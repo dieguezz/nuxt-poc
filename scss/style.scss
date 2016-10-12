@@ -105,6 +105,7 @@ body {
   width: calc(40% - 160px);
   height: calc(100vh - 72px);
   position: relative;
+  transition: all .4s ease-in-out;
 
   .about {
         h1 {
@@ -216,6 +217,7 @@ body {
 }
 
 .column-right {
+  transition: all .4s ease-in-out;
   float: right;
   position: relative;
   background: url('/images/bg.png');

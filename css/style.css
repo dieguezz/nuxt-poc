@@ -65,7 +65,8 @@ body {
   background: #FFF;
   width: calc(40% - 160px);
   height: calc(100vh - 72px);
-  position: relative; }
+  position: relative;
+  transition: all .4s ease-in-out; }
   .column-left .about h1 {
     background: url("/images/etereo-logo-main.svg");
     background-size: cover;
@@ -149,6 +150,7 @@ body {
       margin-top: 40px; }
 
 .column-right {
+  transition: all .4s ease-in-out;
   float: right;
   position: relative;
   background: url("/images/bg.png");
