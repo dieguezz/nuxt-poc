@@ -1,0 +1,214 @@
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-margin-before: 0;
+  -webkit-margin-after: 0;
+  -webkit-margin-start: 0;
+  -webkit-margin-end: 0;
+  -webkit-font-smoothing: antialiased; }
+
+body {
+  font-family: 'Roboto Slab', Helvetica, Arial, sans-serif;
+  color: #1c1c1c;
+  transition: all .4s ease-in-out;
+  animation-name: body;
+  animation-duration: 2s; }
+@keyframes body {
+  0% {
+    opacity: 0; }
+  100% {
+    opacity: 1; } }
+  body.dark {
+    background: #2e2f36;
+    transition: all .4s ease-in-out;
+    animation-name: body-dark;
+    animation-duration: 2s; }
+@keyframes body-dark {
+  0% {
+    opacity: 0; }
+  100% {
+    opacity: 1; } }
+    body.dark .column-left {
+      background: #2e2f36; }
+      body.dark .column-left .about h1 {
+        background: url("/images/etereo-logo-inv.svg");
+        background-size: cover;
+        background-position: -10px; }
+      body.dark .column-left .about h2 {
+        color: #FFF; }
+      body.dark .column-left .about h3 {
+        color: #a9acbe; }
+        body.dark .column-left .about h3::after {
+          background: #FFF; }
+        body.dark .column-left .about h3 span {
+          color: #c3b895; }
+      body.dark .column-left .contact a {
+        color: #FFF; }
+        body.dark .column-left .contact a span {
+          color: #c3b895; }
+      body.dark .column-left .contact .telephone {
+        color: #a9acbe; }
+    body.dark .column-right::before {
+      background: #373942; }
+    body.dark .column-right .column-right-unit h1 {
+      background: url("/images/etereo-logo-inv.svg");
+      background-size: cover;
+      background-position: -10px; }
+    body.dark .column-right .column-right-unit h5 {
+      color: #FFF; }
+      body.dark .column-right .column-right-unit h5 span {
+        color: #c3b895; }
+
+.column-left {
+  float: left;
+  padding: 36px 80px;
+  background: #FFF;
+  width: calc(40% - 160px);
+  height: calc(100vh - 72px);
+  position: relative; }
+  .column-left .about h1 {
+    background: url("/images/etereo-logo-main.svg");
+    background-size: cover;
+    width: 140px;
+    background-position: -10px;
+    text-indent: -9999px;
+    margin-bottom: 40px; }
+  .column-left .about h2 {
+    font-size: 28px;
+    font-weight: 300;
+    margin: 35px 0;
+    line-height: 44px; }
+  .column-left .about h3 {
+    position: relative;
+    font-size: 18px;
+    font-weight: 300;
+    line-height: 28px;
+    margin-bottom: 70px; }
+    .column-left .about h3::after {
+      content: '';
+      position: absolute;
+      width: 35px;
+      height: 1px;
+      background: #1c1c1c;
+      left: 0;
+      bottom: -35px; }
+    .column-left .about h3 span {
+      display: block;
+      font-family: 'Oswald', Helvetica, Arial, sans-serif;
+      font-weight: 300;
+      color: #c0a754;
+      text-transform: uppercase;
+      letter-spacing: 3px;
+      font-size: 16px;
+      padding-bottom: 10px; }
+  .column-left .contact {
+    position: relative; }
+    .column-left .contact::after {
+      content: '@';
+      font-size: 118px;
+      position: absolute;
+      left: 0;
+      top: -25px;
+      color: #898989;
+      opacity: .1; }
+    .column-left .contact a {
+      font-size: 24px;
+      font-weight: 400;
+      text-decoration: none;
+      color: #1c1c1c;
+      display: block;
+      margin-bottom: 35px; }
+      .column-left .contact a span {
+        display: block;
+        font-family: 'Oswald', Helvetica, Arial, sans-serif;
+        font-weight: 300;
+        color: #c0a754;
+        text-transform: uppercase;
+        letter-spacing: 3px;
+        font-size: 16px;
+        padding-bottom: 10px; }
+    .column-left .contact .contact-hayder, .column-left .contact .contact-anthanh {
+      display: inline-block; }
+      .column-left .contact .contact-hayder a, .column-left .contact .contact-anthanh a {
+        font-size: 18px;
+        margin-bottom: 0; }
+      .column-left .contact .contact-hayder .name, .column-left .contact .contact-anthanh .name {
+        display: block;
+        padding-bottom: 5px; }
+      .column-left .contact .contact-hayder .telephone, .column-left .contact .contact-anthanh .telephone {
+        font-weight: 300; }
+    .column-left .contact .contact-hayder {
+      padding-right: 35px; }
+    .column-left .contact .copyright {
+      font-family: 'Oswald';
+      text-transform: uppercase;
+      font-size: 14px;
+      font-weight: 300;
+      letter-spacing: 1px;
+      color: #656671;
+      margin-top: 40px; }
+
+.column-right {
+  float: right;
+  position: relative;
+  background: url("/images/bg.png");
+  background-size: cover;
+  width: 60%;
+  height: 100vh;
+  overflow: hidden;
+  z-index: 2; }
+  .column-right::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: #F2F2F2;
+    opacity: .9; }
+  .column-right .column-right-unit {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    text-align: center;
+    transform: translateX(-50%) translateY(-50%); }
+    .column-right .column-right-unit h1 {
+      background: url("/images/etereo-logo-main.svg");
+      background-size: cover;
+      width: 140px;
+      background-position: -10px;
+      text-indent: -9999px;
+      position: relative;
+      left: 50%;
+      transform: translateX(-50%); }
+    .column-right .column-right-unit h5 {
+      font-size: 18px;
+      font-family: 'Oswald', Helvetica, Arial, sans-serif;
+      text-transform: uppercase;
+      font-weight: 100;
+      letter-spacing: 3px; }
+      .column-right .column-right-unit h5 span {
+        color: #c0a754;
+        display: block;
+        padding-bottom: 5px; }
+
+@media all and (max-width: 1435px) {
+  .column-left {
+    width: calc(50% - 160px);
+    height: auto; }
+
+  .column-right {
+    width: 50%; } }
+@media all and (max-width: 1150px) {
+  .column-left {
+    padding: 36px 40px;
+    width: calc(50% - 80px); } }
+@media all and (max-width: 1036px) {
+  .column-left {
+    padding: 36px 80px;
+    width: calc(100% - 160px); }
+
+  .column-right {
+    display: none; } }
+@media all and (max-width: 632px) {
+  .column-left {
+    padding: 36px 40px;
+    width: calc(100% - 80px); } }
