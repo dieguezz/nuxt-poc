@@ -152,7 +152,8 @@ body {
 .column-right {
   transition: all .4s ease-in-out;
   float: right;
-  position: relative;
+  position: fixed;
+  right: 0;
   background: url("/images/bg.png");
   background-size: cover;
   width: 60%;
