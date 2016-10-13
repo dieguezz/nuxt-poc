@@ -30,6 +30,7 @@ body {
           opacity: 1;
       }
   }
+
   &.dark {
       background: $dark-blue;
       transition: all .4s ease-in-out;
@@ -211,13 +212,12 @@ body {
             font-weight: 300;
             letter-spacing: 1px;
             color: #656671;
-            margin-top: 40px;
+            margin: 40px 0;
         }
     }
 }
 
 .column-right {
-  transition: all .4s ease-in-out;
   float: right;
   position: fixed;
   right: 0;
