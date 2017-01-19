@@ -1,0 +1,301 @@
+@import "./_normalize";
+@import "./_style";
+
+$black: #1c1c1c;
+$black-light: #a9acbe;
+$gold: #c0a754;
+$gold-light: #c3b895;
+$dark-blue: #2e2f36;
+$bluer: #373942;
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-margin-before: 0;
+  -webkit-margin-after: 0;
+  -webkit-margin-start: 0;
+  -webkit-margin-end: 0;
+  -webkit-font-smoothing: antialiased;
+}
+
+body {
+  font-family: 'Roboto Slab', Helvetica, Arial, sans-serif;
+  color: $black;
+  transition: all .4s ease-in-out;
+  animation-name: body;
+  animation-duration: 2s;
+  @keyframes body {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+  &.dark {
+    background: $dark-blue;
+    transition: all .4s ease-in-out;
+    animation-name: body-dark;
+    animation-duration: 2s;
+    @keyframes body-dark {
+      0% {
+        opacity: 0;
+      }
+      100% {
+        opacity: 1;
+      }
+    }
+    .column-left {
+      background: $dark-blue;
+      .about {
+        h1 {
+          background: url('/images/etereo-logo-inv.svg');
+          background-size: cover;
+          background-position: -10px;
+        }
+        h2 {
+          color: #FFF;
+        }
+        h3 {
+          color: $black-light;
+          &::after {
+            background: #FFF;
+          }
+          span {
+            color: $gold-light;
+          }
+        }
+      }
+      .contact {
+        a {
+          color: #FFF;
+          span {
+            color: $gold-light;
+          }
+        }
+        .telephone {
+          color: #a9acbe;
+        }
+      }
+    }
+    .column-right {
+      &::before {
+        background: $bluer;
+      }
+      .column-right-unit {
+        h1 {
+          background: url('/images/etereo-logo-inv.svg');
+          background-size: cover;
+          background-position: -10px;
+        }
+        h5 {
+          color: #FFF;
+          span {
+            color: $gold-light;
+          }
+        }
+      }
+    }
+  }
+}
+
+.column-left {
+  float: left;
+  padding: 36px 80px;
+  background: #FFF;
+  width: calc(40% - 160px);
+  height: calc(100vh - 72px);
+  position: relative;
+  transition: all .4s ease-in-out;
+  .about {
+    h1 {
+      background: url('/images/etereo-logo-main.svg');
+      background-size: cover;
+      width: 140px;
+      background-position: -10px;
+      text-indent: -9999px;
+      margin-bottom: 40px;
+    }
+    h2 {
+      font-size: 28px;
+      font-weight: 300;
+      margin: 35px 0;
+      line-height: 44px;
+    }
+    h3 {
+      position: relative;
+      font-size: 18px;
+      font-weight: 300;
+      line-height: 28px;
+      margin-bottom: 70px;
+      &::after {
+        content: '';
+        position: absolute;
+        width: 35px;
+        height: 1px;
+        background: $black;
+        left: 0;
+        bottom: -35px;
+      }
+      span {
+        display: block;
+        font-family: 'Oswald', Helvetica, Arial, sans-serif;
+        font-weight: 300;
+        color: $gold;
+        text-transform: uppercase;
+        letter-spacing: 3px;
+        font-size: 16px;
+        padding-bottom: 10px;
+      }
+    }
+  }
+  .contact {
+    position: relative;
+    &::after {
+      content: '@';
+      font-size: 118px;
+      position: absolute;
+      left: 0;
+      top: -25px;
+      color: #898989;
+      opacity: .1;
+    }
+    a {
+      font-size: 24px;
+      font-weight: 400;
+      text-decoration: none;
+      color: $black;
+      display: block;
+      margin-bottom: 35px;
+      span {
+        display: block;
+        font-family: 'Oswald', Helvetica, Arial, sans-serif;
+        font-weight: 300;
+        color: $gold;
+        text-transform: uppercase;
+        letter-spacing: 3px;
+        font-size: 16px;
+        padding-bottom: 10px;
+      }
+    }
+    .contact-hayder, .contact-anthanh {
+      display: inline-block;
+      a {
+        font-size: 18px;
+        margin-bottom: 0;
+      }
+      .name {
+        display: block;
+        padding-bottom: 5px;
+      }
+      .telephone {
+        font-weight: 300;
+      }
+    }
+    .contact-hayder {
+      padding-right: 35px;
+    }
+    .copyright {
+      font-family: 'Oswald';
+      text-transform: uppercase;
+      font-size: 14px;
+      font-weight: 300;
+      letter-spacing: 1px;
+      color: #656671;
+      margin: 40px 0;
+    }
+  }
+}
+
+.column-right {
+  float: right;
+  position: fixed;
+  right: 0;
+  background: url('/images/bg.png');
+  background-size: cover;
+  width: 60%;
+  height: 100vh;
+  overflow: hidden;
+  z-index: 2;
+  &::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: #F2F2F2;
+    opacity: .9;
+  }
+  .column-right-unit {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    text-align: center;
+    transform: translateX(-50%) translateY(-50%);
+    h1 {
+      background: url('/images/etereo-logo-main.svg');
+      background-size: cover;
+      width: 140px;
+      background-position: -10px;
+      text-indent: -9999px;
+      position: relative;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+    h5 {
+      font-size: 18px;
+      font-family: 'Oswald', Helvetica, Arial, sans-serif;
+      text-transform: uppercase;
+      font-weight: 100;
+      letter-spacing: 3px;
+      span {
+        color: $gold;
+        display: block;
+        padding-bottom: 5px;
+      }
+    }
+  }
+}
+
+@media all and (max-width: 1435px) {
+  .column-left {
+    width: calc(50% - 160px);
+    height: auto;
+  }
+  .column-right {
+    width: 50%;
+  }
+}
+
+@media all and (max-width: 1150px) {
+  .column-left {
+    padding: 36px 40px;
+    width: calc(50% - 80px);
+  }
+}
+
+@media all and (max-width: 1036px) {
+  .column-left {
+    padding: 36px 80px;
+    width: calc(100% - 160px);
+  }
+  .column-right {
+    display: none;
+  }
+}
+
+@media all and (max-width: 632px) {
+  .column-left {
+    padding: 36px 40px;
+    width: calc(100% - 80px);
+  }
+}
+
+video {
+  z-index: -1;
+  background-size: cover!important;
+  min-width: 100%;
+  width: auto;
+  min-height: 100%;
+  position: relative;
+  right: 25%;
+  height: auto;
+}
