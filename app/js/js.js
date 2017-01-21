@@ -1,9 +1,16 @@
 'use strict';
-$('h1').hover(
-  function() {
-    $('body').removeClass('dark');
-  },
-  function() {
-    $('body').addClass('dark');
+
+(function() {
+
+  var menuToggle = $('.menu-toggle');
+  var body = $('body');
+
+  function toggleMenu() {
+    menuToggle.toggleClass('active');
+    body.toggleClass('menu-open');
   }
-);
+
+  menuToggle.click(toggleMenu);
+  $('.menu a').click(toggleMenu);
+
+})();

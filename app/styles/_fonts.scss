@@ -1,0 +1,92 @@
+@font-face {
+  font-family: "Mark";
+  src: url("/fonts/marklight-webfont.ttf") format("truetype");
+  font-style: normal;
+  font-weight: 300;
+}
+
+@font-face {
+  font-family: "Mark";
+  src: url("/fonts/markmedium-webfont.ttf") format("truetype");
+  font-style: normal;
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: "Mark";
+  src: url("/fonts/markbold-webfont.ttf") format("truetype");
+  font-style: normal;
+  font-weight: 600;
+}
+
+body {
+  text-rendering: optimizeLegibility;
+  text-rendering: geometricPrecision;
+  font-smooth: always;
+  font-smoothing: antialiased;
+  -moz-font-smoothing: antialiased;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-size: $font-size-base;
+  font-family: Mark, Helvetica, sans-serif;
+}
+
+h1, .h1 {
+  font-size: $font-size-h1;
+  letter-spacing: -1.02px;
+  font-weight: 400;
+}
+
+h2, .h2 {
+  font-size: $font-size-h2;
+  font-weight: 400;
+}
+
+h3, .h3 {
+  font-size: $font-size-h3;
+  font-weight: 400;
+}
+
+h4, .h4 {
+  font-size: $font-size-h4;
+}
+
+h5, .h5 {
+  font-size: $font-size-h5;
+}
+
+h6, .h6 {
+  font-size: $font-size-h6;
+}
+
+.lead {
+  font-size: $font-size-h6;
+}
+
+small, .small {
+  font-size: $font-size-small;
+}
+
+.smallest {
+  font-size: $font-size-smallest;
+}
+
+a, .anchor {
+  transition: color $transition-base;
+  cursor: pointer;
+  text-decoration: none;
+  color: $black;
+  &[disabled] {
+    cursor: not-allowed;
+  }
+  &:hover, &:focus, &:active, &.active, &.hover {
+    text-decoration: none;
+    outline: none;
+    color: $gray;
+  }
+}
+
+p {
+  color: $gray;
+  font-size: $font-size-base;
+}
