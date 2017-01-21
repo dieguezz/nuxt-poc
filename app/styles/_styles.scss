@@ -76,13 +76,15 @@
     width: 100%;
   }
   h1 {
-    font-size: 3vw;
     width: 50vw;
     text-align: center;
     margin: 0 auto;
     position: absolute;
     right: 0;
     left: 0;
+    @media all and (max-width: $xs-max) {
+      width: initial;
+    }
   }
   &:before {
     content: "";
@@ -138,6 +140,14 @@
     .lead {
       padding-top: 3vw;
     }
+    @media all and (max-width: $xs-max) {
+      display: block;
+      & > div {
+        width: initial;
+        text-align: left;
+        padding-left: 2em;
+      }
+    }
   }
 }
 
@@ -166,6 +176,20 @@
     li {
       list-style: none;
       padding: 2em;
+    }
+    @media all and (max-width: $xs-max) {
+      display: initial;
+      text-align: center;
+      li {
+        width: 80%;
+        margin: 0 auto;
+      }
+    }
+    @media all and (min-width: $lg-min) {
+      width: 80vw;
+      li {
+        padding: 3em;
+      }
     }
   }
 }
@@ -199,6 +223,13 @@
     justify-content: space-around;
     & > div {
       width: 30%;
+    }
+    @media all and (max-width: $xs-max) {
+      display: initial;
+      & > div {
+        width: 70%;
+        margin: 5em auto;
+      }
     }
   }
 }
