@@ -12,6 +12,13 @@
   height: 4vw;
   background-repeat: no-repeat;
   background-size: contain;
+  @media all and (max-width: $xs-max) {
+    left: 0;
+    right: 0;
+    width: 28vw;
+    height: 10vw;
+    margin: 0 auto;
+  }
 }
 
 .menu-open {
@@ -38,6 +45,14 @@
   align-items: center;
   align-content: center;
   justify-content: space-around;
+  @media all and (max-width: $xs-max) {
+    flex-flow: column;
+    justify-content: center;
+    a {
+      font-size: 5vw;
+      padding: 1.5em;
+    }
+  }
   a {
     &:after {
       display: block;
@@ -81,6 +96,11 @@
     color: $black;
     transform: rotate(-45deg);
     transform-origin: 55% 50%;
+  }
+  @media all and (max-width: $xs-max) {
+    font-size: 15vw;
+    right: 3vw;
+    top: -3vw;
   }
 }
 
