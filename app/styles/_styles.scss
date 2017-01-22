@@ -26,6 +26,7 @@
   overflow: hidden;
   .brand-logo {
     background-image: url("/images/logo.svg");
+    position: fixed;
   }
   .menu {
     opacity: 1;
