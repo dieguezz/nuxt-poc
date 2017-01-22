@@ -45,7 +45,9 @@
   background-color: $white;
   display: flex;
   align-items: center;
+  -webkit-align-items: center;
   align-content: center;
+  -webkit-align-content: center;
   justify-content: space-around;
   @media all and (max-width: $xs-max) {
     flex-flow: column;
@@ -113,6 +115,9 @@
   color: $white;
   display: flex;
   align-items: center;
+  -webkit-align-items: center;
+  position: relative;
+  overflow: hidden;
   video {
     object-fit: cover;
     height: 100%;
@@ -132,7 +137,7 @@
   &:before {
     content: "";
     display: block;
-    height: 110vh;
+    height: 100%;
     width: 100%;
     position: absolute;
     top: 0;
@@ -181,7 +186,8 @@
       padding-right: 3em;
     }
     .lead {
-      padding-top: 3vw;
+      padding-top: 3.8vw;
+      line-height: 0.9em;
     }
     @media all and (max-width: $xs-max) {
       display: block;
@@ -196,9 +202,18 @@
 
 .services {
   background-color: $black;
-  margin-top: 15em;
+  padding-top: 15em;
   color: white;
   padding-bottom: 5em;
+  position: relative;
+  &::before {
+    content: '';
+    position: absolute;
+    width: 100vw;
+    height: 30vh;
+    background: #FFF;
+    top: 0;
+  }
   img {
     width: 90vw;
     margin: 0 auto;
@@ -240,12 +255,22 @@
 .people {
   position: relative;
   top: -5em;
+  &::before {
+    content: '';
+    background: #FFF;
+    width: 100vw;
+    height: 100%;
+    position: absolute;
+    z-index: 0;
+    top: 5em;
+  }
   .title {
     text-transform: uppercase;
     text-align: center;
     font-size: $font-size-small;
     margin: 0;
     color: $white;
+    position: relative;
     &:after {
       content: "";
       display: block;
@@ -260,12 +285,31 @@
     width: 35vw;
     margin: 0 auto;
     margin-bottom: 4em;
+    position: relative;
   }
   .people-list {
     display: flex;
     justify-content: space-around;
+    position: relative;
     & > div {
       width: 30%;
+      h3 {
+        margin-bottom: 0;
+      }
+      .people-title {
+        margin: .5em 0 2em 0;
+      }
+      a {
+        border: 2px solid $gray-lighter;
+        padding: 15px 25px;
+        margin-top: 0px;
+        display: inline-block;
+        position: relative;
+        transition: all $transition-base;
+        &:hover {
+          background: $gray-lighter;
+        }
+      }
     }
     @media all and (max-width: $xs-max) {
       display: initial;
@@ -280,6 +324,7 @@
 footer {
   text-align: center;
   background-color: $gray-lighter;
+  margin-bottom: calc(15vh + 10em);
   .contact-row {
     padding: 3em;
     border-bottom: 1px solid $gray-medium;
@@ -293,7 +338,13 @@ footer {
   .contact-row-main {
     background-color: $gray-light;
     padding-bottom: 7em;
+    padding-left: 0;
     border-bottom: none;
+    position: fixed;
+    width: 100vw;
+    height: 15vh;
+    bottom: 0;
+    z-index: -1;
     h2 {
       font-weight: 600;
     }
