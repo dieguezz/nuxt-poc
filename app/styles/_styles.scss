@@ -116,11 +116,6 @@
   }
 }
 
-// FF fix
-_::-moz-range-track, body:last-child .hero h1 {
-  top: 35%;
-}
-
 .hero {
   height: 110vh;
   background-color: $black;
@@ -136,6 +131,8 @@ _::-moz-range-track, body:last-child .hero h1 {
     width: 100%;
   }
   h1 {
+    // ff and safari do not center with flex correctly
+    top: 35%;
     width: 50vw;
     text-align: center;
     margin: 0 auto;
