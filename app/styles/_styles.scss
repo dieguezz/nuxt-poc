@@ -49,12 +49,19 @@
   align-content: center;
   -webkit-align-content: center;
   justify-content: space-around;
-  @media all and (max-width: $xs-max) {
-    flex-flow: column;
-    justify-content: center;
-    a {
-      font-size: 5vw;
-      padding: 1.5em;
+  .menu-list {
+    display: flex;
+    align-items: center;
+    align-content: center;
+    justify-content: space-around;
+    width: 100%;
+    @media all and (max-width: $xs-max) {
+      flex-flow: column;
+      justify-content: center;
+      a {
+        font-size: 5vw;
+        padding: 1.5em;
+      }
     }
   }
   a {
@@ -109,6 +116,11 @@
   }
 }
 
+// FF fix
+_::-moz-range-track, body:last-child .hero h1 {
+  top: 35%;
+}
+
 .hero {
   height: 110vh;
   background-color: $black;
@@ -147,8 +159,11 @@
 }
 
 .about {
-  position: relative;
-  top: -15vh;
+  background-color: $white;
+  .about-content {
+    position: relative;
+    top: -15vh;
+  }
   .title {
     text-transform: uppercase;
     text-align: center;
@@ -187,7 +202,9 @@
     }
     .lead {
       padding-top: 3.8vw;
-      line-height: 0.9em;
+      @media all and (min-width: $sm-min) {
+        line-height: 0.9em;
+      }
     }
     @media all and (max-width: $xs-max) {
       display: block;
@@ -211,7 +228,7 @@
     position: absolute;
     width: 100vw;
     height: 30vh;
-    background: #FFF;
+    background: $white;
     top: 0;
   }
   img {
@@ -252,17 +269,19 @@
   }
 }
 
+@media all and (max-width: $xs-max) {
+  // FF fix
+  _::-moz-range-track, body:last-child .people {
+    padding-bottom: 1em;
+  }
+}
+
 .people {
-  position: relative;
-  top: -5em;
-  &::before {
-    content: '';
-    background: #FFF;
-    width: 100vw;
-    height: 100%;
-    position: absolute;
-    z-index: 0;
-    top: 5em;
+  background-color: $white;
+  height: 100%;
+  .people-content {
+    position: relative;
+    top: -5em;
   }
   .title {
     text-transform: uppercase;
@@ -330,7 +349,13 @@
 footer {
   text-align: center;
   background-color: $gray-lighter;
-  margin-bottom: calc(15vh + 10em);
+  margin-bottom: 20em;
+  @media all and (max-width: $xs-max) {
+    margin-bottom: 38em;
+  }
+  @media all and (min-width: $lg-min) {
+    margin-bottom: 19em;
+  }
   .contact-row {
     padding: 3em;
     border-bottom: 1px solid $gray-medium;
@@ -348,7 +373,6 @@ footer {
     border-bottom: none;
     position: fixed;
     width: 100vw;
-    height: 15vh;
     bottom: 0;
     z-index: -1;
     h2 {
