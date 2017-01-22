@@ -49,12 +49,19 @@
   align-content: center;
   -webkit-align-content: center;
   justify-content: space-around;
-  @media all and (max-width: $xs-max) {
-    flex-flow: column;
-    justify-content: center;
-    a {
-      font-size: 5vw;
-      padding: 1.5em;
+  .menu-list {
+    display: flex;
+    align-items: center;
+    align-content: center;
+    justify-content: space-around;
+    width: 100%;
+    @media all and (max-width: $xs-max) {
+      flex-flow: column;
+      justify-content: center;
+      a {
+        font-size: 5vw;
+        padding: 1.5em;
+      }
     }
   }
   a {
@@ -107,6 +114,10 @@
     right: 3vw;
     top: -3vw;
   }
+}
+
+_::-moz-range-track, body:last-child .hero h1 {
+  top: 35%;
 }
 
 .hero {
