@@ -116,6 +116,7 @@
   }
 }
 
+// FF fix
 _::-moz-range-track, body:last-child .hero h1 {
   top: 35%;
 }
@@ -158,8 +159,11 @@ _::-moz-range-track, body:last-child .hero h1 {
 }
 
 .about {
-  position: relative;
-  top: -15vh;
+  background-color: $white;
+  .about-content {
+    position: relative;
+    top: -15vh;
+  }
   .title {
     text-transform: uppercase;
     text-align: center;
@@ -198,7 +202,9 @@ _::-moz-range-track, body:last-child .hero h1 {
     }
     .lead {
       padding-top: 3.8vw;
-      line-height: 0.9em;
+      @media all and (min-width: $sm-min) {
+        line-height: 0.9em;
+      }
     }
     @media all and (max-width: $xs-max) {
       display: block;
@@ -222,7 +228,7 @@ _::-moz-range-track, body:last-child .hero h1 {
     position: absolute;
     width: 100vw;
     height: 30vh;
-    background: #FFF;
+    background: $white;
     top: 0;
   }
   img {
@@ -263,17 +269,19 @@ _::-moz-range-track, body:last-child .hero h1 {
   }
 }
 
+@media all and (max-width: $xs-max) {
+  // FF fix
+  _::-moz-range-track, body:last-child .people {
+    padding-bottom: 1em;
+  }
+}
+
 .people {
-  position: relative;
-  top: -5em;
-  &::before {
-    content: '';
-    background: #FFF;
-    width: 100vw;
-    height: 100%;
-    position: absolute;
-    z-index: 0;
-    top: 5em;
+  background-color: $white;
+  height: 100%;
+  .people-content {
+    position: relative;
+    top: -5em;
   }
   .title {
     text-transform: uppercase;
@@ -335,7 +343,13 @@ _::-moz-range-track, body:last-child .hero h1 {
 footer {
   text-align: center;
   background-color: $gray-lighter;
-  margin-bottom: calc(15vh + 10em);
+  margin-bottom: 20em;
+  @media all and (max-width: $xs-max) {
+    margin-bottom: 38em;
+  }
+  @media all and (min-width: $lg-min) {
+    margin-bottom: 19em;
+  }
   .contact-row {
     padding: 3em;
     border-bottom: 1px solid $gray-medium;
@@ -353,7 +367,6 @@ footer {
     border-bottom: none;
     position: fixed;
     width: 100vw;
-    height: 15vh;
     bottom: 0;
     z-index: -1;
     h2 {
