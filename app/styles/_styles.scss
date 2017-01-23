@@ -363,10 +363,21 @@
           animation-timing-function: ease-in-out;
           animation-delay: 0s;
           display: none;
+          &.out {
+            animation-name: bio-image-out;
+            animation-duration: 1s;
+            animation-fill-mode: forwards;
+            animation-timing-function: ease-in-out;
+            animation-delay: 0s;
+            @keyframes bio-image-out {
+              0% {left: 0; opacity: 1;}
+              100%   {left:-20vw; opacity: 0;}
+            }
+          }
           @keyframes bio-image {
             0%   {left:-20vw; opacity: 0;}
             100% {left: 0; opacity: 1;}
-        }
+          }
           &::before {
             display: none;
             content: '';
@@ -404,10 +415,21 @@
           animation-timing-function: ease-in-out;
           animation-delay: 0s;
           display: none;
+          &.out {
+            animation-name: bio-content-out;
+            animation-duration: 1s;
+            animation-fill-mode: forwards;
+            animation-timing-function: ease-in-out;
+            animation-delay: 0s;
+            @keyframes bio-content-out {
+              0% {right: 0; opacity:1;}
+              100%   {right:-10vw; opacity:0;}
+            }
+          }
           @keyframes bio-content {
             0%   {right:-10vw; opacity:0;}
             100% {right: 0; opacity:1;}
-        }
+          }
           p.people-title {
             text-transform: uppercase;
             color: $gray;

@@ -25,7 +25,13 @@ $(document).ready(function() {
    $('body').toggleClass('people-bio-open');
   });
   $('.people-bio .bio-closer').on('click', function() {
-   $('.people-bio').removeClass('show');
+   $('.people-bio .bio-content').addClass('out');
+   $('.people-bio .bio-image').addClass('out');
    $('body').removeClass('people-bio-open');
+   setTimeout(function(){
+    $('.people-bio').removeClass('show');
+    $('.bio-image').removeClass('out');
+    $('.bio-content').removeClass('out');
+  },1500);
   });
 });
