@@ -418,6 +418,15 @@
             font-size: $font-size-small;
           }
         }
+        .bio-next {
+          position: absolute;
+          right: 3vw;
+          bottom: 3vw;
+          border: none;
+          img {
+            transform: rotate(180deg);
+          }
+        }
       }
       &:first-of-type {
         text-align: right;
