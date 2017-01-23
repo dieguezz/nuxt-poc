@@ -18,14 +18,14 @@
 $(document).ready(function() {
   $('.bio-opener-hayder').on('click', function() {
    $('.bio-hayder').toggleClass('show');
-   $('body').toggleClass('menu-open');
+   $('body').toggleClass('people-bio-open');
   });
   $('.bio-opener-anthanh').on('click', function() {
    $('.bio-anthanh').toggleClass('show');
-   $('body').toggleClass('menu-open');
+   $('body').toggleClass('people-bio-open');
   });
   $('.people-bio .bio-closer').on('click', function() {
    $('.people-bio').removeClass('show');
-   $('body').removeClass('menu-open');
+   $('body').removeClass('people-bio-open');
   });
 });

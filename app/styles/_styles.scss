@@ -21,7 +21,9 @@
     margin: 0 auto;
   }
 }
-
+.people-bio-open {
+  overflow: hidden;
+}
 .menu-open {
   overflow: hidden;
   .brand-logo {
@@ -326,9 +328,13 @@
           opacity: 1;
           z-index: 15;
           .bio-image {
+            display: block;
             &::before {
               display: block;
             }
+          }
+          .bio-content {
+            display: block;
           }
         }
         &.bio-anthanh {
@@ -350,6 +356,17 @@
           height: 100%;
           background: $black;
           position: relative;
+          left: -36vw;
+          animation-name: bio-image;
+          animation-duration: 1s;
+          animation-fill-mode: forwards;
+          animation-timing-function: ease-in-out;
+          animation-delay: 0s;
+          display: none;
+          @keyframes bio-image {
+            0%   {left:-36vw;}
+            100% {left: 0;}
+        }
           &::before {
             display: none;
             content: '';
@@ -358,13 +375,13 @@
             opacity: .8;
             background: $black;
             position: absolute;
-            animation-name: bio-image;
+            animation-name: bio-image-cover;
             animation-duration: 3s;
             animation-fill-mode: forwards;
             animation-timing-function: ease-in-out;
             animation-delay: 1s;
             left: 0;
-            @keyframes bio-image {
+            @keyframes bio-image-cover {
               0%   {opacity: .8;}
               100% {opacity: 0;}
           }
@@ -373,7 +390,7 @@
         .bio-content {
           display: inline-block;
           height: auto;
-          right: 0;
+          right: -40vw;
           top: 50%;
           transform: translateY(-50%);
           position: absolute;
@@ -381,6 +398,16 @@
           width: 40vw;
           text-align: left;
           margin: 0 15vw 0 0vw;
+          animation-name: bio-content;
+          animation-duration: 1s;
+          animation-fill-mode: forwards;
+          animation-timing-function: ease-in-out;
+          animation-delay: 0s;
+          display: none;
+          @keyframes bio-content {
+            0%   {right:-40vw; opacity:0;}
+            100% {right: 0; opacity:1;}
+        }
           p.people-title {
             text-transform: uppercase;
             color: $gray;
