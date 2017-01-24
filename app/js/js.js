@@ -43,7 +43,7 @@
 
     var sr = ScrollReveal();
     sr.reveal('.reveal', {
-      easing: 'ease-in-out'
+      easing: 'ease-in-out', scale:'1', reset: 'true', distance: '50px'
     });
 
     var waypoint = new Waypoint({
