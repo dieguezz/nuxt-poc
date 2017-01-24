@@ -178,7 +178,8 @@
     text-align: center;
     font-size: $font-size-small;
     color: $black;
-    margin: 0px 0 -16em 0;;
+    margin: 0px 0 -16em 0;
+    ;
     &:after {
       content: "";
       display: block;
@@ -528,176 +529,177 @@
     &:last-of-type {
       margin-top: 3em;
     }
-    & > div {
-      width: 40%;
-      padding: 0 4.3%;
-      .people-bio {
-        display: none;
-        position: fixed;
-        width: 100vw;
-        height: 100vh;
-        top: 0;
-        left: 0;
-        background: #FFF;
-        overflow: hidden;
-        opacity: 0;
-        z-index: -1;
-        transition: opacity $transition-base;
-        &.show {
-          opacity: 1;
-          z-index: 15;
-          display: block;
-          .bio-image {
-            display: block;
-            &::before {
-              display: block;
-            }
-          }
-          .bio-content {
-            display: block;
-          }
-        }
-        &.bio-anthanh {
-          .bio-image {
-            background: url('/images/anthanh-bio.jpg');
-            background-size: cover;
-            background-position: 45%;
-          }
-        }
-        &.bio-hayder {
-          .bio-image {
-            background: url('/images/hayder-bio.jpg');
-            background-size: 150%;
-            background-position: 65% 70%;
-          }
-        }
+    .people-bio {
+      display: none;
+      position: fixed;
+      width: 100vw;
+      height: 100vh;
+      top: 0;
+      left: 0;
+      background: #FFF;
+      overflow: hidden;
+      padding: 0;
+      opacity: 0;
+      z-index: -1;
+      transition: opacity $transition-base;
+      &.show {
+        opacity: 1;
+        z-index: 15;
+        display: block;
         .bio-image {
-          width: 36vw;
-          height: 100%;
-          background: $black;
-          position: relative;
-          left: -36vw;
-          animation-name: bio-image;
+          display: block;
+          &::before {
+            display: block;
+          }
+        }
+        .bio-content {
+          display: block;
+        }
+      }
+      &.bio-anthanh {
+        .bio-image {
+          background: url('/images/anthanh-bio.jpg');
+          background-size: cover;
+          background-position: 45%;
+        }
+      }
+      &.bio-hayder {
+        .bio-image {
+          background: url('/images/hayder-bio.jpg');
+          background-size: 150%;
+          background-position: 65% 70%;
+        }
+      }
+      .bio-image {
+        width: 36vw;
+        height: 100%;
+        background: $black;
+        position: relative;
+        left: -36vw;
+        animation-name: bio-image;
+        animation-duration: $transition-slow;
+        animation-fill-mode: forwards;
+        animation-timing-function: ease-in-out;
+        animation-delay: 0s;
+        display: none;
+        &.out {
+          animation-name: bio-image-out;
           animation-duration: $transition-slow;
           animation-fill-mode: forwards;
           animation-timing-function: ease-in-out;
           animation-delay: 0s;
-          display: none;
-          &.out {
-            animation-name: bio-image-out;
-            animation-duration: $transition-slow;
-            animation-fill-mode: forwards;
-            animation-timing-function: ease-in-out;
-            animation-delay: 0s;
-            @keyframes bio-image-out {
-              0% {
-                left: 0;
-                opacity: 1;
-              }
-              100% {
-                left: -20vw;
-                opacity: 0;
-              }
-            }
-          }
-          @keyframes bio-image {
+          @keyframes bio-image-out {
             0% {
-              left: -20vw;
-              opacity: 0;
-            }
-            100% {
               left: 0;
               opacity: 1;
             }
-          }
-          &::before {
-            display: none;
-            content: '';
-            height: 100%;
-            width: 100%;
-            opacity: .8;
-            background: $black;
-            position: absolute;
-            animation-name: bio-image-cover;
-            animation-duration: 3s;
-            animation-fill-mode: forwards;
-            animation-timing-function: ease-in-out;
-            animation-delay: 1s;
-            left: 0;
-            @keyframes bio-image-cover {
-              0% {
-                opacity: .8;
-              }
-              100% {
-                opacity: 0;
-              }
+            100% {
+              left: -20vw;
+              opacity: 0;
             }
           }
         }
-        .bio-content {
-          display: inline-block;
-          height: auto;
-          right: -40vw;
-          top: 50%;
-          transform: translateY(-50%);
+        @keyframes bio-image {
+          0% {
+            left: -20vw;
+            opacity: 0;
+          }
+          100% {
+            left: 0;
+            opacity: 1;
+          }
+        }
+        &::before {
+          display: none;
+          content: '';
+          height: 100%;
+          width: 100%;
+          opacity: .8;
+          background: $black;
           position: absolute;
-          float: right;
-          width: 40vw;
-          text-align: left;
-          margin: 0 15vw 0 0vw;
-          animation-name: bio-content;
+          animation-name: bio-image-cover;
+          animation-duration: 3s;
+          animation-fill-mode: forwards;
+          animation-timing-function: ease-in-out;
+          animation-delay: 1s;
+          left: 0;
+          @keyframes bio-image-cover {
+            0% {
+              opacity: .8;
+            }
+            100% {
+              opacity: 0;
+            }
+          }
+        }
+      }
+      .bio-content {
+        display: inline-block;
+        height: auto;
+        right: -40vw;
+        top: 50%;
+        transform: translateY(-50%);
+        position: absolute;
+        float: right;
+        width: 40vw;
+        text-align: left;
+        margin: 0 15vw 0 0vw;
+        animation-name: bio-content;
+        animation-duration: 1s;
+        animation-fill-mode: forwards;
+        animation-timing-function: ease-in-out;
+        animation-delay: 0s;
+        display: none;
+        &.out {
+          animation-name: bio-content-out;
           animation-duration: 1s;
           animation-fill-mode: forwards;
           animation-timing-function: ease-in-out;
           animation-delay: 0s;
-          display: none;
-          &.out {
-            animation-name: bio-content-out;
-            animation-duration: 1s;
-            animation-fill-mode: forwards;
-            animation-timing-function: ease-in-out;
-            animation-delay: 0s;
-            @keyframes bio-content-out {
-              0% {
-                right: 0;
-                opacity: 1;
-              }
-              100% {
-                right: -10vw;
-                opacity: 0;
-              }
-            }
-          }
-          @keyframes bio-content {
+          @keyframes bio-content-out {
             0% {
-              right: -10vw;
-              opacity: 0;
-            }
-            100% {
               right: 0;
               opacity: 1;
             }
-          }
-          p.people-title {
-            text-transform: uppercase;
-            color: $gray;
-          }
-          p {
-            color: $black;
-            line-height: 1.5;
-            font-size: $font-size-small;
+            100% {
+              right: -10vw;
+              opacity: 0;
+            }
           }
         }
-        .bio-next {
-          position: absolute;
-          right: 3vw;
-          bottom: 3vw;
-          border: none;
-          img {
-            transform: rotate(180deg);
+        @keyframes bio-content {
+          0% {
+            right: -10vw;
+            opacity: 0;
           }
+          100% {
+            right: 0;
+            opacity: 1;
+          }
+        }
+        p.people-title {
+          text-transform: uppercase;
+          color: $gray;
+        }
+        p {
+          color: $black;
+          line-height: 1.5;
+          font-size: $font-size-small;
         }
       }
+      .bio-next {
+        position: absolute;
+        right: 3vw;
+        bottom: 3vw;
+        border: none;
+        img {
+          transform: rotate(180deg);
+        }
+      }
+    }
+    & > div {
+      width: 40%;
+      padding: 0 4.3%;
       &:first-of-type {
         /*text-align: right;*/
       }
