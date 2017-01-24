@@ -3,13 +3,14 @@
  */
 
 .brand-logo {
+  transition: all $transition-slower;
   background-image: url("/images/logo-inverse.svg");
   position: absolute;
   top: 2vw;
   left: 2vw;
   width: 10vw;
   max-width: 90px;
-  z-index: 5;
+  z-index: 10;
   height: 4vw;
   background-repeat: no-repeat;
   background-size: contain;
@@ -34,7 +35,7 @@
   }
   .menu {
     opacity: 1;
-    z-index: 1;
+    z-index: 5;
     background-color: $white;
   }
 }
@@ -122,6 +123,7 @@
 }
 
 .hero {
+  top: 0;
   height: 110vh;
   background-color: $black;
   color: $white;
@@ -129,6 +131,7 @@
   align-items: center;
   -webkit-align-items: center;
   position: relative;
+  position: fixed;
   overflow: hidden;
   video {
     object-fit: cover;
@@ -156,11 +159,13 @@
     position: absolute;
     top: 0;
     background-color: $black;
-    opacity: 0.9;
+    opacity: 0.6;
   }
 }
 
 .about {
+  position: relative;
+  margin-top: 100vh;
   background-color: $white;
   .about-content {
     position: relative;
@@ -281,6 +286,8 @@
 .people {
   background-color: $white;
   height: 100%;
+  position: relative;
+  z-index: 2;
   .people-content {
     position: relative;
     top: -5em;
@@ -526,8 +533,8 @@
 }
 
 footer {
+  position: relative;
   text-align: center;
-  background-color: $gray-lighter;
   margin-bottom: 20em;
   @media all and (max-width: $xs-max) {
     margin-bottom: 38em;
@@ -536,6 +543,9 @@ footer {
     margin-bottom: 19em;
   }
   .contact-row {
+    position: relative;
+    z-index: 1;
+    background-color: $gray-lighter;
     padding: 3em;
     border-bottom: 1px solid $gray-medium;
     p {
