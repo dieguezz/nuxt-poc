@@ -4,6 +4,17 @@
 
 (function() {
 
+  var requestAnimationFrame = window.requestAnimationFrame || window.mozRequestAnimationFrame ||
+    window.webkitRequestAnimationFrame || window.msRequestAnimationFrame;
+  window.requestAnimationFrame = requestAnimationFrame;
+
+  var position = $('.hero h1').offset().top;
+  $(window).scroll(function(evt) {
+    requestAnimationFrame(function() {
+      $('.hero h1').css('opacity', (1 - ($('.hero h1').offset().top - position) * 0.005));
+    });
+  });
+
   $(document).ready(function() {
 
     var menuToggle = $('.menu-toggle');
@@ -43,7 +54,10 @@
 
     var sr = ScrollReveal();
     sr.reveal('.reveal', {
-      easing: 'ease-in-out', scale:'1', reset: 'true', distance: '50px'
+      easing: 'ease-in-out',
+      scale: '1',
+      reset: 'true',
+      distance: '50px'
     });
 
     var waypoint = new Waypoint({
