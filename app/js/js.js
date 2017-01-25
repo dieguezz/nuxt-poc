@@ -38,6 +38,26 @@
       $('body').toggleClass('people-bio-open');
       menuToggle.toggle();
     });
+    $('.bio-opener-huibert').on('click', function() {
+      $('.bio-huibert').toggleClass('show');
+      $('body').toggleClass('people-bio-open');
+      menuToggle.toggle();
+    });
+    $('.bio-opener-ruben').on('click', function() {
+      $('.bio-ruben').toggleClass('show');
+      $('body').toggleClass('people-bio-open');
+      menuToggle.toggle();
+    });
+    $('.bio-opener-daniel').on('click', function() {
+      $('.bio-daniel').toggleClass('show');
+      $('body').toggleClass('people-bio-open');
+      menuToggle.toggle();
+    });
+    $('.bio-opener-ismael').on('click', function() {
+      $('.bio-ismael').toggleClass('show');
+      $('body').toggleClass('people-bio-open');
+      menuToggle.toggle();
+    });
     $('.people-bio .bio-closer').on('click', function() {
       $('.people-bio').addClass('out');
       $('.people-bio .bio-content').addClass('out');

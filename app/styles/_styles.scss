@@ -600,16 +600,44 @@
       }
       &.bio-anthanh {
         .bio-image {
-          background: url('/images/anthanh-bio.jpg');
+          background: url('/images/people/anthanh-bio.jpg');
           background-size: cover;
           background-position: 45%;
         }
       }
       &.bio-hayder {
         .bio-image {
-          background: url('/images/hayder-bio.jpg');
+          background: url('/images/people/hayder-bio.jpg');
           background-size: 150%;
           background-position: 65% 70%;
+        }
+      }
+      &.bio-huibert {
+        .bio-image {
+          background: url('/images/people/huibert-bio.jpg');
+          background-size: cover;
+          background-position: center;
+        }
+      }
+      &.bio-ruben {
+        .bio-image {
+          background: url('/images/people/ruben-bio.jpg');
+          background-size: cover;
+          background-position: center;
+        }
+      }
+      &.bio-daniel {
+        .bio-image {
+          background: url('/images/people/daniel-bio.jpg');
+          background-size: cover;
+          background-position: center;
+        }
+      }
+      &.bio-ismael {
+        .bio-image {
+          background: url('/images/people/ismael-bio.jpg');
+          background-size: cover;
+          background-position: center;
         }
       }
       .bio-image {
