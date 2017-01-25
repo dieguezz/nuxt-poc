@@ -97,5 +97,12 @@
     });
 
   });
-
 })();
+
+$(document).ready(function() {
+  $('footer .contact-row-main a').on('click', function() {
+   $('footer .contact-row-main a').addClass('open');
+   $('.circular-transition').addClass('open');
+  });
+
+});

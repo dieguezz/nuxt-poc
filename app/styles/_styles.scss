@@ -854,12 +854,12 @@
 footer {
   position: relative;
   text-align: center;
-  margin-bottom: 20em;
+  margin-bottom: 17em;
   @media all and (max-width: $xs-max) {
     margin-bottom: 38em;
   }
   @media all and (min-width: $lg-min) {
-    margin-bottom: 18.9em;
+    margin-bottom: 17em;
   }
   .contact-row {
     position: relative;
@@ -890,6 +890,82 @@ footer {
       width: 35vw;
       margin: 0 auto;
       margin-bottom: 2em;
+    }
+    .circular-transition {
+      position: absolute;
+      width: 65.8px;
+      height: 65.8px;
+      background: $black;
+      border-radius: 50%;
+      left: 50%;
+      transform: translateX(-50%);
+      margin-left: -40px;
+      opacity: 0;
+      visibility: hidden;
+      &.open {
+        animation-name: circular-transition-open;
+        animation-duration: .7s;
+        animation-fill-mode: forwards;
+        animation-timing-function: ease-in-out;
+        animation-delay: .5s;
+        @keyframes circular-transition-open {
+          0% {
+            opacity: 0;
+            visibility: visible;
+          }
+
+          25% {
+            opacity: 1;
+            visibility: visible;
+          }
+
+          100% {
+            opacity: 1;
+            visibility: visible;
+            transform: translateX(-50%) scale(42);
+            border-radius: none;
+          }
+        }
+      }
+    }
+
+    a {
+      position: absolute;
+      transform: translateX(-50%);
+      overflow: hidden;
+      transition: all 1s ease-in-out;
+      &:hover {
+        position: absolute;
+        border-radius: 50px;
+      }
+      &.open {
+        animation-name: contact-open;
+        animation-duration: 1.5s;
+        animation-fill-mode: forwards;
+        animation-timing-function: ease-in-out;
+        animation-delay: 0s;
+        @keyframes contact-open {
+          0% {
+            text-indent: 0;
+            padding: 1em 3em;
+            border-radius: 50px;
+          }
+          25% {
+            text-indent: -600px;
+            padding: 1em 0em;
+            width: 65.8px;
+            border-radius: 50px;
+            background: $black;
+          }
+          100% {
+            text-indent: -600px;
+            padding: 1em 0em;
+            width: 65.8px;
+            border-radius: 50px;
+            background: $black;
+          }
+        }
+      }
     }
   }
 }
