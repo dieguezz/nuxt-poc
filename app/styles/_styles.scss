@@ -99,7 +99,7 @@
   }
 }
 
-.menu-toggle, .bio-closer {
+.menu-toggle, .bio-closer, .contact-page-closer {
   user-select: none;
   cursor: pointer;
   transition: all $transition-base;
@@ -119,6 +119,12 @@
     font-size: 15vw;
     right: 3vw;
     top: -3vw;
+  }
+}
+
+.contact-page-closer {
+  &.active {
+    color: white;
   }
 }
 
@@ -854,12 +860,12 @@
 footer {
   position: relative;
   text-align: center;
-  margin-bottom: 17em;
+  margin-bottom: 17.55em;
   @media all and (max-width: $xs-max) {
     margin-bottom: 38em;
   }
   @media all and (min-width: $lg-min) {
-    margin-bottom: 17em;
+    margin-bottom: 17.55em;
   }
   .contact-row {
     position: relative;
@@ -893,13 +899,13 @@ footer {
     }
     .circular-transition {
       position: absolute;
-      width: 65.8px;
-      height: 65.8px;
+      width: 55.8px;
+      height: 55.8px;
       background: $black;
       border-radius: 50%;
       left: 50%;
-      transform: translateX(-50%);
-      margin-left: -40px;
+      transform: translateX(-50%) scale(1);
+      margin: -3px 0 0 -30px;
       opacity: 0;
       visibility: hidden;
       &.open {
@@ -919,11 +925,21 @@ footer {
             visibility: visible;
           }
 
-          100% {
+          80% {
+            opacity: 1;
+            visibility: visible;
+            transform: translateX(-50%) scale(.7);
+          }
+
+          99% {
             opacity: 1;
             visibility: visible;
             transform: translateX(-50%) scale(42);
             border-radius: none;
+          }
+
+          100% {
+            display: none;
           }
         }
       }
@@ -933,7 +949,7 @@ footer {
       position: absolute;
       transform: translateX(-50%);
       overflow: hidden;
-      transition: all 1s ease-in-out;
+      transition: background .3s ease-in-out, border-radius .3s ease-in-out, text-indent 1s ease-in-out;
       &:hover {
         position: absolute;
         border-radius: 50px;
@@ -949,23 +965,72 @@ footer {
             text-indent: 0;
             padding: 1em 3em;
             border-radius: 50px;
+            opacity: 1;
           }
           25% {
             text-indent: -600px;
             padding: 1em 0em;
-            width: 65.8px;
+            width: 55.8px;
             border-radius: 50px;
             background: $black;
+            opacity: 1;
           }
+
+          35% {
+            text-indent: -600px;
+            padding: 1em 0em;
+            width: 55.8px;
+            border-radius: 50px;
+            background: $black;
+            opacity: 0;
+          }
+
           100% {
             text-indent: -600px;
             padding: 1em 0em;
-            width: 65.8px;
+            width: 55.8px;
             border-radius: 50px;
             background: $black;
+            opacity: 0;
           }
         }
       }
     }
+  }
+}
+
+.contact-page {
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  background: $black;
+  z-index: -5;
+  opacity: 0;
+  visibility: hidden;
+  .content {
+    opacity: 0;
+    transition: all .5s ease-in-out;
+    &.show {
+      opacity: 1;
+    }
+    form {
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translateX(-50%) translateY(-50%);
+      width: 100%;
+      max-width: 600px;
+      input,textarea,button {
+        display: block;
+        max-width: 600px;
+      }
+    }
+  }
+  &.open {
+    z-index: 10;
+    opacity: 1;
+    visibility: visible;
   }
 }

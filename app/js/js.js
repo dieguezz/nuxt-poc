@@ -103,6 +103,24 @@ $(document).ready(function() {
   $('footer .contact-row-main a').on('click', function() {
    $('footer .contact-row-main a').addClass('open');
    $('.circular-transition').addClass('open');
+   $('.contact-row-main').css('z-index', 2);
+   setTimeout(function() {
+     $('.contact-page').addClass('open');
+     $('body').toggleClass('people-bio-open');
+   }, 1200);
+   setTimeout(function() {
+     $('.contact-page .content').addClass('show');
+   }, 1500);
   });
+});
 
+$(document).ready(function() {
+  $('.contact-page-closer').on('click', function() {
+   $('footer .contact-row-main a').removeClass('open');
+   $('.circular-transition').removeClass('open');
+   $('.contact-row-main').css('z-index', 0);
+   $('.contact-page').removeClass('open');
+   $('body').toggleClass('people-bio-open');
+   $('.contact-page .content').removeClass('show');
+  });
 });
