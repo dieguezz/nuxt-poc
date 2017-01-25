@@ -904,8 +904,8 @@ footer {
       background: $black;
       border-radius: 50%;
       left: 50%;
-      transform: translateX(-50%) scale(1);
-      margin: -3px 0 0 -30px;
+      transform: translateX(-100%) scale(1);
+      margin: 0;
       opacity: 0;
       visibility: hidden;
       &.open {
@@ -928,13 +928,13 @@ footer {
           80% {
             opacity: 1;
             visibility: visible;
-            transform: translateX(-50%) scale(.7);
+            transform: translateX(-100%) scale(.7);
           }
 
           99% {
             opacity: 1;
             visibility: visible;
-            transform: translateX(-50%) scale(42);
+            transform: translateX(-100%) scale(42);
             border-radius: none;
           }
 
@@ -1033,6 +1033,7 @@ footer {
     &.show {
       opacity: 1;
     }
+
     h1 {
       color: #FFF;
       font-size: 4vw;
@@ -1072,5 +1073,20 @@ footer {
     z-index: 10;
     opacity: 1;
     visibility: visible;
+  }
+  &.out {
+    animation-name: contact-page-out;
+    animation-duration: .5s;
+    animation-fill-mode: forwards;
+    animation-timing-function: ease-in-out;
+    animation-delay: 0s;
+    @keyframes contact-page-out {
+      0% {
+        opacity: 1;
+      }
+      100% {
+        opacity: 0;
+      }
+    }
   }
 }

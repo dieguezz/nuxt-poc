@@ -116,11 +116,15 @@ $(document).ready(function() {
 
 $(document).ready(function() {
   $('.contact-page-closer').on('click', function() {
-   $('footer .contact-row-main a').removeClass('open');
-   $('.circular-transition').removeClass('open');
-   $('.contact-row-main').css('z-index', 0);
-   $('.contact-page').removeClass('open');
-   $('body').toggleClass('people-bio-open');
-   $('.contact-page .content').removeClass('show');
+    $('.contact-page').addClass('out');
+    setTimeout(function() {
+       $('footer .contact-row-main a').removeClass('open');
+       $('.circular-transition').removeClass('open');
+       $('.contact-row-main').css('z-index', 0);
+       $('.contact-page').removeClass('open');
+       $('body').toggleClass('people-bio-open');
+       $('.contact-page .content').removeClass('show');
+       $('.contact-page').removeClass('out');
+   }, 500);
   });
 });
