@@ -297,7 +297,7 @@
       color: #FFF;
     }
     .slick-dots li.slick-active button:before {
-      color: $blue;
+      color: #FFF;
     }
     .values-unit {
       text-align: center;
@@ -320,7 +320,7 @@
             left: 0;
             transform: translateY(-50%) rotate(-7deg);
             margin-top: 10px;
-            background: $blue;
+            background: #FFF;
           }
         }
         &::after {
@@ -328,7 +328,7 @@
           position: absolute;
           width: 50px;
           height: 2px;
-          background: $blue;
+          background: #FFF;
           z-index: 10;
           bottom: -30%;
           left: 50%;
@@ -569,6 +569,21 @@
       opacity: 0;
       z-index: -1;
       transition: opacity $transition-base;
+      &.out {
+        animation-name: people-bio-out;
+        animation-duration: $transition-slow;
+        animation-fill-mode: forwards;
+        animation-timing-function: ease-in-out;
+        animation-delay: .5s;
+        @keyframes people-bio-out {
+          0% {
+            opacity: 1;
+          }
+          100% {
+            opacity: 0;
+          }
+        }
+      }
       &.show {
         opacity: 1;
         z-index: 15;
@@ -604,7 +619,7 @@
         position: relative;
         left: -36vw;
         animation-name: bio-image;
-        animation-duration: $transition-slow;
+        animation-duration: $transition-slower;
         animation-fill-mode: forwards;
         animation-timing-function: ease-in-out;
         animation-delay: 0s;
@@ -672,14 +687,14 @@
         text-align: left;
         margin: 0 15vw 0 0vw;
         animation-name: bio-content;
-        animation-duration: 1s;
+        animation-duration: $transition-slower;
         animation-fill-mode: forwards;
         animation-timing-function: ease-in-out;
         animation-delay: 0s;
         display: none;
         &.out {
           animation-name: bio-content-out;
-          animation-duration: 1s;
+          animation-duration: $transition-slow;
           animation-fill-mode: forwards;
           animation-timing-function: ease-in-out;
           animation-delay: 0s;
@@ -732,12 +747,13 @@
         .people-bio-splash {
           opacity: 1;
           visibility: visible;
+          transform: translateX(-50%) translateY(-50%) scale(1);
         }
       }
       .people-bio-splash {
         position: absolute;
         left: 50%;
-        transform: translateX(-50%) translateY(-50%);
+        transform: translateX(-50%) translateY(-50%) scale(.95);
         top: 50%;
         width: calc(100% - 35%);
         height: calc(100% - 10%);

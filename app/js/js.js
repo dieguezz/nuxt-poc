@@ -39,15 +39,17 @@
       menuToggle.toggle();
     });
     $('.people-bio .bio-closer').on('click', function() {
+      $('.people-bio').addClass('out');
       $('.people-bio .bio-content').addClass('out');
       $('.people-bio .bio-image').addClass('out');
       $('body').removeClass('people-bio-open');
       setTimeout(function() {
         menuToggle.toggle();
+        $('.people-bio').removeClass('out');
         $('.people-bio').removeClass('show');
         $('.bio-image').removeClass('out');
         $('.bio-content').removeClass('out');
-      }, 1500);
+      }, 1200);
     });
 
     var rellax = new Rellax('.rellax');
