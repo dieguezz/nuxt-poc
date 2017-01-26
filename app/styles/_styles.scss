@@ -14,6 +14,7 @@
   height: 4vw;
   background-repeat: no-repeat;
   background-size: contain;
+  mix-blend-mode: difference;
   @media all and (max-width: $xs-max) {
     left: 0;
     right: 0;
@@ -110,6 +111,7 @@
   font-size: 6vw;
   z-index: 10;
   font-weight: 300;
+  mix-blend-mode: difference;
   &.active {
     color: $black;
     transform: rotate(-45deg);
