@@ -6,11 +6,14 @@ $(document).ready(function() {
     window.webkitRequestAnimationFrame || window.msRequestAnimationFrame;
   window.requestAnimationFrame = requestAnimationFrame;
 
-  var position = $('.hero h1').offset().top;
-  $(window).scroll(function(evt) {
+  var position = 0;
+  $(window).scroll(fadeHero);
+  fadeHero();
+
+  function fadeHero() {
     requestAnimationFrame(function() {
-      $('.hero h1').css('opacity', (1 - ($('.hero h1').offset().top - position) * 0.005));
+      $('.hero h1').css('opacity', (1 - ($('.hero').offset().top - position) * 0.005));
     });
-  });
+  }
 
 });
