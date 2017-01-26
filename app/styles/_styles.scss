@@ -31,7 +31,6 @@
 .menu-open {
   overflow: hidden;
   .brand-logo {
-    background-image: url("/images/logo.svg");
     position: fixed;
   }
   .menu {
@@ -113,7 +112,6 @@
   font-weight: 300;
   mix-blend-mode: difference;
   &.active {
-    color: $black;
     transform: rotate(-45deg);
     transform-origin: 55% 50%;
   }
