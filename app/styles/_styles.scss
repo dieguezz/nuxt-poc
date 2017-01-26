@@ -419,6 +419,7 @@
       list-style: none;
       padding: 0 2em;
       position: relative;
+      z-index: 1;
       &::after {
         content: '';
         position: absolute;

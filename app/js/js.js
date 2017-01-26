@@ -127,4 +127,8 @@ $(document).ready(function() {
        $('.contact-page').removeClass('out');
    }, 500);
   });
+  var $scrolldown = $('.scrolldown');
+  $(document).scroll(function() {
+      $scrolldown.css({display: $(this).scrollTop() > 100? 'none':'block'});
+  });
 });
