@@ -2,6 +2,7 @@
 /* globals Waypoint */
 
 $(document).ready(function() {
+
   $('footer .contact-row-main a').on('click', function() {
     $('footer .contact-row-main a').addClass('open');
     $('.circular-transition').addClass('open');
@@ -27,6 +28,19 @@ $(document).ready(function() {
       $('.contact-page').removeClass('out');
     }, 500);
   });
+
+  $('#contact-form #name').change(updateMailTo);
+  $('#contact-form #email').change(updateMailTo);
+  $('#contact-form #message').change(updateMailTo);
+
+  function updateMailTo() {
+    var value = 'mailto:hello@etereo.io?subject=LET’S WORK TOGETHER&body=From: ';
+    value += $('#contact-form #email').val();
+    value += '\nName: ' + $('#contact-form #name').val();
+    value += '\nMessage: ' + $('#contact-form #message').val();
+    $('#contact-form a').attr('href', encodeURI(value));
+  }
+
   var $scrolldown = $('.scrolldown');
   $(document).scroll(function() {
     $scrolldown.css({
