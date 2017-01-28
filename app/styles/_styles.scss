@@ -61,6 +61,9 @@
     align-content: center;
     justify-content: space-around;
     width: 100%;
+    a {
+      font-size: 2.5vw;
+    }
     @media all and (max-width: $xs-max) {
       flex-flow: column;
       justify-content: center;
