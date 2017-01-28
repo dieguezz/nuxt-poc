@@ -1,7 +1,10 @@
 /*
  * STYLES
  */
-
+* {
+  &::-moz-selection { background: $gray; }
+  &::selection { background: $gray; }
+}
 body {
   color: $black;
 }
@@ -154,11 +157,14 @@ body {
   }
   h1 {
     // ff and safari do not center with flex correctly
-    top: 38%;
-    width: 50vw;
+    top: 43%;
+    width: 60vw;
     text-align: center;
     margin: 0 auto;
     position: absolute;
+    text-transform: uppercase;
+    line-height: 1.5;
+    letter-spacing: 10px;
     right: 0;
     left: 0;
     @media all and (max-width: $xs-max) {
