@@ -1,16 +1,16 @@
 'use strict';
 
-  $(document).ready(function() {
+$(document).ready(function() {
 
-    var menuToggle = $('.menu-toggle');
-    var body = $('body');
+  var menuToggle = $('.menu-toggle');
+  var body = $('body');
 
-    function toggleMenu() {
-      menuToggle.toggleClass('active');
-      body.toggleClass('menu-open');
-    }
+  function toggleMenu() {
+    menuToggle.toggleClass('active');
+    body.toggleClass('menu-open');
+  }
 
-    menuToggle.click(toggleMenu);
-    $('.menu a').click(toggleMenu);
+  menuToggle.click(toggleMenu);
+  $('.menu a').click(toggleMenu);
 
 });

@@ -171,6 +171,7 @@ module.exports = function(grunt) {
     wiredep: {
       options: {
         //cwd: '<%= appConfig.app %>'
+        'exclude': []
       },
       app: {
         src: [

@@ -4,8 +4,6 @@
 
 $(document).ready(function() {
 
-  var rellax = new Rellax('.rellax');
-
   var sr = ScrollReveal();
   sr.reveal('.reveal', {
     easing: 'ease-in-out',
@@ -13,5 +11,7 @@ $(document).ready(function() {
     reset: 'true',
     distance: '50px'
   });
+
+  var rellax = new Rellax('.rellax');
 
 });
