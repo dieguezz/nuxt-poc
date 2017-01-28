@@ -2,6 +2,10 @@
  * STYLES
  */
 
+body {
+  color: $black;
+}
+
 .brand-logo {
   transition: all $transition-slower;
   background-image: url("../images/logo-inverse.svg");
@@ -382,7 +386,7 @@
     display: none;
   }
   &::after {
-    background: #181818;
+    background: #1f2126;
     opacity: .96;
     content: '';
     width: 100%;
