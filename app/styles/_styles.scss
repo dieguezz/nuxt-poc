@@ -2,6 +2,10 @@
  * STYLES
  */
 
+body {
+  color: $black;
+}
+
 .brand-logo {
   transition: all $transition-slower;
   background-image: url("../images/logo-inverse.svg");
