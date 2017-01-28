@@ -4,7 +4,7 @@
 
 .brand-logo {
   transition: all $transition-slower;
-  background-image: url("/images/logo-inverse.svg");
+  background-image: url("../images/logo-inverse.svg");
   position: fixed;
   top: 2vw;
   left: 2vw;
@@ -282,7 +282,7 @@
     padding: 0;
     .slick-prev {
       text-indent: -99999px;
-      background: url(/images/arrow-white.svg);
+      background: url("../images/arrow-white.svg");
       width: 30px;
       height: 30px;
       background-size: cover;
@@ -294,7 +294,7 @@
     }
     .slick-next {
       text-indent: -99999px;
-      background: url(/images/arrow-white.svg);
+      background: url("../images/arrow-white.svg");
       transform: rotate(180deg);
       width: 30px;
       height: 30px;
@@ -364,7 +364,7 @@
 
 .services {
   background-color: $black;
-  background: url('/images/bg-services.jpg');
+  background: url('../images/bg-services.jpg');
   background-size: cover;
   padding: 10em 0 8em 0;
   color: white;
@@ -469,7 +469,7 @@
           position: absolute;
           width: 90px;
           height: 90px;
-          background: url('/images/hexagon.svg');
+          background: url('../images/hexagon.svg');
           top: -90px;
           animation-name: hexagon;
           animation-duration: 10s;
@@ -645,42 +645,42 @@
       }
       &.bio-anthanh {
         .bio-image {
-          background: url('/images/people/anthanh-bio.jpg');
+          background: url('../images/people/anthanh-bio.jpg');
           background-size: cover;
           background-position: 45%;
         }
       }
       &.bio-hayder {
         .bio-image {
-          background: url('/images/people/hayder-bio.jpg');
+          background: url('../images/people/hayder-bio.jpg');
           background-size: 150%;
           background-position: 65% 70%;
         }
       }
       &.bio-huibert {
         .bio-image {
-          background: url('/images/people/huibert-bio.jpg');
+          background: url('../images/people/huibert-bio.jpg');
           background-size: cover;
           background-position: center;
         }
       }
       &.bio-ruben {
         .bio-image {
-          background: url('/images/people/ruben-bio.jpg');
+          background: url('../images/people/ruben-bio.jpg');
           background-size: cover;
           background-position: center;
         }
       }
       &.bio-daniel {
         .bio-image {
-          background: url('/images/people/daniel-bio.jpg');
+          background: url('../images/people/daniel-bio.jpg');
           background-size: cover;
           background-position: center;
         }
       }
       &.bio-ismael {
         .bio-image {
-          background: url('/images/people/ismael-bio.jpg');
+          background: url('../images/people/ismael-bio.jpg');
           background-size: cover;
           background-position: center;
         }
@@ -1040,7 +1040,7 @@ footer {
   height: 100vh;
   top: 0;
   left: 0;
-  background: url('/images/bg-services.jpg');
+  background: url('../images/bg-services.jpg');
   background-size: cover;
   z-index: -5;
   opacity: 0;
