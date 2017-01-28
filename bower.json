@@ -14,8 +14,8 @@
   "private": true,
   "dependencies": {
     "waypoints": "4.0.1",
-    "scrollreveal": "3.3.2",
-    "slick-carousel": "1.6.0"
+    "slick-carousel": "1.6.0",
+    "scrollreveal": "3.3.2"
   },
   "devDependencies": {}
 }
