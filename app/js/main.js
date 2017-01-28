@@ -14,4 +14,16 @@ $(document).ready(function() {
 
   var rellax = new Rellax('.rellax');
 
+  $('.values-container').slick({
+    dots: true,
+    infinite: true,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    autoplay: true,
+    autoplaySpeed: 10000,
+    draggable: false,
+    fade: true,
+    speed: 1200,
+  });
+
 });
