@@ -214,7 +214,7 @@ body {
   position: relative;
   margin-top: 115vh;
   background-color: $white;
-  padding-bottom: 25vh;
+  padding-bottom: 18vh;
   @media all and (max-width: $xs-max) {
     padding-bottom: 2vh;
   }
@@ -253,10 +253,11 @@ body {
   .panel {
     display: flex;
     background-color: $gray-lighter;
-    width: 90vw;
+    width: 80vw;
     margin: 0 auto;
     padding: 2em 0;
     @media all and (max-width: $xxs-max) {
+      width: 90vw;
       h1 {
         font-size: 7vw;
       }
