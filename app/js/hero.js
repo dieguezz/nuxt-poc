@@ -12,7 +12,7 @@ $(document).ready(function() {
 
   function fadeHero() {
     requestAnimationFrame(function() {
-      $('.hero h1').css('opacity', (1 - ($('.hero').offset().top - position) * 0.005));
+      $('.hero h1.opacityscroll').css('opacity', (1 - ($('.hero').offset().top - position) * 0.005));
     });
   }
 

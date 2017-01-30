@@ -26,4 +26,10 @@ $(document).ready(function() {
     speed: 1200,
   });
 
+  setTimeout(function(){
+    $('.hero h1').removeClass('animation');
+    $('.hero h1 span').removeClass('animation');
+    $('.hero h1').addClass('opacityscroll');
+},2500);
+
 });
