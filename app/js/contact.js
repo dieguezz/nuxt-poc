@@ -26,6 +26,9 @@ $(document).ready(function() {
       $('body').toggleClass('people-bio-open');
       $('.contact-page .content').removeClass('show');
       $('.contact-page').removeClass('out');
+      $('.contact-page-thanks').removeClass('show');
+      $('.contact-page-thanks-layer').removeClass('show');
+      $('.sender').removeClass('sending');
     }, 500);
   });
 
