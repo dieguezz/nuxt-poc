@@ -1273,6 +1273,61 @@ footer {
     top: 0;
     left: 0;
   }
+  .brand-logo,.contact-page-closer {
+    z-index: 13;
+    mix-blend-mode: normal;
+  }
+  .contact-page-thanks {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    width: calc(50% - 10vw);
+    height: calc(50% - 10vw);
+    background: #FFF;
+    z-index: 12;
+    padding: 10vw;
+    box-shadow: 0px 5px 50px rgba(0,0,0,.5);
+    text-align: center;
+    z-index: 13;
+    opacity: 0;
+    visibility: hidden;
+    transition: all .5s ease-in-out;
+    h3 {
+      font-size: 3vw;
+      margin: 10px 0 35px 0;
+    }
+    p {
+      font-size: 1.5vw;
+      margin-bottom: 60px;
+      margin-top: 0;
+    }
+    a {
+      &:hover {
+        box-shadow: 0px 5px 50px rgba(0, 0, 0, .2);
+      }
+    }
+    &.show {
+      opacity: 1;
+      visibility: visible;
+    }
+  }
+  .contact-page-thanks-layer {
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    background: #1e2025;
+    opacity: 0;
+    visibility: hidden;
+    top: 0;
+    left: 0;
+    z-index: 12;
+    transition: all .5s ease-in-out;
+    &.show {
+      opacity: .7;
+      visibility: visible;
+    }
+  }
   .content {
     opacity: 0;
     transition: all .5s ease-in-out;
@@ -1356,6 +1411,46 @@ footer {
 
         &:hover {
           box-shadow: 0px 5px 50px rgba(256, 256, 256, .2);
+        }
+
+        &.sending {
+          background: $black;
+          color: #FFF;
+          box-shadow: 0px 5px 50px rgba(256, 256, 256, .2);
+          position: relative;
+          padding: 1em 4.5em;
+          transition: none;
+            &::after {
+              content: '';
+              position: absolute;
+              height: 100%;
+              background: #FFF;
+              width: 0%;
+              top: 0;
+              left: 0;
+              animation-name: form-sending;
+              animation-duration: 2.5s;
+              animation-fill-mode: forwards;
+              animation-timing-function: ease-in-out;
+              animation-delay: 0s;
+              @keyframes form-sending {
+                0% {
+                  width: 0%;
+                }
+
+                100% {
+                  width: 100%;
+                }
+              }
+          }
+          span {
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%) translateY(-50%);
+            top: 50%;
+            mix-blend-mode: difference;
+            z-index: 2;
+          }
         }
       }
     }

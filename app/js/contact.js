@@ -29,6 +29,30 @@ $(document).ready(function() {
     }, 500);
   });
 
+  $('.close-thanks').on('click', function() {
+    $('.contact-page').addClass('out');
+    setTimeout(function() {
+      $('footer .contact-row-main a').removeClass('open');
+      $('.circular-transition').removeClass('open');
+      $('.contact-row-main').css('z-index', 0);
+      $('.contact-page').removeClass('open');
+      $('body').toggleClass('people-bio-open');
+      $('.contact-page .content').removeClass('show');
+      $('.contact-page').removeClass('out');
+      $('.contact-page-thanks').removeClass('show');
+      $('.contact-page-thanks-layer').removeClass('show');
+      $('.sender').removeClass('sending');
+    }, 500);
+  });
+
+  $('.sender').on('click', function() {
+    $('.sender').addClass('sending');
+    setTimeout(function() {
+      $('.contact-page-thanks').addClass('show');
+      $('.contact-page-thanks-layer').addClass('show');
+    }, 2500);
+  });
+
   $('#contact-form #name').change(updateMailTo);
   $('#contact-form #email').change(updateMailTo);
   $('#contact-form #message').change(updateMailTo);
