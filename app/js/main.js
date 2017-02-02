@@ -15,7 +15,7 @@ $(document).ready(function() {
   var rellax = new Rellax('.rellax');
 
   $('.values-container').slick({
-    dots: true,
+    dots: false,
     infinite: true,
     slidesToShow: 1,
     slidesToScroll: 1,
