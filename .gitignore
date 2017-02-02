@@ -12,3 +12,4 @@ bower_components
 *.sublime-project
 *.sublime-workspace
 .idea
+services/vendor

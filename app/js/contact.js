@@ -48,25 +48,28 @@ $(document).ready(function() {
     }, 500);
   });
 
-  $('.sender').on('click', function() {
+  $('#contact-form .sender').click(function() {
     $('.sender').addClass('sending');
-    setTimeout(function() {
-      $('.contact-page-thanks').addClass('show');
-      $('.contact-page-thanks-layer').addClass('show');
-    }, 2500);
+    var xhr = new XMLHttpRequest();
+    xhr.open('POST', 'services/email.php', true);
+
+    //Send the proper header information along with the request
+    xhr.setRequestHeader('Content-type', 'application/x-www-form-urlencoded');
+
+    xhr.onreadystatechange = function() { //Call a function when the state changes.
+      if (xhr.readyState === XMLHttpRequest.DONE && xhr.status === 200) {
+        setTimeout(function() {
+          $('.contact-page-thanks').addClass('show');
+          $('.contact-page-thanks-layer').addClass('show');
+        }, 2000);
+      }
+    };
+    xhr.send($.param({
+      name: $('#contact-form #name').val(),
+      email: $('#contact-form #email').val(),
+      message: $('#contact-form #message').val()
+    }));
   });
-
-  $('#contact-form #name').change(updateMailTo);
-  $('#contact-form #email').change(updateMailTo);
-  $('#contact-form #message').change(updateMailTo);
-
-  function updateMailTo() {
-    var value = 'mailto:hello@etereo.io?subject=LET’S WORK TOGETHER&body=From: ';
-    value += $('#contact-form #email').val();
-    value += '\nName: ' + $('#contact-form #name').val();
-    value += '\nMessage: ' + $('#contact-form #message').val();
-    $('#contact-form a').attr('href', encodeURI(value));
-  }
 
   var $scrolldown = $('.scrolldown');
   $(document).scroll(function() {
