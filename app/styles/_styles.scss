@@ -421,6 +421,9 @@ main {
     .slick-list, .slick-track {
       overflow: visible!important;
     }
+    .slick-slide {
+      outline: none;
+    }
     .slick-prev {
       text-indent: -99999px;
       background: url("../images/arrow-white.svg");
@@ -472,30 +475,46 @@ main {
         clip-path: polygon(0% 0%, 0% 100%, 0 100%, 0 30%, 100% 30%, 100% 55%, 0 55%, 0 100%, 100% 100%, 100% 0%);
       }
       &:nth-of-type(2) {
+        &::before {
+          border-color: $green;
+        }
         h2 {
           &::before {
             content: '02';
+            color: $green;
           }
         }
       }
       &:nth-of-type(3) {
+        &::before {
+          border-color: $yellow;
+        }
         h2 {
           &::before {
             content: '03';
+            color: $yellow;
           }
         }
       }
       &:nth-of-type(4) {
+        &::before {
+          border-color: $orange;
+        }
         h2 {
           &::before {
             content: '04';
+            color: $orange;
           }
         }
       }
       &:nth-of-type(5) {
+        &::before {
+          border-color: $violet;
+        }
         h2 {
           &::before {
             content: '05';
+            color: $violet;
           }
         }
       }
@@ -901,7 +920,7 @@ main {
       &.bio-hayder {
         .bio-image {
           background: url('../images/people/hayder-bio.jpg');
-          background-size: 150%;
+          background-size: cover;
           background-position: 65% 70%;
         }
       }
