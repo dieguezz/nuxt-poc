@@ -12,6 +12,9 @@ $(document).ready(function() {
     distance: '50px'
   });
 
+  sr.reveal('.services li', { duration: 1000, scale: '1', easing: 'ease-in-out', reset: 'true', distance: '50px' }, 300);
+  sr.reveal('.people-list .people-bio-thumb', { duration: 1000, scale: '1', easing: 'ease-in-out', reset: 'true', distance: '50px' }, 300);
+
   var rellax = new Rellax('.rellax');
 
   $('.values-container').slick({

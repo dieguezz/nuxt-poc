@@ -2,8 +2,8 @@
  * STYLES
  */
 * {
-  &::-moz-selection { background: $gray; }
-  &::selection { background: $gray; }
+  &::-moz-selection { background: $gray; color: #FFF;}
+  &::selection { background: $gray; color: #FFF;}
 }
 body {
   color: $black;
@@ -378,6 +378,13 @@ main {
     }
     .lead {
       padding-top: 3.8vw;
+      p {
+        font-size: 1.25vw;
+        line-height: 1.75vw;
+        &:first-of-type {
+          margin-top: 1.3vh;
+        }
+      }
       @media all and (min-width: $sm-min) {
         line-height: 0.9em;
       }
@@ -388,6 +395,36 @@ main {
         width: initial;
         text-align: left;
         padding-left: 2em;
+      }
+    }
+  }
+  .approach {
+    display: flex;
+    padding: 3em 7em;
+    justify-content: space-between;
+    .approach-main {
+      width: 60%;
+      h1 {
+        margin-top: 0;
+      }
+    }
+    .approach-focus {
+      width: 30%;
+      h3 {
+        text-transform: uppercase;
+        font-size: 1vw;
+        letter-spacing: .2vw;
+        font-weight: 600;
+        margin-bottom: 3.5vh;
+      }
+      ul {
+        padding-left: 0;
+        li {
+          list-style: none;
+          padding-bottom: 2vh;
+          font-size: 1vw;
+          color: $gray;
+        }
       }
     }
   }
@@ -470,51 +507,51 @@ main {
         top: 50%;
         transform: translateX(-50%) translateY(-50%);
         z-index: -1;
-        border: 7px solid $blue;
+        border: 7px solid $gray-dark;
         -webkit-clip-path: polygon(0% 0%, 0% 100%, 0 100%, 0 30%, 100% 30%, 100% 55%, 0 55%, 0 100%, 100% 100%, 100% 0%);
         clip-path: polygon(0% 0%, 0% 100%, 0 100%, 0 30%, 100% 30%, 100% 55%, 0 55%, 0 100%, 100% 100%, 100% 0%);
       }
       &:nth-of-type(2) {
         &::before {
-          border-color: $green;
+          /*border-color: $green;*/
         }
         h2 {
           &::before {
             content: '02';
-            color: $green;
+            /*color: $green;*/
           }
         }
       }
       &:nth-of-type(3) {
         &::before {
-          border-color: $yellow;
+          /*border-color: $yellow;*/
         }
         h2 {
           &::before {
             content: '03';
-            color: $yellow;
+            /*color: $yellow;*/
           }
         }
       }
       &:nth-of-type(4) {
         &::before {
-          border-color: $orange;
+          /*border-color: $orange;*/
         }
         h2 {
           &::before {
             content: '04';
-            color: $orange;
+            /*color: $orange;*/
           }
         }
       }
       &:nth-of-type(5) {
         &::before {
-          border-color: $violet;
+          /*border-color: $violet;*/
         }
         h2 {
           &::before {
             content: '05';
-            color: $violet;
+            /*color: $violet;*/
           }
         }
       }
@@ -556,7 +593,7 @@ main {
           font-size: 2.5vw;
           text-align: center;
           z-index: 1;
-          color: $blue;
+          color: $gray-dark;
           margin-bottom: 20px;
           @media all and (min-width: $sm-max) {
             font-size: 36px;
