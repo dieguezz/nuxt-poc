@@ -1,10 +1,18 @@
 /*
  * STYLES
  */
+
 * {
-  &::-moz-selection { background: $gray; color: #FFF;}
-  &::selection { background: $gray; color: #FFF;}
+  &::-moz-selection {
+    background: $gray;
+    color: #FFF;
+  }
+  &::selection {
+    background: $gray;
+    color: #FFF;
+  }
 }
+
 body {
   color: $black;
 }
@@ -16,13 +24,13 @@ body {
     display: block;
     width: 100vw;
     height: 10em;
-    background-color: rgba(0,0,0,0.5);
+    background-color: rgba(0, 0, 0, 0.5);
     position: fixed;
     top: 0;
     z-index: 10;
   }
   .menu-open:before {
-    background-color: rgba(0,0,0,0);
+    background-color: rgba(0, 0, 0, 0);
   }
 }
 
@@ -39,8 +47,9 @@ body {
   height: 4vw;
   background-repeat: no-repeat;
   background-size: contain;
-  @media all and (min-width: $sm-min) {mix-blend-mode: difference;}
-
+  @media all and (min-width: $sm-min) {
+    mix-blend-mode: difference;
+  }
   @media all and (max-width: $xs-max) {
     left: 0;
     right: 0;
@@ -58,9 +67,9 @@ body {
   overflow: hidden;
   .brand-logo {
     position: fixed;
-  @media all and (max-width: $xs-max) {
-    background-image: url("../images/logo.svg");
-  }
+    @media all and (max-width: $xs-max) {
+      background-image: url("../images/logo.svg");
+    }
   }
   .menu {
     opacity: 1;
@@ -84,6 +93,7 @@ main {
   z-index: 7;
   position: relative;
 }
+
 .menu {
   transform: translateX(-100%);
   transition: all .7s ease-in-out;
@@ -162,13 +172,15 @@ main {
   font-size: 6vw;
   z-index: 10;
   font-weight: 300;
-  @media all and (min-width: $sm-min) {mix-blend-mode: difference;}
+  @media all and (min-width: $sm-min) {
+    mix-blend-mode: difference;
+  }
   &.active {
     transform: rotate(-45deg);
     transform-origin: 55% 50%;
-  @media all and (max-width: $xs-max) {
-  color: $black;
-}
+    @media all and (max-width: $xs-max) {
+      color: $black;
+    }
   }
   @media all and (max-width: $xs-max) {
     font-size: 15vw;
@@ -339,11 +351,9 @@ main {
     position: absolute;
     left: 0;
     right: 0;
-
     @media all and (max-width: $xs-max) {
       font-size: 2vw;
     }
-
     @media all and (max-width: $xxs-max) {
       font-size: 3.5vw;
       bottom: 13.5em;
@@ -465,13 +475,12 @@ main {
   background: -webkit-linear-gradient(-45deg,  rgba(31,33,38,0) 15%,rgba(178,161,232,0.85) 100%);
   background: linear-gradient(135deg,  rgba(31,33,38,0) 15%,rgba(178,161,232,0.85) 100%);
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#001f2126', endColorstr='#d9b2a1e8',GradientType=1 );*/
-
   @media all and (max-width: $xs-max) {
     padding: 10em 0;
   }
   @media all and (max-width: $xxs-max) {
     padding: 20em 0;
-    .values-unit h2::after{
+    .values-unit h2::after {
       display: none;
     }
   }
@@ -610,7 +619,6 @@ main {
             background: #FFF;
           }
         }
-
         &::before {
           content: '01';
           font-weight: 400;
@@ -732,10 +740,8 @@ main {
       padding: 0 2em;
       position: relative;
       z-index: 1;
-
       @media all and (max-width: $xxs-max) {
         margin-top: 25em!important;
-
         h2 {
           font-size: 7vw;
         }
@@ -743,7 +749,6 @@ main {
           font-size: 4vw;
         }
       }
-
       &::after {
         content: '';
         position: absolute;
@@ -823,7 +828,6 @@ main {
     @media all and (max-width: $xs-max) {
       display: initial;
       text-align: center;
-
       li {
         width: 80%;
         margin: 0 auto;
@@ -1287,12 +1291,9 @@ footer {
         margin-right: auto;
         width: 80vw;
       }
-
       p {
         width: 85vw;
       }
-
-
       a {
         font-size: 4vw;
         width: 60vw;
@@ -1425,9 +1426,11 @@ footer {
     top: 0;
     left: 0;
   }
-  .brand-logo,.contact-page-closer {
+  .brand-logo, .contact-page-closer {
     z-index: 13;
-    @media all and (min-width: $sm-min) {mix-blend-mode: normal;}
+    @media all and (min-width: $sm-min) {
+      mix-blend-mode: normal;
+    }
   }
   .contact-page-thanks {
     position: absolute;
@@ -1439,7 +1442,7 @@ footer {
     background: #FFF;
     z-index: 12;
     padding: 10vw;
-    box-shadow: 0px 5px 50px rgba(0,0,0,.5);
+    box-shadow: 0px 5px 50px rgba(0, 0, 0, .5);
     text-align: center;
     z-index: 13;
     opacity: 0;
@@ -1490,7 +1493,6 @@ footer {
     width: 100%;
     max-width: 600px;
     z-index: 12;
-
     &.show {
       opacity: 1;
     }
@@ -1526,14 +1528,12 @@ footer {
           font-size: 3vw;
         }
       }
-
       @media all and (min-width: $xs-max) and (max-width: $sm-max) {
         font-size: 2.5vw;
         a {
           font-size: 2vw;
         }
       }
-
       input, textarea {
         display: block;
         width: 100%;
@@ -1544,7 +1544,6 @@ footer {
         color: #FFF;
         padding: 10px 0;
         margin: 20px 0;
-
         &::-webkit-input-placeholder {
           color: $gray-dark;
         }
@@ -1560,11 +1559,9 @@ footer {
         text-transform: uppercase;
         transition: all $transition-slow;
         margin-top: 15px;
-
         &:hover {
           box-shadow: 0px 5px 50px rgba(256, 256, 256, .2);
         }
-
         &.sending {
           background: $black;
           color: #FFF;
@@ -1572,35 +1569,36 @@ footer {
           position: relative;
           padding: 1em 4.5em;
           transition: none;
-            &::after {
-              content: '';
-              position: absolute;
-              height: 100%;
-              background: #FFF;
-              width: 0%;
-              top: 0;
-              left: 0;
-              animation-name: form-sending;
-              animation-duration: 2.5s;
-              animation-fill-mode: forwards;
-              animation-timing-function: ease-in-out;
-              animation-delay: 0s;
-              @keyframes form-sending {
-                0% {
-                  width: 0%;
-                }
-
-                100% {
-                  width: 100%;
-                }
+          &::after {
+            content: '';
+            position: absolute;
+            height: 100%;
+            background: #FFF;
+            width: 0%;
+            top: 0;
+            left: 0;
+            animation-name: form-sending;
+            animation-duration: 2.5s;
+            animation-fill-mode: forwards;
+            animation-timing-function: ease-in-out;
+            animation-delay: 0s;
+            @keyframes form-sending {
+              0% {
+                width: 0%;
               }
+              100% {
+                width: 100%;
+              }
+            }
           }
           span {
             position: absolute;
             left: 50%;
             transform: translateX(-50%) translateY(-50%);
             top: 50%;
-            @media all and (min-width: $sm-min) {mix-blend-mode: difference;}
+            @media all and (min-width: $sm-min) {
+              mix-blend-mode: difference;
+            }
             z-index: 2;
           }
         }
