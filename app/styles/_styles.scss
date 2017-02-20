@@ -9,6 +9,23 @@ body {
   color: $black;
 }
 
+@media all and (max-width: $xs-max) {
+  body:before {
+    transition: background-color $transition-slower;
+    content: "";
+    display: block;
+    width: 100vw;
+    height: 10em;
+    background-color: rgba(0,0,0,0.5);
+    position: fixed;
+    top: 0;
+    z-index: 10;
+  }
+  .menu-open:before {
+    background-color: rgba(0,0,0,0);
+  }
+}
+
 .brand-logo {
   transition: all $transition-slower;
   background-image: url("../images/logo-inverse.svg");
@@ -22,7 +39,7 @@ body {
   height: 4vw;
   background-repeat: no-repeat;
   background-size: contain;
-  mix-blend-mode: difference;
+  @media all and (min-width: $sm-min) {mix-blend-mode: difference;}
 
   @media all and (max-width: $xs-max) {
     left: 0;
@@ -41,6 +58,9 @@ body {
   overflow: hidden;
   .brand-logo {
     position: fixed;
+  @media all and (max-width: $xs-max) {
+    background-image: url("../images/logo.svg");
+  }
   }
   .menu {
     opacity: 1;
@@ -142,10 +162,13 @@ main {
   font-size: 6vw;
   z-index: 10;
   font-weight: 300;
-  mix-blend-mode: difference;
+  @media all and (min-width: $sm-min) {mix-blend-mode: difference;}
   &.active {
     transform: rotate(-45deg);
     transform-origin: 55% 50%;
+  @media all and (max-width: $xs-max) {
+  color: $black;
+}
   }
   @media all and (max-width: $xs-max) {
     font-size: 15vw;
@@ -379,8 +402,10 @@ main {
     .lead {
       padding-top: 3.8vw;
       p {
-        font-size: 1.25vw;
-        line-height: 1.75vw;
+        @media all and (min-width: $sm-min) {
+          font-size: 1.25vw;
+          line-height: 1.75vw;
+        }
         &:first-of-type {
           margin-top: 1.3vh;
         }
@@ -1402,7 +1427,7 @@ footer {
   }
   .brand-logo,.contact-page-closer {
     z-index: 13;
-    mix-blend-mode: normal;
+    @media all and (min-width: $sm-min) {mix-blend-mode: normal;}
   }
   .contact-page-thanks {
     position: absolute;
@@ -1575,7 +1600,7 @@ footer {
             left: 50%;
             transform: translateX(-50%) translateY(-50%);
             top: 50%;
-            mix-blend-mode: difference;
+            @media all and (min-width: $sm-min) {mix-blend-mode: difference;}
             z-index: 2;
           }
         }
