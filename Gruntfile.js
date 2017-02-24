@@ -41,12 +41,12 @@ module.exports = function(grunt) {
                     livereload: '<%= connect.options.livereload %>'
                 }
             },
-            compass: {
+            sass: {
                 files: [
                     '<%= appConfig.app %>/styles/**/*.{scss,sass}',
                     '<%= appConfig.app %>/modules/*/styles/**/*.{scss,sass}'
                 ],
-                tasks: ['compass:server', 'autoprefixer']
+                tasks: ['sass', 'autoprefixer']
             },
             gruntfile: {
                 files: ['Gruntfile.js']
@@ -192,13 +192,33 @@ module.exports = function(grunt) {
                 baseUrl: '',
             },
             server: {
+                files: [{
+                    '.tmp/index.html': '<%= appConfig.app %>/index.html',
+                    '.tmp/about.html': '<%= appConfig.app %>/about.html'
+                }]
+            },
+            dist: {
                 files: {
-                    '.tmp/index.html': '<%= appConfig.app %>/index.html'
+                    '<%= appConfig.dist %>/index.html': '<%= appConfig.app %>/index.html',
+                    '<%= appConfig.dist %>/about.html': '<%= appConfig.app %>/about.html'
+                }
+            }
+        },
+
+        processhtml: {
+            options: {
+                includeBase: '<%= appConfig.app %>'
+            },
+            server: {
+                files: {
+                    '.tmp/index.html': '.tmp/index.html',
+                    '.tmp/about.html': '.tmp/about.html'
                 }
             },
             dist: {
                 files: {
-                    '<%= appConfig.dist %>/index.html': '<%= appConfig.app %>/index.html'
+                    'dist/index.html': '<%= appConfig.dist %>/index.html',
+                    'dist/about.html': '<%= appConfig.dist %>/about.html'
                 }
             }
         },
@@ -406,6 +426,7 @@ module.exports = function(grunt) {
             'clean:server',
             'wiredep',
             'includeSource:server',
+            'processhtml:server',
             'sass',
             'autoprefixer',
             'connect:livereload',
@@ -417,6 +438,7 @@ module.exports = function(grunt) {
         'clean:dist',
         'wiredep',
         'includeSource:dist',
+        'processhtml:dist',
         'useminPrepare',
         'sass',
         'imagemin',

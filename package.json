@@ -31,6 +31,7 @@
         "grunt-google-cdn": "0.4.3",
         "grunt-include-source": "1.0.0",
         "grunt-newer": "1.2.0",
+        "grunt-processhtml": "^0.4.1",
         "grunt-release": "0.14.0",
         "grunt-sass": "2.0.0",
         "grunt-svgmin": "4.0.0",

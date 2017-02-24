@@ -2,29 +2,45 @@
 
 $(document).ready(function() {
 
-  var menuToggle = $('.menu-toggle');
-  var body = $('body');
+    $('a[href*="#"]:not([href="#"])').click(function() {
+        if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') && location.hostname == this.hostname) {
+            var target = $(this.hash);
+            target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
+            if (target.length) {
+                $('html, body').animate({
+                    scrollTop: target.offset().top
+                }, 1000);
+                return false;
+            }
+        }
+    });
 
-  function toggleMenu() {
-    menuToggle.toggleClass('active');
-    body.toggleClass('menu-open');
-  }
+    $('.menu-opener').click(function() {
+        $(this).toggleClass('open');
+        $('.menu').toggleClass('menu-active');
+        $('.global-wrapper').toggleClass('menu-active');
+        $('body').toggleClass('menu-active');
+    });
 
-  menuToggle.click(toggleMenu);
-  $('.menu a').click(toggleMenu);
+    $('.menu-home').hover(
+        function() { $('.cover-home').addClass('hover'); },
+        function() { $('.cover-home').removeClass('hover'); }
+    );
+    $('.menu-about').hover(
+        function() { $('.cover-about').addClass('hover'); },
+        function() { $('.cover-about').removeClass('hover'); }
+    );
+    $('.menu-join').hover(
+        function() { $('.cover-join').addClass('hover'); },
+        function() { $('.cover-join').removeClass('hover'); }
+    );
+    $('.menu-contact').hover(
+        function() { $('.cover-contact').addClass('hover'); },
+        function() { $('.cover-contact').removeClass('hover'); }
+    );
+    $('.menu-blog').hover(
+        function() { $('.cover-blog').addClass('hover'); },
+        function() { $('.cover-blog').removeClass('hover'); }
+    );
 
-  $(function() {
-  $('a[href*="#"]:not([href="#"])').click(function() {
-    if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
-      var target = $(this.hash);
-      target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
-      if (target.length) {
-        $('html, body').animate({
-          scrollTop: target.offset().top
-        }, 1000);
-        return false;
-      }
-    }
-  });
-});
 });
