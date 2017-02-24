@@ -52,8 +52,8 @@ module.exports = function(grunt) {
                 files: ['Gruntfile.js']
             },
             html: {
-                files: ['<%= appConfig.app %>/*.html'],
-                tasks: ['includeSource:server']
+                files: ['<%= appConfig.app %>/**/*.html'],
+                tasks: ['includeSource:server', 'processhtml:server']
             },
             livereload: {
                 options: {
