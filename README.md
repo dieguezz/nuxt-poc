@@ -6,7 +6,6 @@
 # Installation
 
 ```
-gem install compass scss-lint
 npm install -g bower grunt-cli protractor
 npm install
 bower install
