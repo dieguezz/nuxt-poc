@@ -1,7 +1,6 @@
 
 
-
-# etéreo website ![build status](https://gitlab.com/etereo/40persona-app/badges/master/build.svg)
+# etéreo website ![build status](https://gitlab.com/etereo/etereo-website/badges/master/build.svg)
 
 ## Installation
 
