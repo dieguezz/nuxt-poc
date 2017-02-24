@@ -134,6 +134,9 @@ header {
         position: absolute;
         top: 35px;
         left: 35px;
+        a {
+            display: block;
+        }
     }
     .menu-opener {
         width: 33px;
