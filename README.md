@@ -1,9 +1,9 @@
 
-# Project Management
 
-* [GIT](https://bitbucket.org/etereo/etereo-website)
 
-# Installation
+# etéreo website ![build status](https://gitlab.com/etereo/40persona-app/badges/master/build.svg)
+
+## Installation
 
 ```
 npm install -g bower grunt-cli protractor
@@ -13,14 +13,14 @@ webdriver-manager update
 ```
 
 
-# Build project
+## Build project
 
 ```
 grunt build
 ```
 
 
-# Run project
+## Run project
 
 * Dev mode
 	
@@ -34,7 +34,7 @@ grunt build
 	grunt serve:dist
 	```
 
-## Supported options
+### Supported options
 
   * **serverPort** (`9000`): Change server port.
   * **testPort** (`9001`): Change test port
@@ -44,8 +44,3 @@ grunt build
 	grunt serve --serverPort 9003 --testPort 1234
 	```
 
-# Release
-
-```
-grunt release:1.2.3
-```
