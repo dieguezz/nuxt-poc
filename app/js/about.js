@@ -1,6 +1,6 @@
 $(document).ready(function() {
 
-    $('.join-us-apply').click(function() {
+    $('#join-us .central-content .button').click(function() {
         $('.join-us-main').toggleClass('join-us-etereotypes-open');
         $('.join-us-etereotypes').toggleClass('join-us-etereotypes-open');
         $('.join-us-apply-closer').toggleClass('join-us-etereotypes-open');
