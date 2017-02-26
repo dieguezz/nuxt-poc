@@ -242,7 +242,10 @@
                 <form id="join-us-form">
                     <input id="name" name="name" type="text" placeholder="Your full name..." required>
                     <input id="email" name="email" type="email" placeholder="Your email..." email required>
-                    <input id="cv" name="cv" type="file" value="Your CV..." placeholder="Your CV..." email required>
+                    <div class="input-file">
+                        <input type="text" value="Your CV..." placeholder="Your CV...">
+                        <input id="cv" name="cv" type="file" value="Your CV..." placeholder="Your CV..." required>
+                    </div>
                     <textarea id="message" name="message" rows="8" cols="80" placeholder="A bit about you..." required></textarea>
                     <a class="button sender"><span>Send</span></a>
                 </form>

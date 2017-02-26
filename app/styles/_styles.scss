@@ -1702,3 +1702,13 @@ footer {
         }
     }
 }
+
+.input-file {
+    position: relative;
+    input[type="file"] {
+        cursor: pointer;
+        opacity: 0;
+        position: absolute;
+        top: -22px;
+    }
+}
