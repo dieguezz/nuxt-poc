@@ -5,7 +5,7 @@
 $(document).ready(function() {
 
     var sr = ScrollReveal();
-    sr.reveal('.twitter-news-slides, #about-us h2, #about-us h3, #about-us a, #about-us p, #people h2, #people h3, #people a, #people p, #services h2, #services h3, #services a, #services p, #contact-us h2, #contact-us h3, #contact-us p, #blog-news a, #how-to h2, #how-to a, #twitter-news h2, #blog-news h2, .call-dna, .etereotypes-list-unit, .etereotypes-cons h2, .etereotypes-cons p, .etereotypes-about-you h2, #about-intro h2, #about-intro h4, #about-intro q, #about-intro .about-us-pictures', {
+    sr.reveal('.reveal', {
         easing: 'ease-in-out',
         scale: '1',
         reset: 'true',
