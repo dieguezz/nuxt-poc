@@ -11,122 +11,6 @@ body {
     }
 }
 
-section {
-    display: block;
-    position: relative;
-    padding: 150px 0;
-    @media all and (max-width: $xs-max) {
-        padding: 4em 0;
-    }
-    h2 {
-        position: relative;
-        font-size: 64px;
-        letter-spacing: 1px;
-        &::after {
-            content: '';
-            position: absolute;
-            width: 80px;
-            height: 2px;
-            background: $red;
-            bottom: -50px;
-            left: 0;
-        }
-        &::before {
-            font-family: 'Playfair Display', serif;
-            position: absolute;
-            color: $gray-dark;
-            font-size: 24px;
-            font-style: italic;
-            font-weight: 300;
-            letter-spacing: 1px;
-            top: -30px;
-            left: 50%;
-            transform: translateX(-50%) translateY(-10px);
-        }
-        @media all and (max-width: $xs-max) {
-            font-size: 40px;
-            &::before {
-                font-size: 19px;
-                top: -3em;
-                transform: translateX(-50%);
-                width: 60%;
-            }
-        }
-    }
-    h3 {
-        font-family: 'Playfair Display', serif;
-        font-size: 24px;
-        font-weight: 300;
-        letter-spacing: .5px;
-    }
-}
-
-a {
-    text-decoration: none;
-}
-
-.clear {
-    clear: both;
-}
-
-.button {
-    text-transform: uppercase;
-    letter-spacing: 2px;
-    padding: 25px 40px;
-    font-size: 18px;
-    transition: all .3s ease-in-out;
-    display: inline-block;
-}
-
-.bg-white {
-    background: $white;
-    color: $black;
-    a.button {
-        background-color: $black;
-        color: $white;
-        &:hover {
-            background-color: $white;
-            color: $black;
-            box-shadow: 0px 5px 50px rgba(0, 0, 0, .25);
-        }
-    }
-}
-
-.bg-gray {
-    background: $gray-light;
-    color: $black;
-    a.button {
-        background-color: $black;
-        color: $white;
-        &:hover {
-            background-color: $white;
-            color: $black;
-            box-shadow: 0px 5px 50px rgba(0, 0, 0, .25);
-        }
-    }
-}
-
-.bg-black {
-    background: $black;
-    color: $gray-light;
-    a.button {
-        background-color: $white;
-        color: $black;
-        &:hover {
-            background-color: $black;
-            color: $white;
-            box-shadow: 0px 5px 50px rgba(256, 256, 256, .25);
-        }
-    }
-}
-
-.container {
-    width: calc(100% - 60px);
-    max-width: 1650px;
-    padding: 30px;
-    margin: 0 auto;
-}
-
 
 /* -------------- */
 
@@ -1010,97 +894,6 @@ header {
 }
 
 
-/* Home > Contact Us */
-
-#contact-us {
-    text-align: center;
-    padding: 300px 0;
-    .link-small {
-        color: $gray-dark;
-        text-transform: uppercase;
-        letter-spacing: 2px;
-        display: block;
-        position: absolute;
-        bottom: 50px;
-        left: 50%;
-        transform: translateX(-50%);
-        &::after {
-            content: '';
-            position: absolute;
-            left: 50%;
-            transform: translateX(-50%);
-            height: 25px;
-            width: 1px;
-            background: $gray-dark;
-            bottom: -50px;
-        }
-    }
-    h2 {
-        margin-bottom: 200px;
-        &::before {
-            content: 'Only one step away';
-        }
-        &::after {
-            display: none;
-        }
-    }
-    .contact-us-unit {
-        display: inline-block;
-        text-align: center;
-        padding: 0 75px;
-        margin: 0;
-        a {
-            font-size: 32px;
-            letter-spacing: 1.5px;
-            color: $black;
-            font-weight: 600;
-            margin: 0;
-            &::before {
-                content: 'Mail Us';
-                position: absolute;
-                text-transform: uppercase;
-                top: -30px;
-                font-size: 16px;
-                letter-spacing: 1.5px;
-                color: $gray-dark;
-                margin: 0 auto;
-                left: 0;
-                right: 0;
-            }
-            &:nth-of-type(1) {
-                &::before {
-                    content: 'Mail Us';
-                }
-            }
-            &:nth-of-type(2) {
-                &::before {
-                    content: 'Tweet Us';
-                }
-            }
-            &:nth-of-type(3) {
-                &::before {
-                    content: 'Call Us';
-                }
-            }
-        }
-    }
-    @media all and (max-width: $sm-max) {
-        padding: 2em 0;
-        h2 {
-            margin-bottom: 3em;
-        }
-        .container {
-            display: flex;
-            flex-direction: column;
-            .contact-us-unit {
-                padding: 0;
-                margin-bottom: 7em;
-            }
-        }
-    }
-}
-
-
 /* Home > Join Us */
 
 #join-us {
@@ -1307,10 +1100,12 @@ header {
             padding: 0;
         }
         .etereotypes-about-you {
-            padding: 150px 0;
-            @media all and (max-width: $xs-max) {
-                padding: 2em 0;
-            }
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            align-content: center;
+            justify-content: center;
             h2 {
                 &::before {
                     content: 'Simply fall in love?';
@@ -1362,7 +1157,6 @@ header {
                 text-transform: uppercase;
                 transition: all .5s ease-in-out;
                 margin-top: 15px;
-                float: left;
                 cursor: pointer;
                 &:hover {
                     box-shadow: 0px 5px 50px rgba(256, 256, 256, .2);
@@ -1409,11 +1203,11 @@ header {
     }
     .etereotypes-thanks {
         opacity: 0;
-        visibility: hidden;
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translateY(-50%) translateX(-50%);
+        display: none;
+        &.show {
+            opacity: 1;
+            display: block;
+        }
     }
     .join-us-apply-closer {
         position: fixed;

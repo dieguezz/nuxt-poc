@@ -5,6 +5,12 @@ $(document).ready(function() {
 
     $('.etereotypes-about-you .sender').click(function() {
         $('.sender').addClass('sending');
+        setTimeout(function() {
+            $('.etereotypes-about-you-form').addClass('hidden');
+            $('.etereotypes-thanks').addClass('show');
+            $('.sender').removeClass('sending');
+        }, 2000);
+        return;
         var xhr = new XMLHttpRequest();
         xhr.open('POST', 'services/email.php', true);
 
@@ -14,8 +20,8 @@ $(document).ready(function() {
         xhr.onreadystatechange = function() { //Call a function when the state changes.
             if (xhr.readyState === XMLHttpRequest.DONE && xhr.status === 200) {
                 setTimeout(function() {
-                    $('.contact-page-thanks').addClass('show');
-                    $('.contact-page-thanks-layer').addClass('show');
+                    $('.etereotypes-thanks').addClass('show');
+                    $('.sender').removeClass('sending');
                 }, 2000);
             }
         };
@@ -25,5 +31,10 @@ $(document).ready(function() {
             message: $('#contact-form #message').val()
         }));
     });
+
+    $('.close-thanks').click(function() {
+        $('.etereotypes-about-you-form').removeClass('hidden');
+        $('.etereotypes-thanks').removeClass('show');
+    })
 
 });
