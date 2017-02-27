@@ -789,7 +789,7 @@ header {
             background: url('../images/fingerprint.svg');
             background-size: cover;
             top: 50%;
-            left: 25%;
+            left: 20%;
             right: 0px;
             margin: 0 auto;
             transform: translateX(-50%) translateY(-50%) rotate(-15deg);
@@ -1196,6 +1196,9 @@ header {
         &.join-us-etereotypes-open {
             left: 0;
         }
+        &.contact-form-etereotypes>.container {
+            padding: 0;
+        }
         .etereotypes-list {
             margin-bottom: 100px;
             .etereotypes-list-unit {
@@ -1299,6 +1302,9 @@ header {
                 font-size: 20px;
                 line-height: 32px;
             }
+        }
+        &.contact-form-etereotypes .etereotypes-about-you {
+            padding: 0;
         }
         .etereotypes-about-you {
             padding: 150px 0;
