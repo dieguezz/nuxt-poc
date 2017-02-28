@@ -1,0 +1,75 @@
+/* Home > People */
+
+#people {
+    padding: 0;
+    .people-description {
+        display: inline-block;
+        width: 35%;
+        padding: 150px 10%;
+        h2 {
+            max-width: 512px;
+            &::after {
+                left: 0;
+            }
+        }
+        p {
+            max-width: 520px;
+            font-size: 20px;
+            line-height: 32px;
+            color: $gray-dark;
+            font-weight: 300;
+            padding-top: 50px;
+            margin-bottom: 75px;
+        }
+    }
+    .people-pictures {
+        position: absolute;
+        display: inline-block;
+        width: 45%;
+        background: transparent;
+        height: 100%;
+        right: 0;
+        top: 0;
+        .people-pictures-unit {
+            position: absolute;
+            width: 100%;
+            height: 50%;
+            background-size: cover;
+            filter: grayscale(100%);
+            transition: all .3s ease-in-out;
+            &:hover {
+                filter: grayscale(0%);
+            }
+            &:first-child {
+                top: 0;
+                background-image: url('../images/about-1.png');
+            }
+            &:last-child {
+                bottom: 0;
+                background-image: url('../images/about-2.jpg');
+            }
+        }
+    }
+    @media all and (max-width: $xs-max) {
+        display: flex;
+        flex-direction: column;
+        .people-description {
+            width: 90%;
+            padding: 2em 1em;
+            h2 {
+                font-size: 45px;
+            }
+            p {
+                font-size: 18px;
+            }
+        }
+        .people-pictures {
+            width: 100%;
+            position: relative;
+            .people-pictures-unit {
+                position: relative;
+                height: 50vh;
+            }
+        }
+    }
+}
