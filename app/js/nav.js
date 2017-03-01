@@ -15,11 +15,13 @@ $(document).ready(function() {
         }
     });
 
-    function toggleMenu() {
-        $('.menu-opener').toggleClass('open');
-        $('.menu').toggleClass('menu-active');
-        $('.global-wrapper').toggleClass('menu-active');
-        $('body').toggleClass('menu-active');
+    function toggleMenu(evt) {
+        if (evt.delegateTarget.dataset.target === 'menu') {
+            $('.menu-opener').toggleClass('open');
+            $('.menu').toggleClass('menu-active');
+            $('.global-wrapper').toggleClass('menu-active');
+            $('body').toggleClass('menu-active');
+        }
     }
 
     $('.menu-opener').click(toggleMenu);

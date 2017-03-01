@@ -4,50 +4,49 @@
 
     $(document).ready(function() {
 
-        var menuToggle = $('.menu-toggle');
+        function toggleMenu(evt) {
+            if (evt.delegateTarget.dataset.target === 'people') {
+                $('header .menu-opener').toggleClass('open menu-opener-people');
+                $('header .menu-opener').attr('data-target', 'menu');
+                $('.people-bio').addClass('out');
+                $('.people-bio .bio-content').addClass('out');
+                $('.people-bio .bio-image').addClass('out');
+                $('body').removeClass('people-bio-open');
+                setTimeout(function() {
+                    $('.people-bio').removeClass('out');
+                    $('.people-bio').removeClass('show');
+                    $('.bio-image').removeClass('out');
+                    $('.bio-content').removeClass('out');
+                }, 1200);
+            }
+        }
+
+        $('.menu-opener').click(toggleMenu);
+
+        function showBio(bioClass) {
+            $('header .menu-opener').toggleClass('open menu-opener-people');
+            $('header .menu-opener').attr('data-target', 'people');
+            $(bioClass).toggleClass('show');
+            $('body').toggleClass('people-bio-open');
+        }
 
         $('.bio-opener-hayder').on('click', function() {
-            $('.bio-hayder').toggleClass('show');
-            $('body').toggleClass('people-bio-open');
-            menuToggle.toggle();
+            showBio('.bio-hayder');
         });
         $('.bio-opener-anthanh').on('click', function() {
-            $('.bio-anthanh').toggleClass('show');
-            $('body').toggleClass('people-bio-open');
-            menuToggle.toggle();
+            showBio('.bio-anthanh');
         });
         $('.bio-opener-huibert').on('click', function() {
-            $('.bio-huibert').toggleClass('show');
-            $('body').toggleClass('people-bio-open');
-            menuToggle.toggle();
+            showBio('.bio-huibert');
         });
         $('.bio-opener-ruben').on('click', function() {
-            $('.bio-ruben').toggleClass('show');
-            $('body').toggleClass('people-bio-open');
-            menuToggle.toggle();
+            showBio('.bio-ruben');
         });
         $('.bio-opener-daniel').on('click', function() {
-            $('.bio-daniel').toggleClass('show');
-            $('body').toggleClass('people-bio-open');
-            menuToggle.toggle();
+            showBio('.bio-daniel');
         });
         $('.bio-opener-ismael').on('click', function() {
-            $('.bio-ismael').toggleClass('show');
-            $('body').toggleClass('people-bio-open');
-            menuToggle.toggle();
-        });
-        $('.people-bio .bio-closer').on('click', function() {
-            $('.people-bio').addClass('out');
-            $('.people-bio .bio-content').addClass('out');
-            $('.people-bio .bio-image').addClass('out');
-            $('body').removeClass('people-bio-open');
-            setTimeout(function() {
-                menuToggle.toggle();
-                $('.people-bio').removeClass('out');
-                $('.people-bio').removeClass('show');
-                $('.bio-image').removeClass('out');
-                $('.bio-content').removeClass('out');
-            }, 1200);
+            showBio('.bio-ismael');
         });
 
     });
