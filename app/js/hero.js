@@ -12,7 +12,8 @@ $(document).ready(function() {
 
     function fadeHero() {
         requestAnimationFrame(function() {
-            $('.hero h2.opacityscroll').css('opacity', (1 - ($('.hero').offset().top - position) * 0.005));
+            var offset = $('.hero').offset() || {};
+            $('.hero h2.opacityscroll').css('opacity', (1 - (offset.top - position) * 0.005));
         });
     }
 

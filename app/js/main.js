@@ -18,7 +18,9 @@ $(document).ready(function() {
     sr.reveal('.how-to-unit', { duration: 1000, scale: '1', easing: 'ease-in-out', reset: 'true', distance: '50px' }, 50);
     sr.reveal('.people-pictures-unit', { duration: 1000, scale: '1', easing: 'ease-in-out', reset: 'true', distance: '50px' }, 50);
 
-    var rellax = new Rellax('.rellax');
+    if ($('.rellax').length) {
+        var rellax = new Rellax('.rellax');
+    }
 
     $('.values-container').slick({
         dots: false,
