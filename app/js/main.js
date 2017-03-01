@@ -32,8 +32,4 @@ $(document).ready(function() {
         speed: 1200,
     });
 
-    if (location.hash === '#join-us' || location.hash === '#contact-us') {
-        window.scrollTo(0, document.body.scrollHeight);
-    }
-
 });
