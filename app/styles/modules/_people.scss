@@ -305,10 +305,17 @@
                         opacity: 1;
                     }
                 }
+                h3 {
+                  font-family: 'Mark', Helvetica, Arial, sans-serif;
+                  font-weight: 500;
+                  font-size: 42px;
+                }
                 p {
                     color: $black;
-                    line-height: 1.5;
-                    font-size: 15px;
+                    line-height: 1.6;
+                    font-size: 20px;
+                    max-width: 700px;
+                    margin-bottom: 50px;
                     &.people-title {
                         text-transform: uppercase;
                         color: #ddd;
@@ -316,6 +323,11 @@
                     @media all and (max-width: $xs-max) {
                         font-size: 3vw;
                     }
+                }
+                a {
+                  color: $black;
+                  font-size: 20px;
+                  margin-right: 10px;
                 }
             }
             .bio-next {
