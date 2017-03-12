@@ -396,24 +396,72 @@
       margin-left: 225px;
       background: url('/images/icons/community-white.svg');
       transition: all .5s ease-in-out;
+      &::after {
+        content: 'Community';
+        position: absolute;
+        /*bottom: -25px;*/
+        top: 50%;
+        left: 50%;
+        transform: translateX(-50%) translateY(-50%);
+        width: 100%;
+        max-width: 120px;
+        overflow: hidden;
+        text-align: center;
+        text-shadow: 0px 5px 25px rgba(23,26,28,1);
+        text-transform: uppercase;
+        letter-spacing: 3px;
+        font-size: 12px;
+        transition: all .5s ease-in-out;
+      }
+      &:hover {
+        background: url('/images/icons/community.svg');
+        &::after {
+          color: $black;
+          text-shadow: 0px 5px 25px rgba(243,243,243,1);
+        }
+      }
       &.how-to-2 {
         animation-delay: 3s;
         background: url('/images/icons/freedom-white.svg');
+        &::after {
+          content: 'Freedom';
+        }
+        &:hover {
+          background: url('/images/icons/freedom.svg');
+        }
       }
 
       &.how-to-3 {
         animation-delay: 6s;
         background: url('/images/icons/competence-white.svg');
+        &::after {
+          content: 'Competence';
+        }
+        &:hover {
+          background: url('/images/icons/competence.svg');
+        }
       }
 
       &.how-to-4 {
         animation-delay: 9s;
         background: url('/images/icons/citizenship-white.svg');
+        &::after {
+          content: 'Citizenship';
+        }
+        &:hover {
+          background: url('/images/icons/citizenship.svg');
+        }
       }
 
       &.how-to-5 {
         animation-delay: 12s;
         background: url('/images/icons/professionalism-white.svg');
+        &::after {
+          content: 'Expertise';
+        }
+        &:hover {
+          background: url('/images/icons/professionalism.svg');
+        }
       }
       @keyframes circular-image {
         0% {
@@ -553,17 +601,20 @@
     transform: rotate(0deg);
   }
 
+
   100% {
     transform: rotate(360deg);
   }
 }
-#dec_three{animation-name:blasa; animation-duration:10s;animation-iteration-count:infinite; margin-left: 40px; margin-top: 40px;}
-#dec_four{animation-name:blasa; animation-duration:10s;animation-iteration-count:infinite; margin-left:40px; margin-top: 65px;}
-#dec_five{animation-name:blasa; animation-duration:10s;animation-iteration-count:infinite; margin-left:25px; margin-top: 85px;}
-#dec_six{animation-name:blasa; animation-duration:10s;animation-iteration-count:infinite; margin-top: 100px;}
-#dec_seven {animation-name:blasa; animation-duration:10s;animation-iteration-count:infinite; margin-left: -25px;margin-top:100px;}
-#dec_eight{animation-name:blasa; animation-duration:10s;animation-iteration-count:infinite; margin-left: -50px;margin-top:85px; }
-#dec_nine{animation-name:blasa; animation-duration:10s;animation-iteration-count:infinite; margin-left: -65px;margin-top: 65px; }
-#dec_ten{animation-name:blasa; animation-duration:10s;animation-iteration-count:infinite; margin-left: -65px; margin-top: 40px; }
-#dec_eleven{animation-name:blasa; animation-duration:10s;animation-iteration-count:infinite; margin-left: -50px; margin-top: 15px; }
-#dec_twelve{animation-name:blasa; animation-duration:10s;animation-iteration-count:infinite; margin-left: -25px;}
+#dec_one{animation-timing-function: linear; animation-name:blasa; animation-duration:20s;animation-iteration-count:infinite;}
+#dec_two{animation-timing-function: linear; animation-name:blasa; animation-duration:20s;animation-iteration-count:infinite;}
+#dec_three{animation-timing-function: linear; animation-name:blasa; animation-duration:20s;animation-iteration-count:infinite; margin-left: 40px; margin-top: 40px;}
+#dec_four{animation-timing-function: linear; animation-name:blasa; animation-duration:20s;animation-iteration-count:infinite; margin-left:40px; margin-top: 65px;}
+#dec_five{animation-timing-function: linear; animation-name:blasa; animation-duration:20s;animation-iteration-count:infinite; margin-left:25px; margin-top: 85px;}
+#dec_six{animation-timing-function: linear; animation-name:blasa; animation-duration:20s;animation-iteration-count:infinite; margin-top: 100px;}
+#dec_seven {animation-timing-function: linear; animation-name:blasa; animation-duration:20s;animation-iteration-count:infinite; margin-left: -25px;margin-top:100px;}
+#dec_eight{animation-timing-function: linear; animation-name:blasa; animation-duration:20s;animation-iteration-count:infinite; margin-left: -50px;margin-top:85px;}
+#dec_nine{animation-timing-function: linear; animation-name:blasa; animation-duration:20s;animation-iteration-count:infinite; margin-left: -65px;margin-top: 65px; }
+#dec_ten{animation-timing-function: linear; animation-name:blasa; animation-duration:20s;animation-iteration-count:infinite; margin-left: -65px; margin-top: 40px;}
+#dec_eleven{animation-timing-function: linear; animation-name:blasa; animation-duration:20s;animation-iteration-count:infinite; margin-left: -50px; margin-top: 15px; }
+#dec_twelve{animation-timing-function: linear; animation-name:blasa; animation-duration:20s;animation-iteration-count:infinite; margin-left: -25px;}
