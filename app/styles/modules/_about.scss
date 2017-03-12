@@ -359,6 +359,18 @@
 }
 
 #how-to-2 {
+  padding-bottom: 250px;
+  h2 {
+    text-align: center;
+    margin-bottom: 250px;
+    &::after {
+      display: none;
+    }
+
+    &::before {
+      content: 'Our process to success';
+    }
+  }
   .how-to-circular-outter {
     width: 550px;
     height: 550px;
@@ -367,10 +379,10 @@
     border: 1px solid $gray-dark;
     margin: 0 auto;
 
-    img {
+    .how-to-unit {
       width: 120px;
+      height: 134px;
       position: absolute;
-      background: #FFF;
       animation-name: circular-image;
       animation-duration: 15s;
       animation-fill-mode: forwards;
@@ -382,23 +394,26 @@
       opacity: 0;
       margin-top: 200px;
       margin-left: 225px;
-      /*&:hover {
-        animation-play-state: paused;
-      }*/
+      background: url('/images/icons/community-white.svg');
+      transition: all .5s ease-in-out;
       &.how-to-2 {
         animation-delay: 3s;
+        background: url('/images/icons/freedom-white.svg');
       }
 
       &.how-to-3 {
         animation-delay: 6s;
+        background: url('/images/icons/competence-white.svg');
       }
 
       &.how-to-4 {
         animation-delay: 9s;
+        background: url('/images/icons/citizenship-white.svg');
       }
 
       &.how-to-5 {
         animation-delay: 12s;
+        background: url('/images/icons/professionalism-white.svg');
       }
       @keyframes circular-image {
         0% {
