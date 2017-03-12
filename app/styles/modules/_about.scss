@@ -1,6 +1,99 @@
+.about-navigation {
+  position: fixed;
+  top: 100px;
+  left: 60px;
+  color: #FFF;
+  z-index: 50;
+  mix-blend-mode: difference;
+  ul {
+    padding: 0 0 0 30px;
+    li {
+      display: block;
+      padding: 0;
+      line-height: 10px;
+      position: relative;
+      transition: all .3s ease-in-out;
+      &:hover {
+        a {
+        color: #FFF;
+        opacity: 1;
+        }
+        &::before {
+          background: #FFF;
+          opacity: 1;
+        }
+      }
+      &.active {
+        line-height: 30px;
+        a {
+          opacity: 1;
+          color: #FFF;
+        }
+        &::before {
+          background: #FFF;
+          opacity: 1;
+          width: 75px;
+          left: -90px;
+        }
+      }
+      &::before {
+        content: '';
+        position: absolute;
+        width: 25px;
+        height: 1px;
+        background: $gray-dark;
+        top: 50%;
+        transform: translateY(-50%);
+        left: -50px;
+        opacity: .7;
+        transition: all .3s ease-in-out;
+      }
+      a {
+        color: $gray-dark;
+        text-transform: uppercase;
+        font-size: 12px;
+        letter-spacing: 1px;
+        transition: all .3s ease-in-out;
+        opacity: 0;
+      }
+    }
+  }
+}
+
 #about-intro {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  padding: 0;
+  text-align: center;
+  .about-intro-cover {
+    background: #171A1C;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: .75;
+    z-index: 11;
+  }
+  .container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateY(-50%) translateX(-50%);
+    z-index: 12;
+  }
+  video {
+    object-fit: cover;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    z-index: 10;
+    left: 0;
+    top: 0;
+  }
     h2 {
-        margin-top: 150px;
+      margin-top: 0;
         &::after {
             display: none;
         }
@@ -13,6 +106,7 @@
         color: $gray-dark;
         max-width: 800px;
         font-weight: 300;
+        margin: 0 auto;
     }
     q {
         font-size: 45px;
@@ -23,6 +117,7 @@
         max-width: 1100px;
         display: block;
         padding-top: 100px;
+        margin: 0 auto;
     }
     .about-us-pictures {
         margin-top: 100px;
@@ -73,6 +168,34 @@
             img {
                 filter: grayscale(0%);
                 transition: all 1s ease-in-out;
+                opacity: 1;
+            }
+        }
+    }
+    .scrolldown {
+        position: absolute;
+        bottom: 25px;
+        left: 50%;
+        transform: translateX(-50%);
+        color: $white;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        font-size: 12px;
+        animation-name: scrolldown;
+        animation-duration: 2s;
+        animation-fill-mode: forwards;
+        animation-iteration-count: infinite;
+        animation-timing-function: ease-in-out;
+        animation-delay: 0s;
+        z-index: 20;
+        @keyframes scrolldown {
+            0% {
+                opacity: 1;
+            }
+            50% {
+                opacity: .3;
+            }
+            100% {
                 opacity: 1;
             }
         }

@@ -112,6 +112,7 @@
         animation-iteration-count: infinite;
         animation-timing-function: ease-in-out;
         animation-delay: 0s;
+        z-index: 20;
         @keyframes scrolldown {
             0% {
                 opacity: 1;
