@@ -357,3 +357,198 @@
         }
     }
 }
+
+#how-to-2 {
+  .how-to-circular-outter {
+    width: 550px;
+    height: 550px;
+    border-radius: 50%;
+    position: relative;
+    border: 1px solid $gray-dark;
+    margin: 0 auto;
+
+    img {
+      width: 120px;
+      position: absolute;
+      background: #FFF;
+      animation-name: circular-image;
+      animation-duration: 15s;
+      animation-fill-mode: forwards;
+      animation-timing-function: linear;
+      animation-iteration-count: infinite;
+      animation-play-state: running;
+      left: 0;
+      top: 0;
+      opacity: 0;
+      margin-top: 200px;
+      margin-left: 225px;
+      /*&:hover {
+        animation-play-state: paused;
+      }*/
+      &.how-to-2 {
+        animation-delay: 3s;
+      }
+
+      &.how-to-3 {
+        animation-delay: 6s;
+      }
+
+      &.how-to-4 {
+        animation-delay: 9s;
+      }
+
+      &.how-to-5 {
+        animation-delay: 12s;
+      }
+      @keyframes circular-image {
+        0% {
+          opacity: 1;
+		transform: rotate(0deg)
+		           translate(-275px)
+		           rotate(0deg);
+	}
+	100% {
+    opacity: 1;
+		transform: rotate(360deg)
+		           translate(-275px)
+		           rotate(-360deg);
+	}
+      }
+    }
+    .how-to-circular-inner-1 {
+      position: absolute;
+      width: 350px;
+      height: 350px;
+      border: 2px dashed $gray-dark;
+      border-radius: 50%;
+      left: 50%;
+      top: 50%;
+      transform: translateX(-50%) translateY(-50%);
+      animation-name: circular-inner-1;
+      animation-duration: 12s;
+      animation-fill-mode: forwards;
+      animation-timing-function: linear;
+      animation-play-state: running;
+      animation-iteration-count: infinite;
+      animation-direction: reverse;
+        @keyframes circular-inner-1 {
+          0% {
+            transform: translateX(-50%) translateY(-50%) rotate(0deg);
+          }
+
+          100% {
+            transform: translateX(-50%) translateY(-50%) rotate(360deg);
+          }
+        }
+    }
+
+    .how-to-circular-inner-2 {
+      position: absolute;
+      width: 200px;
+      height: 200px;
+      border: 2px dashed $gray-dark;
+      border-radius: 50%;
+      left: 50%;
+      top: 50%;
+      transform: translateX(-50%) translateY(-50%);
+      animation-name: circular-inner-2;
+      animation-duration: 12s;
+      animation-fill-mode: forwards;
+      animation-timing-function: linear;
+      animation-play-state: running;
+      animation-iteration-count: infinite;
+        @keyframes circular-inner-2 {
+          0% {
+            transform: translateX(-50%) translateY(-50%) rotate(0deg);
+          }
+
+          100% {
+            transform: translateX(-50%) translateY(-50%) rotate(360deg);
+          }
+      }
+    }
+
+    .how-to-circular-inner-3 {
+      position: absolute;
+      width: 100px;
+      height: 100px;
+      border: 2px dashed $red;
+      border-radius: 50%;
+      left: 50%;
+      top: 50%;
+      transform: translateX(-50%) translateY(-50%);
+      animation-name: circular-inner-3;
+      animation-duration: 12s;
+      animation-fill-mode: forwards;
+      animation-timing-function: linear;
+      animation-play-state: running;
+      animation-iteration-count: infinite;
+      animation-direction: reverse;
+        @keyframes circular-inner-3 {
+          0% {
+            transform: translateX(-50%) translateY(-50%) rotate(0deg);
+          }
+
+          100% {
+            transform: translateX(-50%) translateY(-50%) rotate(360deg);
+          }
+      }
+    }
+  }
+}
+
+
+
+
+
+.central-object {
+  position: relative;
+  width: 350px;
+  height: 350px;
+  left: 50%;
+  top: 50%;
+  transform: translateX(-50%) translateY(-50%);
+  text-shadow: 0 0 black;
+  margin: -30px 0 0 -35px;
+  z-index: 99999999;
+  padding: 0;
+}
+.child {
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  border-radius: 100%;
+  border-style: dashed;
+  border-width: 1px;
+  border-color: $red;
+  top: 0%;
+  left: 0%;
+  z-index: -1;
+    }
+
+.decagon{
+  top: 30%;
+  left: 50%;
+  border-color: $red;
+}
+
+#dec_two {margin-left: 25px; margin-top: 15px;animation-name:blasa; animation-duration:10s;animation-iteration-count:infinite;}
+@keyframes blasa {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+#dec_three{animation-name:blasa; animation-duration:10s;animation-iteration-count:infinite; margin-left: 40px; margin-top: 40px;}
+#dec_four{animation-name:blasa; animation-duration:10s;animation-iteration-count:infinite; margin-left:40px; margin-top: 65px;}
+#dec_five{animation-name:blasa; animation-duration:10s;animation-iteration-count:infinite; margin-left:25px; margin-top: 85px;}
+#dec_six{animation-name:blasa; animation-duration:10s;animation-iteration-count:infinite; margin-top: 100px;}
+#dec_seven {animation-name:blasa; animation-duration:10s;animation-iteration-count:infinite; margin-left: -25px;margin-top:100px;}
+#dec_eight{animation-name:blasa; animation-duration:10s;animation-iteration-count:infinite; margin-left: -50px;margin-top:85px; }
+#dec_nine{animation-name:blasa; animation-duration:10s;animation-iteration-count:infinite; margin-left: -65px;margin-top: 65px; }
+#dec_ten{animation-name:blasa; animation-duration:10s;animation-iteration-count:infinite; margin-left: -65px; margin-top: 40px; }
+#dec_eleven{animation-name:blasa; animation-duration:10s;animation-iteration-count:infinite; margin-left: -50px; margin-top: 15px; }
+#dec_twelve{animation-name:blasa; animation-duration:10s;animation-iteration-count:infinite; margin-left: -25px;}
