@@ -68,3 +68,14 @@ $('.about-navigation li').click(function() {
     $('.about-navigation li.active').removeClass('active');
     $(this).addClass('active');
 });
+
+$('.how-to-circular-outter .how-to-1').click(function() {
+    $(this).removeClass('moving');
+    $(this).addClass('active');
+    $('.central-object').addClass('hide');
+    $('.how-to-description').addClass('active');
+    $('.how-to-2').addClass('moving-after');
+    $('.how-to-3').addClass('moving-after');
+    $('.how-to-4').addClass('moving-after');
+    $('.how-to-5').addClass('moving-after');
+});
