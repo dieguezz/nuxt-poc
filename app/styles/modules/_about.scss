@@ -393,7 +393,7 @@
       h3 {
         animation-name: how-to-description-title;
         animation-duration: 1s;
-        animation-delay: 1.5s;
+        animation-delay: 1s;
         animation-fill-mode: forwards;
         animation-timing-function: ease-in-out;
         opacity: 0;
@@ -422,7 +422,7 @@
       p {
         animation-name: how-to-description-text;
         animation-duration: 1s;
-        animation-delay: 2.5s;
+        animation-delay: 1.5s;
         animation-fill-mode: forwards;
         animation-timing-function: ease-in-out;
         opacity: 0;
@@ -463,7 +463,7 @@
       }
       &.active {
         animation-name: circular-image-selected;
-        animation-duration: 2s;
+        animation-duration: 1.5s;
         animation-fill-mode: forwards;
         animation-timing-function: ease-in-out;
         animation-play-state: running;
@@ -491,7 +491,7 @@
             top: -10px;
           }
 
-          75% {
+          60% {
             opacity: 1;
             left: -10px;
             top: -10px;
