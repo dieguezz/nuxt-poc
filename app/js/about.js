@@ -98,13 +98,21 @@ $('.about-navigation li').click(function() {
     $(this).addClass('active');
 });
 
-$('.how-to-circular-outter .how-to-1').click(function() {
-    $(this).removeClass('moving');
+var $active;
+
+$('.how-to-circular-outter .how-to-unit').click(function() {
+
+    var pos = $(this).attr('data-position');
+
+    if ($active)  {
+        $active.removeClass('active');
+        $active.addClass('how-to-' + pos);
+    }
+
+    $(this).removeClass('moving moving-after how-to-' + pos);
     $(this).addClass('active');
+    $('how-to-actionable:not(.active)').addClass('moving-after');
     $('.central-object').addClass('hide');
-    $('.how-to-description').addClass('active');
-    $('.how-to-2').addClass('moving-after');
-    $('.how-to-3').addClass('moving-after');
-    $('.how-to-4').addClass('moving-after');
-    $('.how-to-5').addClass('moving-after');
+    $(this).find('.how-to-description').addClass('active');
+    $active = $(this);
 });
