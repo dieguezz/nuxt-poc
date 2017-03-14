@@ -454,7 +454,7 @@
       opacity: 0;
       margin-top: 200px;
       margin-left: 225px;
-      background: url('/images/icons/community-white.svg');
+      background: url('');
       transition: all .5s ease-in-out;
       z-index: 20;
       cursor: pointer;
@@ -507,7 +507,7 @@
         }
       }
       &::after {
-        content: 'Community';
+        content: '';
         position: absolute;
         /*bottom: -25px;*/
         top: 50%;
@@ -523,67 +523,75 @@
         font-size: 12px;
         transition: all .5s ease-in-out;
       }
-      /*&:hover {
-        background: url('/images/icons/community.svg');
+
+      &.how-to-community {
+        background: url('/images/icons/community-white.svg');
         &::after {
-          color: $black;
-          text-shadow: 0px 5px 25px rgba(243,243,243,1);
+          content: 'Community';
         }
-      }*/
-      &.how-to-2 {
-        animation-delay: 3s;
+      }
+
+      &.how-to-freedom {
         background: url('/images/icons/freedom-white.svg');
-        &.moving-after {
-          animation-delay: 3.75s!important;
-        }
         &::after {
           content: 'Freedom';
         }
-        /*&:hover {
-          background: url('/images/icons/freedom.svg');
-        }*/
+      }
+
+      &.how-to-competence {
+        background: url('/images/icons/competence-white.svg');
+        &::after {
+          content: 'Competence';
+        }
+      }
+
+      &.how-to-citizenship {
+        background: url('/images/icons/citizenship-white.svg');
+        &::after {
+          content: 'Citizenship';
+        }
+      }
+
+      &.how-to-expertise {
+        background: url('/images/icons/professionalism-white.svg');
+        &::after {
+          content: 'Expertise';
+        }
+      }
+
+      &.how-to-1 {
+        animation-delay: 0s;
+        &.moving-after {
+          animation-delay: 0s!important;
+        }
+      }
+
+      &.how-to-2 {
+        animation-delay: 3s;
+        &.moving-after {
+          animation-delay: 3.75s!important;
+        }
       }
 
       &.how-to-3 {
         animation-delay: 6s;
-        background: url('/images/icons/competence-white.svg');
         &.moving-after {
           animation-delay: 7.5s!important;
         }
-        &::after {
-          content: 'Competence';
-        }
-        /*&:hover {
-          background: url('/images/icons/competence.svg');
-        }*/
       }
 
       &.how-to-4 {
         animation-delay: 9s;
-        background: url('/images/icons/citizenship-white.svg');
         &.moving-after {
           animation-delay: 11.25s!important;
         }
-        &::after {
-          content: 'Citizenship';
-        }
-        /*&:hover {
-          background: url('/images/icons/citizenship.svg');
-        }*/
       }
 
       &.how-to-5 {
         animation-delay: 12s;
-        background: url('/images/icons/professionalism-white.svg');
         &.moving-after {
           animation-delay: 15s!important;
         }
-        &::after {
-          content: 'Expertise';
-        }
-        /*&:hover {
-          background: url('/images/icons/professionalism.svg');
-        }*/
       }
       @keyframes circular-image {
         0% {
