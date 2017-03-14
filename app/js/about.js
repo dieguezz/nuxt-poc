@@ -111,7 +111,7 @@ $('.how-to-circular-outter .how-to-unit').click(function() {
 
     $(this).removeClass('moving moving-after how-to-' + pos);
     $(this).addClass('active');
-    $('how-to-actionable:not(.active)').addClass('moving-after');
+    $('.how-to-unit:not(.active)').addClass('moving-after');
     $('.central-object').addClass('hide');
     $(this).find('.how-to-description').addClass('active');
     $active = $(this);
