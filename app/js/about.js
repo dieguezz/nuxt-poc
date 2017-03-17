@@ -66,6 +66,18 @@ $(window).scroll(function() {
 
 var $active;
 
+var selectMenuItem = function ($menuItem) {
+  if ($active) {
+    $active.parent().removeClass('active');
+  }
+
+  $menuItem.parent().addClass('active');
+
+  $active = $menuItem;
+
+  return false;
+};
+
 // Bind to scroll
 $(window).scroll(function(){
    // Get container scroll position
@@ -73,24 +85,25 @@ $(window).scroll(function(){
    
    // Get id of current scroll item
    $('#top-menu').find('a').each(function(){
-     var href = $(this).attr('href'),
-         $el = $('.scroll-anchor[href="' + href + '"]'),
-         offset = $el.offset();
+      if ($(this) !== $active) {
 
-     if (offset.top >= 0) {
-        if ($(this) !== $active) {
-          if ($active) {
-            $active.parent().removeClass('active');
+        if (!$(this).parent().next().length) {
+          return selectMenuItem($(this));
+        } 
+
+        var href = $(this).attr('href'),
+            $el = $('.scroll-anchor[href="' + href + '"]'),
+            offset = $el.offset();
+
+          if (!offset) {
+            return;
           }
 
-          $(this).parent().addClass('active');
-
-          $active = $(this);
-
-          return false;
+        if (offset.top >= 0 || $(this).parent().next().find('a').offset().top < Math.abs(window.screenTop)) {
+          return selectMenuItem($(this));
         }
-     }
-   });          
+      }
+  });          
 });
 
 $('.about-navigation li').click(function() {
@@ -101,8 +114,11 @@ $('.about-navigation li').click(function() {
 var $active;
 
 $('.how-to-circular-outter .how-to-unit').click(function() {
-
-    var pos = $(this).attr('data-position');
+    var description = $(this).find('.how-to-description').html(),
+        centralDescription = $('#central-description'),
+        pos = $(this).attr('data-position');
+    
+    centralDescription.removeClass('active');
 
     if ($active)  {
         $active.removeClass('active');
@@ -113,6 +129,9 @@ $('.how-to-circular-outter .how-to-unit').click(function() {
     $(this).addClass('active');
     $('.how-to-unit:not(.active)').addClass('moving-after');
     $('.central-object').addClass('hide');
-    $(this).find('.how-to-description').addClass('active');
     $active = $(this);
+    centralDescription.html(description);
+    centralDescription.addClass('active');
+
+    // $(this).find('.how-to-description').addClass('active');
 });
