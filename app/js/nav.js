@@ -92,27 +92,18 @@ $(document).ready(function() {
 
   var waypoints = [];
 
-  // Bind to scroll
-  $(window).scroll(function() {
-    // Get container scroll position
-    var fromTop = $(this).scrollTop();
-
-    // Get id of current scroll item
-    $('#top-menu').find('a').each(function() {
-
-      var elem = $(this);
-      var href = elem.attr('href');
-      var waypoint = new Waypoint({
-        element: $('.scroll-anchor[href="' + href + '"]')[0],
-        handler: function() {
-          selectMenuItem(elem);
-        },
-        offset: '100%'
-      });
-
-      waypoints.push(waypoint);
-
+  // Get id of current scroll item
+  $('#top-menu').find('a').each(function() {
+    var elem = $(this);
+    var href = elem.attr('href');
+    var waypoint = new Waypoint({
+      element: $('.scroll-anchor[href="' + href + '"]')[0],
+      handler: function() {
+        selectMenuItem(elem);
+      },
+      offset: '100%'
     });
+    waypoints.push(waypoint);
   });
 
 });
