@@ -1,170 +1,91 @@
 /* Home > Twitter */
 
 #twitter-news {
-    padding-top: 370px;
-    text-align: center;
+  padding-top: 370px;
+  text-align: center;
+  h2 {
+    margin-bottom: 150px;
+    &::after {
+      display: none;
+    }
+  }
+  @media all and (max-width: $xs-max) {
+    padding: 10em 0 4em 0;
     h2 {
-        margin-bottom: 150px;
-        &::after {
-            display: none;
+      margin-bottom: 1em;
+    }
+  }
+  .twitter-news-slides {
+    text-align: left;
+    .slick-dots {
+      bottom: -75px;
+    }
+    .twitter-news-slides-unit {
+      border: 1px solid #D8D8D8;
+      border-radius: 4px;
+      padding: 25px;
+      margin: 0 25px;
+      background: url('../images/twitter-logo.svg');
+      background-size: 28px;
+      background-repeat: no-repeat;
+      background-position: 95% 20%;
+      @media all and (max-width: $xs-max) {
+        background-position: 95% 8%;
+      }
+      &:focus {
+        outline: none;
+        cursor: pointer;
+      }
+    }
+    .profile-user {
+      img {
+        width: 56px;
+        border-radius: 50%;
+        display: inline-block;
+        vertical-align: middle;
+      }
+      .profile-name {
+        display: inline-block;
+        vertical-align: middle;
+        padding-left: 20px;
+        h5 {
+          font-size: 20px;
+          color: $black;
+          margin: 0;
+          padding: 0;
+          text-align: left;
         }
+        h6 {
+          font-size: 16px;
+          color: $gray-dark;
+          margin: 0;
+          padding: 0;
+          text-align: left;
+        }
+      }
+      p {
+        text-align: left;
+        font-size: 18px;
+        font-family: 'Playfair Display', serif;
+        line-height: 28px;
+        color: $gray-dark;
+        font-weight: 300;
+        padding-top: 25px;
+      }
     }
     @media all and (max-width: $xs-max) {
-        padding: 10em 0 4em 0;
-        h2 {
-            margin-bottom: 1em;
+      .twitter-news-slides-unit {
+        background-position: 95% 8%;
+      }
+      .profile-user {
+        img {
+          width: 40px;
         }
+        p {
+          font-size: 15px;
+          padding: 0;
+        }
+      }
     }
-    .call-dna {
-        background: $red;
-        color: $red-dark;
-        font-size: 64px;
-        font-weight: 600;
-        letter-spacing: 1px;
-        width: 90%;
-        max-width: 1090px;
-        position: absolute;
-        text-align: center;
-        padding: 175px 0;
-        top: 0;
-        left: 0;
-        right: 0;
-        /*transform: translateX(-50%) translateY(-50%); (ScrollReveal crashes)*/
-        margin: -215px auto;
-        transition: all .3s ease-in-out;
-        box-shadow: 0 16px 25px 0 rgba(108, 24, 36, 0.40);
-        &::before {
-            content: 'Want to know more?';
-            position: absolute;
-            transition: all .3s ease-in-out;
-            font-family: 'Playfair Display';
-            font-style: italic;
-            font-weight: 300;
-            left: 50%;
-            transform: translateX(-50%) translateY(-25px);
-            font-size: 24px;
-            color: $red-dark;
-            letter-spacing: 0;
-        }
-        &::after {
-            content: '';
-            position: absolute;
-            width: 210px;
-            height: 220px;
-            background: url('../images/fingerprint.svg');
-            background-size: cover;
-            top: 50%;
-            left: 20%;
-            right: 0px;
-            margin: 0 auto;
-            transform: translateX(-50%) translateY(-50%) rotate(-15deg);
-            transition: all .3s ease-in-out;
-            z-index: -1;
-            opacity: .10;
-        }
-        &:hover {
-            background: $black;
-            color: $white;
-            box-shadow: 0 16px 150px 0 rgba(23, 26, 28, 0.40);
-            &::before {
-                color: $red;
-            }
-            &::after {
-                opacity: .25;
-            }
-        }
-        @media all and (max-width: $xs-max) {
-            font-size: 47px;
-            width: 90vw;
-            padding: 2.5em 0 2em;
-            top: 13px;
-            right: 5%;
-            left: auto;
-            margin: -3.2em auto;
-            &::before {
-                transform: translateX(-50%) translateY(-45px);
-                font-size: 20px;
-            }
-            &::after {
-                background-size: contain;
-                background-repeat: no-repeat;
-                width: 37%;
-                height: 50%;
-                left: 40%;
-            }
-        }
-    }
-    .twitter-news-slides {
-        text-align: left;
-        .slick-dots {
-            bottom: -75px;
-        }
-        .twitter-news-slides-unit {
-            border: 1px solid #D8D8D8;
-            border-radius: 4px;
-            padding: 25px;
-            margin: 0 25px;
-            background: url('../images/twitter-logo.svg');
-            background-size: 28px;
-            background-repeat: no-repeat;
-            background-position: 95% 20%;
-            @media all and (max-width: $xs-max) {
-                background-position: 95% 8%;
-            }
-            &:focus {
-                outline: none;
-                cursor: pointer;
-            }
-        }
-        .profile-user {
-            img {
-                width: 56px;
-                border-radius: 50%;
-                display: inline-block;
-                vertical-align: middle;
-            }
-            .profile-name {
-                display: inline-block;
-                vertical-align: middle;
-                padding-left: 20px;
-                h5 {
-                    font-size: 20px;
-                    color: $black;
-                    margin: 0;
-                    padding: 0;
-                    text-align: left;
-                }
-                h6 {
-                    font-size: 16px;
-                    color: $gray-dark;
-                    margin: 0;
-                    padding: 0;
-                    text-align: left;
-                }
-            }
-            p {
-                text-align: left;
-                font-size: 18px;
-                font-family: 'Playfair Display', serif;
-                line-height: 28px;
-                color: $gray-dark;
-                font-weight: 300;
-                padding-top: 25px;
-            }
-        }
-        @media all and (max-width: $xs-max) {
-            .twitter-news-slides-unit {
-                background-position: 95% 8%;
-            }
-            .profile-user {
-                img {
-                    width: 40px;
-                }
-                p {
-                    font-size: 15px;
-                    padding: 0;
-                }
-            }
-        }
-    }
+  }
 }
