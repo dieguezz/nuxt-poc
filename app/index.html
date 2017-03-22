@@ -70,10 +70,21 @@
   <!-- build:include templates/menu.html -->
   <!-- /build -->
 
+  <nav class="menu-navigation menu-active">
+    <ul id="top-menu">
+      <li><a href="#intro">Top</a></li>
+      <li><a href="#about-us">About us</a></li>
+      <li><a href="#services">What we do</a></li>
+      <li><a href="#how-to">How we do it</a></li>
+      <li><a href="#contact-us">Contact us</a></li>
+    </ul>
+  </nav>
+
   <!-- Global Wrapper -->
   <div class="global-wrapper">
     <!-- Section Intro -->
     <section id="intro" class="bg-black hero">
+      <a href="#intro" class="scroll-anchor"></a>
       <video src="images/video.mp4" loop autoplay></video>
       <div class="container">
         <div class="intro-slides">
@@ -89,6 +100,7 @@
     <!-- Section About Us -->
     <section id="about-us" class="bg-white">
       <div class="container">
+        <a href="#about-us" class="scroll-anchor"></a>
         <h2 class="reveal">From digital people,<br/>to people with digital ideas.</h2>
         <h3 class="reveal">Nunc non iaculis nunc. Praesent quis risus enim. Vestibulum malesuada mauris ipsum, vitae lacinia justo ultrices vestibulum. Maecenas lacinia luctus facilisis.</h3>
         <a href="about.html" class="button reveal">About us</a>
@@ -98,7 +110,6 @@
 
     <!-- Section People -->
     <section id="people-claim" class="bg-gray">
-
       <div class="people-description">
         <h2 class="reveal">People as basis of everything.</h2>
         <p class="reveal">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent leo mi, fringilla in nisi id, pharetra cursus nisi. Etiam vestibulum orci nec felis hendrerit sollicitudin. Donec mollis congue tellus sed luctus. Nulla ullamcorper porta odio et suscipit. Curabitur pharetra mauris sit amet nibh sagittis rutrum at at est. Curabitur sed tellus sapien. Orci varius natoque penatibus et magnis dis parturient montes.</p>
@@ -116,6 +127,7 @@
     <!-- Section Services -->
     <section id="services" class="bg-black">
       <div class="container">
+        <a href="#services" class="scroll-anchor"></a>
         <h2 class="reveal">What we do</h2>
         <div class="services-list">
           <div class="services-list-unit">
@@ -150,39 +162,30 @@
 
   <!-- Section Join Us -->
   <section id="join-us" class="bg-black contact-footer">
+    <a href="#join-us" class="scroll-anchor"></a>
     <div class="join-us-main container">
       <div class="central-content">
-        <img src="images/logo-icon.svg" alt="etéreo symbol">
-        <h2 class="contact-title">Unleash your potential with us</h2>
-        <a class="button join-us-apply">LET’S WORK TOGETHER</a>
-      </div>
-
-      <!-- build:include templates/footer.html -->
-      <!-- /build -->
-
-    </div>
-    <div class="join-us-etereotypes contact-form-etereotypes">
-      <div class="container">
-        <div class="join-us-apply-closer"></div>
-      </div>
-      <div class="etereotypes-about-you">
-        <div class="etereotypes-about-you-form">
-          <h2>Let's rock and roll!</h2>
+        <div class="footer-form">
+          <img src="images/logo-icon.svg" alt="etéreo symbol">
           <form id="join-us-form">
+            <h2>Let's rock and roll!</h2>
             <input id="name" name="name" type="text" placeholder="Your full name..." required>
             <input id="email" name="email" type="email" placeholder="Your email..." email required>
             <textarea id="message" name="message" rows="8" cols="80" placeholder="Your delicious message..." required></textarea>
             <a class="button sender"><span>Send</span></a>
           </form>
-        </div>
-        <div class="etereotypes-thanks">
-          <h3>Thank you for contacting!</h3>
-          <p>Your message has been sent succesfully, we will contact you in the next few hours.
-            <br>Have an awesome day!</p>
-          <a class="button close-thanks">KEEP BROWSING</a>
+          <div class="form-thanks">
+            <h3>Thank you for contacting!</h3>
+            <p>Your message has been sent succesfully, we will contact you in the next few hours.
+              <br>Have an awesome day!</p>
+            <a class="button form-thanks-close">KEEP BROWSING</a>
+          </div>
         </div>
       </div>
-    </div>
+
+      <!-- build:include templates/footer.html -->
+      <!-- /build -->
+
     </div>
   </section>
   <!-- End Section Join Us -->

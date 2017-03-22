@@ -133,6 +133,9 @@ header {
   z-index: 50;
   mix-blend-mode: difference;
   transform: translateX(-200%);
+  @media all and (max-width: $sm-min) {
+    display: none;
+  }
   &.menu-active {
     transform: translateX(0);
   }

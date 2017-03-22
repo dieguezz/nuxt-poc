@@ -1,0 +1,120 @@
+#about-us-values {
+  padding-bottom: 0;
+  h2 {
+    text-align: center;
+    &::before {
+      content: 'Our main values';
+    }
+    &::after {
+      display: none;
+    }
+  }
+  .values-unit {
+    display: block;
+    text-align: center;
+    margin: 400px auto;
+    max-width: 1200px;
+    &:last-child {
+      margin-bottom: 150px;
+    }
+    &.odd {
+      .values-unit-picture {
+        float: left;
+      }
+      .values-unit-description {
+        float: right;
+        padding-right: 0;
+      }
+    }
+    .values-unit-picture {
+      display: inline-block;
+      vertical-align: middle;
+      float: right;
+      position: relative;
+      .number-focus {
+        position: absolute;
+        top: 0;
+        left: 35px;
+        font-size: 150px;
+        color: $white;
+      }
+      img {
+        width: 100%;
+        max-width: 640px;
+      }
+    }
+    .values-unit-description {
+      display: inline-block;
+      width: calc(45% - 150px);
+      text-align: left;
+      padding-right: 150px;
+      position: relative;
+      vertical-align: middle;
+      float: left;
+      &:last-of-type {
+        padding-right: 0;
+        &::after {
+          display: none;
+        }
+      }
+      .values-unit-number {
+        font-size: 26px;
+        font-weight: 600;
+        position: relative;
+        text-align: center;
+        width: 100px;
+        height: 100px;
+        line-height: 100px;
+        margin: 0;
+        padding: 0;
+        &::before {
+          content: '';
+          position: absolute;
+          width: 100px;
+          height: 100px;
+          background: url('../images/hexagon.svg');
+          top: 0;
+          left: 0;
+          animation-name: hexagon;
+          animation-duration: 10s;
+          animation-iteration-count: infinite;
+          animation-fill-mode: forwards;
+          animation-timing-function: linear;
+          animation-delay: 0s;
+          @keyframes hexagon {
+            0% {
+              transform: rotate(0deg);
+            }
+            100% {
+              transform: rotate(360deg);
+            }
+          }
+        }
+      }
+      h3 {
+        font-size: 40px;
+        font-weight: 600;
+        letter-spacing: 0;
+        font-family: 'Mark', Helvetica, Arial, sans-serif;
+        position: relative;
+        margin-top: 10px;
+        &::after {
+          content: '';
+          position: absolute;
+          width: 80px;
+          height: 2px;
+          background: $red;
+          bottom: -30px;
+          left: 0;
+        }
+      }
+      p {
+        font-size: 20px;
+        font-weight: 300;
+        line-height: 32px;
+        color: $gray-dark;
+        padding-top: 25px;
+      }
+    }
+  }
+}

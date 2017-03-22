@@ -4,508 +4,266 @@
 /* Home > Intro */
 
 #intro {
-    height: calc(100vh - 0px);
+  height: calc(100vh - 0px);
 }
 
 .hero {
-    padding: 0;
-    top: 0;
-    background-color: $black;
-    color: $white;
-    display: flex;
-    align-items: center;
-    position: relative;
-    overflow: hidden;
+  padding: 0;
+  top: 0;
+  background-color: $black;
+  color: $white;
+  display: flex;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  transform: scale(1.3);
+  transition: all .5s ease-in-out;
+  animation-name: hero;
+  animation-duration: 2s;
+  animation-fill-mode: forwards;
+  animation-timing-function: ease-in-out;
+  animation-delay: 1.5s;
+  @keyframes hero {
+    0% {
+      transform: scale(1.3);
+    }
+    100% {
+      transform: scale(1);
+    }
+  }
+  video {
+    object-fit: cover;
+    height: 100%;
     width: 100%;
-    transform: scale(1.3);
-    transition: all .5s ease-in-out;
-    animation-name: hero;
-    animation-duration: 2s;
-    animation-fill-mode: forwards;
-    animation-timing-function: ease-in-out;
-    animation-delay: 1.5s;
-    @keyframes hero {
+    position: absolute;
+    z-index: -1;
+  }
+  h2 {
+    // ff and safari do not center with flex correctly
+    top: 43%;
+    width: 60vw;
+    text-align: center;
+    margin: 0 auto;
+    position: absolute;
+    text-transform: uppercase;
+    line-height: 1.5;
+    letter-spacing: 12px;
+    right: 0;
+    left: 0;
+    font-size: 42px;
+    line-height: 60px;
+    &::after {
+      display: none;
+    }
+    &::before {
+      content: 'We are etéreo';
+      text-transform: none;
+      top: -50px;
+    }
+    &.animation {
+      opacity: 0;
+      animation-name: hero-h1;
+      animation-duration: 1s;
+      animation-delay: 500ms;
+      animation-fill-mode: forwards;
+      animation-timing-function: ease-in-out;
+      @keyframes hero-h1 {
         0% {
-            transform: scale(1.3);
+          opacity: 0;
         }
         100% {
-            transform: scale(1);
+          opacity: 1;
         }
+      }
     }
-    video {
-        object-fit: cover;
-        height: 100%;
-        width: 100%;
-        position: absolute;
-        z-index: -1;
-    }
-    h2 {
-        // ff and safari do not center with flex correctly
-        top: 43%;
-        width: 60vw;
-        text-align: center;
-        margin: 0 auto;
-        position: absolute;
-        text-transform: uppercase;
-        line-height: 1.5;
-        letter-spacing: 12px;
-        right: 0;
-        left: 0;
-        font-size: 42px;
-        line-height: 60px;
-        &::after {
-            display: none;
-        }
-        &::before {
-            content: 'We are etéreo';
-            text-transform: none;
-            top: -50px;
-        }
-        &.animation {
-            opacity: 0;
-            animation-name: hero-h1;
-            animation-duration: 1s;
-            animation-delay: 500ms;
-            animation-fill-mode: forwards;
-            animation-timing-function: ease-in-out;
-            @keyframes hero-h1 {
-                0% {
-                    opacity: 0;
-                }
-                100% {
-                    opacity: 1;
-                }
-            }
-        }
-        span {
-            display: block;
-            &.animation {
-                opacity: 0;
-                animation-name: hero-h1-span;
-                animation-duration: 1s;
-                animation-delay: 1.5s;
-                animation-fill-mode: forwards;
-                animation-timing-function: ease-in-out;
-                @keyframes hero-h1-span {
-                    0% {
-                        opacity: 0;
-                    }
-                    100% {
-                        opacity: 1;
-                    }
-                }
-            }
-        }
-    }
-    .scrolldown {
-        position: absolute;
-        bottom: 25px;
-        left: 50%;
-        transform: translateX(-50%);
-        color: $white;
-        text-transform: uppercase;
-        letter-spacing: 1px;
-        font-size: 12px;
-        animation-name: scrolldown;
-        animation-duration: 2s;
-        animation-fill-mode: forwards;
-        animation-iteration-count: infinite;
-        animation-timing-function: ease-in-out;
-        animation-delay: 0s;
-        z-index: 20;
-        @keyframes scrolldown {
-            0% {
-                opacity: 1;
-            }
-            50% {
-                opacity: .3;
-            }
-            100% {
-                opacity: 1;
-            }
-        }
-    }
-    &:before {
-        content: "";
-        display: block;
-        height: 100%;
-        width: 100%;
-        position: absolute;
-        top: 0;
-        background-color: $black;
-        opacity: 1;
-        animation-name: hero-before;
-        animation-duration: 2s;
+    span {
+      display: block;
+      &.animation {
+        opacity: 0;
+        animation-name: hero-h1-span;
+        animation-duration: 1s;
         animation-delay: 1.5s;
         animation-fill-mode: forwards;
         animation-timing-function: ease-in-out;
-        @keyframes hero-before {
-            0% {
-                opacity: 1;
-            }
-            100% {
-                opacity: 0.94;
-                opacity: .5;
-            }
+        @keyframes hero-h1-span {
+          0% {
+            opacity: 0;
+          }
+          100% {
+            opacity: 1;
+          }
         }
+      }
     }
-    @media all and (max-width: $xs-max) {
-        h2 {
-            width: 85vw;
-            font-size: 18px;
-            line-height: 25px;
-        }
+  }
+  .scrolldown {
+    position: absolute;
+    bottom: 25px;
+    left: 50%;
+    transform: translateX(-50%);
+    color: $white;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-size: 12px;
+    animation-name: scrolldown;
+    animation-duration: 2s;
+    animation-fill-mode: forwards;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+    animation-delay: 0s;
+    z-index: 20;
+    @keyframes scrolldown {
+      0% {
+        opacity: 1;
+      }
+      50% {
+        opacity: .3;
+      }
+      100% {
+        opacity: 1;
+      }
     }
+  }
+  &:before {
+    content: "";
+    display: block;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    background-color: $black;
+    opacity: 1;
+    animation-name: hero-before;
+    animation-duration: 2s;
+    animation-delay: 1.5s;
+    animation-fill-mode: forwards;
+    animation-timing-function: ease-in-out;
+    @keyframes hero-before {
+      0% {
+        opacity: 1;
+      }
+      100% {
+        opacity: 0.94;
+        opacity: .5;
+      }
+    }
+  }
+  @media all and (max-width: $xs-max) {
+    h2 {
+      width: 85vw;
+      font-size: 18px;
+      line-height: 25px;
+    }
+  }
 }
 
 
 /* Home > Join Us */
 
 #join-us {
-    text-align: center;
-    height: calc(100vh - 300px);
+  text-align: center;
+  height: 100vh;
+  width: 100vw;
+  position: fixed;
+  z-index: 1;
+  bottom: 0;
+  padding: 0;
+  @media all and (max-width: $xs-max) {
+    height: 100vh;
+  }
+  .join-us-main {
+    transition: all .5s;
+    backface-visibility: hidden;
+    transition: left 0.7s;
+    transition-timing-function: cubic-bezier(0.91, 0.01, 0.6, 0.99);
+    padding: 0;
+    margin: 0;
     width: 100vw;
-    position: fixed;
-    z-index: 1;
-    bottom: 0;
-    @media all and (max-width: $xs-max) {
-        height: 100vh;
-    }
-    &.join-us-etereotypes-open {
-        position: relative;
-        .central-content {
-            display: none;
-        }
-    }
-    .join-us-main {
-        transition: all .5s;
-        backface-visibility: hidden;
-        transition: left 0.7s;
-        transition-timing-function: cubic-bezier(0.91, 0.01, 0.6, 0.99);
-        &.join-us-etereotypes-open {
-            left: -100%;
-            display: none;
-        }
-        .central-content {
-            position: absolute;
-            left: 50%;
-            top: 50%;
-            transform: translateX(-50%) translateY(-50%);
-            width: calc(100% - 60px);
-            img {
-                width: 70px;
-                margin-bottom: 25px;
-                @media all and (max-width: $xs-max) {
-                    display: none;
-                }
-            }
-            h2 {
-                position: relative;
-                margin-bottom: 25px;
-                padding: 1em;
-                @media all and (max-width: $xs-max) {
-                    padding: 0;
-                    &::before {
-                        display: none;
-                    }
-                }
-                &::after {
-                    display: none;
-                }
-                &::before {
-                    content: 'Show us your talent';
-                }
-                &.contact-title {
-                    &::before {
-                        top: 30px;
-                        content: 'Make the leap. Drop us a line.';
-                    }
-                }
-            }
-            h3 {
-                @media all and (max-width: $xs-max) {
-                    font-size: 18px;
-                }
-            }
-            a {
-                color: $black;
-                text-transform: uppercase;
-                letter-spacing: 2px;
-                font-size: 14px;
-                position: relative;
-                cursor: pointer;
-                &:hover {
-                    color: $white;
-                }
-            }
-        }
-    }
-    .join-us-etereotypes {
-        height: auto;
-        width: 100vw;
-        position: relative;
-        z-index: 2;
-        bottom: 0;
-        left: 100%;
-        background: $black;
-        transition: all .5s;
-        backface-visibility: hidden;
-        transition: left 0.7s;
-        transition-timing-function: cubic-bezier(0.91, 0.01, 0.6, 0.99);
-        &.join-us-etereotypes-open {
-            left: 0;
-        }
-        &.contact-form-etereotypes>.container {
-            padding: 0;
-        }
-        .etereotypes-list {
-            margin-bottom: 100px;
-            .etereotypes-list-unit {
-                display: inline-block;
-                width: calc(33% - 150px);
-                text-align: left;
-                padding-right: 150px;
-                position: relative;
-                vertical-align: top;
-                &:last-of-type {
-                    padding-right: 0;
-                    &::after {
-                        display: none;
-                    }
-                }
-                &::after {
-                    content: '';
-                    position: absolute;
-                    right: 75px;
-                    top: 50%;
-                    transform: translateY(-50%);
-                    background: #272727;
-                    height: 75%;
-                    width: 1px;
-                }
-                .etereotypes-list-unit-number {
-                    font-size: 26px;
-                    font-weight: 600;
-                    position: relative;
-                    text-align: center;
-                    width: 100px;
-                    height: 100px;
-                    line-height: 100px;
-                    margin: 0;
-                    padding: 0;
-                    &::before {
-                        content: '';
-                        position: absolute;
-                        width: 100px;
-                        height: 100px;
-                        background: url('../images/hexagon.svg');
-                        top: 0;
-                        left: 0;
-                        animation-name: hexagon;
-                        animation-duration: 10s;
-                        animation-iteration-count: infinite;
-                        animation-fill-mode: forwards;
-                        animation-timing-function: linear;
-                        animation-delay: 0s;
-                        @keyframes hexagon {
-                            0% {
-                                transform: rotate(0deg);
-                            }
-                            100% {
-                                transform: rotate(360deg);
-                            }
-                        }
-                    }
-                }
-                h3 {
-                    font-size: 32px;
-                    font-weight: 600;
-                    letter-spacing: 0;
-                    font-family: 'Mark', Helvetica, Arial, sans-serif;
-                    position: relative;
-                    margin-top: 10px;
-                    &::after {
-                        content: '';
-                        position: absolute;
-                        width: 80px;
-                        height: 2px;
-                        background: $red;
-                        bottom: -30px;
-                        left: 0;
-                    }
-                }
-                p {
-                    font-size: 20px;
-                    font-weight: 300;
-                    line-height: 32px;
-                    color: $gray-dark;
-                    padding-top: 25px;
-                }
-            }
-        }
-        .etereotypes-cons {
-            background: $gray-light;
-            padding: 150px 35px;
-            h2 {
-                color: $black;
-                margin: 0 0 50px 0;
-                &::before {
-                    display: none;
-                }
-            }
-            p {
-                color: $gray-dark;
-                width: 90%;
-                max-width: 850px;
-                margin: 0 auto;
-                font-size: 20px;
-                line-height: 32px;
-            }
-        }
-        &.contact-form-etereotypes .etereotypes-about-you {
-            padding: 0;
-        }
-        .etereotypes-about-you {
-            min-height: 100vh;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            align-content: center;
-            justify-content: center;
-            h2 {
-                &::before {
-                    content: 'Simply fall in love?';
-                }
-            }
-            form {
-                margin: 0 auto;
-                max-width: 600px;
-                width: 90%;
-                input,
-                textarea {
-                    display: block;
-                    width: 100%;
-                    max-width: 600px;
-                    background: transparent;
-                    border: none;
-                    border-bottom: 1px solid rgba(256, 256, 256, .15);
-                    color: $white;
-                    padding: 10px 0;
-                    margin: 20px 0;
-                    font-size: 21px;
-                    color: $gray-dark;
-                }
-                &:focus {
-                    outline: none;
-                }
-            }
-            textarea {
-                max-height: 300px;
-                margin-bottom: 4vh;
-            }
-            a.sender {
-                position: relative;
-                width: 100px;
-                height: 20px;
-                @media all and (max-width: $xs-max) {
-                    float: right;
-                    margin-bottom: 2em;
-                }
-                span {
-                    position: absolute;
-                    left: 50%;
-                    transform: translateX(-50%) translateY(-50%);
-                    top: 50%;
-                }
-            }
-            a,
-            button {
-                text-transform: uppercase;
-                transition: all .5s ease-in-out;
-                margin-top: 15px;
-                cursor: pointer;
-                &:hover {
-                    box-shadow: 0px 5px 50px rgba(256, 256, 256, .2);
-                }
-                &.sending {
-                    background: $black;
-                    color: $white;
-                    box-shadow: 0px 5px 50px rgba(256, 256, 256, .2);
-                    position: relative;
-                    transition: none;
-                    &::after {
-                        content: '';
-                        position: absolute;
-                        height: 100%;
-                        background: $white;
-                        width: 0%;
-                        top: 0;
-                        left: 0;
-                        animation-name: form-sending;
-                        animation-duration: 2.5s;
-                        animation-fill-mode: forwards;
-                        animation-timing-function: ease-in-out;
-                        animation-delay: 0s;
-                        @keyframes form-sending {
-                            0% {
-                                width: 0%;
-                            }
-                            100% {
-                                width: 100%;
-                            }
-                        }
-                    }
-                    span {
-                        position: absolute;
-                        left: 50%;
-                        transform: translateX(-50%) translateY(-50%);
-                        top: 50%;
-                        mix-blend-mode: difference;
-                        z-index: 2;
-                    }
-                }
-            }
-        }
-    }
-    .etereotypes-thanks {
-        opacity: 0;
-        display: none;
-        &.show {
-            opacity: 1;
-            display: block;
-        }
-    }
-    .join-us-apply-closer {
-        position: fixed;
-        bottom: 35px;
-        width: 1.5rem;
-        height: 1.5rem;
-        background: transparent;
-        border-top: .3rem solid $white;
-        border-right: .3rem solid $white;
-        transition: all .3s ease-in-out;
-        left: 35px;
-        transform: translate3d(0, -50%, 0) rotate(-135deg);
-        cursor: pointer;
-        opacity: 0;
-        mix-blend-mode: difference;
-        &:hover {
-            transform: translate3d(0, -50%, 0) rotate(45deg);
-        }
-        &.join-us-etereotypes-open {
-            opacity: 1;
-        }
-    }
-    h2 {
-        margin-bottom: 150px;
+    .central-content {
+      display: flex;
+      align-items: center;
+      align-content: center;
+      justify-content: center;
+      img {
+        width: 70px;
+        margin-bottom: 25px;
         @media all and (max-width: $xs-max) {
-            padding: 2em 0;
+          display: none;
+        }
+      }
+      h2 {
+        position: relative;
+        margin-bottom: 25px;
+        padding: 1em;
+        @media all and (max-width: $xs-max) {
+          padding: 0;
+          &::before {
+            display: none;
+          }
         }
         &::after {
-            display: none;
+          display: none;
         }
         &::before {
-            content: 'Inside the house';
+          content: 'Show us your talent';
         }
+        &.contact-title {
+          &::before {
+            top: 30px;
+            content: 'Make the leap. Drop us a line.';
+          }
+        }
+      }
+      h3 {
+        @media all and (max-width: $xs-max) {
+          font-size: 18px;
+        }
+      }
+      a {
+        color: $black;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        font-size: 14px;
+        position: relative;
+        cursor: pointer;
+        &:hover {
+          color: $white;
+        }
+      }
     }
+  }
+  .join-us-apply-closer {
+    position: fixed;
+    bottom: 35px;
+    width: 1.5rem;
+    height: 1.5rem;
+    background: transparent;
+    border-top: .3rem solid $white;
+    border-right: .3rem solid $white;
+    transition: all .3s ease-in-out;
+    left: 35px;
+    transform: translate3d(0, -50%, 0) rotate(-135deg);
+    cursor: pointer;
+    opacity: 0;
+    mix-blend-mode: difference;
+    &:hover {
+      transform: translate3d(0, -50%, 0) rotate(45deg);
+    }
+    &.join-us-etereotypes-open {
+      opacity: 1;
+    }
+  }
+  h2 {
+    margin-bottom: 150px;
+    @media all and (max-width: $xs-max) {
+      padding: 2em 0;
+    }
+    &::after {
+      display: none;
+    }
+    &::before {
+      content: 'Inside the house';
+    }
+  }
 }

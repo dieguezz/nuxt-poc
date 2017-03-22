@@ -80,6 +80,16 @@ $(document).ready(function() {
     }, 1000);
   });
 
+  var $active;
+  var selectMenuItem = function($menuItem) {
+    if ($active) {
+      $active.parent().removeClass('active');
+    }
+    $menuItem.parent().addClass('active');
+    $active = $menuItem;
+    return false;
+  };
+
   var waypoints = [];
 
   // Bind to scroll
@@ -92,7 +102,6 @@ $(document).ready(function() {
 
       var elem = $(this);
       var href = elem.attr('href');
-
       var waypoint = new Waypoint({
         element: $('.scroll-anchor[href="' + href + '"]')[0],
         handler: function() {
