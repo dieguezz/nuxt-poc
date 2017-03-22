@@ -57,6 +57,7 @@
   "globals": {
     "svg4everybody": true,
     "Promise": true,
+    "Waypoint": true,
     "alert": true,
     "$": false
   }
