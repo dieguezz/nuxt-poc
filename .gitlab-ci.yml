@@ -12,7 +12,6 @@ build:
     - npm install -g bower grunt-cli protractor s3-deploy
     - npm install
     - bower install --allow-root --force-latest
-    - grunt test
     - grunt build
     - s3-deploy './dist/**' --cwd './dist/' --gzip --region $AWS_REGION --bucket $AWS_BUCKET
   only:
