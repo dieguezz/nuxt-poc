@@ -18,6 +18,7 @@ $(document).ready(function() {
   function toggleMenu(evt) {
     if (evt.delegateTarget.dataset.target === 'menu') {
       $('.menu-opener').toggleClass('open');
+      $('.menu-navigation').toggleClass('menu-active');
       $('.menu').toggleClass('menu-active');
       $('.global-wrapper').toggleClass('menu-active');
       $('body').toggleClass('menu-active');
