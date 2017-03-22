@@ -1,89 +1,95 @@
 /* Home > Contact Us */
 
 #contact-us {
+  text-align: center;
+  padding: 300px 0;
+  .link-small {
+    color: $gray-dark;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    display: block;
+    position: absolute;
+    bottom: 50px;
+    left: 50%;
+    transform: translateX(-50%);
+    &::after {
+      content: '';
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
+      height: 25px;
+      width: 1px;
+      background: $gray-dark;
+      bottom: -50px;
+    }
+  }
+  h2 {
+    margin-bottom: 200px;
+    &::before {
+      content: 'Only one step away';
+    }
+    &::after {
+      display: none;
+    }
+  }
+  .contact-us-unit {
+    display: inline-block;
     text-align: center;
-    padding: 300px 0;
-    .link-small {
-        color: $gray-dark;
-        text-transform: uppercase;
-        letter-spacing: 2px;
-        display: block;
+    padding: 0 75px;
+    margin: 0;
+    a {
+      font-size: 32px;
+      letter-spacing: 1.5px;
+      color: $black;
+      font-weight: 600;
+      margin: 0;
+      &:before {
+        content: '';
         position: absolute;
-        bottom: 50px;
-        left: 50%;
-        transform: translateX(-50%);
-        &::after {
-            content: '';
-            position: absolute;
-            left: 50%;
-            transform: translateX(-50%);
-            height: 25px;
-            width: 1px;
-            background: $gray-dark;
-            bottom: -50px;
-        }
+        text-transform: uppercase;
+        top: -30px;
+        font-size: 16px;
+        letter-spacing: 1.5px;
+        color: $gray-dark;
+        margin: 0 auto;
+        left: 0;
+        right: 0;
+      }
     }
+    &:nth-child(2) {
+      a {
+        &:before {
+          content: 'Mail Us';
+        }
+      }
+    }
+    &:nth-child(3) {
+      a {
+        &:before {
+          content: 'Tweet Us';
+        }
+      }
+    }
+    &:nth-child(4) {
+      a {
+        &:before {
+          content: 'Call Us';
+        }
+      }
+    }
+  }
+  @media all and (max-width: $sm-max) {
+    padding: 2em 0;
     h2 {
-        margin-bottom: 200px;
-        &::before {
-            content: 'Only one step away';
-        }
-        &::after {
-            display: none;
-        }
+      margin-bottom: 3em;
     }
-    .contact-us-unit {
-        display: inline-block;
-        text-align: center;
-        padding: 0 75px;
-        margin: 0;
-        a {
-            font-size: 32px;
-            letter-spacing: 1.5px;
-            color: $black;
-            font-weight: 600;
-            margin: 0;
-            &::before {
-                content: 'Mail Us';
-                position: absolute;
-                text-transform: uppercase;
-                top: -30px;
-                font-size: 16px;
-                letter-spacing: 1.5px;
-                color: $gray-dark;
-                margin: 0 auto;
-                left: 0;
-                right: 0;
-            }
-            &:nth-of-type(1) {
-                &::before {
-                    content: 'Mail Us';
-                }
-            }
-            &:nth-of-type(2) {
-                &::before {
-                    content: 'Tweet Us';
-                }
-            }
-            &:nth-of-type(3) {
-                &::before {
-                    content: 'Call Us';
-                }
-            }
-        }
+    .container {
+      display: flex;
+      flex-direction: column;
+      .contact-us-unit {
+        padding: 0;
+        margin-bottom: 7em;
+      }
     }
-    @media all and (max-width: $sm-max) {
-        padding: 2em 0;
-        h2 {
-            margin-bottom: 3em;
-        }
-        .container {
-            display: flex;
-            flex-direction: column;
-            .contact-us-unit {
-                padding: 0;
-                margin-bottom: 7em;
-            }
-        }
-    }
+  }
 }
