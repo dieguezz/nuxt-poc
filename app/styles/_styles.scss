@@ -172,65 +172,57 @@
   @media all and (max-width: $xs-max) {
     height: 100vh;
   }
-  .join-us-main {
-    transition: all .5s;
-    backface-visibility: hidden;
-    transition: left 0.7s;
-    transition-timing-function: cubic-bezier(0.91, 0.01, 0.6, 0.99);
-    padding: 0;
-    margin: 0;
+  .central-content {
+    display: flex;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
     width: 100vw;
-    .central-content {
-      display: flex;
-      align-items: center;
-      align-content: center;
-      justify-content: center;
-      width: 100vw;
-      img {
-        width: 70px;
-        margin-bottom: 25px;
-        @media all and (max-width: $xs-max) {
-          display: none;
-        }
+    height: calc(100vh - 5em);
+    img {
+      width: 70px;
+      margin-bottom: 25px;
+      @media all and (max-width: $xs-max) {
+        display: none;
       }
-      h2 {
-        position: relative;
-        margin-bottom: 25px;
-        padding: 1em;
-        @media all and (max-width: $xs-max) {
-          padding: 0;
-          &::before {
-            display: none;
-          }
-        }
-        &::after {
-          display: none;
-        }
+    }
+    h2 {
+      position: relative;
+      margin-bottom: 25px;
+      padding: 1em;
+      @media all and (max-width: $xs-max) {
+        padding: 0;
         &::before {
-          content: 'Show us your talent';
-        }
-        &.contact-title {
-          &::before {
-            top: 30px;
-            content: 'Make the leap. Drop us a line.';
-          }
+          display: none;
         }
       }
-      h3 {
-        @media all and (max-width: $xs-max) {
-          font-size: 18px;
+      &::after {
+        display: none;
+      }
+      &::before {
+        content: 'Show us your talent';
+      }
+      &.contact-title {
+        &::before {
+          top: 30px;
+          content: 'Make the leap. Drop us a line.';
         }
       }
-      a {
-        color: $black;
-        text-transform: uppercase;
-        letter-spacing: 2px;
-        font-size: 14px;
-        position: relative;
-        cursor: pointer;
-        &:hover {
-          color: $white;
-        }
+    }
+    h3 {
+      @media all and (max-width: $xs-max) {
+        font-size: 18px;
+      }
+    }
+    a {
+      color: $black;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      font-size: 14px;
+      position: relative;
+      cursor: pointer;
+      &:hover {
+        color: $white;
       }
     }
   }

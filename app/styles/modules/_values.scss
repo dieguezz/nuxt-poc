@@ -116,5 +116,21 @@
         padding-top: 25px;
       }
     }
+    @media all and (max-width: $xs-max) {
+      margin: 2em auto;
+      .values-unit-picture {
+        display: none;
+      }
+      .values-unit-description {
+        transform: none !important;
+        padding: 0;
+        width: 100%;
+        .values-unit-number {
+          left: 0;
+          right: 0;
+          margin: 0 auto;
+        }
+      }
+    }
   }
 }
