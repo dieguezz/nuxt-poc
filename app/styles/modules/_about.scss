@@ -57,59 +57,6 @@
     padding-top: 100px;
     margin: 0 auto;
   }
-  .about-us-pictures {
-    margin-top: 100px;
-    position: relative;
-    .slick-slide {
-      height: auto;
-    }
-    &::before {
-      content: '';
-      position: absolute;
-      width: 25%;
-      height: 100%;
-      left: 0;
-      top: 0;
-      background: linear-gradient(to right, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 0) 100%);
-      z-index: 10;
-    }
-    &::after {
-      content: '';
-      position: absolute;
-      width: 25%;
-      height: 100%;
-      right: 0;
-      top: 0;
-      background: linear-gradient(to right, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 1) 100%);
-      z-index: 10;
-    }
-    .about-us-pictures-unit {
-      margin: 0 25px;
-      transform: scale(.9);
-      transition: all 1s ease-in-out;
-      &:focus {
-        outline: none;
-        cursor: pointer;
-      }
-      img {
-        width: 100%;
-        max-width: 850px;
-        filter: grayscale(100%);
-        opacity: .5;
-      }
-    }
-    .slick-dots {
-      bottom: -65px;
-    }
-    .slick-current {
-      transform: scale(1);
-      img {
-        filter: grayscale(0%);
-        transition: all 1s ease-in-out;
-        opacity: 1;
-      }
-    }
-  }
   .scrolldown {
     position: absolute;
     bottom: 25px;

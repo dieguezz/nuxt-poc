@@ -1,15 +1,5 @@
 $(document).ready(function() {
 
-  $('.about-us-pictures').slick({
-    dots: true,
-    infinite: true,
-    centerMode: true,
-    slidesToShow: 3,
-    slidesToScroll: 3,
-    arrows: false,
-    variableWidth: true
-  });
-
   var $aboutIntroCover = $('.about-intro-cover');
   var $aboutIntroCoverHeight = $aboutIntroCover.height();
   var $aboutIntroTitle = $('#about-intro h2');
