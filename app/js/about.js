@@ -10,40 +10,38 @@ $(document).ready(function() {
     variableWidth: true
   });
 
+  var $aboutIntroCover = $('.about-intro-cover');
+  var $aboutIntroCoverHeight = $aboutIntroCover.height();
+  var $aboutIntroTitle = $('#about-intro h2');
+  var $aboutIntroTitleHeight = $aboutIntroTitle.height();
+  var $aboutIntroSubtitle = $('#about-intro h4');
+  var $aboutIntroSubtitleHeight = $aboutIntroSubtitle.height();
+  var $aboutIntroScrollDown = $('#about-intro .scrolldown');
+  var $aboutIntroScrollDownHeight = $aboutIntroScrollDown.height();
+
   $(window).scroll(function() {
-    var scrollTop = $(this).scrollTop();
 
-    $('.about-intro-cover').css({
-      opacity: function() {
-        var elementHeight = $(this).height(),
-          opacity = ((1 - (elementHeight - scrollTop) / elementHeight) * 0.8) + 0.75;
-        return opacity;
-      }
+    window.requestAnimationFrame(function() {
+      var scrollTop = $(this).scrollTop();
+
+      $aboutIntroCover.css({
+        opacity: ((1 - ($aboutIntroCoverHeight - scrollTop) / $aboutIntroCoverHeight) * 0.8) + 0.75
+      });
+
+      $aboutIntroTitle.css({
+        opacity: ((2 + ($aboutIntroTitleHeight - scrollTop) / $aboutIntroTitleHeight) * 1) - 1
+      });
+
+      $aboutIntroSubtitle.css({
+        opacity: ((4 + ($aboutIntroSubtitleHeight - scrollTop) / $aboutIntroSubtitleHeight) * 1) - 1
+      });
+
+      $aboutIntroScrollDown.css({
+        opacity: ((4 + ($aboutIntroScrollDownHeight - scrollTop) / $aboutIntroScrollDownHeight) * 1) - 1
+      });
+
     });
 
-    $('#about-intro h2').css({
-      opacity: function() {
-        var elementHeight = $(this).height(),
-          opacity = ((2 + (elementHeight - scrollTop) / elementHeight) * 1) - 1;
-        return opacity;
-      }
-    });
-
-    $('#about-intro h4').css({
-      opacity: function() {
-        var elementHeight = $(this).height(),
-          opacity = ((4 + (elementHeight - scrollTop) / elementHeight) * 1) - 1;
-        return opacity;
-      }
-    });
-
-    $('#about-intro .scrolldown').css({
-      opacity: function() {
-        var elementHeight = $(this).height(),
-          opacity = ((4 + (elementHeight - scrollTop) / elementHeight) * 1) - 1;
-        return opacity;
-      }
-    });
   });
 
   $('.about-navigation li').click(function() {
