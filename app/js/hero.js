@@ -2,16 +2,19 @@
 
 $(document).ready(function() {
 
-  var position = 0;
-  if ($('.hero').length) {
-    $(window).scroll(fadeHero);
-    fadeHero();
+  if (!$('.hero').length) {
+    return;
   }
+
+  $(window).scroll(fadeHero);
+  fadeHero();
+
+  var topPosition = $('.menu').offset().top;
 
   function fadeHero() {
     window.requestAnimationFrame(function() {
-      var offset = $('.hero').offset() || {};
-      $('.hero h2.opacityscroll').css('opacity', (1 - (offset.top - position) * 0.005));
+      var offset = $('.menu').offset() || {};
+      $('.hero h2.opacityscroll').css('opacity', (1 - (Math.abs(offset.top - topPosition) * 0.005)));
     });
   }
 

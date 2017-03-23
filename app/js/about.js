@@ -1,5 +1,10 @@
 $(document).ready(function() {
 
+  if (!$('.about-intro-cover').length) {
+    return;
+  }
+
+  var $window = $(window);
   var $aboutIntroCover = $('.about-intro-cover');
   var $aboutIntroCoverHeight = $aboutIntroCover.height();
   var $aboutIntroTitle = $('#about-intro h2');
@@ -9,11 +14,10 @@ $(document).ready(function() {
   var $aboutIntroScrollDown = $('#about-intro .scrolldown');
   var $aboutIntroScrollDownHeight = $aboutIntroScrollDown.height();
 
-  $(window).scroll(function() {
+  $window.scroll(function() {
 
     window.requestAnimationFrame(function() {
-      var scrollTop = $(this).scrollTop();
-
+      var scrollTop = $window.scrollTop();
       $aboutIntroCover.css({
         opacity: ((1 - ($aboutIntroCoverHeight - scrollTop) / $aboutIntroCoverHeight) * 0.8) + 0.75
       });
