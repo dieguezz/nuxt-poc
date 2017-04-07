@@ -1,0 +1,33 @@
+/* Typography */
+
+@font-face {
+  font-family: "Mark";
+  src: url("fonts/marklight-webfont.ttf") format("truetype");
+  font-style: normal;
+  font-weight: 300;
+}
+
+@font-face {
+  font-family: "Mark";
+  src: url("fonts/markmedium-webfont.ttf") format("truetype");
+  font-style: normal;
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: "Mark";
+  src: url("fonts/markbold-webfont.ttf") format("truetype");
+  font-style: normal;
+  font-weight: 600;
+}
+
+body {
+  text-rendering: optimizeLegibility;
+  text-rendering: geometricPrecision;
+  font-smooth: always;
+  font-smoothing: antialiased;
+  -moz-font-smoothing: antialiased;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-family: 'Mark', Helvetica, sans-serif;
+}

@@ -13,9 +13,10 @@
   "license": "UNLICENSED",
   "private": true,
   "dependencies": {
-    "waypoints": "4.0.1",
-    "slick-carousel": "1.6.0",
-    "scrollreveal": "3.3.2"
+    "jquery": "^3.2.1",
+    "lining.js": "^0.3.3",
+    "waypoints": "^4.0.1",
+    "animsition": "^4.0.2"
   },
   "devDependencies": {}
 }

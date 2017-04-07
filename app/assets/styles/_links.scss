@@ -1,0 +1,67 @@
+/* Links */
+
+
+/* Normal link */
+
+.link {
+  position: relative;
+  height: auto;
+  color: $black;
+  &::after {
+    content: '';
+    position: absolute;
+    height: 3px;
+    background: $black;
+    width: 0%;
+    bottom: -3px;
+    left: 50%;
+    transform: translateX(-50%);
+    transition: all $normal-transition;
+  }
+  &:hover {
+    &::after {
+      width: 100%;
+    }
+  }
+  /* White link */
+  &.white {
+    color: #FFF;
+    &:hover {
+      &::after {
+        background: #FFF;
+      }
+    }
+  }
+}
+
+
+/* Normal button */
+
+.button {
+  padding: 15px 25px;
+  font-size: 14px;
+  border: 2px solid inherit;
+  background: $black;
+  color: #FFF;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  display: inline-block;
+  font-weight: 600;
+  transition: background $normal-transition, color $normal-transition, transform $normal-transition, border $normal-transition;
+  &:hover {
+    color: $black;
+    background: #FFF;
+    border: 2px solid $black;
+    transform: scale(.95);
+  }
+  /* Border button */
+  &.border {
+    border: 2px solid $black;
+    background: #FFF;
+    color: $black;
+    &:hover {
+      color: #FFF;
+      background: $black;
+    }
+  }
+}

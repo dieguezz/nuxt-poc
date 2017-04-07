@@ -3,222 +3,79 @@
 
 <head>
 
-  <title>etéreo | Independent Creative Studio</title>
-
-  <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, minimum-scale=1.0, initial-scale=1.0, maximum-scale=1.0">
-
-  <!-- Standard html meta tags -->
-  <meta name="author" content="etereo-website">
-  <meta name="description" content="Independent Creative Studio">
-  <meta name="keywords" content="etereo, software, craftmanship, studio">
-  <meta name="application-name" content="etereo-website">
-  <meta name="copyright" content="etereo-website">
-
-  <!-- Dublin core -->
-  <meta name="DCTERMS.rightsHolder" content="etereo-website">
-  <meta name="DCTERMS.Title" content="Independent Creative Studio">
-  <meta name="DCTERMS.Creator" content="etereo-website">
-  <meta name="DCTERMS.Subject" content="etereo, software, craftmanship, studio">
-  <meta name="DCTERMS.Description" content="Independent Creative Studio">
-  <meta name="DCTERMS.Publisher" content="etereo-website">
-  <meta name="DCTERMS.Language" content="en">
-
-  <!-- Schema.org markup for Google+ -->
-  <meta itemprop="name" content="etereo-website">
-  <meta itemprop="description" content="etereo website">
-  <meta itemprop="url" content="http://etereo.io/">
-  <meta itemprop="image" content="images/icons/android-icon-192x192.png">
-  <meta itemprop="author" content="etereo-website">
-  <meta itemprop="datePublished" content="19-01-2017">
-  <meta itemprop="operatingSystems" content="Windows, Linux, Mac OS">
-  <meta itemprop="applicationCategory" content="etereo, software, craftmanship, studio">
-  <meta itemprop="softwareVersion" content="0.0.1">
-  <meta itemprop="browserRequirements" content="HTML5, Google Chrome, JavaScript">
-
-  <!-- Twitter Card data -->
-  <meta name="twitter:card" content="images/icons/android-icon-192x192.png">
-  <meta name="twitter:site" content="@etereo-website">
-  <meta name="twitter:creator" content="@etereo-website">
-  <meta name="twitter:title" content="etereo-website">
-  <meta name="twitter:description" content="Independent Creative Studio">
-  <!-- La imagen debe ser de menos de 1Mb, y como mínimo de 280x150 en el ejemplo de twitter usan una de 480 x 270 (para la summary card with large image)-->
-  <meta name="twitter:image:src" content="images/landing/bg-top.jpg">
-
-  <!-- Open Graph data -->
-  <meta property="og:title" content="etereo-website">
-  <meta property="og:type" content="website">
-  <meta property="og:url" content="http://etereo.io/">
-  <!-- La imagen debe estar a 1200 x 630 -->
-  <!-- <meta property="og:image" content="img/common/img_1200x630.png"> -->
-  <meta property="og:description" content="Independent Creative Studio">
-  <meta property="og:site_name" content="etereo-website">
-
-  <link rel="icon" type="image/png" href="images/favicon.png">
-
-  <link rel="stylesheet" type="text/css" href="http://cdn.jsdelivr.net/jquery.slick/1.6.0/slick.css" />
-  <link rel="stylesheet" type="text/css" href="http://cdn.jsdelivr.net/jquery.slick/1.6.0/slick-theme.css" />
-
-  <!-- build:css(.tmp) styles/main.css -->
-  <link rel="stylesheet" type="text/css" href="styles/main.css" />
-  <!-- endbuild -->
-</head>
-
-<body>
-
-  <!-- build:include templates/menu.html -->
+  <!-- build:include templates/meta.html -->
   <!-- /build -->
 
-  <nav class="menu-navigation menu-active">
-    <ul id="top-menu">
-      <li><a href="#intro">Top</a></li>
-      <li><a href="#about-us">About us</a></li>
-      <li><a href="#services">What we do</a></li>
-      <li><a href="#how-to">How we do it</a></li>
-      <li><a href="#contact-us">Contact us</a></li>
-    </ul>
-  </nav>
+  <!-- build:css(.tmp) assets/styles/main.css -->
+  <link rel="stylesheet" type="text/css" href="assets/styles/main.css" />
+  <!-- endbuild -->
 
-  <!-- Global Wrapper -->
-  <div class="global-wrapper">
-    <!-- Section Intro -->
-    <section id="intro" class="bg-black hero">
-      <a href="#intro" class="scroll-anchor"></a>
-      <video src="images/video.mp4" loop autoplay></video>
-      <div class="container">
-        <div class="intro-slides">
-          <div class="intro-slides-unit">
-            <h2 class="animation">Resonating experiences<span class="animation">with lasting value</span></h2>
-          </div>
+
+
+</head>
+
+<body class="home-intro">
+
+  <!-- build:include templates/mobile-menu.html -->
+  <!-- /build -->
+
+  <!-- build:include templates/pre-loader.html -->
+  <!-- /build -->
+
+  <!-- START Page Transition -->
+  <div class="animsition">
+    <!-- START Home -->
+    <section id="home">
+
+      <!-- build:include templates/cookies.html -->
+      <!-- /build -->
+
+      <!-- build:include templates/header.html -->
+      <!-- /build -->
+
+      <main class="black">
+        <div class="container">
+
+          <h2 data-lining class="fade-scroll">
+          A full digital product agency made differently.
+        </h2>
+
+          <nav class="sub-navigation fade-scroll">
+            <ul>
+              <li><a href="#" class="link">About Us</a></li>
+              <li><a href="#" class="link">Services</a></li>
+              <li><a href="#" class="link">People</a></li>
+              <li><a href="#" class="link">Contact</a></li>
+            </ul>
+          </nav>
+          <span class="scroll-appear">People First.</span>
         </div>
-        <a href="#about-us" class="scrolldown">Scroll down</a>
-      </div>
+
+        <video src="assets/imgs/video.mp4" autoplay loop></video>
+
+      </main>
     </section>
-    <!-- End Section Intro -->
-
-    <!-- Section About Us -->
-    <section id="about-us" class="bg-white">
-      <div class="container">
-        <a href="#about-us" class="scroll-anchor"></a>
-        <h2 class="reveal">From digital people,<br/>to people with digital ideas.</h2>
-        <h3 class="reveal">Nunc non iaculis nunc. Praesent quis risus enim. Vestibulum malesuada mauris ipsum, vitae lacinia justo ultrices vestibulum. Maecenas lacinia luctus facilisis.</h3>
-        <a href="about.html" class="button reveal">About us</a>
-      </div>
-    </section>
-    <!-- End Section About Us -->
-
-    <!-- Section People -->
-    <section id="people-claim" class="bg-gray">
-      <div class="people-description">
-        <h2 class="reveal">People as basis of everything.</h2>
-        <p class="reveal">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent leo mi, fringilla in nisi id, pharetra cursus nisi. Etiam vestibulum orci nec felis hendrerit sollicitudin. Donec mollis congue tellus sed luctus. Nulla ullamcorper porta odio et suscipit. Curabitur pharetra mauris sit amet nibh sagittis rutrum at at est. Curabitur sed tellus sapien. Orci varius natoque penatibus et magnis dis parturient montes.</p>
-        <a href="about.html#people" class="button reveal">Our People</a>
-        <div class="clear"></div>
-      </div>
-      <div class="people-pictures">
-        <div class="people-pictures-unit"></div>
-        <div class="people-pictures-unit"></div>
-      </div>
-
-    </section>
-    <!-- End Section People -->
-
-    <!-- Section Services -->
-    <section id="services" class="bg-black">
-      <div class="container">
-        <a href="#services" class="scroll-anchor"></a>
-        <h2 class="reveal">What we do</h2>
-        <div class="services-list">
-          <div class="services-list-unit">
-            <div class="services-list-unit-number">01</div>
-            <h3 class="reveal">Strategy</h3>
-            <p class="reveal">We help you to properly define what you want to achieve, seeking solutions and improvements outside the initial idea. Turn moving concepts and abstract ideas into tangible structures that quickly familiarize the user.</p>
-          </div>
-          <div class="services-list-unit">
-            <div class="services-list-unit-number">02</div>
-            <h3 class="reveal">Design</h3>
-            <p class="reveal">We help you to properly define what you want to achieve, seeking solutions and improvements outside the initial idea. Turn moving concepts and abstract ideas into tangible structures that quickly familiarize the user.</p>
-          </div>
-          <div class="services-list-unit">
-            <div class="services-list-unit-number">03</div>
-            <h3 class="reveal">Technology</h3>
-            <p class="reveal">We help you to properly define what you want to achieve, seeking solutions and improvements outside the initial idea. Turn moving concepts and abstract ideas into tangible structures that quickly familiarize the user.</p>
-          </div>
-        </div>
-      </div>
-      <img src="/images/people-first.svg" alt="People First">
-    </section>
-    <!-- End Section Services -->
-
-    <!-- build:include templates/how-to.html -->
-    <!-- /build -->
-
-    <!-- build:include templates/contact-us.html -->
-    <!-- /build -->
-
-  </div>
-  <!-- End Global Wrapper -->
-
-  <!-- Section Join Us -->
-  <section id="join-us" class="bg-black contact-footer">
-    <a href="#join-us" class="scroll-anchor"></a>
-    <div class="central-content">
-      <div class="footer-form">
-        <img src="images/logo-icon.svg" alt="etéreo symbol">
-        <form id="join-us-form">
-          <h2>Let's rock and roll!</h2>
-          <input id="name" name="name" type="text" placeholder="Your full name..." required>
-          <input id="email" name="email" type="email" placeholder="Your email..." email required>
-          <textarea id="message" name="message" rows="8" cols="80" placeholder="Your delicious message..." required></textarea>
-          <a class="button sender"><span>Send</span></a>
-        </form>
-        <div class="form-thanks">
-          <h3>Thank you for contacting!</h3>
-          <p>Your message has been sent succesfully, we will contact you in the next few hours.
-            <br>Have an awesome day!</p>
-          <a class="button form-thanks-close">KEEP BROWSING</a>
-        </div>
-      </div>
-    </div>
+    <!-- END Home -->
 
     <!-- build:include templates/footer.html -->
     <!-- /build -->
 
-  </section>
-  <!-- End Section Join Us -->
+  </div>
 
   <!-- build:js(.) scripts/vendor.js -->
   <!-- bower:js -->
-  <script src="bower_components/waypoints/lib/noframework.waypoints.js"></script>
   <script src="bower_components/jquery/dist/jquery.js"></script>
-  <script src="bower_components/slick-carousel/slick/slick.js"></script>
-  <script src="bower_components/scrollreveal/dist/scrollreveal.js"></script>
+  <script src="bower_components/lining.js/src/lining.js"></script>
+  <script src="bower_components/animsition/dist/js/animsition.min.js"></script>
   <!-- endbower -->
+  <script src="bower_components/waypoints/lib/jquery.waypoints.js"></script>
   <!-- endbuild -->
 
   <!-- build:js({.,.tmp,app,dist}) scripts/scripts.js -->
   <!-- include: "type": "js", "files": ["vendor/**/*.js"] -->
   <script src="app.scripts.js"></script>
-  <!-- include: "type": "js", "files": ["js/*.js"] -->
+  <!-- include: "type": "js", "files": ["assets/scripts/*.js"] -->
   <!-- endbuild -->
-
-  <script>
-  (function(i, s, o, g, r, a, m) {
-    i['GoogleAnalyticsObject'] = r;
-    i[r] = i[r] || function() {
-      (i[r].q = i[r].q || []).push(arguments)
-    }, i[r].l = 1 * new Date();
-    a = s.createElement(o),
-      m = s.getElementsByTagName(o)[0];
-    a.async = 1;
-    a.src = g;
-    m.parentNode.insertBefore(a, m)
-  })(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
-
-  ga('create', 'UA-90941973-1', 'auto');
-  ga('send', 'pageview');
-  </script>
 
 </body>
 

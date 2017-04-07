@@ -171,11 +171,13 @@ module.exports = function(grunt) {
     wiredep: {
       options: {
         //cwd: '<%= appConfig.app %>'
-        'exclude': []
+        'exclude': [
+          'bower_components/waypoints/lib/noframework.waypoints.js'
+        ]
       },
       app: {
         src: [
-          '<%= appConfig.app %>/index.html',
+          '<%= appConfig.app %>/*.html',
           '<%= appConfig.app %>/statics/*.html'
         ],
         ignorePath: /\.\.\//
@@ -194,13 +196,13 @@ module.exports = function(grunt) {
       server: {
         files: [{
           '.tmp/index.html': '<%= appConfig.app %>/index.html',
-          '.tmp/about.html': '<%= appConfig.app %>/about.html'
+          '.tmp/company.html': '<%= appConfig.app %>/company.html'
         }]
       },
       dist: {
         files: {
           '<%= appConfig.dist %>/index.html': '<%= appConfig.app %>/index.html',
-          '<%= appConfig.dist %>/about.html': '<%= appConfig.app %>/about.html'
+          '<%= appConfig.dist %>/company.html': '<%= appConfig.app %>/company.html'
         }
       }
     },
@@ -212,13 +214,13 @@ module.exports = function(grunt) {
       server: {
         files: {
           '.tmp/index.html': '.tmp/index.html',
-          '.tmp/about.html': '.tmp/about.html'
+          '.tmp/company.html': '.tmp/company.html'
         }
       },
       dist: {
         files: {
           'dist/index.html': '<%= appConfig.dist %>/index.html',
-          'dist/about.html': '<%= appConfig.dist %>/about.html'
+          'dist/company.html': '<%= appConfig.dist %>/company.html'
         }
       }
     },
@@ -231,7 +233,7 @@ module.exports = function(grunt) {
         files: [{
           expand: true,
           cwd: 'app',
-          src: ['styles/main.scss'],
+          src: ['assets/styles/main.scss'],
           dest: '.tmp',
           ext: '.css'
         }]
