@@ -128,7 +128,7 @@ section:not(#home) {
       }
       &:nth-of-type(1) {
         &:hover {
-          background: url('../../assets/imgs/company.gif');
+          background: url('../images/company.gif');
           background-size: cover;
         }
       }
@@ -137,7 +137,7 @@ section:not(#home) {
         border-top: 1px solid $gray;
         animation-delay: .15s;
         &:hover {
-          background: url('../../assets/imgs/people.gif');
+          background: url('../images/people.gif');
           background-size: cover;
         }
       }
@@ -146,7 +146,7 @@ section:not(#home) {
         border-top: 1px solid $gray;
         animation-delay: .2s;
         &:hover {
-          background: url('../../assets/imgs/contact.gif');
+          background: url('../images/contact.gif');
           background-size: cover;
         }
       }
@@ -352,7 +352,7 @@ header {
   z-index: 50;
   &.inverse {
     h1 {
-      background: url('../../assets/imgs/logo.svg');
+      background: url('../images/logo.svg');
       background-size: cover;
     }
     .navigation {
@@ -394,7 +394,7 @@ header {
     margin-left: -10px;
     float: left;
     transition: opacity $normal-transition, visibility $normal-transition;
-    background: url('../../assets/imgs/logo-inverse.svg');
+    background: url('../images/logo-inverse.svg');
     width: 120px;
     height: 36px;
     text-indent: -99999px;
@@ -537,7 +537,7 @@ footer {
     float: left;
     h2 {
       text-indent: -99999px;
-      background: url('../../assets/imgs/logo-icon.svg');
+      background: url('../images/logo-icon.svg');
       width: 58px;
       height: 58px;
       background-size: cover;

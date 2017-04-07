@@ -233,7 +233,7 @@ module.exports = function(grunt) {
         files: [{
           expand: true,
           cwd: 'app',
-          src: ['assets/styles/main.scss'],
+          src: ['styles/main.scss'],
           dest: '.tmp',
           ext: '.css'
         }]
@@ -325,7 +325,7 @@ module.exports = function(grunt) {
         files: [{
           expand: true,
           cwd: '<%= appConfig.app %>/images',
-          src: '{,*/}*.svg',
+          src: '**/*.svg',
           dest: '<%= appConfig.dist %>/images'
         }]
       }

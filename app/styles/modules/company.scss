@@ -5,7 +5,7 @@
     z-index: 0;
     margin-bottom: 0!important;
     .section-bg {
-      background: url('../../assets/imgs/company/company-bg.jpg');
+      background: url('../images/company/company-bg.jpg');
       background-size: cover;
       background-position: center;
       animation-name: section-bg;
@@ -142,7 +142,7 @@
         position: absolute;
         width: 210px;
         height: 220px;
-        background: url('../../assets/imgs/fingerprint.svg');
+        background: url('../images/fingerprint.svg');
         background-size: cover;
         top: 50%;
         left: 25%;
@@ -158,7 +158,7 @@
         color: #FFF;
         box-shadow: 0 3px 25px 0px rgba(23, 26, 28, 0.35);
         &::after {
-          background: url('../../assets/imgs/fingerprint-inverse.svg');
+          background: url('../images/fingerprint-inverse.svg');
           background-size: cover;
         }
       }
