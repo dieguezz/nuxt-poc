@@ -8,8 +8,8 @@ $(window).on('beforeunload', function() {
 
 $(document).ready(function() {
 
-  if (document.referrer.indexOf(document.location.origin) !== -1) {
-    $('.preloader').addClass('hidden');
+  if (document.referrer.indexOf(document.location.origin) === -1) {
+    $('.preloader').removeClass('hidden');
   }
 
   setTimeout(function() {
