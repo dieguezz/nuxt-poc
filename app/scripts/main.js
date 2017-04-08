@@ -7,28 +7,22 @@ $(window).on('beforeunload', function() {
 /* Home Intro */
 
 $(document).ready(function() {
+
+  if (document.referrer.indexOf(document.location.origin) !== -1) {
+    $('.preloader').addClass('hidden');
+  }
+
   setTimeout(function() {
     $('body').css('background', '#171A1C');
     $('.preloader').removeClass('loading');
-    $('#home').addClass('cookies-active');
     $('.home-intro h2').addClass('appear');
   }, 3000);
-});
 
-$(document).ready(function() {
   setTimeout(function() {
     $('.home-intro h2').removeClass('appear');
     $('.home-intro h2').addClass('appeared');
   }, 5000);
-});
 
-
-/* Cookies Bar */
-
-$(document).ready(function() {
-  $('.close-cookies-bar').on('click', function(evt) {
-    $('.cookies-active').removeClass('cookies-active');
-  });
 });
 
 /* Mobile menu */
