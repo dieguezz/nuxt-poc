@@ -47,6 +47,9 @@
         padding-left: 200px;
         margin-top: 100px;
         position: relative;
+        @media screen and (max-width: $max-xs) {
+          padding: 0;
+        }
         h5 {
           font-size: 40px;
           font-weight: 600;
@@ -219,6 +222,14 @@
             }
           }
         }
+        @media screen and (max-width: $max-xs) {
+          .description {
+            width: 100%;
+          }
+          .figure {
+            display: none;
+          }
+        }
         &.how-to-unit-concept {
           .figure {
             span {}
@@ -251,19 +262,19 @@
       margin: 0 auto;
     }
     ul {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-around;
       li {
         display: inline-block;
-        margin-right: 35px;
         text-align: center;
         background: #FFF;
         padding: 35px;
         box-shadow: 0 25px 25px 0 rgba(155, 159, 181, .18);
         transition: box-shadow $normal-transition;
+        margin: 0.9em;
         &:hover {
           box-shadow: 0 5px 5px 0 rgba(155, 159, 181, .35);
-        }
-        &:last-child {
-          margin-right: 0;
         }
         a::after {
           display: none;
