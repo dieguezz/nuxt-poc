@@ -303,6 +303,9 @@
     .extra-contact {
       margin-top: 100px;
       position: relative;
+      @media screen and (max-width: $max-xs) {
+        display: none;
+      }
       &::before {
         content: 'OR';
         position: absolute;
