@@ -114,62 +114,6 @@
       }
     }
   }
-  /* DNA */
-  #dna {
-    padding: 0;
-    a {
-      font-size: 48px;
-      font-weight: 600;
-      color: $black;
-      padding: 150px 0;
-      text-align: center;
-      background: #FFF;
-      position: absolute;
-      margin-top: -180px;
-      max-height: 360px;
-      width: 90%;
-      max-width: 880px;
-      left: 50%;
-      transform: translateX(-50%);
-      border: 5px solid #FFFFFF;
-      box-shadow: 0 6px 45px 0 rgba(23, 26, 28, 0.25);
-      transition: color $normal-transition, background $normal-transition, box-shadow $normal-transition;
-      &::before {
-        content: 'Want to know more?';
-        position: absolute;
-        font-size: 20px;
-        font-weight: 300;
-        left: 50%;
-        margin-top: -25px;
-        transform: translateX(-50%);
-      }
-      &::after {
-        content: '';
-        position: absolute;
-        width: 210px;
-        height: 220px;
-        background: url('../images/fingerprint.svg');
-        background-size: cover;
-        top: 50%;
-        left: 0;
-        right: 0;
-        margin: 0 auto;
-        transform: translateY(-50%) rotate(-15deg);
-        transition: background $normal-transition;
-        z-index: -1;
-        opacity: .1;
-      }
-      &:hover {
-        background: $black;
-        color: #FFF;
-        box-shadow: 0 3px 25px 0px rgba(23, 26, 28, 0.35);
-        &::after {
-          background: url('../images/fingerprint-inverse.svg');
-          background-size: cover;
-        }
-      }
-    }
-  }
   /* How-to Section */
   #how-to {
     h3 {
