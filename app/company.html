@@ -26,15 +26,15 @@
   <!-- build:include templates/pre-loader.html -->
   <!-- /build -->
 
+  <!-- build:include templates/header.html -->
+  <!-- /build -->
+
   <!-- START Page Transition -->
   <div class="animsition">
     <!-- START Home -->
     <section id="home" class="black">
 
       <!-- build:include templates/cookies.html -->
-      <!-- /build -->
-
-      <!-- build:include templates/header.html -->
       <!-- /build -->
 
       <main>
@@ -76,16 +76,32 @@
           <div class="services-unit services-unit-strategy">
             <h5>Strategy</h5>
             <p>Starting from your idea, we will help you to define the shape and the goal we want to achieve, looking for the best creative and technological solutions that leads us to create not only a successful but a stable product with lasting value.</p>
+            <svg width="340px" height="340px" viewBox="343 3477 286 286" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                <polygon class="path" id="Polygon" stroke="#202427" stroke-width="15" fill="none" points="486 3488 618 3620 486 3752 354 3620"></polygon>
+            </svg>
+            <svg class="sub" width="340px" height="340px" viewBox="343 3477 286 286" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                <polygon class="path" id="Polygon" stroke="#333A3F" stroke-width="15" fill="none" points="486 3488 618 3620 486 3752 354 3620"></polygon>
+            </svg>
+
           </div>
           <div class="clear"></div>
           <div class="services-unit services-unit-design">
             <h5>Design</h5>
             <p>Providing an intuitive and effective design is vital to the functionality of your product and what you want to convey to the world. We love simplicity, movement and above all, the logic and coherence of a design that delight the user.</p>
+            <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="280px" height="280px" xml:space="preserve">
+              <path class="path" fill="#171A1C" stroke="#202427" stroke-width="15" stroke-miterlimit="15" d="M 140, 140 m -132, 0 a 132,132 0 1,0 264,0 a 132,132 0 1,0 -264,0"/>
+            </svg>
           </div>
           <div class="clear"></div>
           <div class="services-unit services-unit-technology">
             <h5>Technology</h5>
             <p>With a team of expert engineers in web technology, we create scalable products using the latest technologies integrating ourselves deeply into your project and deliver outstanding experiences that breathes on its own.</p>
+            <svg width="340px" height="288px" viewBox="-14 -5 340 288" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                <polygon class="path" id="Triangle" stroke="#202427" stroke-width="15" fill="none" points="156 10 312 275 0 275"></polygon>
+            </svg>
+            <svg class="sub" width="340px" height="288px" viewBox="-14 -5 340 288" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                <polygon class="path" id="Triangle" stroke="#333A3F" stroke-width="15" fill="none" points="156 10 312 275 0 275"></polygon>
+            </svg>
           </div>
           <div class="clear"></div>
         </div>
@@ -176,6 +192,7 @@
   <script src="bower_components/jquery/dist/jquery.js"></script>
   <script src="bower_components/lining.js/src/lining.js"></script>
   <script src="bower_components/animsition/dist/js/animsition.min.js"></script>
+  <script src="bower_components/scrollreveal/dist/scrollreveal.min.js"></script>
   <!-- endbower -->
   <script src="bower_components/waypoints/lib/jquery.waypoints.js"></script>
   <!-- endbuild -->
@@ -186,6 +203,12 @@
   <!-- include: "type": "js", "files": ["scripts/*.js"] -->
   <!-- endbuild -->
 
+
+  <script>
+    window.sr = ScrollReveal();
+    sr.reveal('h3,h4,h5,p,section a', {origin:'bottom',scale:1,reset:true,distance:'50px',duration:750,delay:350});
+    sr.reveal('#partners ul li', {scale:1,reset:true,distance:'50px',duration: 1750 }, 150);
+</script>
 </body>
 
 </html>
