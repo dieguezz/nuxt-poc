@@ -196,13 +196,15 @@ module.exports = function(grunt) {
       server: {
         files: [{
           '.tmp/index.html': '<%= appConfig.app %>/index.html',
-          '.tmp/company.html': '<%= appConfig.app %>/company.html'
+          '.tmp/company.html': '<%= appConfig.app %>/company.html',
+          '.tmp/people.html': '<%= appConfig.app %>/people.html'
         }]
       },
       dist: {
         files: {
           '<%= appConfig.dist %>/index.html': '<%= appConfig.app %>/index.html',
-          '<%= appConfig.dist %>/company.html': '<%= appConfig.app %>/company.html'
+          '<%= appConfig.dist %>/company.html': '<%= appConfig.app %>/company.html',
+          '<%= appConfig.dist %>/people.html': '<%= appConfig.app %>/people.html'
         }
       }
     },
@@ -214,13 +216,15 @@ module.exports = function(grunt) {
       server: {
         files: {
           '.tmp/index.html': '.tmp/index.html',
-          '.tmp/company.html': '.tmp/company.html'
+          '.tmp/company.html': '.tmp/company.html',
+          '.tmp/people.html': '.tmp/people.html'
         }
       },
       dist: {
         files: {
           'dist/index.html': '<%= appConfig.dist %>/index.html',
-          'dist/company.html': '<%= appConfig.dist %>/company.html'
+          'dist/company.html': '<%= appConfig.dist %>/company.html',
+          'dist/people.html': '<%= appConfig.dist %>/people.html'
         }
       }
     },
