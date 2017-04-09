@@ -55,6 +55,40 @@ section:not(#home) {
     font-weight: 300;
     padding-left: 50px;
   }
+  &.legal {
+    h4 {
+      max-width: 960px;
+    }
+    h5 {
+      font-size: 48px;
+      letter-spacing: 2px;
+      line-height: 70px;
+      max-width: 680px;
+      padding: 90px 0;
+    }
+    p, ul li, strong {
+      max-width: 960px;
+      font-size: 20px;
+      line-height: 34px;
+      letter-spacing: .8px;
+      font-weight: 300;
+      padding-left: 50px;
+    }
+    strong {
+      font-weight: 900;
+    }
+    ul {
+      padding: 35px 0;
+      li {
+        padding-left: 90px;
+        list-style-type: disc;
+        list-style-position: inside;
+      }
+    }
+    a::after {
+      width: 100%;
+    }
+  }
 }
 
 
