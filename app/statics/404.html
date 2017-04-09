@@ -3,8 +3,12 @@
 
 <head>
   <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, minimum-scale=1.0, initial-scale=1.0, maximum-scale=1.0">
   <title>Page Not Found :(</title>
   <style>
+  * {
+    margin: 0;
+  }
    ::-moz-selection {
     background: #b3d4fc;
     text-shadow: none;
@@ -16,11 +20,10 @@
   }
 
   html {
-    padding: 30px 10px;
     font-size: 20px;
     line-height: 1.4;
-    color: #737373;
-    background: #f0f0f0;
+    color: #FFF;
+    background: #171A1C;
     -webkit-text-size-adjust: 100%;
     -ms-text-size-adjust: 100%;
   }
@@ -30,24 +33,57 @@
     font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   }
 
+  @font-face {
+    font-family: "Mark";
+    src: url("../fonts/marklight-webfont.ttf") format("truetype");
+    font-style: normal;
+    font-weight: 300;
+  }
+
+  @font-face {
+    font-family: "Mark";
+    src: url("../fonts/markmedium-webfont.ttf") format("truetype");
+    font-style: normal;
+    font-weight: 400;
+  }
+
+  @font-face {
+    font-family: "Mark";
+    src: url("../fonts/markbold-webfont.ttf") format("truetype");
+    font-style: normal;
+    font-weight: 600;
+  }
+
   body {
-    max-width: 500px;
-    _width: 500px;
-    padding: 30px 20px 50px;
-    border: 1px solid #b3b3b3;
-    border-radius: 4px;
-    margin: 0 auto;
-    box-shadow: 0 1px 10px #a7a7a7, inset 0 1px 0 #fff;
-    background: #fcfcfc;
+    text-rendering: optimizeLegibility;
+    text-rendering: geometricPrecision;
+    font-smooth: always;
+    font-smoothing: antialiased;
+    -moz-font-smoothing: antialiased;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    font-family: 'Mark', Helvetica, sans-serif;
+    overflow: hidden;
+    width: 100vw;
+    height: 100vh;
   }
 
   h1 {
-    margin: 0 10px;
-    font-size: 50px;
-    text-align: center;
+    margin: 0 auto;
+    transition: opacity 0.35s ease-in-out, visibility 0.35s ease-in-out;
+    background: url(../images/logo-icon-inverse.svg);
+    width: 65px;
+    height: 65px;
+    text-indent: -99999px;
+    background-size: cover;
   }
 
-  h1 span {
+  h2 {
+    font-size: 50px;
+    padding: 25px 0;
+  }
+
+  h2 span {
     color: #bbb;
   }
 
@@ -59,102 +95,204 @@
     margin: 1em 0;
   }
 
-  ul {
-    padding: 0 0 0 40px;
-    margin: 1em 0;
-  }
-
   .container {
-    max-width: 380px;
-    _width: 380px;
+    max-width: 960px;
+    width: 100%;
     margin: 0 auto;
-  }
-  /* google search */
-
-  #goog-fixurl ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-  }
-
-  #goog-fixurl form {
-    margin: 0;
-  }
-
-  #goog-wm-qt,
-  #goog-wm-sb {
-    border: 1px solid #bbb;
-    font-size: 16px;
-    line-height: normal;
-    vertical-align: top;
-    color: #444;
-    border-radius: 2px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateY(-50%) translateX(-50%);
+    text-align: center;
+    z-index: 20;
+    opacity: 0;
+    animation-name: intro;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+    animation-timing-function: ease-in-out;
   }
 
-  #goog-wm-qt {
-    width: 220px;
-    height: 20px;
-    padding: 5px;
-    margin: 5px 10px 0 0;
-    box-shadow: inset 0 1px 1px #ccc;
+  @keyframes intro {
+    0% {
+      filter: blur(5px);
+      opacity: 0;
+    }
+    100% {
+      filter: blur(0px);
+      opacity: 1;
+    }
   }
 
-  #goog-wm-sb {
+  img.travolta {
+    position: absolute;
+    bottom: 0;
+    right: 10%;
+    animation-name: travolta;
+    animation-duration: 1s;
+    animation-delay: 1s;
+    animation-fill-mode: forwards;
+    animation-timing-function: ease-in-out;
+    opacity: 0;
+  }
+
+  @keyframes travolta {
+    0% {
+      bottom: -10%;
+      opacity: 0;
+    }
+    100% {
+      bottom: 0;
+      opacity: 1;
+    }
+  }
+
+  .link {
+      position: relative;
+      height: auto;
+      color: #171A1C;
+      text-decoration: none;
+  }
+  .button {
+    padding: 15px 25px;
+    font-size: 14px;
+    border: 2px solid #FFF;
+    background: transparent;
+    color: #FFF;
+    text-transform: uppercase;
+    letter-spacing: 2px;
     display: inline-block;
-    height: 32px;
-    padding: 0 10px;
-    margin: 5px 0 0;
-    white-space: nowrap;
-    cursor: pointer;
-    background-color: #f5f5f5;
-    background-image: -webkit-linear-gradient(rgba(255, 255, 255, 0), #f1f1f1);
-    background-image: -moz-linear-gradient(rgba(255, 255, 255, 0), #f1f1f1);
-    background-image: -ms-linear-gradient(rgba(255, 255, 255, 0), #f1f1f1);
-    background-image: -o-linear-gradient(rgba(255, 255, 255, 0), #f1f1f1);
-    -webkit-appearance: none;
-    -moz-appearance: none;
-    appearance: none;
-    *overflow: visible;
-    *display: inline;
-    *zoom: 1;
+    font-weight: 600;
+    transition: background 0.35s ease-in-out, color 0.35s ease-in-out, transform 0.35s ease-in-out, border 0.35s ease-in-out;
+  }
+  .button:hover {
+    color: #171A1C;
+    background: #FFF;
+    transform: scale(.9);
   }
 
-  #goog-wm-sb:hover,
-  #goog-wm-sb:focus {
-    border-color: #aaa;
-    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
-    background-color: #f8f8f8;
+  .star {
+    width: 1px;
+    height: 1px;
+    position: absolute;
+    animation-name: star;
+    animation-duration: 4s;
+    animation-delay: 1s;
+    animation-fill-mode: forwards;
+    animation-timing-function: ease-in-out;
+    background: #FFF;
+    opacity: 0;
   }
 
-  #goog-wm-qt:hover,
-  #goog-wm-qt:focus {
-    border-color: #105cb6;
-    outline: 0;
-    color: #222;
+  @keyframes star {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
   }
 
-  input::-moz-focus-inner {
-    padding: 0;
-    border: 0;
+  .star-2 {
+    background: #b8b8fb;
+    width: 4px;
+    height: 1px;
   }
+  .star-5 {
+    background: #2affa9;
+  }
+  .star-6 {
+    background: #f98eea;
+    width: 3px;
+    height: 1px;
+  }
+
+  @media all and (max-height: 500px) {
+    .container {
+      transform: translateX(-50%);
+      top: 35px;
+    }
+  }
+
+  @media all and (max-width: 900px) {
+    .travolta {
+      right: -15%!important;
+    }
+  }
+
+  @media all and (max-width: 600px) {
+    h2 {
+      font-size: 36px;
+    }
+  }
+
+  @media all and (max-width: 400px) {
+    h2 {
+      font-size: 32px;
+    }
+    a {
+      font-size: 12px!important;
+    }
+  }
+
+  @media all and (max-height: 300px) {
+    body {
+      overflow-y: scroll;
+    }
+  }
+
   </style>
 </head>
 
 <body>
   <div class="container">
-    <h1>Not found <span>:(</span></h1>
-    <p>Sorry, but the page you were trying to view does not exist.</p>
-    <p>It looks like this was the result of either:</p>
-    <ul>
-      <li>a mistyped address</li>
-      <li>an out-of-date link</li>
-    </ul>
-    <script>
-    var GOOG_FIXURL_LANG = (navigator.language || '').slice(0, 2),
-      GOOG_FIXURL_SITE = location.host;
-    </script>
-    <script src="//linkhelp.clients.google.com/tbproxy/lh/wm/fixurl.js"></script>
+    <h1>etéreo</h1>
+    <h2>The treasure seems<br>not to be here.</h2>
+    <a class="button link" href="../index.html">Relax and come back home</a>
   </div>
+  <img class="travolta" src="../../images/404.gif" alt="">
+  <div class="star star-1"></div>
+  <script src="../bower_components/jquery/dist/jquery.js"></script>
+  <script type="text/javascript">
+  var width = $(window).width();
+  var height = $(window).height();
+  var star_count = 150;
+
+  var stars = new Array;
+
+  for ( i=1; i<= star_count; i++ ) {
+
+  var rand_x =  Math.floor((Math.random()*width)+1);
+  var rand_y =  Math.floor((Math.random()*height)+1);
+  var rand_color = Math.floor((Math.random()*10)+1);
+  var speed = Math.floor((Math.random()*5)+1);
+
+
+  var element = document.createElement('div');
+  element.className = "star star-" + rand_color;
+  element.style.left = rand_x + "px";
+  element.style.top = rand_y + "px";
+  element.setAttribute("data-speed", speed);
+  document.body.appendChild( element );
+
+  stars[i] = element;
+
+  }
+
+  window.setInterval(function(){
+
+  for ( i=1; i<stars.length; i++ ) {
+
+    var left = stars[i].style.left;
+    if ( left === "0px" ) {
+      stars[i].style.left = (width - 10) + "px";
+    } else {
+      stars[i].style.left = parseInt( left ) - stars[i].getAttribute("data-speed") + "px";
+    }
+
+  }
+
+  },1000/60);
+  </script>
 </body>
 
 </html>

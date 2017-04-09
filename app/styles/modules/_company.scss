@@ -179,7 +179,7 @@
           top: 0;
           height: 250px;
           float: right;
-          span {
+          span{
             position: absolute;
             width: calc(100% - 50px);
             height: 2px;
@@ -192,10 +192,31 @@
             animation-fill-mode: forwards;
             animation-timing-function: ease-in-out;
             animation-iteration-count: infinite;
+            animation-direction: alternate;
+            &::after {
+              position: absolute;
+              content: '';
+              width: calc(100% - 50px);
+              height: 2px;
+              background: #FFF;
+              right: 0;
+              top: 50%;
+              transform: translateY(-50%);
+              animation-name: how-to-figure-after;
+              animation-duration: 4s;
+              animation-delay: 2.5s;
+              animation-fill-mode: forwards;
+              animation-timing-function: ease-in-out;
+              animation-iteration-count: infinite;
+              animation-direction: alternate;
+            }
             @keyframes how-to-figure {
-              0% {}
-              50% {}
-              100% {}
+              0% {width: calc(100% - 50px)}
+              100% {width: calc(0% - 50px)}
+            }
+            @keyframes how-to-figure-after {
+              0% {width: calc(100% - 50px)}
+              100% {width: calc(0% - 50px)}
             }
           }
         }
@@ -217,6 +238,53 @@
             float: right;
           }
           .figure {
+            .zigzag {
+              top: 50%;
+              transform: translateY(-50%);
+            	background: #FFF;
+            	position: relative;
+            	height: 16px;
+            	z-index: 1;
+            	width: calc(100% - 50px);
+            	&:before,
+            	&:after {
+            		content: "";
+            		display: block;
+            		position: absolute;
+            		left: 0;
+              	right: 0;
+                animation-name: zig-zag;
+                animation-duration: 10s;
+                animation-fill-mode: forwards;
+                animation-timing-function: ease-in-out;
+                animation-iteration-count: infinite;
+                animation-direction: alternate;
+                @keyframes zig-zag {
+                  0% {
+                    background-position: 0% 0%;
+                  }
+                  100% {
+                    background-position: 150% 0%;
+                  }
+                }
+            	}
+            	&:before {
+            		height: (16px - 4px);
+            		top: 120%;
+            		background: linear-gradient(-135deg, #171A1C 8px, transparent 0) 0 8px, linear-gradient( 135deg, #171A1C 8px, transparent 0) 0 8px;
+            		background-position: top left;
+            		background-repeat: repeat-x;
+            		background-size: 16px 16px;
+            	}
+            	&:after {
+            		height: 16px;
+            		top: 100%;
+            		background: linear-gradient(-135deg, #FFF 8px, transparent 0) 0 8px, linear-gradient( 135deg, #FFF 8px, transparent 0) 0 8px;
+            		background-position: top left;
+            		background-repeat: repeat-x;
+            		background-size: 16px 16px;
+            	}
+}
             span {
               left: 0;
               right: auto;
