@@ -18,7 +18,7 @@
 
 </head>
 
-<body class="company">
+<body class="page">
 
   <!-- build:include templates/mobile-menu.html -->
   <!-- /build -->
@@ -28,13 +28,12 @@
 
   <!-- START Page Transition -->
   <div class="animsition">
+    <!-- build:include templates/header.html -->
+    <!-- /build -->
     <!-- START Home -->
     <section id="home" class="black">
 
       <!-- build:include templates/cookies.html -->
-      <!-- /build -->
-
-      <!-- build:include templates/header.html -->
       <!-- /build -->
 
       <main>
@@ -51,7 +50,7 @@
           </a>
           <span class="scroll-appear">People First.</span>
         </div>
-        <div class="section-bg"></div>
+        <div class="section-bg people"></div>
       </main>
     </section>
     <!-- END Home -->
@@ -202,6 +201,7 @@
     <script src="bower_components/jquery/dist/jquery.js"></script>
     <script src="bower_components/lining.js/src/lining.js"></script>
     <script src="bower_components/animsition/dist/js/animsition.min.js"></script>
+    <script src="bower_components/scrollreveal/dist/scrollreveal.min.js"></script>
     <!-- endbower -->
     <script src="bower_components/waypoints/lib/jquery.waypoints.js"></script>
     <!-- endbuild -->
@@ -211,6 +211,12 @@
     <script src="app.scripts.js"></script>
     <!-- include: "type": "js", "files": ["scripts/*.js"] -->
     <!-- endbuild -->
+
+    <script>
+      window.sr = ScrollReveal();
+      sr.reveal('h3,h4,h5,p,section a', {origin:'bottom',scale:1,reset:true,distance:'50px',duration:750,delay:350});
+      sr.reveal('#partners ul li', {scale:1,reset:true,distance:'50px',duration: 1750 }, 150);
+    </script>
 
 </body>
 
