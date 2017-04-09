@@ -16,4 +16,11 @@ $(document).ready(function() {
     duration: 1750
   }, 150);
 
+  sr.reveal('#people ul li', {
+    scale: 1,
+    reset: true,
+    distance: '50px',
+    duration: 1750
+  }, 150);
+
 });
