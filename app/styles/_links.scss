@@ -1,6 +1,22 @@
 /* Links */
 
 
+/* Inline link */
+
+p, h4 {
+  .link {
+    &::after {
+      width: 100%;
+    }
+    &:hover {
+      font-weight: 600;
+      &::after {
+        width: 0%;
+      }
+    }
+  }
+}
+
 /* Normal link */
 
 .link {
