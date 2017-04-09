@@ -411,7 +411,7 @@ header {
       }
     }
     .navigation-mobile {
-      .bar:before, .bar:after {
+      .bar, .bar:before, .bar:after {
         background: $black;
       }
     }
