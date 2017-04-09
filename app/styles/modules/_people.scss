@@ -33,7 +33,7 @@
         position: absolute;
         width: 230px;
         height: 300px;
-        background-color: rgba(256,256,256,.95);
+        background-color: rgba(256, 256, 256, .95);
         opacity: 0;
         display: flex;
         flex-direction: column;
@@ -62,7 +62,7 @@
         }
       }
       &.people-join {
-        width: calc( (290px * 2) + ((100% - 120px - ((293px - 2em) * 3)) / 2));
+        width: calc( (290px * 2) + ((100% - 120px - ((300px - 2em) * 3)) / 2));
         background-color: $gray-lighter;
         text-align: center;
         display: flex;
@@ -70,7 +70,7 @@
         align-items: center;
         align-content: center;
         justify-content: center;
-        @media screen and (max-width: 1085px) {
+        @media screen and (max-width: 1168px) {
           width: 290px;
         }
         p {
