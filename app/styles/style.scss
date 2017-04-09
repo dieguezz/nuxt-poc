@@ -56,6 +56,13 @@ section:not(#home) {
     padding-left: 50px;
   }
   &.legal {
+    #cookies {
+      position: relative;
+      width: 100%;
+      height: 2px;
+      background: $gray-lighter;
+      margin: 180px 0 90px 0;
+    }
     h4 {
       max-width: 960px;
     }
