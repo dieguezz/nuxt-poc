@@ -9,13 +9,14 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
+    max-width: 1080px;
     @media screen and (max-width: 763px) {
       justify-content: space-around;
     }
     li {
       width: 290px;
       height: 360px;
-      margin: 1em;
+      margin: 1.7em;
       position: relative;
       display: flex;
       align-items: center;
@@ -31,7 +32,7 @@
         position: absolute;
         width: 230px;
         height: 300px;
-        background-color: white;
+        background-color: rgba(256,256,256,.95);
         opacity: 0;
         display: flex;
         flex-direction: column;
@@ -41,11 +42,14 @@
         padding: 1em;
         z-index: 1;
         h4 {
-          font-size: 28px;
+          font-size: 24px;
+          font-weight: 600;
           padding: 0;
         }
         .people-title {
-          margin: -7em 0 -5em;
+          margin: -9em 0 -5em;
+          font-size: 14px;
+          letter-spacing: 1px;
         }
       }
       .link {
@@ -70,10 +74,15 @@
         }
         p {
           font-size: 32px;
+          line-height: 42px;
+          font-weight: 600;
+          max-width: 500px;
+          letter-spacing: 1.5px;
           margin-bottom: 1em;
         }
         .link {
           background-color: transparent;
+          font-size: 14px;
           &:hover {
             color: $black;
           }
