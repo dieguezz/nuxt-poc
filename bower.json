@@ -17,7 +17,8 @@
     "lining.js": "^0.3.3",
     "waypoints": "^4.0.1",
     "animsition": "^4.0.2",
-    "scrollreveal": "^3.3.5"
+    "scrollreveal": "^3.3.5",
+    "instafeed.js": "^1.4.1"
   },
   "devDependencies": {}
 }
