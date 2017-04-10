@@ -26,3 +26,33 @@ $(document).ready(function() {
     $('header').toggleClass('mobile-appear');
   });
 });
+
+$(document).ready(function() {
+
+  var $active;
+  var selectMenuItem = function($menuItem) {
+    if ($active) {
+      $active.parent().removeClass('active');
+    }
+    $menuItem.parent().addClass('active');
+    $active = $menuItem;
+    return false;
+  };
+
+  var waypoints = [];
+
+  // Get id of current scroll item
+  $('#top-menu').find('a').each(function() {
+    var elem = $(this);
+    var href = elem.attr('href');
+    var waypoint = new Waypoint({
+      element: $(href)[0],
+      handler: function() {
+        selectMenuItem(elem);
+      },
+      offset: '100%'
+    });
+    waypoints.push(waypoint);
+  });
+
+});
