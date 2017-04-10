@@ -121,5 +121,8 @@ section:not(.home-page) {
     line-height: 70px!important;
     letter-spacing: 2px!important;
     max-width: 720px!important;
+    .line[index="1"], .line[index="2"], .line[index="3"] {
+      
+    }
   }
 }

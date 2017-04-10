@@ -25,6 +25,19 @@ $(document).ready(function() {
 
 });
 
+/* Reveal Titles */
+$(document).ready(function() {
+  setTimeout(function() {
+
+    $('.title-page').addClass('appear');
+  }, 1000);
+
+  setTimeout(function() {
+    $('.title-page').removeClass('appear');
+    $('.title-page').addClass('appeared');
+  }, 3000);
+});
+
 /* Mobile menu */
 
 $(document).ready(function() {
