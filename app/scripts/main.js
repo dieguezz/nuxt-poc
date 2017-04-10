@@ -102,6 +102,22 @@ $(document).ready(function() {
 
 });
 
+/* Open Bio */
+
+$(document).ready(function() {
+  $('.open-bio').on('click', function() {
+    $('.people-bio-container').addClass('show');
+    $('.people-bio-container').removeClass('hide');
+  });
+});
+
+$(document).ready(function() {
+  $('.close-bio').on('click', function() {
+    $('.people-bio-container').removeClass('show');
+    $('.people-bio-container').addClass('hide');
+  });
+});
+
 /* Page transitions */
 
 $(document).ready(function() {
@@ -115,7 +131,7 @@ $(document).ready(function() {
     loading: false,
     loadingParentElement: 'body', //animsition wrapper element
     loadingClass: 'animsition-loading',
-    loadingInner: '', // e.g '<img src="loading.svg" />'
+    loadingInner: '<img src="../images/logo-icon-inverse.svg" />', // e.g '<img src="loading.svg" />'
     timeout: false,
     timeoutCountdown: 5000,
     onLoadEvent: true,
