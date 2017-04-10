@@ -1,6 +1,6 @@
 $(document).ready(function() {
   var sr = ScrollReveal();
-  sr.reveal('h3,h4,h5,p,section a', {
+  sr.reveal('h3,h4,h5,p,section a,input,textarea', {
     origin: 'bottom',
     scale: 1,
     reset: true,
