@@ -67,6 +67,7 @@
       position: absolute;
       z-index: -1;
     }
+
     h2, .scroll-appear {
       font-size: 64px;
       font-weight: 600;
@@ -108,5 +109,17 @@
       opacity: 0;
       z-index: 10;
     }
+  }
+}
+
+/* Not Home Page*/
+
+section:not(.home-page) {
+  h2 {
+    font-size: 48px!important;
+    font-weight: 500!important;
+    line-height: 70px!important;
+    letter-spacing: 2px!important;
+    max-width: 720px!important;
   }
 }

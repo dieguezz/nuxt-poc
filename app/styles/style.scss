@@ -27,7 +27,6 @@ body {
   }
 }
 
-
 /* Sections */
 
 section:not(#home) {
@@ -41,6 +40,7 @@ section:not(#home) {
     background: $gray-lighter;
     color: $black;
   }
+
   h3 {
     font-size: 48px;
     letter-spacing: 2px;
