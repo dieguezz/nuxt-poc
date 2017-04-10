@@ -1,3 +1,5 @@
+'use strict';
+
 $(document).ready(function() {
   if (!window.localStorage.getItem('cookies')) {
     setTimeout(function() {

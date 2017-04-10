@@ -1,28 +1,9 @@
+'use strict';
+
 /* Scroll to Top before load */
 
 $(window).on('beforeunload', function() {
   $(window).scrollTop(0);
-});
-
-/* Home Intro */
-
-$(document).ready(function() {
-
-  if (document.referrer.indexOf(document.location.origin) === -1) {
-    $('.preloader').removeClass('hidden');
-  }
-
-  setTimeout(function() {
-    $('body').css('background', '#171A1C');
-    $('.preloader').removeClass('loading');
-    $('.home-intro h2').addClass('appear');
-  }, 3000);
-
-  setTimeout(function() {
-    $('.home-intro h2').removeClass('appear');
-    $('.home-intro h2').addClass('appeared');
-  }, 5000);
-
 });
 
 /* Reveal Titles */
@@ -38,23 +19,6 @@ $(document).ready(function() {
   }, 3000);
 });
 
-/* Form Sending */
-$(document).ready(function() {
-  $('.sender').on('click', function() {
-    $(this).toggleClass('sending');
-  });
-});
-
-/* Mobile menu */
-
-$(document).ready(function() {
-  $('.navigation-mobile').on('click', function() {
-    $('.bar').toggleClass('animate');
-    $('.mobile-menu').toggleClass('appear');
-    $('header').toggleClass('mobile-appear');
-  });
-});
-
 /* Scroll Opacity */
 
 $(window).on('scroll', function() {
@@ -63,23 +27,6 @@ $(window).on('scroll', function() {
   });
   $('.scroll-appear').css({
     'opacity': (-150 + $(window).scrollTop()) / 150
-  });
-});
-
-/* Smooth Scroll in same page*/
-
-$(function() {
-  $('a[href*="#"]:not([href="#"])').click(function() {
-    if (location.pathname.replace(/^\//, '') === this.pathname.replace(/^\//, '') && location.hostname === this.hostname) {
-      var target = $(this.hash);
-      target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
-      if (target.length) {
-        $('html, body').animate({
-          scrollTop: target.offset().top
-        }, 1000);
-        return false;
-      }
-    }
   });
 });
 
@@ -111,45 +58,16 @@ $(document).ready(function() {
 
 /* Open Bio */
 
-$(document).ready(function() {
-  $('.open-bio').on('click', function() {
-    $('.people-bio-container').addClass('show');
-    $('.people-bio-container').removeClass('hide');
-  });
-});
+// $(document).ready(function() {
+//   $('.open-bio').on('click', function() {
+//     $('.people-bio-container').addClass('show');
+//     $('.people-bio-container').removeClass('hide');
+//   });
+// });
 
-$(document).ready(function() {
-  $('.close-bio').on('click', function() {
-    $('.people-bio-container').removeClass('show');
-    $('.people-bio-container').addClass('hide');
-  });
-});
-
-/* Page transitions */
-
-$(document).ready(function() {
-  $(".animsition").animsition({
-    inClass: 'fade-in',
-    outClass: 'fade-out',
-    inDuration: 1500,
-    outDuration: 800,
-    linkElement: '.link',
-    // e.g. linkElement: 'a:not([target="_blank"]):not([href^="#"])'
-    loading: false,
-    loadingParentElement: 'body', //animsition wrapper element
-    loadingClass: 'animsition-loading',
-    loadingInner: '<img src="../images/logo-icon-inverse.svg" />', // e.g '<img src="loading.svg" />'
-    timeout: false,
-    timeoutCountdown: 5000,
-    onLoadEvent: true,
-    browser: ['animation-duration', '-webkit-animation-duration'],
-    // "browser" option allows you to disable the "animsition" in case the css property in the array is not supported by your browser.
-    // The default setting is to disable the "animsition" in a browser that does not support "animation-duration".
-    overlay: false,
-    overlayClass: 'animsition-overlay-slide',
-    overlayParentElement: 'body',
-    transition: function(url) {
-      window.location.href = url;
-    }
-  });
-});
+// $(document).ready(function() {
+//   $('.close-bio').on('click', function() {
+//     $('.people-bio-container').removeClass('show');
+//     $('.people-bio-container').addClass('hide');
+//   });
+// });
