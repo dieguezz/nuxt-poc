@@ -38,6 +38,13 @@ $(document).ready(function() {
   }, 3000);
 });
 
+/* Form Sending */
+$(document).ready(function() {
+  $('.sender').on('click', function() {
+    $(this).toggleClass('sending');
+  });
+});
+
 /* Mobile menu */
 
 $(document).ready(function() {

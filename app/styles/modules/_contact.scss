@@ -141,8 +141,9 @@
   }
   a.sender {
     position: relative;
-    width: 100px;
-    height: 20px;
+    width: 160px;
+    height: 30px;
+    font-size: 16px;
     @media all and (max-width: $max-xs) {
       float: right;
       margin-bottom: 2em;
