@@ -28,18 +28,17 @@ body {
   }
 }
 
-.container:after,
-.row:after,
-.u-cf {
+.container:after, .row:after, .u-cf {
   content: "";
   display: table;
-  clear: both; }
+  clear: both;
+}
 
-.column,
-.columns {
+.column, .columns {
   width: 100%;
   float: left;
-  box-sizing: border-box; }
+  box-sizing: border-box;
+}
 
 
 /* Sections */
@@ -601,23 +600,25 @@ footer {
 
 #pictures {
   border-top: 1px solid #E9E9EF;
-#instafeed {
-  width: calc(100% - 120px);
-  max-width: 1420px;
-  height: 100%;
-  margin: 0 auto;
-  padding: 120px 60px;
-  a {
-    img {
-      width: 100%;
-      max-width: 350px;
-      transition: opacity $normal-transition;
-    }
-    &:hover {
+  #instafeed {
+    width: calc(100% - 120px);
+    max-width: 1420px;
+    height: 100%;
+    margin: 0 auto;
+    padding: 120px 60px;
+    display: flex;
+    justify-content: space-between;
+    a {
       img {
-        opacity: .7;
+        width: 100%;
+        max-width: 350px;
+        transition: opacity $normal-transition;
+      }
+      &:hover {
+        img {
+          opacity: .7;
+        }
       }
     }
   }
-}
 }
