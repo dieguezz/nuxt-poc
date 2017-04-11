@@ -611,6 +611,12 @@ footer {
     img {
       width: 100%;
       max-width: 350px;
+      transition: opacity $normal-transition;
+    }
+    &:hover {
+      img {
+        opacity: .7;
+      }
     }
   }
 }
