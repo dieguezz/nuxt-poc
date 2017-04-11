@@ -17,12 +17,14 @@ p, h4 {
   }
 }
 
+
 /* Normal link */
 
 .link {
   position: relative;
   height: auto;
   color: $black;
+  outline: none;
   &::after {
     content: '';
     position: absolute;
@@ -57,6 +59,7 @@ p, h4 {
   padding: 15px 25px;
   font-size: 14px;
   border: 2px solid inherit;
+  outline: none;
   background: $black;
   color: #FFF;
   text-transform: uppercase;
