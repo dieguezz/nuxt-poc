@@ -41,10 +41,10 @@
           Let's rock and roll!
         </h3>
         <form id="join-us-form">
-          <input id="name" name="name" type="text" placeholder="Your full name..." required="">
-          <input id="email" name="email" type="email" placeholder="Your email..." email="" required="">
-          <textarea id="message" name="message" rows="8" cols="80" placeholder="Your delicious message..." required=""></textarea>
-          <a class="button white sender"><span>Send</span></a>
+          <input id="name" name="name" type="text" placeholder="Your full name..." required>
+          <input id="email" name="email" type="email" placeholder="Your email..." email required>
+          <textarea id="message" name="message" rows="8" cols="80" placeholder="Your delicious message..." required></textarea>
+          <button type="submit" class="button white sender"><span>Send</span></button>
         </form>
         <div class="clear"></div>
         <div class="contact-links">
@@ -100,25 +100,25 @@
 
     <!-- build:include templates/footer.html -->
     <!-- /build -->
-    </div>
+  </div>
 
-    <!-- build:js(.) scripts/vendor.js -->
-    <!-- bower:js -->
-    <script src="bower_components/jquery/dist/jquery.js"></script>
-    <script src="bower_components/lining.js/src/lining.js"></script>
-    <script src="bower_components/animsition/dist/js/animsition.min.js"></script>
-    <script src="bower_components/scrollreveal/dist/scrollreveal.js"></script>
-    <script src="bower_components/instafeed.js/instafeed.js"></script>
-    <script src="bower_components/rellax/rellax.js"></script>
-    <!-- endbower -->
-    <script src="bower_components/waypoints/lib/jquery.waypoints.js"></script>
-    <!-- endbuild -->
+  <!-- build:js(.) scripts/vendor.js -->
+  <!-- bower:js -->
+  <script src="bower_components/jquery/dist/jquery.js"></script>
+  <script src="bower_components/lining.js/src/lining.js"></script>
+  <script src="bower_components/animsition/dist/js/animsition.min.js"></script>
+  <script src="bower_components/scrollreveal/dist/scrollreveal.js"></script>
+  <script src="bower_components/instafeed.js/instafeed.js"></script>
+  <script src="bower_components/rellax/rellax.js"></script>
+  <!-- endbower -->
+  <script src="bower_components/waypoints/lib/jquery.waypoints.js"></script>
+  <!-- endbuild -->
 
-    <!-- build:js({.,.tmp,app,dist}) scripts/scripts.js -->
-    <!-- include: "type": "js", "files": ["vendor/**/*.js"] -->
-    <script src="app.scripts.js"></script>
-    <!-- include: "type": "js", "files": ["scripts/*.js"] -->
-    <!-- endbuild -->
+  <!-- build:js({.,.tmp,app,dist}) scripts/scripts.js -->
+  <!-- include: "type": "js", "files": ["vendor/**/*.js"] -->
+  <script src="app.scripts.js"></script>
+  <!-- include: "type": "js", "files": ["scripts/*.js"] -->
+  <!-- endbuild -->
 
 </body>
 
