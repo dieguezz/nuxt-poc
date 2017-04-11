@@ -4,8 +4,68 @@
   background-position: center!important;
 }
 
-#people {
+#values {
+  padding-bottom: 600px!important;
+  position: relative;
+  overflow: hidden;
+  img {
+    position: absolute;
+    &.values-1 {
+      left: -20%;
+      top: 60%;
+    }
+    &.values-2 {
+      right: -20%;
+      top: 20%;
+    }
+    &.values-3 {
+      right: -10%;
+      top: 70%;
+    }
+  }
+  h3 {
+    padding-bottom: 250px;
+  }
+  .values-list {
+    .values-unit {
+      float: left;
+      display: inline-block;
+      margin-top: 180px;
+      position: relative;
+      width: 40%;
+      max-width: 350px;
+      &::before {
+        position: absolute;
+        font-size: 144px;
+        font-weight: 600;
+        top: -50%;
+        left: -10%;
+        opacity: .05;
+      }
+      h5 {
+        font-size: 32px;
+        font-weight: 600;
+        z-index: 10;
+        position: relative;
+      }
+      p {
+        max-width: 400px;
+        color: #B9B9B9;
+        padding-top: 50px;
+        font-weight: 300;
+        font-size: 20px;
+        line-height: 32px;
+        letter-spacing: .8px;
+        z-index: 10;
+        position: relative;
+      }
+      &.community{&::before {content: '1'}} &.freedom{margin-left: 80px;&::before {content: '2'}} &.competence{&::before {content: '3'}} &.citizenship{margin-left: 80px;&::before {content: '4'}} &.professionalism{margin-left: 80px;&::before {content: '5'}};
 
+    }
+  }
+}
+
+#people {
   .people-bio-container {
     position: fixed;
     width: 100vw;

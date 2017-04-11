@@ -21,11 +21,25 @@ body {
   height: 100%;
   margin: 0 auto;
   padding: 0 60px;
+  box-sizing: border-box;
   @media all and (max-width: 490px) {
     padding: 0 30px;
     width: calc(100% - 60px);
   }
 }
+
+.container:after,
+.row:after,
+.u-cf {
+  content: "";
+  display: table;
+  clear: both; }
+
+.column,
+.columns {
+  width: 100%;
+  float: left;
+  box-sizing: border-box; }
 
 
 /* Sections */
@@ -586,11 +600,15 @@ footer {
 }
 
 #instafeed {
-  padding-top: 120px;
+  width: calc(100% - 120px);
+  max-width: 1420px;
+  height: 100%;
+  margin: 0 auto;
+  padding: 120px 60px;
   a {
     img {
       width: 100%;
-      max-width: 400px;
+      max-width: 350px;
     }
   }
 }

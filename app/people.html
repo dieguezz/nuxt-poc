@@ -69,42 +69,46 @@
     <!-- END Info Section -->
 
     <!-- START Services Section -->
-    <section id="services" class="black">
+    <section id="values" class="black">
+      <img src="/images/people/values-1.jpg" class="values-1 rellax" data-rellax-speed="7" data-rellax-percentage="0.5" alt=""/>
+      <img src="/images/people/values-2.jpg" class="values-2 rellax" data-rellax-speed="3" alt=""/>
+      <img src="/images/people/values-3.jpg" class="values-3 rellax" data-rellax-speed="3" alt=""/>
       <div class="container">
         <h3>The values we stand for. The weapons that allows us to pursue our goals.</h3>
-        <div class="services-list">
+        <div class="values-list">
 
-          <div class="services-unit">
-            <h5>Community</h5>
-            <p>We like to hang out with people who share our values.</p>
+          <div class="row">
+            <div class="values-unit community">
+              <h5>Community</h5>
+              <p>We like to hang out with people who share our values.</p>
+            </div>
+            <div class="values-unit freedom">
+              <h5>Freedom</h5>
+              <p>We want to control our own time.</p>
+            </div>
           </div>
 
           <div class="clear"></div>
 
-          <div class="services-unit">
-            <h5>Freedom</h5>
-            <p>We want to control our own time.</p>
+          <div class="row">
+            <div class="values-unit competence">
+              <h5>Competence</h5>
+              <p>We want to continuously learn.</p>
+            </div>
+            <div class="values-unit citizenship">
+              <h5>Good Citizenship</h5>
+              <p>Heart over wallet (money isn’t the main thing in life).</p>
+            </div>
           </div>
 
           <div class="clear"></div>
 
-          <div class="services-unit">
-            <h5>Competence</h5>
-            <p>We want to continuously learn.</p>
-          </div>
-
-          <div class="clear"></div>
-
-          <div class="services-unit">
-            <h5>Good Citizenship</h5>
-            <p>Heart over wallet (money isn’t the main thing in life).</p>
-          </div>
-
-          <div class="clear"></div>
-
-          <div class="services-unit">
-            <h5>Professionalism</h5>
-            <p>We genuinely care about solving our customers problems.</p>
+          <div class="row">
+            <div class="values-unit blank"></div>
+            <div class="values-unit professionalism">
+              <h5>Professionalism</h5>
+              <p>We genuinely care about solving our customers problems.</p>
+            </div>
           </div>
 
           <div class="clear"></div>
@@ -241,8 +245,8 @@
     <section id="pictures">
       <div class="container">
         <h3>Because although we are passionate, not everything in life is working.</h3>
-        <div id="instafeed"></div>
       </div>
+      <div id="instafeed"></div>
     </section>
     <!-- build:include templates/pre-footer.html -->
     <!-- /build -->
@@ -266,6 +270,10 @@
     <!-- build:js({.,.tmp,app,dist}) scripts/scripts.js -->
     <!-- include: "type": "js", "files": ["vendor/**/*.js"] -->
     <script src="app.scripts.js"></script>
+    <script src="scripts/rellax.min.js"></script>
+    <script>
+      var rellax = new Rellax('.rellax');
+    </script>
     <!-- include: "type": "js", "files": ["scripts/*.js"] -->
     <!-- endbuild -->
 
