@@ -19,7 +19,7 @@ $(document).ready(function() {
       method: 'POST',
       data: {
         '_subject': name,
-        email: email,
+        '_replyto': email,
         message: message
       },
       dataType: 'json'
