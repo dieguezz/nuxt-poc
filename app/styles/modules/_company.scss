@@ -293,7 +293,67 @@
         }
         &.how-to-unit-excellence {
           padding-bottom: 0;
-          .figure {}
+          .figure {
+            overflow: hidden;
+            position: relative;
+            .heart-rate {
+              width: calc(100% - 50px);
+              top: 50%;
+              right: 0;
+              height: 73px;
+              position: absolute;
+              margin-top: -35px;
+            }
+
+            .fade-in {
+              position: absolute;
+              width: 100%;
+              height: 100%;
+              background-color: #FFFFFF;
+              top: 0;
+              right: 0;
+              animation: heartRateIn 5s linear infinite;
+            }
+
+            .fade-out {
+              position: absolute;
+              width: 120%;
+              height: 100%;
+              top: 0;
+              left: -120%;
+              animation: heartRateOut 5s linear infinite;
+              background: rgba(255, 255, 255, 1);
+              background: -moz-linear-gradient(left, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 1) 50%, rgba(255, 255, 255, 0) 100%);
+              background: -webkit-linear-gradient(left, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 1) 50%, rgba(255, 255, 255, 0) 100%);
+              background: -o-linear-gradient(left, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 1) 50%, rgba(255, 255, 255, 0) 100%);
+              background: -ms-linear-gradient(left, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 1) 50%, rgba(255, 255, 255, 0) 100%);
+              background: linear-gradient(to right, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 1) 80%, rgba(255, 255, 255, 0) 100%);
+            }
+
+            @keyframes heartRateIn {
+              0% {
+                width: 100%;
+              }
+              50% {
+                width: 0;
+              }
+              100% {
+                width: 0;
+              }
+            }
+
+            @keyframes heartRateOut {
+              0% {
+                left: -120%;
+              }
+              30% {
+                left: -120%;
+              }
+              100% {
+                left: 0;
+              }
+            }
+          }
         }
       }
     }
@@ -302,6 +362,9 @@
   #partners {
     border-bottom: 1px solid #FFF;
     padding: 250px 0 150px 0;
+    .container {
+      max-width: 1320px;
+    }
     h3 {
       text-align: center;
       margin: 0 auto;

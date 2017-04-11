@@ -599,6 +599,8 @@ footer {
   }
 }
 
+#pictures {
+  border-top: 1px solid #E9E9EF;
 #instafeed {
   width: calc(100% - 120px);
   max-width: 1420px;
@@ -611,4 +613,5 @@ footer {
       max-width: 350px;
     }
   }
+}
 }
