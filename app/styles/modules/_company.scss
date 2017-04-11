@@ -38,7 +38,6 @@
   #services {
     padding-bottom: 400px;
     overflow-x: hidden;
-    max-width: 100%;
     @media all and (max-width: 600px) {
       padding-bottom: 150px;
     }
@@ -71,6 +70,9 @@
           letter-spacing: .8px;
           z-index: 10;
           position: relative;
+          @media all and (max-width: 600px) {
+            padding-left: 0px;
+          }
         }
         &.services-unit-design {
           float: right;
@@ -185,6 +187,9 @@
             line-height: 32px;
             padding-left: 50px;
             padding-top: 50px;
+            @media all and (max-width: 600px) {
+              padding-left: 0px;
+            }
           }
         }
         .figure {
