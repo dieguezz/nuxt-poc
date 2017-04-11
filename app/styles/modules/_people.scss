@@ -266,7 +266,7 @@
   ul {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
+    justify-content: center;
     max-width: 1080px;
     padding-top: 120px;
     @media all and (max-width: 600px) {
