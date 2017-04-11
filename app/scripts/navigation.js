@@ -46,7 +46,7 @@ $(document).ready(function() {
     var elem = $(this);
     var href = elem.attr('href');
     var waypoint = new Waypoint({
-      element: $(href)[0],
+      element: $('*[data-menu-navigation="' + href + '"]')[0],
       handler: function() {
         selectMenuItem(elem);
       },

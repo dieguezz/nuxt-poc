@@ -51,16 +51,14 @@ $(document).ready(function() {
       $(".menu-navigation").removeClass('inverse');
     }
   }, {
-    offset: '100%'
+    offset: '90%'
   });
 
   $black.waypoint(function(direction) {
     if (direction === 'down') {
       $("header").removeClass('inverse');
-      $(".menu-navigation").removeClass('inverse');
     } else {
       $("header").addClass('inverse');
-      $(".menu-navigation").addClass('inverse');
     }
   }, {
     offset: '10%'
@@ -73,7 +71,7 @@ $(document).ready(function() {
       $(".menu-navigation").addClass('inverse');
     }
   }, {
-    offset: '100%'
+    offset: '90%'
   });
 
 });

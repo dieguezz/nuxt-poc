@@ -29,6 +29,16 @@
   <!-- START Page Transition -->
   <div class="animsition">
 
+    <nav class="menu-navigation menu-active">
+      <ul id="top-menu">
+        <li><a href="#home">Start</a></li>
+        <li><a href="#info">About us</a></li>
+        <li><a href="#values">What we believe</a></li>
+        <li><a href="#people">Etereotypes</a></li>
+        <li><a href="#pictures">Pictures</a></li>
+      </ul>
+    </nav>
+
     <!-- START Home -->
     <section id="home" class="black">
       <!-- build:include templates/header.html -->
@@ -40,7 +50,7 @@
       <main>
         <div class="container">
 
-          <h2 data-lining class="fade-scroll title-page">
+          <h2 data-lining class="fade-scroll title-page" data-menu-navigation="#home">
           We believe in the individual potential and breaking the hierarchical chains.
         </h2>
 
@@ -59,7 +69,7 @@
     <!-- START Info Section -->
     <section id="info" class="white">
       <div class="container">
-        <h3>We are not only a group of folks with very clear ideas.</h3>
+        <h3 data-menu-navigation="#info">We are not only a group of folks with very clear ideas.</h3>
         <h4>The etereo team has an enormous ambition and passion to create products of great value far from the noisy business world and the dehumanization that is increasingly being imposed. This has led us to create a talented group who share same values and can create just about anything from the web.
           <br><br>
           Designers, engineers, creators, makers, programmers and thinkers together. No hierarchies, no bosses, no supervisors— With responsibility, with ambition, with thoroughness. Let's do something amazing.
@@ -74,7 +84,7 @@
       <img src="/images/people/values-2.jpg" class="values-2 rellax" data-rellax-speed="7" data-rellax-percentage="0.5">
       <img src="/images/people/values-3.jpg" class="values-3 rellax" data-rellax-speed="3" data-rellax-percentage="0.25">
       <div class="container">
-        <h3>The values we stand for. The weapons that allows us to pursue our goals.</h3>
+        <h3 data-menu-navigation="#values">The values we stand for. The weapons that allows us to pursue our goals.</h3>
         <div class="values-list">
 
           <div class="row">
@@ -143,7 +153,7 @@
       <!-- END People Bio -->
 
       <div class="container">
-        <h3>The etereotypes: these are the crazy guys that make this possible.</h3>
+        <h3 data-menu-navigation="#people">The etereotypes: these are the crazy guys that make this possible.</h3>
 
         <ul>
 
@@ -244,7 +254,7 @@
     <!-- END Partners Section -->
     <section id="pictures">
       <div class="container">
-        <h3>Because although we are passionate, not everything in life is working.</h3>
+        <h3 data-menu-navigation="#pictures">Because although we are passionate, not everything in life is working.</h3>
       </div>
       <div id="instafeed"></div>
       <a href="http://instagram.com/etereoio" class="link button white border" target="_blank">View more on Instagram</a>
