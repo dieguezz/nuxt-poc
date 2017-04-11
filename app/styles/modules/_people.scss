@@ -179,83 +179,83 @@
 }
 
 #people {
-  .people-bio-container {
-    position: fixed;
-    width: 100vw;
-    height: 100vh;
-    top: 0;
-    left: 0;
-    background: transparent;
-    z-index: 50;
-    display: none;
-    .navigation-mobile {
-      display: block;
-      bottom: auto;
-      z-index: 20;
-      top: 40px;
-      right: 40px;
-      .bar.animate {
-        background: rgba(255, 255, 255, 0)!important;
-      }
-      .bar, .bar::before, .bar::after {
-        background: $black;
-      }
-    }
-    .people-picture {
-      position: absolute;
-      background-size: cover!important;
-      width: 40%;
-      height: 100%;
-      top: 0;
-      left: -10%;
-      opacity: 0;
-    }
-    .people-bio {
-      position: absolute;
-      padding: 150px;
-      width: calc(60% - 300px);
-      height: calc(100% - 300px);
-      background: #FFF;
-      top: 0;
-      right: -10%;
-      opacity: 0;
-    }
-    &.show {
-      display: block;
-      .people-picture {
-        animation-name: people-picture;
-        animation-duration: .7s;
-        animation-fill-mode: forwards;
-        animation-timing-function: ease-in-out;
-        @keyframes people-picture {
-          0% {
-            left: -10%;
-            opacity: 0;
-          }
-          100% {
-            left: 0%;
-            opacity: 1;
-          }
-        }
-      }
-      .people-bio {
-        animation-name: people-bio;
-        animation-duration: .7s;
-        animation-fill-mode: forwards;
-        animation-timing-function: ease-in-out;
-        @keyframes people-bio {
-          0% {
-            right: -10%;
-            opacity: 0;
-          }
-          100% {
-            right: 0%;
-            opacity: 1;
-          }
-        }
-      }
-    }
-  }
+  // .people-bio-container {
+  //   position: fixed;
+  //   width: 100vw;
+  //   height: 100vh;
+  //   top: 0;
+  //   left: 0;
+  //   background: transparent;
+  //   z-index: 50;
+  //   display: none;
+  //   .navigation-mobile {
+  //     display: block;
+  //     bottom: auto;
+  //     z-index: 20;
+  //     top: 40px;
+  //     right: 40px;
+  //     .bar.animate {
+  //       background: rgba(255, 255, 255, 0)!important;
+  //     }
+  //     .bar, .bar::before, .bar::after {
+  //       background: $black;
+  //     }
+  //   }
+  //   .people-picture {
+  //     position: absolute;
+  //     background-size: cover!important;
+  //     width: 40%;
+  //     height: 100%;
+  //     top: 0;
+  //     left: -10%;
+  //     opacity: 0;
+  //   }
+  //   .people-bio {
+  //     position: absolute;
+  //     padding: 150px;
+  //     width: calc(60% - 300px);
+  //     height: calc(100% - 300px);
+  //     background: #FFF;
+  //     top: 0;
+  //     right: -10%;
+  //     opacity: 0;
+  //   }
+  //   &.show {
+  //     display: block;
+  //     .people-picture {
+  //       animation-name: people-picture;
+  //       animation-duration: .7s;
+  //       animation-fill-mode: forwards;
+  //       animation-timing-function: ease-in-out;
+  //       @keyframes people-picture {
+  //         0% {
+  //           left: -10%;
+  //           opacity: 0;
+  //         }
+  //         100% {
+  //           left: 0%;
+  //           opacity: 1;
+  //         }
+  //       }
+  //     }
+  //     .people-bio {
+  //       animation-name: people-bio;
+  //       animation-duration: .7s;
+  //       animation-fill-mode: forwards;
+  //       animation-timing-function: ease-in-out;
+  //       @keyframes people-bio {
+  //         0% {
+  //           right: -10%;
+  //           opacity: 0;
+  //         }
+  //         100% {
+  //           right: 0%;
+  //           opacity: 1;
+  //         }
+  //       }
+  //     }
+  //   }
+  // }
   h3 {
     padding-top: 160px;
   }
