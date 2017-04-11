@@ -108,6 +108,32 @@
   color: #FFF;
   z-index: 50;
   transform: translateX(-200%);
+  &.inverse {
+    color: $black;
+    ul {
+      li {
+        &:hover {
+          a {
+            color: $black;
+          }
+          &::before {
+            background: $black;
+          }
+        }
+        &.active {
+          a {
+            color: $black;
+          }
+          &::before {
+            background: $black;
+          }
+        }
+        &::before {
+          background: #7f7f7f;
+        }
+      }
+    }
+  }
   @media all and (max-width: $max-xs) {
     display: none;
   }

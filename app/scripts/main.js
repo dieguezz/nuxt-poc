@@ -44,14 +44,36 @@ $(document).ready(function() {
     offset: '10%'
   });
 
+  $white.waypoint(function(direction) {
+    if (direction === 'down') {
+      $(".menu-navigation").addClass('inverse');
+    } else {
+      $(".menu-navigation").removeClass('inverse');
+    }
+  }, {
+    offset: '100%'
+  });
+
   $black.waypoint(function(direction) {
     if (direction === 'down') {
       $("header").removeClass('inverse');
+      $(".menu-navigation").removeClass('inverse');
     } else {
       $("header").addClass('inverse');
+      $(".menu-navigation").addClass('inverse');
     }
   }, {
     offset: '10%'
+  });
+
+  $black.waypoint(function(direction) {
+    if (direction === 'down') {
+      $(".menu-navigation").removeClass('inverse');
+    } else {
+      $(".menu-navigation").addClass('inverse');
+    }
+  }, {
+    offset: '100%'
   });
 
 });
