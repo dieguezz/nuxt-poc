@@ -21,44 +21,6 @@
       opacity: .5;
       z-index: 0;
     }
-    nav.sub-navigation {
-      position: absolute;
-      bottom: 50px;
-      z-index: 20;
-      ul {
-        li {
-          display: inline-block;
-          padding-right: 65px;
-          &:last-child {
-            padding-right: 0;
-          }
-          a {
-            color: #FFF;
-            font-size: 14px;
-            letter-spacing: 2px;
-            font-weight: 600;
-            text-transform: uppercase;
-            &::after {
-              background: #FFF;
-              bottom: -5px;
-            }
-          }
-        }
-      }
-      @media all and (max-width: 600px) {
-        ul {
-          li {
-            padding-right: 35px;
-            a {
-              font-size: 12px;
-            }
-          }
-        }
-      }
-      @media all and (max-width: 450px) {
-        display: none;
-      }
-    }
     video {
       object-fit: cover;
       top: 0;
@@ -67,7 +29,6 @@
       position: absolute;
       z-index: -1;
     }
-
     h2, .scroll-appear {
       font-size: 64px;
       font-weight: 600;
@@ -112,6 +73,7 @@
   }
 }
 
+
 /* Not Home Page*/
 
 section:not(.home-page) {
@@ -121,8 +83,6 @@ section:not(.home-page) {
     line-height: 70px!important;
     letter-spacing: 2px!important;
     max-width: 720px!important;
-    .line[index="1"], .line[index="2"], .line[index="3"] {
-      
-    }
+    .line[index="1"], .line[index="2"], .line[index="3"] {}
   }
 }
