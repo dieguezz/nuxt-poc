@@ -172,7 +172,7 @@
     }
   }
   @media all and (max-width: 780px) {
-        padding-bottom: 350px !important;
+    padding-bottom: 350px !important;
     img {
       display: none;
     }
@@ -261,7 +261,6 @@
     padding-top: 160px;
     @media all and (max-width: 600px) {
       padding-top: 100px;
-
     }
   }
   ul {
@@ -272,7 +271,6 @@
     padding-top: 120px;
     @media all and (max-width: 600px) {
       padding-top: 35px;
-
     }
     @media screen and (max-width: 810px) {
       justify-content: space-around;
@@ -309,7 +307,9 @@
         padding: 1em;
         z-index: 1;
         top: 14px; // safari fix
-        left: 14px; // safari fix
+        left: 0;
+        right: 0;
+        margin: 0 auto;
         h4 {
           font-size: 24px;
           font-weight: 600;
