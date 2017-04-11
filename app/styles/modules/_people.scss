@@ -281,6 +281,8 @@
         height: 100%;
         position: absolute;
         object-fit: cover;
+        top: 0; // safari fix
+        left: 0; // safari fix
       }
       &>div {
         text-align: center;
@@ -297,6 +299,8 @@
         align-content: center;
         padding: 1em;
         z-index: 1;
+        top: 14px; // safari fix
+        left: 14px; // safari fix
         h4 {
           font-size: 24px;
           font-weight: 600;
