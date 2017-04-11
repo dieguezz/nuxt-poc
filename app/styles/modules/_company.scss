@@ -302,6 +302,9 @@
   #partners {
     border-bottom: 1px solid #FFF;
     padding: 250px 0 150px 0;
+    .container {
+      max-width: 1320px;
+    }
     h3 {
       text-align: center;
       margin: 0 auto;

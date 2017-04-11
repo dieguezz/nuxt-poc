@@ -60,7 +60,94 @@
         position: relative;
       }
       &.community{&::before {content: '1'}} &.freedom{margin-left: 80px;&::before {content: '2'}} &.competence{&::before {content: '3'}} &.citizenship{margin-left: 80px;&::before {content: '4'}} &.professionalism{margin-left: 80px;&::before {content: '5'}};
+      @media all and (max-width: 780px) {
+        float: none;
+        display: block;
+        margin: 180px auto 0 auto;
+        position: relative;
+        width: 90%;
+        max-width: 410px;
+        &.professionalism{margin-left: 0px;}
+      }
+      @media all and (max-width: 400px) {
+        float: none;
+        display: block;
+        margin-top: 90px;
+        margin-left: 0!important;
+        position: relative;
+        width: 90%;
+        max-width: 410px;
+        &::before {
+          top: -25%;
+        }
+      }
+    }
+  }
 
+  @media all and (max-width: 1500px) {
+    img {
+      &.values-1 {
+        left: -30%;
+      }
+      &.values-2 {
+        right: -30%;
+      }
+      &.values-3 {
+        right: -18%;
+      }
+    }
+  }
+
+  @media all and (max-width: 1250px) {
+    img {
+      &.values-1 {
+        left: -30%;
+      }
+      &.values-2 {
+        right: -50%;
+      }
+      &.values-3 {
+        right: -20%;
+        top: 80%;
+      }
+    }
+  }
+
+  @media all and (max-width: 1120px) {
+    img {
+      &.values-1 {
+        left: -45%;
+        top: 65%;
+      }
+      &.values-2 {
+        right: -50%;
+      }
+      &.values-3 {
+        right: -20%;
+        top: 80%;
+      }
+    }
+  }
+
+  @media all and (max-width: 1000px) {
+    img {
+      &.values-1 {
+        left: -60%;
+        top: 65%;
+      }
+      &.values-2 {
+        display: none;
+      }
+      &.values-3 {
+        right: -50%;
+        top: 82%;
+      }
+    }
+  }
+
+  @media all and (max-width: 780px) {
+    img {
+      display: none;
     }
   }
 }
