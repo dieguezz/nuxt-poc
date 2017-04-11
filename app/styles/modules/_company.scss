@@ -403,10 +403,22 @@
       letter-spacing: 2px;
       font-weight: 600;
       padding-bottom: 50px;
+      @media all and (max-width: 930px) {
+        font-size: 36px;
+        line-height: 50px;
+      }
+      @media all and (max-width: 600px) {
+        font-size: 32px;
+        line-height: 46px;
+      }
     }
     a {
       font-size: 18px;
       padding: 25px 60px;
+      @media all and (max-width: 600px) {
+        font-size: 16px;
+        padding: 20px 50px;
+      }
     }
     .extra-contact {
       margin-top: 100px;
