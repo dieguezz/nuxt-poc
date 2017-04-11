@@ -84,5 +84,8 @@ section:not(.home-page) {
     letter-spacing: 2px!important;
     max-width: 720px!important;
     .line[index="1"], .line[index="2"], .line[index="3"] {}
+    @media screen and (max-width: 600px) {
+      font-size: 36px!important;
+    }
   }
 }
