@@ -47,8 +47,8 @@
         line-height: 60px;
       }
       @media all and (max-width: 600px) {
-        font-size: 36px;
-        line-height: 50px;
+        font-size: 36px!important;
+        line-height: 50px!important;
       }
       @media all and (max-width: 490px) {
         /*font-size: 30px;

@@ -37,8 +37,14 @@
   /* Services Section */
   #services {
     padding-bottom: 400px;
+    @media all and (max-width: 600px) {
+      padding-bottom: 150px;
+    }
     h3 {
       padding-bottom: 250px;
+      @media all and (max-width: 600px) {
+        padding-bottom: 50px;
+      }
     }
     .services-list {
       .services-unit {
@@ -149,12 +155,19 @@
     h3 {
       padding-bottom: 250px;
       padding-top: 150px;
+      @media all and (max-width: 600px) {
+        padding-top: 0px;
+        padding-bottom: 100px;
+      }
     }
     .how-to-list {
       .how-to-unit {
         padding-bottom: 250px;
         display: inline-block;
         position: relative;
+        @media all and (max-width: 600px) {
+          padding-bottom: 100px;
+        }
         .description {
           display: inline-block;
           float: left;
@@ -362,6 +375,9 @@
   #partners {
     border-bottom: 1px solid #FFF;
     padding: 250px 0 150px 0;
+    @media all and (max-width: 600px) {
+      padding: 150px 0 150px 0;
+    }
     .container {
       max-width: 1320px;
     }

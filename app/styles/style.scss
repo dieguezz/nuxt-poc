@@ -50,6 +50,9 @@ body {
 section:not(#home) {
   padding: 250px 0;
   background: #FFF;
+  @media all and (max-width: 600px) {
+    padding: 150px 0;
+  }
   &.black {
     background: $black;
     color: #FFF;
