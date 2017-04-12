@@ -38,22 +38,20 @@
       <div class="new-project-container">
         <div class="container">
           <h2>Start a project with us</h2>
-          <form action="">
-            <ol>
-              <li>
-                <input type="text" placeholder="Your full name..." required>
-                <input type="text" placeholder="Company name..." required>
-                <input type="text" placeholder="Your email adress..." required>
-                <button class="link button border white">Next</button>
-              </li>
-            </ol>
+
+          <form id="join-us-form">
+            <input id="name" name="name" type="text" placeholder="Your full name..." required>
+            <input id="company" name="company" type="text" placeholder="Your company name..." required>
+            <input id="email" name="email" type="email" placeholder="Your email..." email required>
+            <textarea id="message" name="message" rows="8" cols="80" placeholder="Your delicious message..." required></textarea>
+            <a class="button white sender appeared"><span>Send</span></a>
           </form>
         </div>
 
-        <div class="new-project-progress">
+        <!--<div class="new-project-progress">
           <small class="total">1<span>/4</span></small>
           <span class="progress-bar"></span>
-        </div>
+        </div>-->
       </div>
       <main>
       <div class="container">
