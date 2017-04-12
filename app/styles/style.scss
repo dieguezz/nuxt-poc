@@ -13,6 +13,10 @@ body {
   color: $black;
   background: $black;
   overflow-x: hidden;
+  &.lock {
+    overflow: hidden;
+    height: 100%;
+  }
 }
 
 .container {
@@ -44,6 +48,11 @@ body {
   box-sizing: border-box;
 }
 
+.tofade {
+  transition: all .5s ease-out!important;
+  opacity: 0!important;
+  transform: translateY(40px)!important;
+}
 
 /* Sections */
 

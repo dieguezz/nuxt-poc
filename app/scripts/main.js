@@ -78,3 +78,21 @@ $(document).ready(function() {
 //     $('.people-bio-container').addClass('hide');
 //   });
 // });
+
+/* Open New Project */
+$(document).ready(function() {
+  $('.new-business').on('click', function() {
+    $('.contact-page h3,.contact-page svg,.general-contact-unit,.mars-map').addClass('tofade');
+
+    setTimeout(function() {
+      $('.new-business').addClass('opening');
+      $('.new-project-container').addClass('open');
+    }, 450);
+
+    setTimeout(function() {
+      $('header').removeClass('inverse');
+      $('body').addClass('lock');
+    }, 800);
+
+  });
+});
