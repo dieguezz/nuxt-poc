@@ -6,19 +6,6 @@ $(window).on('beforeunload', function() {
   $(window).scrollTop(0);
 });
 
-/* Reveal Titles */
-$(document).ready(function() {
-  setTimeout(function() {
-
-    $('.title-page').addClass('appear');
-  }, 1000);
-
-  setTimeout(function() {
-    $('.title-page').removeClass('appear');
-    $('.title-page').addClass('appeared');
-  }, 3000);
-});
-
 /* Scroll Opacity */
 
 $(window).on('scroll', function() {
@@ -36,9 +23,9 @@ $(document).ready(function() {
 
   $white.waypoint(function(direction) {
     if (direction === 'down') {
-      $("header").addClass('inverse');
+      $('header').addClass('inverse');
     } else {
-      $("header").removeClass('inverse');
+      $('header').removeClass('inverse');
     }
   }, {
     offset: '10%'
@@ -46,9 +33,9 @@ $(document).ready(function() {
 
   $white.waypoint(function(direction) {
     if (direction === 'down') {
-      $(".menu-navigation").addClass('inverse');
+      $('.menu-navigation').addClass('inverse');
     } else {
-      $(".menu-navigation").removeClass('inverse');
+      $('.menu-navigation').removeClass('inverse');
     }
   }, {
     offset: '90%'
@@ -56,9 +43,9 @@ $(document).ready(function() {
 
   $black.waypoint(function(direction) {
     if (direction === 'down') {
-      $("header").removeClass('inverse');
+      $('header').removeClass('inverse');
     } else {
-      $("header").addClass('inverse');
+      $('header').addClass('inverse');
     }
   }, {
     offset: '10%'
@@ -66,9 +53,9 @@ $(document).ready(function() {
 
   $black.waypoint(function(direction) {
     if (direction === 'down') {
-      $(".menu-navigation").removeClass('inverse');
+      $('.menu-navigation').removeClass('inverse');
     } else {
-      $(".menu-navigation").addClass('inverse');
+      $('.menu-navigation').addClass('inverse');
     }
   }, {
     offset: '90%'
