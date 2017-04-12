@@ -4,19 +4,23 @@
 
 $(document).ready(function() {
 
+  var time0 = 0;
+  var time1 = 2000;
   if (document.referrer.indexOf(document.location.origin) === -1) {
     $('.preloader').removeClass('hidden');
+    time0 += 3000;
+    time1 += 3000;
   }
 
   setTimeout(function() {
     $('body').css('background', '#171A1C');
     $('.preloader').removeClass('loading');
-    $('.home-intro h2').addClass('appear');
-  }, 3000);
+    $('.title-page').addClass('appear');
+  }, time0);
 
   setTimeout(function() {
-    $('.home-intro h2').removeClass('appear');
-    $('.home-intro h2').addClass('appeared');
-  }, 5000);
+    $('.title-page').removeClass('appear');
+    $('.title-page').addClass('appeared');
+  }, time1);
 
 });

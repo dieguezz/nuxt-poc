@@ -6,19 +6,6 @@ $(window).on('beforeunload', function() {
   $(window).scrollTop(0);
 });
 
-/* Reveal Titles */
-$(document).ready(function() {
-  setTimeout(function() {
-
-    $('.title-page').addClass('appear');
-  }, 1000);
-
-  setTimeout(function() {
-    $('.title-page').removeClass('appear');
-    $('.title-page').addClass('appeared');
-  }, 3000);
-});
-
 /* Scroll Opacity */
 
 $(window).on('scroll', function() {
