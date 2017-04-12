@@ -32,4 +32,11 @@ $(document).ready(function() {
     duration: 1750
   }, 150);
 
+  sr.reveal('.general-contact-unit', {
+    scale: 1,
+    reset: false,
+    distance: '50px',
+    duration: 1750
+  }, 150);
+
 });
