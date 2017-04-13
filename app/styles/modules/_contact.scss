@@ -426,12 +426,15 @@
       position: relative;
       margin: 50px 0;
       width: 100%;
+      @media all and (max-width: $max-xs) {
+        margin: 20px 0;
+      }
     }
     .form-control:first-of-type {
       margin-top: 0;
     }
     .form-control:last-of-type {
-      margin-bottom: 4vh;
+      margin-bottom: 10vh;
     }
     a, button {
       text-transform: uppercase;
