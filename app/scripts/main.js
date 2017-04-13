@@ -2,18 +2,26 @@
 
 /* Scroll to Top before load */
 
-$(window).on('beforeunload', function() {
-  $(window).scrollTop(0);
+var $window = $(window);
+
+$window.on('beforeunload', function() {
+  $window.scrollTop(0);
 });
 
 /* Scroll Opacity */
 
-$(window).on('scroll', function() {
-  $('.fade-scroll').css({
-    'opacity': (250 - $(window).scrollTop()) / 250
+var $fadeScroll = $('.fade-scroll');
+var $scrollAppear = $('.scroll-appear');
+$window.on('scroll', function() {
+  requestAnimationFrame(function() {
+    $fadeScroll.css({
+      'opacity': (250 - $window.scrollTop()) / 250
+    });
   });
-  $('.scroll-appear').css({
-    'opacity': (-150 + $(window).scrollTop()) / 150
+  requestAnimationFrame(function() {
+    $scrollAppear.css({
+      'opacity': (-150 + $window.scrollTop()) / 150
+    });
   });
 });
 
@@ -21,13 +29,14 @@ $(document).ready(function() {
   var $white = $('.white');
   var $black = $('.black');
   var $pictures = $('#pictures');
-
+  var $header = $('header');
+  var $menuNavigation = $('.menu-navigation');
 
   $white.waypoint(function(direction) {
     if (direction === 'down') {
-      $('header').addClass('inverse');
+      $header.addClass('inverse');
     } else {
-      $('header').removeClass('inverse');
+      $header.removeClass('inverse');
     }
   }, {
     offset: '10%'
@@ -35,9 +44,9 @@ $(document).ready(function() {
 
   $white.waypoint(function(direction) {
     if (direction === 'down') {
-      $('.menu-navigation').addClass('inverse');
+      $menuNavigation.addClass('inverse');
     } else {
-      $('.menu-navigation').removeClass('inverse');
+      $menuNavigation.removeClass('inverse');
     }
   }, {
     offset: '90%'
@@ -47,9 +56,9 @@ $(document).ready(function() {
 
   $black.waypoint(function(direction) {
     if (direction === 'down') {
-      $('header').removeClass('inverse');
+      $header.removeClass('inverse');
     } else {
-      $('header').addClass('inverse');
+      $header.addClass('inverse');
     }
   }, {
     offset: '10%'
@@ -57,9 +66,9 @@ $(document).ready(function() {
 
   $black.waypoint(function(direction) {
     if (direction === 'down') {
-      $('.menu-navigation').removeClass('inverse');
+      $menuNavigation.removeClass('inverse');
     } else {
-      $('.menu-navigation').addClass('inverse');
+      $menuNavigation.addClass('inverse');
     }
   }, {
     offset: '90%'
