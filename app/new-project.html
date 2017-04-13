@@ -39,26 +39,42 @@
         <h2 class="form-item">Start a project with us</h2>
 
         <form id="join-us-form">
-          <div class="form-control reveal2">
+          <div class="form-control reveal2 required">
             <input class="form-item" id="name" name="name" type="text" placeholder="Your full name..." required>
             <p>A valid name is required</p>
           </div>
           <div class="form-control reveal2">
             <input class="form-item" id="company" name="company" type="text" placeholder="Your company name...">
           </div>
-          <div class="form-control reveal2">
+          <div class="form-control reveal2 required">
             <input class="form-item" id="email" name="email" type="email" placeholder="Your email..." required>
             <p>A valid email is required</p>
           </div>
           <div class="form-control reveal2">
-            <input class="form-item" id="phone" name="phone" type="tel" placeholder="Your phone number..." required>
+            <input class="form-item" id="phone" name="phone" type="tel" placeholder="Your phone number...">
             <p>A valid phone is required</p>
           </div>
-          <div class="form-control reveal2">
-            <textarea class="form-item" id="message" name="message" rows="10" cols="80" placeholder="A bit about your project..." required></textarea>
+          <div class="form-control reveal2 required message">
+            <textarea class="form-item" id="message" name="message" rows="8" cols="80" placeholder="A bit about your project..." required></textarea>
             <p>Message required</p>
           </div>
-          <a class="button white sender form-item reveal"><span>Send</span></a>
+
+
+          <!-- Optional Questions -->
+          <div class="form-control reveal2 message extra">
+            <textarea class="form-item" id="message" name="message" rows="8" cols="80" placeholder="How did you meet us?"></textarea>
+          </div>
+          <div class="form-control reveal2 message extra">
+            <textarea class="form-item" id="message" name="message" rows="8" cols="80" placeholder="What was the special point that made you contact us?"></textarea>
+          </div>
+
+
+          <div class="clear"></div>
+          <div class="send-questions">
+            <a class="extra-questions link-raw white">Do you mind answering two more questions? (optional)</a>
+            <a class="button white sender form-item reveal"><span>Send</span></a>
+          </div>
+
         </form>
       </div>
       <svg class="shape cuadrado" width="340px" height="340px" viewBox="343 3477 286 286" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">

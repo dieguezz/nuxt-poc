@@ -387,11 +387,14 @@
     }
   }
   form {
-    width: 90%;
-    max-width: 690px;
-    float: left;
+    width: 100%;
     position: relative;
     z-index: 20;
+
+    label {
+      font-size: 28px;
+    }
+
     input, textarea {
       transition: border-bottom 0.1s;
       display: block;
@@ -404,6 +407,8 @@
       font-size: 21px;
       font-family: 'Mark';
       color: #FFF;
+      position: relative;
+
       &:focus {
         outline: none;
         border-color: #FFF;
@@ -424,10 +429,36 @@
     }
     .form-control {
       position: relative;
-      margin: 50px 0;
+      margin: 0px 50px 50px 0;
       width: 100%;
+      display: inline-block;
+      width: 46%;
+      &.extra {
+        display: none;
+        padding-top: 20px;
+        &:before {
+          content: 'Optional extra question';
+          text-transform: uppercase;
+          letter-spacing: 2px;
+          font-size: 12px;
+          position: absolute;
+          left: 0;
+          top: 10px;
+        }
+        &.show {
+          display: block;
+        }
+      }
+      &:nth-of-type(2),&:nth-of-type(4) {
+        margin-right: 0;
+      }
       @media all and (max-width: $max-xs) {
         margin: 20px 0;
+      }
+      @media all and (max-width: 800px) {
+        width: 100%;
+        display: block;
+        margin: 0 0 25px 0;
       }
     }
     .form-control:first-of-type {
@@ -435,6 +466,42 @@
     }
     .form-control:last-of-type {
       margin-bottom: 10vh;
+    }
+    .form-control.message {
+      width: 100%;
+    }
+    .send-questions {
+      width: 100%;
+
+      a {
+        &.extra-questions {
+          float: left;
+          color: #FFF;
+          text-transform: none;
+          padding-top: 20px;
+          line-height: 24px;
+          &:hover {
+            box-shadow: none;
+          }
+          &::after {
+            bottom: -7px;
+          }
+        }
+        &.sender {
+          float: right;
+        }
+      }
+      @media all and (max-width: 780px) {
+        a {
+          &.extra-questions, &.sender {
+            float: none;
+            display: block;
+          }
+          &.extra-questions {
+            margin-bottom: 50px;
+          }
+        }
+      }
     }
     a, button {
       text-transform: uppercase;
@@ -485,7 +552,7 @@
   }
   textarea {
     max-height: 300px;
-    max-width: 690px;
+    max-width: 100%;
   }
   a.sender {
     position: relative;
@@ -522,6 +589,7 @@
       h2 {
         font-size: 8vw;
       }
+
       input, textarea {
         font-size: 18px;
         margin: 15px 0;
@@ -564,8 +632,14 @@
 }
 
 .new-project-page {
+  h2 {
+    text-align: center;
+    margin: 0 auto;
+  }
   form {
-    margin: 100px 0 150px 0;
+    margin: 100px auto 250px auto;
+    max-width: 740px;
+    float: none;
   }
   svg.shape {
     opacity: .5!important;
