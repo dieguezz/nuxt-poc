@@ -18,6 +18,13 @@ $(document).ready(function() {
   $('.sender').on('click', function(event) {
     event.preventDefault();
 
+    // mock
+    $(this).addClass('sending');
+    setTimeout(function() {
+      $('#sended-form').addClass('sended');
+    }, 2500);
+    return;
+
     var data = {
       '_subject': 'Let\'s rock n roll!',
     };
@@ -52,6 +59,7 @@ $(document).ready(function() {
     }).then(function() {
       setTimeout(function() {
         $(this).removeClass('sending');
+        $('#sended-form').addClass('sended');
       }, 2000);
     });
 
