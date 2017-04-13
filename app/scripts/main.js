@@ -20,6 +20,8 @@ $(window).on('scroll', function() {
 $(document).ready(function() {
   var $white = $('.white');
   var $black = $('.black');
+  var $pictures = $('#pictures');
+
 
   $white.waypoint(function(direction) {
     if (direction === 'down') {
@@ -40,6 +42,8 @@ $(document).ready(function() {
   }, {
     offset: '90%'
   });
+
+
 
   $black.waypoint(function(direction) {
     if (direction === 'down') {
