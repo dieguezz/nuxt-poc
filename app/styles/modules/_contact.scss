@@ -86,7 +86,6 @@
     cursor: pointer;
     transition: transform .5s, box-shadow .5s, opacity .2s;
     transition-timing-function: cubic-bezier(0.64, 0.57, 0.67, 1.53);
-
     &.opening {
       animation-name: new-business-button;
       animation-duration: .7s;
@@ -205,8 +204,7 @@
         font-size: 18px;
       }
     }
-
-    @media all and (max-width: 740px ) {
+    @media all and (max-width: 740px) {
       width: 110%;
       margin-left: -5%;
       .general-contact-unit {
@@ -214,8 +212,7 @@
         padding-right: 4%;
       }
     }
-
-    @media all and (max-width: 650px ) {
+    @media all and (max-width: 650px) {
       width: 100%;
       margin-left: 0;
       .general-contact-unit {
@@ -243,7 +240,7 @@
     background-size: cover;
     background-position: center;
     margin-top: 250px;
-    @media all and (max-width: 600px ) {
+    @media all and (max-width: 600px) {
       margin-top: 150px;
     }
     .map-info {
@@ -428,6 +425,7 @@
     .form-control {
       position: relative;
       margin: 50px 0;
+      width: 100%;
     }
     .form-control:first-of-type {
       margin-top: 0;
@@ -511,7 +509,6 @@
     }
   }
   @media all and (max-width: $max-xs) {
-
     svg.shape {
       display: none;
     }
@@ -609,9 +606,6 @@
     color: $gray;
     max-width: 500px;
     text-align: center;
-  }
-  a {
-
   }
   &.sended {
     transform: translateY(0);
