@@ -21,13 +21,15 @@
     opacity: 0;
     visibility: hidden;
     overflow: scroll;
+    form {
+      margin-top: 100px;
+      margin-bottom: 150px;
+    }
     .container {
       padding-top: 250px;
+
       h2 {
         color: #FFF;
-      }
-      form {
-        margin-top: 150px;
       }
     }
     .new-project-progress {
@@ -91,12 +93,9 @@
     transition-timing-function: cubic-bezier(0.64, 0.57, 0.67, 1.53);
     &.opening {
       animation-name: new-business-button;
-      animation-duration: 1s;
+      animation-duration: .7s;
       animation-fill-mode: forwards;
       animation-timing-function: ease-in-out;
-      p,a,span {
-        opacity: 0!important;
-      }
       background: $black;
       @keyframes new-business-button {
         0% {
@@ -104,19 +103,25 @@
           opacity: 1;
         }
 
-        20% {
+        35% {
           transform: scale(1);
           opacity: 1;
         }
         100% {
-          transform: scale(6);
-          opacity: 0;
+          transform: scale(11);
+          opacity: 1;
         }
       }
     }
     &:hover {
       transform: scale(1.07);
       box-shadow: 0px 10px 25px rgba(0,0,0,.5);
+
+      span.opening, p.opening, a.opening {
+        transform: translateY(-40px)!important;
+        opacity: 0!important;
+        transition: all .5s ease-out!important;
+      }
 
       span {
       animation-name: project-line;
@@ -362,12 +367,13 @@
       border-bottom: 1px solid rgba(256, 256, 256, .15);
       color: #FFF;
       padding: 10px 0;
-      margin: 32px 0;
+      margin: 40px 0;
       font-size: 21px;
       font-family: 'Mark';
-      color: $gray;
+      color: #FFF;
       &:focus {
         outline: none;
+        border-color: #FFF;
       }
     }
     input:first-of-type {
@@ -500,6 +506,25 @@
         top: 40%;
         right: -10%;
       }
+    }
+  }
+}
+
+.new-project-page {
+  form {
+    margin: 100px 0 150px 0;
+  }
+  svg.shape {
+    opacity: .5!important;
+    right: -5%;
+    left: auto;
+    &.circulo {
+      right: -7%;
+      left: auto;
+    }
+    &.triangulo {
+      right: 10%;
+      left: auto;
     }
   }
 }

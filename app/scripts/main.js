@@ -85,13 +85,15 @@ $(document).ready(function() {
     $('.contact-page h3,.contact-page svg,.general-contact-unit,.mars-map').addClass('tofade');
 
     setTimeout(function() {
+      $('.new-business p, .new-business a, .new-business span').addClass('opening');
+    }, 0);
+
+    setTimeout(function() {
       $('.new-business').addClass('opening');
-      $('.new-project-container').addClass('open');
     }, 450);
 
     setTimeout(function() {
-      $('header').removeClass('inverse');
-      $('body').addClass('lock');
+      window.location.href='new-project.html';
     }, 800);
 
   });

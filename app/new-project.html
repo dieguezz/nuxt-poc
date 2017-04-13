@@ -32,42 +32,21 @@
     <!-- /build -->
 
     <!-- START Info Section -->
-    <section id="contact" class="white contact-page">
+    <section id="contact" class="black contact-page new-project-page">
       <!-- build:include templates/cookies.html -->
       <!-- /build -->
-
-      <main>
       <div class="container">
-        <h3>
-          We'd love to hear from you.<br>
-          Let's rock and roll!
-        </h3>
-        <div class="clear"></div>
-        <div class="new-business">
-          <p>It’s the right time to make something great together.</p>
-          <a>Start a project</a>
-          <span></span>
-        </div>
-        <div class="clear"></div>
-        <div class="general-contact">
-          <div class="general-contact-unit">
-            <h6>General Inquiries</h6>
-            <p>Have any question, want to meet us or just say hello? email us at:</p>
-            <a href="mailto:hello@etereo.io?subject=General Inquiries" class="link-notransition">hello@etereo.io</a>
-          </div>
-          <div class="general-contact-unit">
-            <h6>Careers</h6>
-            <p>We are always eager to meet new awesome talents.</p>
-            <a href="mailto:hello@etereo.io?subject=Career Inquiries" class="link-notransition">Introduce yourself</a>
-          </div>
-          <div class="general-contact-unit location">
-            <h6>Our Location</h6>
-            <p>We are based in Madrid, but you can reach us worlwide. Even Mars?</p>
-            <a href="#mars-map" class="link-notransition">Martians?</a>
-          </div>
-        </div>
-      </div>
+        <h2 class="form-item">Start a project with us</h2>
 
+        <form id="join-us-form">
+          <input class="form-item" id="name" name="name" type="text" placeholder="Your full name..." required>
+          <input class="form-item" id="company" name="company" type="text" placeholder="Your company name..." required>
+          <input class="form-item" id="email" name="email" type="email" placeholder="Your email..." required>
+          <input class="form-item" id="phone" name="phone" type="tel" placeholder="Your phone number...">
+          <textarea class="form-item" id="message" name="message" rows="10" cols="80" placeholder="A bit about your project..." required></textarea>
+          <a class="button white sender form-item"><span>Send</span></a>
+        </form>
+      </div>
       <svg class="shape cuadrado" width="340px" height="340px" viewBox="343 3477 286 286" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
         <polygon class="path" id="cuadrado" stroke="#202427" stroke-width="15" fill="none" points="486 3488 618 3620 486 3752 354 3620"></polygon>
       </svg>
@@ -77,40 +56,30 @@
       <svg class="shape triangulo" width="340px" height="288px" viewBox="-14 -5 340 288" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
         <polygon class="path" id="triangulo" stroke="#202427" stroke-width="15" fill="none" points="156 10 312 275 0 275"></polygon>
       </svg>
-    </main>
-      <div class="mars-map" id="mars-map">
-        <div class="map-info">
-          <p>
-            We are not settled in any office. But this would be a cozy one.
-          </p>
-        </div>
-        <div class="marker"></div>
-        <div class="pulse"></div>
-      </div>
-    </section>
-    <!-- END Info Section -->
+  </section>
+  <!-- END Info Section -->
 
-    <!-- build:include templates/footer.html -->
-    <!-- /build -->
-  </div>
+  <!-- build:include templates/footer.html -->
+  <!-- /build -->
+</div>
 
-  <!-- build:js(.) scripts/vendor.js -->
-  <!-- bower:js -->
-  <script src="bower_components/jquery/dist/jquery.js"></script>
-  <script src="bower_components/lining.js/src/lining.js"></script>
-  <script src="bower_components/animsition/dist/js/animsition.min.js"></script>
-  <script src="bower_components/scrollreveal/dist/scrollreveal.js"></script>
-  <script src="bower_components/instafeed.js/instafeed.js"></script>
-  <script src="bower_components/rellax/rellax.js"></script>
-  <!-- endbower -->
-  <script src="bower_components/waypoints/lib/jquery.waypoints.js"></script>
-  <!-- endbuild -->
+<!-- build:js(.) scripts/vendor.js -->
+<!-- bower:js -->
+<script src="bower_components/jquery/dist/jquery.js"></script>
+<script src="bower_components/lining.js/src/lining.js"></script>
+<script src="bower_components/animsition/dist/js/animsition.min.js"></script>
+<script src="bower_components/scrollreveal/dist/scrollreveal.js"></script>
+<script src="bower_components/instafeed.js/instafeed.js"></script>
+<script src="bower_components/rellax/rellax.js"></script>
+<!-- endbower -->
+<script src="bower_components/waypoints/lib/jquery.waypoints.js"></script>
+<!-- endbuild -->
 
-  <!-- build:js({.,.tmp,app,dist}) scripts/scripts.js -->
-  <!-- include: "type": "js", "files": ["vendor/**/*.js"] -->
-  <script src="app.scripts.js"></script>
-  <!-- include: "type": "js", "files": ["scripts/*.js"] -->
-  <!-- endbuild -->
+<!-- build:js({.,.tmp,app,dist}) scripts/scripts.js -->
+<!-- include: "type": "js", "files": ["vendor/**/*.js"] -->
+<script src="app.scripts.js"></script>
+<!-- include: "type": "js", "files": ["scripts/*.js"] -->
+<!-- endbuild -->
 
 </body>
 

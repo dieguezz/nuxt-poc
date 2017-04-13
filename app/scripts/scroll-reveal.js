@@ -1,6 +1,6 @@
 $(document).ready(function() {
   var sr = ScrollReveal();
-  sr.reveal('h3,h4,h5,p,section a,input,textarea, #instafeed', {
+  sr.reveal('h3,h4,h5,p,section a,textarea, #instafeed', {
     origin: 'bottom',
     scale: 1,
     reset: false,
@@ -23,6 +23,13 @@ $(document).ready(function() {
     reset: false,
     distance: '50px',
     duration: 1750
+  }, 150);
+
+  sr.reveal('.new-project-page .form-item', {
+    scale: 1,
+    reset: false,
+    distance: '50px',
+    duration: 1000
   }, 150);
 
   sr.reveal('#people ul li', {

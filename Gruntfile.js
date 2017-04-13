@@ -197,6 +197,7 @@ module.exports = function(grunt) {
         files: [{
           '.tmp/index.html': '<%= appConfig.app %>/index.html',
           '.tmp/company.html': '<%= appConfig.app %>/company.html',
+          '.tmp/new-project.html': '<%= appConfig.app %>/new-project.html',
           '.tmp/contact.html': '<%= appConfig.app %>/contact.html',
           '.tmp/people.html': '<%= appConfig.app %>/people.html',
           '.tmp/privacy-policy.html': '<%= appConfig.app %>/privacy-policy.html'
@@ -206,6 +207,7 @@ module.exports = function(grunt) {
         files: {
           '<%= appConfig.dist %>/index.html': '<%= appConfig.app %>/index.html',
           '<%= appConfig.dist %>/company.html': '<%= appConfig.app %>/company.html',
+          '<%= appConfig.dist %>/new-project.html': '<%= appConfig.app %>/new-project.html',
           '<%= appConfig.dist %>/contact.html': '<%= appConfig.app %>/contact.html',
           '<%= appConfig.dist %>/people.html': '<%= appConfig.app %>/people.html',
           '<%= appConfig.dist %>/privacy-policy.html': '<%= appConfig.app %>/privacy-policy.html',
@@ -221,6 +223,7 @@ module.exports = function(grunt) {
         files: {
           '.tmp/index.html': '.tmp/index.html',
           '.tmp/company.html': '.tmp/company.html',
+          '.tmp/new-project.html': '.tmp/new-project.html',
           '.tmp/contact.html': '.tmp/contact.html',
           '.tmp/people.html': '.tmp/people.html',
           '.tmp/privacy-policy.html': '.tmp/privacy-policy.html'
@@ -230,6 +233,7 @@ module.exports = function(grunt) {
         files: {
           'dist/index.html': '<%= appConfig.dist %>/index.html',
           'dist/company.html': '<%= appConfig.dist %>/company.html',
+          'dist/new-project.html': '<%= appConfig.dist %>/new-project.html',
           'dist/contact.html': '<%= appConfig.dist %>/contact.html',
           'dist/people.html': '<%= appConfig.dist %>/people.html',
           'dist/privacy-policy.html': '<%= appConfig.dist %>/privacy-policy.html'
