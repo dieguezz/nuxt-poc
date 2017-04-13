@@ -2,13 +2,43 @@
 
 /* Sending */
 $(document).ready(function() {
+
+  var inputs = $('#new-project input, #new-project textarea');
+
+  inputs.each(function(index, elem) {
+    $(elem).keyup(function() {
+      if (this.checkValidity()) {
+        $(this).removeClass('invalid');
+      } else {
+        $(this).addClass('invalid');
+      }
+    });
+  });
+
   $('.sender').on('click', function(event) {
     event.preventDefault();
-    var name = $('#contact #name').val();
-    var email = $('#contact #email').val();
-    var message = $('#contact #message').val();
 
-    if (!name || !email || !message) {
+    var data = {
+      '_subject': 'Let\'s rock n roll!',
+    };
+
+    var validity = [];
+    inputs.each(function(index, elem) {
+      validity.push(elem.checkValidity());
+      var $elem = $(elem);
+      if (!elem.checkValidity()) {
+        $elem.addClass('invalid');
+      }
+      if ($elem.val()) {
+        data[elem.name] = $elem.val();
+      }
+    });
+
+    var isValid = validity.reduce(function(total, value) {
+      return total && value;
+    }, true);
+
+    if (!isValid) {
       return;
     }
 
@@ -17,11 +47,7 @@ $(document).ready(function() {
     $.ajax({
       url: 'https://formspree.io/hello@etereo.io',
       method: 'POST',
-      data: {
-        '_subject': name,
-        '_replyto': email,
-        message: message
-      },
+      data: data,
       dataType: 'json'
     }).then(function() {
       setTimeout(function() {
