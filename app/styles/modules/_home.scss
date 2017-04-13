@@ -76,7 +76,7 @@
       opacity: .5;
     }
   }
-  h2 {
+  h2, .scroll-appear {
     font-size: 64px;
     font-weight: 600;
     line-height: 82px;
@@ -89,7 +89,7 @@
 /* Not Home Page*/
 
 section {
-  h2 {
+  h2, .scroll-appear {
     font-size: 48px;
     font-weight: 500;
     line-height: 70px;
