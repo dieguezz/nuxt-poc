@@ -97,7 +97,7 @@ $(document).ready(function() {
     }, 450);
 
     setTimeout(function() {
-      window.location.href='new-project.html';
+      window.location.href = 'new-project.html';
     }, 800);
 
   });
