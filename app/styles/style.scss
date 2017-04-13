@@ -333,7 +333,7 @@ header {
   max-width: 2560px;
   left: 50%;
   transform: translateX(-50%);
-  z-index: 50;
+  z-index: 150;
   &.inverse {
     h1 {
       background: url('../images/logo.svg');

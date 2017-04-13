@@ -23,6 +23,11 @@ $(document).ready(function() {
     setTimeout(function() {
       $('#sended-form').addClass('sended');
     }, 2500);
+    setTimeout(function() {
+      $('header').addClass('inverse');
+      $('body').addClass('lock');
+    }, 3000);
+
     return;
 
     var data = {

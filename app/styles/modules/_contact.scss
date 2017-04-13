@@ -511,7 +511,7 @@
     }
   }
   @media all and (max-width: $max-xs) {
-    
+
     svg.shape {
       display: none;
     }
@@ -596,6 +596,23 @@
   align-items: center;
   justify-content: center;
   padding: 0;
+  @media all and (max-height: 550px) {
+    padding-top: 150px;
+  }
+  h6 {
+    font-size: 42px;
+  }
+  p {
+    padding: 50px 0;
+    font-size: 18px;
+    line-height: 24px;
+    color: $gray;
+    max-width: 500px;
+    text-align: center;
+  }
+  a {
+
+  }
   &.sended {
     transform: translateY(0);
   }
