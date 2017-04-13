@@ -18,23 +18,22 @@ $(document).ready(function() {
   $('.sender').on('click', function(event) {
     event.preventDefault();
 
-    // mock
-    $(this).addClass('sending');
-    setTimeout(function() {
-      $('#sended-form').addClass('sended');
-    }, 2500);
-    setTimeout(function() {
-      $('header').addClass('inverse');
-      $('body').addClass('lock');
-    }, 3000);
+    // // mock
+    // $(this).addClass('sending');
+    // setTimeout(function() {
+    //   $('#sended-form').addClass('sended');
+    // }, 2500);
+    // setTimeout(function() {
+    //   $('header').addClass('inverse');
+    //   $('body').addClass('lock');
+    // }, 3000);
+    // return;
 
-    return;
-
+    var validity = [];
     var data = {
       '_subject': 'Let\'s rock n roll!',
     };
 
-    var validity = [];
     inputs.each(function(index, elem) {
       validity.push(elem.checkValidity());
       var $elem = $(elem);
