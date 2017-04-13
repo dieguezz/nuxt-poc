@@ -1,11 +1,13 @@
-.section-bg.people {
-  background: url('../images/people/people-bg1.jpg')!important;
-  background-size: cover!important;
-  background-position: center!important;
+.page {
+  .section-bg.people {
+    background: url('../images/people/people-bg1.jpg');
+    background-size: cover;
+    background-position: center;
+  }
 }
 
 #values {
-  padding-bottom: 600px!important;
+  padding-bottom: 600px;
   position: relative;
   overflow: hidden;
   img {
@@ -172,7 +174,7 @@
     }
   }
   @media all and (max-width: 780px) {
-    padding-bottom: 350px !important;
+    padding-bottom: 350px;
     img {
       display: none;
     }

@@ -1,10 +1,11 @@
 /* Home Section */
 
 #home {
+  padding: 0;
+  background: none;
   transition: padding-top $normal-transition;
   main {
     padding: 50px 0;
-    margin-bottom: 300px;
     position: relative;
     height: calc(100vh - 100px);
     overflow: hidden;
@@ -18,7 +19,7 @@
       height: 100%;
       background: url('../images/noise.png') #0f1112;
       background-attachment: fixed;
-      opacity: .5;
+      opacity: .7;
       z-index: 0;
     }
     video {
@@ -30,12 +31,7 @@
       z-index: -1;
     }
     h2, .scroll-appear {
-      font-size: 64px;
-      font-weight: 600;
-      line-height: 82px;
-      letter-spacing: 1px;
       color: #FFF;
-      max-width: 700px;
       position: absolute;
       top: 50%;
       width: calc(100% - 60px);
@@ -73,19 +69,35 @@
   }
 }
 
+.home-page {
+  main {
+    margin-bottom: 300px;
+    &:after {
+      opacity: .5;
+    }
+  }
+  h2 {
+    font-size: 64px;
+    font-weight: 600;
+    line-height: 82px;
+    letter-spacing: 1px;
+    max-width: 700px;
+  }
+}
+
 
 /* Not Home Page*/
 
-section:not(.home-page) {
+section {
   h2 {
-    font-size: 48px!important;
-    font-weight: 500!important;
-    line-height: 70px!important;
-    letter-spacing: 2px!important;
-    max-width: 720px!important;
+    font-size: 48px;
+    font-weight: 500;
+    line-height: 70px;
+    letter-spacing: 2px;
+    max-width: 720px;
     .line[index="1"], .line[index="2"], .line[index="3"] {}
     @media screen and (max-width: 600px) {
-      font-size: 36px!important;
+      font-size: 36px;
     }
   }
 }

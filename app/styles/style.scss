@@ -54,9 +54,10 @@ body {
   transform: translateY(40px)!important;
 }
 
+
 /* Sections */
 
-section:not(#home) {
+section {
   padding: 250px 0;
   background: #FFF;
   @media all and (max-width: 600px) {
@@ -281,11 +282,11 @@ section:not(#home) {
   }
 }
 
-.cookies-active {
+#home.cookies-active {
   padding-top: 50px;
   transition: padding-top $normal-transition;
   main {
-    height: calc(100vh - 150px)!important;
+    height: calc(100vh - 150px);
   }
   .cookies-bar {
     transition: top $normal-transition;
@@ -654,7 +655,6 @@ footer {
         }
       }
     }
-
     @media all and (max-width: 1120px) {
       display: block;
     }
