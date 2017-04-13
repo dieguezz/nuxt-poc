@@ -1,6 +1,7 @@
 $(document).ready(function() {
   var sr = ScrollReveal();
-  sr.reveal('h3,h4,h5,p,section a,textarea, #instafeed', {
+
+  sr.reveal('.reveal', {
     origin: 'bottom',
     scale: 1,
     reset: false,
@@ -9,37 +10,7 @@ $(document).ready(function() {
     delay: 350
   });
 
-  sr.reveal('.revealed, .revealed a', {
-    origin: 'bottom',
-    scale: 1,
-    opacity: 1,
-    distance: '0px',
-    duration: 0,
-    delay: 0
-  });
-
-  sr.reveal('#partners ul li', {
-    scale: 1,
-    reset: false,
-    distance: '50px',
-    duration: 1750
-  }, 150);
-
-  sr.reveal('.new-project-page .form-item', {
-    scale: 1,
-    reset: false,
-    distance: '50px',
-    duration: 1000
-  }, 150);
-
-  sr.reveal('#people ul li', {
-    scale: 1,
-    reset: false,
-    distance: '50px',
-    duration: 1750
-  }, 150);
-
-  sr.reveal('.general-contact-unit', {
+  sr.reveal('.reveal2', {
     scale: 1,
     reset: false,
     distance: '50px',
