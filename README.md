@@ -1,5 +1,3 @@
-
-
 # etéreo website ![build status](https://gitlab.com/etereo/etereo-website/badges/master/build.svg)
 
 ## Installation
@@ -32,6 +30,15 @@ grunt build
 	```
 	grunt serve:dist
 	```
+
+* With Docker
+
+  ```
+  grunt clean build
+  docker build -t etereo-website .
+  docker run -p 80:80 -dit etereo-website
+  ```
+
 
 ### Supported options
 
