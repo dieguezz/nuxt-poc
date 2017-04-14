@@ -11,7 +11,7 @@ $(document).ready(function() {
     loading: false,
     loadingParentElement: 'body', //animsition wrapper element
     loadingClass: 'animsition-loading',
-    loadingInner: '<img src="../images/logo-icon-inverse.svg" />', // e.g '<img src="loading.svg" />'
+    loadingInner: '<img src="/images/logo-icon-inverse.svg" />', // e.g '<img src="loading.svg" />'
     timeout: false,
     timeoutCountdown: 5000,
     onLoadEvent: true,

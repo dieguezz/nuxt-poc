@@ -7,13 +7,13 @@
   <!-- /build -->
 
   <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
-  <!-- build:css(.) styles/vendor.css -->
+  <!-- build:css(.) /styles/vendor.css -->
   <!-- bower:css -->
-  <link rel="stylesheet" href="bower_components/animsition/dist/css/animsition.min.css" />
+  <link rel="stylesheet" href="../bower_components/animsition/dist/css/animsition.min.css" />
   <!-- endbower -->
   <!-- endbuild -->
-  <!-- build:css(.tmp) styles/main.css -->
-  <link rel="stylesheet" type="text/css" href="styles/main.css" />
+  <!-- build:css(.tmp) /styles/main.css -->
+  <link rel="stylesheet" type="text/css" href="/styles/main.css" />
   <!-- endbuild -->
 
 </head>
@@ -158,7 +158,7 @@
         <ul>
 
           <li class="reveal2">
-            <img src="images/people/hayder.jpg" alt="Hayder">
+            <img src="/images/people/hayder.jpg" alt="Hayder">
             <div>
               <h4 class="reveal">Hayder Al-Deen</h4>
               <p class="people-title reveal">THE INVETERATE DESIGNER</p>
@@ -171,7 +171,7 @@
           </li>
 
           <li class="reveal2">
-            <img src="images/people/ruben.jpg" alt="Rubén">
+            <img src="/images/people/ruben.jpg" alt="Rubén">
             <div>
               <h4 class="reveal">Rubén Carrasco</h4>
               <p class="people-title reveal">THE ALLROAD GUY</p>
@@ -183,7 +183,7 @@
           </li>
 
           <li class="reveal2">
-            <img src="images/people/daniel.jpg" alt="Daniel">
+            <img src="/images/people/daniel.jpg" alt="Daniel">
             <div>
               <h4 class="reveal">Daniel García</h4>
               <p class="people-title reveal">THE YOUNG PROMISE</p>
@@ -195,7 +195,7 @@
           </li>
 
           <li class="reveal2">
-            <img src="images/people/rafael.jpg" alt="Rafael">
+            <img src="/images/people/rafael.jpg" alt="Rafael">
             <div>
               <h4 class="reveal">Rafael Gimeno</h4>
               <p class="people-title reveal">THE CREATIVE CODER</p>
@@ -207,7 +207,7 @@
           </li>
 
           <li class="reveal2">
-            <img src="images/people/ismael.jpg" alt="Ismael">
+            <img src="/images/people/ismael.jpg" alt="Ismael">
             <div>
               <h4 class="reveal">Ismael Madirolas</h4>
               <p class="people-title reveal">THE DATA CRAFTSMAN</p>
@@ -219,7 +219,7 @@
           </li>
 
           <li class="reveal2">
-            <img src="images/people/anthanh.jpg" alt="Anthanh">
+            <img src="/images/people/anthanh.jpg" alt="Anthanh">
             <div>
               <h4 class="reveal">Anthanh Pham</h4>
               <p class="people-title reveal">THE NINJA DEVELOPER</p>
@@ -231,7 +231,7 @@
           </li>
 
           <li class="reveal2">
-            <img src="images/people/diego.jpg" alt="diego">
+            <img src="/images/people/diego.jpg" alt="diego">
             <div>
               <h4 class="reveal">Diego Segura</h4>
               <p class="people-title reveal">THE ONE MAN ARMY</p>
@@ -267,22 +267,22 @@
 
     </div>
 
-    <!-- build:js(.) scripts/vendor.js -->
+    <!-- build:js(.) /scripts/vendor.js -->
     <!-- bower:js -->
-    <script src="bower_components/jquery/dist/jquery.js"></script>
-    <script src="bower_components/lining.js/src/lining.js"></script>
-    <script src="bower_components/animsition/dist/js/animsition.min.js"></script>
-    <script src="bower_components/scrollreveal/dist/scrollreveal.js"></script>
-    <script src="bower_components/instafeed.js/instafeed.js"></script>
-    <script src="bower_components/rellax/rellax.js"></script>
+    <script src="../bower_components/jquery/dist/jquery.js"></script>
+    <script src="../bower_components/lining.js/src/lining.js"></script>
+    <script src="../bower_components/animsition/dist/js/animsition.min.js"></script>
+    <script src="../bower_components/scrollreveal/dist/scrollreveal.js"></script>
+    <script src="../bower_components/instafeed.js/instafeed.js"></script>
+    <script src="../bower_components/rellax/rellax.js"></script>
     <!-- endbower -->
-    <script src="bower_components/waypoints/lib/jquery.waypoints.js"></script>
+    <script src="/bower_components/waypoints/lib/jquery.waypoints.js"></script>
     <!-- endbuild -->
 
-    <!-- build:js({.,.tmp,app,dist}) scripts/scripts.js -->
-    <!-- include: "type": "js", "files": ["vendor/**/*.js"] -->
-    <script src="app.scripts.js"></script>
-    <!-- include: "type": "js", "files": ["scripts/*.js"] -->
+    <!-- build:js({.,.tmp,app,dist}) /scripts/scripts.js -->
+    <!-- include: "type": "js", "files": ["vendor/**/*.js"], "baseUrl": "/" -->
+    <script src="/app.scripts.js"></script>
+    <!-- include: "type": "js", "files": ["scripts/*.js"], "baseUrl": "/" -->
     <!-- endbuild -->
     <script>
     var rellax = new Rellax('.rellax');

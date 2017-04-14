@@ -177,8 +177,7 @@ module.exports = function(grunt) {
       },
       app: {
         src: [
-          '<%= appConfig.app %>/*.html',
-          '<%= appConfig.app %>/statics/*.html'
+          '<%= appConfig.app %>/**/*.html'
         ],
         ignorePath: /\.\.\//
       },
@@ -196,21 +195,21 @@ module.exports = function(grunt) {
       server: {
         files: [{
           '.tmp/index.html': '<%= appConfig.app %>/index.html',
-          '.tmp/company.html': '<%= appConfig.app %>/company.html',
-          '.tmp/new-project.html': '<%= appConfig.app %>/new-project.html',
-          '.tmp/contact.html': '<%= appConfig.app %>/contact.html',
-          '.tmp/people.html': '<%= appConfig.app %>/people.html',
-          '.tmp/privacy-policy.html': '<%= appConfig.app %>/privacy-policy.html'
+          '.tmp/company/index.html': '<%= appConfig.app %>/company/index.html',
+          '.tmp/new-project/index.html': '<%= appConfig.app %>/new-project/index.html',
+          '.tmp/contact/index.html': '<%= appConfig.app %>/contact/index.html',
+          '.tmp/people/index.html': '<%= appConfig.app %>/people/index.html',
+          '.tmp/privacy-policy/index.html': '<%= appConfig.app %>/privacy-policy/index.html'
         }]
       },
       dist: {
         files: {
           '<%= appConfig.dist %>/index.html': '<%= appConfig.app %>/index.html',
-          '<%= appConfig.dist %>/company.html': '<%= appConfig.app %>/company.html',
-          '<%= appConfig.dist %>/new-project.html': '<%= appConfig.app %>/new-project.html',
-          '<%= appConfig.dist %>/contact.html': '<%= appConfig.app %>/contact.html',
-          '<%= appConfig.dist %>/people.html': '<%= appConfig.app %>/people.html',
-          '<%= appConfig.dist %>/privacy-policy.html': '<%= appConfig.app %>/privacy-policy.html',
+          '<%= appConfig.dist %>/company/index.html': '<%= appConfig.app %>/company/index.html',
+          '<%= appConfig.dist %>/new-project/index.html': '<%= appConfig.app %>/new-project/index.html',
+          '<%= appConfig.dist %>/contact/index.html': '<%= appConfig.app %>/contact/index.html',
+          '<%= appConfig.dist %>/people/index.html': '<%= appConfig.app %>/people/index.html',
+          '<%= appConfig.dist %>/privacy-policy/index.html': '<%= appConfig.app %>/privacy-policy/index.html',
         }
       }
     },
@@ -222,21 +221,21 @@ module.exports = function(grunt) {
       server: {
         files: {
           '.tmp/index.html': '.tmp/index.html',
-          '.tmp/company.html': '.tmp/company.html',
-          '.tmp/new-project.html': '.tmp/new-project.html',
-          '.tmp/contact.html': '.tmp/contact.html',
-          '.tmp/people.html': '.tmp/people.html',
-          '.tmp/privacy-policy.html': '.tmp/privacy-policy.html'
+          '.tmp/company/index.html': '.tmp/company/index.html',
+          '.tmp/new-project/index.html': '.tmp/new-project/index.html',
+          '.tmp/contact/index.html': '.tmp/contact/index.html',
+          '.tmp/people/index.html': '.tmp/people/index.html',
+          '.tmp/privacy-policy/index.html': '.tmp/privacy-policy/index.html'
         }
       },
       dist: {
         files: {
           'dist/index.html': '<%= appConfig.dist %>/index.html',
-          'dist/company.html': '<%= appConfig.dist %>/company.html',
-          'dist/new-project.html': '<%= appConfig.dist %>/new-project.html',
-          'dist/contact.html': '<%= appConfig.dist %>/contact.html',
-          'dist/people.html': '<%= appConfig.dist %>/people.html',
-          'dist/privacy-policy.html': '<%= appConfig.dist %>/privacy-policy.html'
+          'dist/company/index.html': '<%= appConfig.dist %>/company/index.html',
+          'dist/new-project/index.html': '<%= appConfig.dist %>/new-project/index.html',
+          'dist/contact/index.html': '<%= appConfig.dist %>/contact/index.html',
+          'dist/people/index.html': '<%= appConfig.dist %>/people/index.html',
+          'dist/privacy-policy/index.html': '<%= appConfig.dist %>/privacy-policy/index.html'
         }
       }
     },
@@ -359,7 +358,7 @@ module.exports = function(grunt) {
         files: [{
           expand: true,
           cwd: '<%= appConfig.dist %>',
-          src: ['*.html', 'views/{,*/}*.html', 'modules/{,*/}*.html'],
+          src: ['**/*.html'],
           dest: '<%= appConfig.dist %>'
         }]
       }
