@@ -3,6 +3,10 @@
   padding-bottom: 0;
   position: relative;
   overflow: hidden;
+  transition: margin-top 0.35s ease-in-out!important;
+  &.cookies-active {
+    margin-top: 50px;
+  }
   h3 {
     max-width: 700px;
     z-index: 20;

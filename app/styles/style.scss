@@ -232,7 +232,7 @@ section {
   height: 50px;
   width: 100vw;
   background: #000;
-  z-index: 20;
+  z-index: 100;
   transition: top $normal-transition;
   p {
     color: $gray;
