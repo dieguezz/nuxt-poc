@@ -68,4 +68,17 @@ $(document).ready(function() {
     });
 
   });
+
+  /* Open Extra Questions */
+  $('.extra-questions').on('click', function() {
+    $('.extra').toggleClass('show');
+    //$(this).text("No sorry, maybe later.");
+
+    if ($(this).text() == "I don't have time enough to answer the optional ones ") {
+      $(this).text('Do you mind answering two more questions? (optional)');
+    } else {
+      $(this).text("I don't have time enough to answer the optional ones ");
+    }
+  });
+
 });
