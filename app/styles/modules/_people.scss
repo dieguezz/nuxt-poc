@@ -13,6 +13,7 @@
   img {
     position: absolute;
     filter: grayscale(100%);
+    transition: top $normal-transition,right $normal-transition,left $normal-transition;
     &.values-1 {
       left: -10%;
       top: 60%;
@@ -24,6 +25,17 @@
     &.values-3 {
       right: -25%;
       top: 70%;
+    }
+    @media all and (min-width: 1700px ) {
+      &.values-1 {
+        left: -0%;
+      }
+      &.values-2 {
+        right: -0%;
+      }
+      &.values-3 {
+        right: -15%;
+      }
     }
   }
   h3 {
@@ -119,26 +131,26 @@
   @media all and (max-width: 1500px) {
     img {
       &.values-1 {
-        left: -30%;
+        left: -15%;
       }
       &.values-2 {
         right: -30%;
       }
       &.values-3 {
-        right: -18%;
+        right: -35%;
       }
     }
   }
   @media all and (max-width: 1250px) {
     img {
       &.values-1 {
-        left: -30%;
+        left: -20%;
       }
       &.values-2 {
-        right: -50%;
+        right: -30%;
       }
       &.values-3 {
-        right: -20%;
+        right: -30%;
         top: 80%;
       }
     }
@@ -146,14 +158,15 @@
   @media all and (max-width: 1120px) {
     img {
       &.values-1 {
-        left: -45%;
+        left: -25%;
         top: 65%;
       }
       &.values-2 {
-        right: -50%;
+        top: 8%;
+        right: -30%;
       }
       &.values-3 {
-        right: -20%;
+        right: -40%;
         top: 80%;
       }
     }
@@ -161,7 +174,7 @@
   @media all and (max-width: 1000px) {
     img {
       &.values-1 {
-        left: -60%;
+        left: -35%;
         top: 65%;
       }
       &.values-2 {
