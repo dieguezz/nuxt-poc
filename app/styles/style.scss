@@ -282,7 +282,7 @@ section {
   }
 }
 
-#home.cookies-active {
+#home.cookies-active, .contact-page.cookies-active {
   padding-top: 50px;
   transition: padding-top $normal-transition;
   main {

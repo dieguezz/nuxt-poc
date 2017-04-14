@@ -3,7 +3,7 @@
 $(document).ready(function() {
   if (!window.localStorage.getItem('cookies')) {
     setTimeout(function() {
-      $('#home').addClass('cookies-active');
+      $('#home, .contact-page').addClass('cookies-active');
     }, 3000);
   }
 
