@@ -65,6 +65,9 @@
       top: auto;
       opacity: 0;
       z-index: 10;
+      @media all and (max-width: 830px) {
+        bottom: 70px;
+      }
     }
   }
 }
@@ -76,7 +79,7 @@
       opacity: .5;
     }
   }
-  h2, .scroll-appear {
+  h2{
     font-size: 64px;
     font-weight: 600;
     line-height: 82px;
