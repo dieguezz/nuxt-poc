@@ -106,26 +106,8 @@ $(document).ready(function() {
     }, 450);
 
     setTimeout(function() {
-      window.location.href = 'new-project.html';
+      window.location.href = '/new-project';
     }, 800);
 
-  });
-});
-
-/* Open Extra Questions */
-$(document).ready(function() {
-  $('.extra-questions').on('click', function() {
-    $('.extra').toggleClass('show');
-    //$(this).text("No sorry, maybe later.");
-
-
-       if($(this).text() == "I don't have time enough to answer the optional ones ")
-       {
-           $(this).text('Do you mind answering two more questions? (optional)');
-       }
-       else
-       {
-           $(this).text("I don't have time enough to answer the optional ones ");
-       }
   });
 });

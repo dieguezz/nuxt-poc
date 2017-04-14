@@ -14,7 +14,7 @@ build:
     - bower install --allow-root --force-latest
     - grunt build
     - s3-deploy './dist/*' --cwd './dist/' --gzip --region $AWS_REGION --bucket $AWS_BUCKET
-    - s3-deploy './dist/statics/**' --cwd './dist/' --gzip --region $AWS_REGION --bucket $AWS_BUCKET
+    - s3-deploy './dist/**/*.html' --cwd './dist/' --gzip --region $AWS_REGION --bucket $AWS_BUCKET
     - s3-deploy './dist/fonts/**' --cwd './dist/' --gzip --region $AWS_REGION --bucket $AWS_BUCKET
     - s3-deploy './dist/scripts/**' --cwd './dist/' --gzip --region $AWS_REGION --bucket $AWS_BUCKET
     - s3-deploy './dist/styles/**' --cwd './dist/' --gzip --region $AWS_REGION --bucket $AWS_BUCKET
