@@ -1,4 +1,4 @@
-# etéreo website ![build status](https://gitlab.com/etereo/etereo-website/badges/master/build.svg)
+# etéreo website [![build status](https://gitlab.com/etereo/etereo-website/badges/master/build.svg)](https://gitlab.com/etereo/etereo-website/commits/master)
 
 ## Installation
 
