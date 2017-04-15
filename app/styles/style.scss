@@ -379,11 +379,12 @@ header {
   }
   @media all and (max-width: 490px) {
     width: calc(100% - 60px);
+    margin-top: 15px;
   }
   h1 {
     margin-left: -10px;
     float: left;
-    transition: opacity $normal-transition, visibility $normal-transition;
+    transition: opacity $normal-transition, visibility $normal-transition, background $normal-transition;
     background: url('../images/logo-inverse.svg');
     width: 120px;
     height: 36px;
