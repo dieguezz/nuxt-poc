@@ -10,10 +10,32 @@
   padding-bottom: 600px;
   position: relative;
   overflow: hidden;
-  img {
+  .about-picture {
     position: absolute;
     filter: grayscale(100%);
     transition: top $normal-transition,right $normal-transition,left $normal-transition;
+    span {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      background: #FFF;
+      left: 0;
+      &.show {
+        animation-name: about-picture-cover;
+        animation-duration: .5s;
+        animation-fill-mode: forwards;
+        animation-timing-function: ease-out;
+        @keyframes about-picture-cover {
+          0% {
+            width: 100%;
+          }
+
+          100% {
+            width: 0%;
+          }
+        }
+      }
+    }
     &.values-1 {
       left: -10%;
       top: 60%;
@@ -129,7 +151,7 @@
     }
   }
   @media all and (max-width: 1500px) {
-    img {
+    .about-picture {
       &.values-1 {
         left: -15%;
       }
@@ -142,7 +164,7 @@
     }
   }
   @media all and (max-width: 1250px) {
-    img {
+    .about-picture {
       &.values-1 {
         left: -20%;
       }
@@ -156,7 +178,7 @@
     }
   }
   @media all and (max-width: 1120px) {
-    img {
+    .about-picture {
       &.values-1 {
         left: -25%;
         top: 65%;
@@ -172,7 +194,7 @@
     }
   }
   @media all and (max-width: 1000px) {
-    img {
+    .about-picture {
       &.values-1 {
         left: -35%;
         top: 65%;
@@ -188,7 +210,7 @@
   }
   @media all and (max-width: 780px) {
     padding-bottom: 350px;
-    img {
+    .about-picture {
       display: none;
     }
   }
