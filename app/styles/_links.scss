@@ -25,6 +25,7 @@ p, h4 {
   height: auto;
   color: $black;
   outline: none;
+  -webkit-tab-highlight-color: none;
   &::after {
     content: '';
     position: absolute;
@@ -60,6 +61,7 @@ p, h4 {
   font-size: 14px;
   border: 2px solid inherit;
   outline: none;
+  -webkit-tab-highlight-color: none;
   background: $black;
   color: #FFF;
   text-transform: uppercase;

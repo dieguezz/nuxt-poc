@@ -358,6 +358,7 @@ header {
       }
     }
     .navigation-mobile {
+      -webkit-tap-highlight-color: transparent;
       .bar, .bar:before, .bar:after {
         background: $black;
       }
