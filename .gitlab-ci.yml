@@ -7,7 +7,7 @@ stages:
 - deploy
 
 setup:
-  stage: build
+  stage: setup
   script:
     - npm install -g bower grunt-cli protractor s3-deploy
     - npm install
