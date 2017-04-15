@@ -6,13 +6,34 @@ stages:
 - build
 - deploy
 
-build:
+setup:
   stage: build
   script:
     - npm install -g bower grunt-cli protractor s3-deploy
     - npm install
     - bower install --allow-root --force-latest
     - grunt build
+    - s3-deploy './dist/*' --cwd './dist/' --gzip --region $AWS_REGION --bucket $AWS_BUCKET
+    - s3-deploy './dist/**/*.html' --cwd './dist/' --gzip --region $AWS_REGION --bucket $AWS_BUCKET
+    - s3-deploy './dist/fonts/**' --cwd './dist/' --gzip --region $AWS_REGION --bucket $AWS_BUCKET
+    - s3-deploy './dist/scripts/**' --cwd './dist/' --gzip --region $AWS_REGION --bucket $AWS_BUCKET
+    - s3-deploy './dist/styles/**' --cwd './dist/' --gzip --region $AWS_REGION --bucket $AWS_BUCKET
+    - s3-deploy './dist/images/**' --cwd './dist/' --region $AWS_REGION --bucket $AWS_BUCKET
+    - s3-deploy './dist/images/**/*.svg' --cwd './dist/' --gzip --region $AWS_REGION --bucket $AWS_BUCKET
+
+test:
+  stage: test
+  script:
+    - grunt build
+
+build:
+  stage: build
+  script:
+    - grunt build
+
+deploy:
+  stage: deploy
+  script:
     - s3-deploy './dist/*' --cwd './dist/' --gzip --region $AWS_REGION --bucket $AWS_BUCKET
     - s3-deploy './dist/**/*.html' --cwd './dist/' --gzip --region $AWS_REGION --bucket $AWS_BUCKET
     - s3-deploy './dist/fonts/**' --cwd './dist/' --gzip --region $AWS_REGION --bucket $AWS_BUCKET
