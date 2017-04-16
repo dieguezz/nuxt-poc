@@ -22,6 +22,9 @@
       background-attachment: fixed;
       opacity: .7;
       z-index: 0;
+      @media all and (max-width: 600px) {
+        opacity: 0;
+      }
     }
     video {
       object-fit: cover;
@@ -30,6 +33,9 @@
       width: 100%;
       position: absolute;
       z-index: 0;
+      @media all and (max-width: 600px) {
+        display: none;
+      }
     }
     h2, .scroll-appear {
       color: #FFF;
@@ -279,6 +285,9 @@ body.home-intro.three {
           transition: opacity $normal-transition, top $normal-transition;
           transform: inherit;
           width: auto;
+          @media all and (max-width: 600px) {
+            display: none;
+          }
         }
       }
     }
