@@ -114,6 +114,11 @@ body.home-intro.three {
   .title-page, .scroll-appear, footer, .navigation {
     display: none;
   }
+  .scroll-down {
+    @media all and (max-width: 600px) {
+      display: none;
+    }
+  }
   .scroll-navigate {
     position: absolute;
     z-index: 40;
@@ -157,6 +162,13 @@ body.home-intro.three {
     @media all and (max-width: 930px) {
       margin-bottom: 0!important;
     }
+    @media all and (max-width: 600px) {
+      margin-bottom: -30px !important;
+      padding-bottom: 0;
+      text-align: right;
+      font-size: 18px;
+      padding-right: 50px;
+    }
     @keyframes claim-bottom {
       0% {
         bottom: 30px;
@@ -177,13 +189,26 @@ body.home-intro.three {
   left: 10%;
   width: 2560px;
   transform: translateY(-50%);
+  @media all and (max-width: 600px) {
+    top: 250px;
+    width: 100vw;
+  }
   ul {
     position: absolute;
     top: -50px;
+    @media all and (max-width: 600px) {
+      left: 0!important;
+    }
+    @media all and (max-height: 550px) {
+      top: -100px;
+    }
     li {
       display: inline-block;
       padding-right: 150px;
       position: relative;
+      @media all and (max-width: 600px) {
+        display: block;
+      }
       &:last-child {
         margin-right: 150px;
       }
@@ -225,8 +250,11 @@ body.home-intro.three {
         color: #FFF;
         opacity: .1;
         transition: opacity $normal-transition;
-        @media all and (max-width: 600px) {
+        @media all and (max-width: 960px) {
           font-size: 72px;
+        }
+        @media all and (max-width: 400px) {
+          font-size: 60px;
         }
         &::before {
           content: '/';
@@ -234,6 +262,9 @@ body.home-intro.three {
           position: absolute;
           color: #FFF;
           left: -50px;
+          @media all and (max-width: 400px) {
+            left: -35px;
+          }
         }
 
         &::after {
