@@ -309,6 +309,7 @@ section {
   text-align: center;
   left: 50%;
   transform: translateX(-50%);
+  transition: opacity $normal-transition;
   svg {
     animation-name: scroll-down;
     animation-duration: 2s;
