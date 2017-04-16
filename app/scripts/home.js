@@ -28,39 +28,44 @@ $(document).ready(function() {
 
 /* HOME Option 3 */
 
-$(document).ready(function () {
-    var $horizontal = $('.central-navigation ul');
+$(document).ready(function() {
+  var $horizontal = $('.central-navigation ul');
 
-    $(window).scroll(function () {
-        var s = $(this).scrollTop(),
-            d = $(document).height(),
-            c = $(this).height();
+  $(window).scroll(function() {
+    var s = $(this).scrollTop(),
+      d = $(document).height(),
+      c = $(this).height();
 
-        var $scrollPercent = (s / (d - c));
+    var $scrollPercent = (s / (d - c));
 
-        var position = ($scrollPercent * ($(document).width() - $horizontal.width()));
+    var position = ($scrollPercent * ($(document).width() - $horizontal.width()));
 
-        $horizontal.css({
-            'left': position
-        });
+    $horizontal.css({
+      'left': position
     });
+  });
 });
 
 
-$(document).ready(function(){
-   $(window).scroll(function() {
-       if ($('body').height() <= ($(window).height() + $(window).scrollTop())) {
-           $('.scroll-down').css('opacity','0');
-           $('.claim-bottom').css('margin-bottom','-75px');
-       }
-       else {
-         $('.scroll-down').css('opacity','1');
-         $('.claim-bottom').css('margin-bottom','-25px');
-       }
-    });
-});
+$(document).ready(function() {
 
-$('.central-navigation ul li').hover(
-       function(){ $('.central-navigation ul li:first-child').removeClass('active') },
-       function(){ $('.central-navigation ul li:first-child').addClass('active') }
-)
+  $(window).scroll(function() {
+    if ($('body').height() <= ($(window).height() + $(window).scrollTop())) {
+      $('.scroll-down').css('opacity', '0');
+      $('.claim-bottom').css('margin-bottom', '-75px');
+    } else {
+      $('.scroll-down').css('opacity', '1');
+      $('.claim-bottom').css('margin-bottom', '-25px');
+    }
+  });
+
+  $('.central-navigation ul li').hover(
+    function() {
+      $('.central-navigation ul li:first-child').removeClass('active')
+    },
+    function() {
+      $('.central-navigation ul li:first-child').addClass('active')
+    }
+  );
+
+});
