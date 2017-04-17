@@ -152,16 +152,14 @@ section {
 body.home-intro.three {
   height: 300vh;
   @media all and (max-width: 600px) {
-    footer {
-      display: none;
-    }
+    height: 100vh;
   }
   .navigation {
     display: none;
   }
   .scroll-down {
     @media all and (max-width: 600px) {
-      display: none;
+      opacity: 1!important;
     }
   }
   .scroll-navigate {
@@ -180,14 +178,25 @@ body.home-intro.three {
   main {
     position: fixed!important;
     width: 100vw;
+    @media all and (max-width: 600px) {
+      position: relative!important;
+    }
+    .scroll-appear {
+      display: none;
+      @media all and (max-width: 600px) {
+        display: block;
+      }
+    }
   }
 
   .claim-bottom {
     position: absolute;
     width: 100%;
+    max-width: 320px;
     color: #FFF;
-    font-family: 'Playfair Display', serif;
-    font-style: italic;
+    /*font-family: 'Playfair Display', serif;
+    font-style: italic;*/
+    letter-spacing: 1px;
     font-size: 24px;
     z-index: 20;
     bottom: 30px;
@@ -207,13 +216,7 @@ body.home-intro.three {
     @media all and (max-width: 930px) {
       margin-bottom: 0!important;
     }
-    @media all and (max-width: 600px) {
-      margin-bottom: -30px !important;
-      padding-bottom: 0;
-      text-align: right;
-      font-size: 18px;
-      padding-right: 50px;
-    }
+
     @keyframes claim-bottom {
       0% {
         bottom: 30px;
@@ -223,6 +226,39 @@ body.home-intro.three {
         bottom: 50px;
         opacity: 1;
       }
+    }
+
+    @media all and (max-width: 600px) {
+      bottom: auto;
+      padding: 0 30px;
+      left: 0;
+      width: calc(100% - 60px);
+      max-width: calc(100% - 60px);
+      text-align: left;
+      font-size: 42px;
+      line-height: 52px;
+      font-weight: 600;
+      top: 50%;
+      display: inline-table;
+      opacity: 1;
+      transform: translateY(-50%) translateX(0);
+      animation-name: claim-bottom-mobile;
+      animation-duration: 1s;
+      animation-fill-mode: forwards;
+      animation-delay: 1s;
+      animation-timing-function: ease-in-out;
+      @keyframes claim-bottom-mobile {
+        0% {
+          bottom: 30px;
+        }
+        100% {
+          bottom: 50px;
+        }
+      }
+    }
+    @media all and (max-width: 420px) {
+      font-size: 36px;
+      line-height: 46px;
     }
   }
 
@@ -235,8 +271,9 @@ body.home-intro.three {
   width: 2560px;
   transform: translateY(-50%);
   @media all and (max-width: 600px) {
-    top: 250px;
-    width: 100vw;
+    /*top: 250px;
+    width: 100vw;*/
+    display: none;
   }
   ul {
     position: absolute;
