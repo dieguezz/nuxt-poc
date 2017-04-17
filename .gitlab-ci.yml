@@ -23,6 +23,22 @@ build:
   only:
     - master
 
+build-test2:
+  stage: build
+  script:
+    - npm install -g bower grunt-cli protractor s3-deploy
+    - npm install
+    - bower install --allow-root --force-latest
+    - grunt build
+    - s3-deploy './dist/*' --etag --cache 31536000 --cwd './dist/' --gzip --region $AWS_REGION --bucket $AWS_BUCKET_TEST2
+    - s3-deploy './dist/**/*.html' --etag --cache 0 --cwd './dist/' --gzip --region $AWS_REGION --bucket $AWS_BUCKET_TEST2
+    - s3-deploy './dist/fonts/**' --etag --cache 31536000 --cwd './dist/' --gzip --region $AWS_REGION --bucket $AWS_BUCKET_TEST2
+    - s3-deploy './dist/scripts/**' --etag --cache 31536000 --cwd './dist/' --gzip --region $AWS_REGION --bucket $AWS_BUCKET_TEST2
+    - s3-deploy './dist/styles/**' --etag --cache 31536000 --cwd './dist/' --gzip --region $AWS_REGION --bucket $AWS_BUCKET_TEST2
+    - s3-deploy './dist/images/**' --etag --cache 31536000 --cwd './dist/' --region $AWS_REGION --bucket $AWS_BUCKET_TEST2
+    - s3-deploy './dist/images/**/*.svg' --etag --cache 31536000 --cwd './dist/' --gzip --region $AWS_REGION --bucket $AWS_BUCKET_TEST2
+  only:
+    - test2
 
 build-production:
   stage: build
