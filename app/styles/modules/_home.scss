@@ -151,6 +151,11 @@ section {
 .central-navigation,.claim-bottom,.scroll-navigate {display:none;}
 body.home-intro.three {
   height: 300vh;
+  @media all and (max-width: 600px) {
+    footer {
+      display: none;
+    }
+  }
   .navigation {
     display: none;
   }
