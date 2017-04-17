@@ -117,6 +117,9 @@ section {
 .central-navigation,.claim-bottom,.scroll-navigate {display:none;}
 body.home-intro.three {
   height: 300vh;
+  .navigation {
+    display: none;
+  }
   .scroll-down {
     @media all and (max-width: 600px) {
       display: none;
