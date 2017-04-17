@@ -112,7 +112,7 @@
 
 .home-page {
   main {
-    overflow: scroll!important;
+    /*overflow: scroll!important;*/
     margin-bottom: 300px;
     &::after {
       display: none;
@@ -162,13 +162,14 @@ body.home-intro.homepage {
     display: none;
   }
   .scroll-down {
-    position: fixed;
+    /*position: fixed;*/
     @media all and (max-width: 600px) {
       opacity: 1!important;
     }
   }
   .scroll-navigate {
-    position: fixed;
+    /*position: fixed;*/
+    position: absolute;
     z-index: 40;
     color: #FFF;
     top: 0;
@@ -198,7 +199,8 @@ body.home-intro.homepage {
   }
 
   .claim-bottom {
-    position: fixed;
+    /*position: fixed;*/
+    position: absolute;
     width: 100%;
     max-width: 320px;
     color: #FFF;
@@ -272,8 +274,8 @@ body.home-intro.homepage {
 
 .central-navigation {
   display: block;
-  /*position: fixed;*/
-  position: relative;
+  position: fixed;
+  /*position: relative;*/
   z-index: 20;
   top: 50%;
   left: 10%;
