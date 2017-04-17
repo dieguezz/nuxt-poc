@@ -55,6 +55,7 @@
   "node": true,
 
   "globals": {
+    "ga": true,
     "svg4everybody": true,
     "Instafeed": true,
     "ScrollReveal": true,
