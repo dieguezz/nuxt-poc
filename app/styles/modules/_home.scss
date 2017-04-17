@@ -112,6 +112,7 @@
 
 .home-page {
   main {
+    overflow: scroll!important;
     margin-bottom: 300px;
     &::after {
       display: none;
@@ -146,8 +147,14 @@ section {
 
 /* Title Option 3 */
 .central-navigation,.claim-bottom,.scroll-navigate {display:none;}
-body.home-intro.three {
+body.home-intro.homepage {
   height: 300vh;
+  -webkit-touch-callout: none;
+    -webkit-user-select: none;
+     -khtml-user-select: none;
+       -moz-user-select: none;
+        -ms-user-select: none;
+            user-select: none;
   @media all and (max-width: 600px) {
     height: 100vh;
   }
@@ -155,12 +162,13 @@ body.home-intro.three {
     display: none;
   }
   .scroll-down {
+    position: fixed;
     @media all and (max-width: 600px) {
       opacity: 1!important;
     }
   }
   .scroll-navigate {
-    position: absolute;
+    position: fixed;
     z-index: 40;
     color: #FFF;
     top: 0;
@@ -190,7 +198,7 @@ body.home-intro.three {
   }
 
   .claim-bottom {
-    position: absolute;
+    position: fixed;
     width: 100%;
     max-width: 320px;
     color: #FFF;
@@ -264,7 +272,8 @@ body.home-intro.three {
 
 .central-navigation {
   display: block;
-  position: fixed;
+  /*position: fixed;*/
+  position: relative;
   z-index: 20;
   top: 50%;
   left: 10%;
