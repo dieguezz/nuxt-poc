@@ -23,9 +23,6 @@
       transition: opacity .5s ease-in-out;
       opacity: .7;
       z-index: 0;
-      @media all and (max-width: 600px) {
-        opacity: 0;
-      }
     }
 
     h2, .scroll-appear {
@@ -180,6 +177,9 @@ body.home-intro.three {
     width: 100vw;
     @media all and (max-width: 600px) {
       position: relative!important;
+      &::after {
+        opacity: 0;
+      }
     }
     .scroll-appear {
       display: none;
