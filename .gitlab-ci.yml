@@ -40,4 +40,3 @@ build-production:
     - s3-deploy './dist/images/**/*.svg' --cwd './dist/' --gzip --region $AWS_REGION --bucket $AWS_BUCKET_PRODUCTION
   only:
     - production
-Sip-wino1-kim9
