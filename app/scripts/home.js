@@ -47,9 +47,11 @@ $(document).ready(function() {
     if ($('body').height() <= ($(window).height() + $(window).scrollTop())) {
       $('.scroll-down').css('opacity', '0');
       $('.claim-bottom').css('margin-bottom', '-75px');
+      $('.video-cover').addClass('fade');
     } else {
       $('.scroll-down').css('opacity', '1');
       $('.claim-bottom').css('margin-bottom', '-25px');
+      $('.video-cover').removeClass('fade');
     }
 
   });
