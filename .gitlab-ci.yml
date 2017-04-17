@@ -14,7 +14,7 @@ build:
     - bower install --allow-root --force-latest
     - grunt build
     - s3-deploy './dist/*' --etag --cache 31536000 --cwd './dist/' --gzip --region $AWS_REGION --bucket $AWS_BUCKET
-    - s3-deploy './dist/**/*.html' --etag --cache 0 --cwd './dist/' --gzip --region $AWS_REGION --bucket $AWS_BUCKET
+    - s3-deploy './dist/**/*.html' --etag --cwd './dist/' --gzip --region $AWS_REGION --bucket $AWS_BUCKET
     - s3-deploy './dist/fonts/**' --etag --cache 31536000 --cwd './dist/' --gzip --region $AWS_REGION --bucket $AWS_BUCKET
     - s3-deploy './dist/scripts/**' --etag --cache 31536000 --cwd './dist/' --gzip --region $AWS_REGION --bucket $AWS_BUCKET
     - s3-deploy './dist/styles/**' --etag --cache 31536000 --cwd './dist/' --gzip --region $AWS_REGION --bucket $AWS_BUCKET
@@ -32,7 +32,7 @@ build-production:
     - bower install --allow-root --force-latest
     - grunt build
     - s3-deploy './dist/*' --etag --cache 31536000 --cwd './dist/' --gzip --region $AWS_REGION --bucket $AWS_BUCKET_PRODUCTION
-    - s3-deploy './dist/**/*.html' --etag --cache 0 --cwd './dist/' --gzip --region $AWS_REGION --bucket $AWS_BUCKET_PRODUCTION
+    - s3-deploy './dist/**/*.html' --etag --cwd './dist/' --gzip --region $AWS_REGION --bucket $AWS_BUCKET_PRODUCTION
     - s3-deploy './dist/fonts/**' --etag --cache 31536000 --cwd './dist/' --gzip --region $AWS_REGION --bucket $AWS_BUCKET_PRODUCTION
     - s3-deploy './dist/scripts/**' --etag --cache 31536000 --cwd './dist/' --gzip --region $AWS_REGION --bucket $AWS_BUCKET_PRODUCTION
     - s3-deploy './dist/styles/**' --etag --cache 31536000 --cwd './dist/' --gzip --region $AWS_REGION --bucket $AWS_BUCKET_PRODUCTION
