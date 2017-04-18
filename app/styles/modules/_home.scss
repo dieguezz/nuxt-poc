@@ -113,7 +113,7 @@
 
 .home-page {
   main {
-    /*overflow: scroll!important;*/
+    overflow: scroll!important;
     margin-bottom: 300px;
     &::after {
       display: none;
@@ -163,7 +163,7 @@ body.home-intro.homepage {
     display: none;
   }
   .scroll-down {
-    /*position: fixed;*/
+    position: fixed;
     @media all and (max-width: 600px) {
       opacity: 1!important;
     }
@@ -172,7 +172,7 @@ body.home-intro.homepage {
     display: block;
   }*/
   .scroll-navigate {
-    position: absolute;
+    position: fixed;
     z-index: 40;
     color: #FFF;
     top: 0;
@@ -207,8 +207,7 @@ body.home-intro.homepage {
   }
 
   .claim-bottom {
-    /*position: fixed;*/
-    position: absolute;
+    position: fixed;
     width: 100%;
     max-width: 320px;
     color: #FFF;
@@ -282,8 +281,7 @@ body.home-intro.homepage {
 
 .central-navigation {
   display: block;
-  position: fixed;
-  /*position: relative;*/
+  position: relative;
   z-index: 20;
   top: 50%;
   left: 10%;
@@ -368,7 +366,7 @@ body.home-intro.homepage {
         font-size: 120px;
         font-weight: 600;
         color: #FFF;
-        opacity: .1;
+        opacity: .25;
         transition: opacity $normal-transition;
         @media all and (max-width: 960px) {
           font-size: 72px;
@@ -406,5 +404,9 @@ body.home-intro.homepage {
       }
     }
   }
+}
+&::-webkit-scrollbar {
+  width: 0px;
+  height: 0px;
 }
 }
