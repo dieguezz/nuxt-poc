@@ -180,6 +180,8 @@ body.home-intro.homepage {
     padding-top: 15px;
     right: 50px;
     display: block;
+    transition: all $normal-transition;
+
     @media all and (max-width: 740px){
       display: none;
     }
