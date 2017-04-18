@@ -2,47 +2,6 @@
 
 /* Home Intro */
 
-var throttle = function(func, wait, options) {
-  var timeout, context, args, result;
-  var previous = 0;
-  if (!options) options = {};
-
-  var later = function() {
-    previous = options.leading === false ? 0 : Date.now();
-    timeout = null;
-    result = func.apply(context, args);
-    if (!timeout) context = args = null;
-  };
-
-  var throttled = function() {
-    var now = Date.now();
-    if (!previous && options.leading === false) previous = now;
-    var remaining = wait - (now - previous);
-    context = this;
-    args = arguments;
-    if (remaining <= 0 || remaining > wait) {
-      if (timeout) {
-        clearTimeout(timeout);
-        timeout = null;
-      }
-      previous = now;
-      result = func.apply(context, args);
-      if (!timeout) context = args = null;
-    } else if (!timeout && options.trailing !== false) {
-      timeout = setTimeout(later, remaining);
-    }
-    return result;
-  };
-
-  throttled.cancel = function() {
-    clearTimeout(timeout);
-    previous = 0;
-    timeout = context = args = null;
-  };
-
-  return throttled;
-};
-
 $(document).ready(function() {
 
   var time0 = 0;
@@ -71,79 +30,36 @@ $(document).ready(function() {
 
 $(document).ready(function() {
   var $horizontal = $('.central-navigation ul');
-  var $horizontalMain = $('.home-page .black');
-  var previousScroll = $(document).scrollTop();
-  var edge = false;
-  var silent = false;
-  var manualScroll = false;
-
-  $('.home-page .black').scroll(throttle(function(e){
-    if (!manualScroll) {
-      $(window).scrollTop(e.currentTarget.scrollLeft);
-      silent = true;
-      manualScroll = false;
-    }
-  }, 500));
-
-  $('.home-page .black').scroll(function(e){
-    if (silent) {
-      silent = false;
-      return;
-    }
-
-    var left = e.currentTarget.scrollLeft;
-
-    if (($(document).width() + left) >= $horizontal.width() && !edge) {
-      edge = true;
-      console.log('edge');
-      $('.scroll-down').css('opacity', '0');
-      $('.claim-bottom').css('margin-bottom', '-75px');
-      $('.video-cover').addClass('fade');
-    }
-    else if (($(document).width() + left) < $horizontal.width()) {
-      edge = false;
-      $('.scroll-down').css('opacity', '1');
-      $('.claim-bottom').css('margin-bottom', '-25px');
-      $('.video-cover').removeClass('fade');
-    }
-  });
 
   $(window).scroll(function() {
-    if (silent) {
-      silent = false;
-      return;
-    }
-
     var s = $(this).scrollTop(),
-        horizontalScroll = $horizontalMain.scrollLeft(),
-        d = $(document).height(),
-        c = $(this).height();
+      d = $(document).height(),
+      c = $(this).height();
 
-    var offset = (s - previousScroll);
+    var $scrollPercent = (s / (d - c));
 
-    previousScroll = s;
+    var position = ($scrollPercent * ($(document).width() - $horizontal.width()));
 
-    var newLeft = horizontalScroll + offset;
+    $horizontal.css({
+      'left': position
+    });
 
-
-    $horizontalMain.scrollLeft(newLeft);
-
-    silent = true;
-    manualScroll = true;
-
-    if (($(document).width() + newLeft) >= ($horizontal.width() - 20) && !edge) {
-      edge = true;
+    if ($('body').height() <= ($(window).height() + $(window).scrollTop())) {
       $('.scroll-down').css('opacity', '0');
       $('.claim-bottom').css('margin-bottom', '-75px');
       $('.video-cover').addClass('fade');
-    } else if ($('body').height() > ($(window).height() + $(window).scrollTop())){
-      edge = false;
+    } else {
       $('.scroll-down').css('opacity', '1');
       $('.claim-bottom').css('margin-bottom', '-25px');
       $('.video-cover').removeClass('fade');
     }
 
+  });
 
+  $('.central-navigation ul li').hover(function() {
+    $('.central-navigation ul li:first-child').removeClass('active')
+  }, function() {
+    $('.central-navigation ul li:first-child').addClass('active')
   });
 
 });
