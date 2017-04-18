@@ -11,6 +11,7 @@
     height: calc(100vh - 100px);
     overflow: hidden;
     transition: height $normal-transition;
+    z-index: 5;
     &::after {
       content: '';
       position: absolute;
@@ -71,7 +72,7 @@
     left: 0;
     width: 100vw;
     height: 100vh;
-    z-index: -2;
+    z-index: 2;
     transition: top .5s ease-in-out;
     @media all and (max-width: 600px) {
       display: none;
@@ -148,7 +149,7 @@ section {
 /* Title Option 3 */
 .central-navigation,.claim-bottom,.scroll-navigate {display:none;}
 body.home-intro.homepage {
-  height: 300vh;
+  height: 180vh;
   -webkit-touch-callout: none;
     -webkit-user-select: none;
      -khtml-user-select: none;
@@ -167,8 +168,10 @@ body.home-intro.homepage {
       opacity: 1!important;
     }
   }
+  /*.navigation-mobile {
+    display: block;
+  }*/
   .scroll-navigate {
-    /*position: fixed;*/
     position: absolute;
     z-index: 40;
     color: #FFF;
@@ -184,6 +187,7 @@ body.home-intro.homepage {
   main {
     position: fixed!important;
     width: 100vw;
+    transition: top .5s ease-out;
     @media all and (max-width: 600px) {
       position: relative!important;
       &::after {
@@ -196,6 +200,10 @@ body.home-intro.homepage {
         display: block;
       }
     }
+  }
+
+  footer {
+    z-index: -1;
   }
 
   .claim-bottom {
@@ -289,6 +297,25 @@ body.home-intro.homepage {
   ul {
     position: absolute;
     top: -50px;
+    &.inactive {
+      animation-name: menu-inactive;
+      animation-duration: 10s;
+      animation-fill-mode: backwards;
+      animation-timing-function: ease-in;
+      @keyframes menu-inactive {
+        0% {
+          left:0%;
+        }
+
+        50% {
+          left: -40%;
+        }
+
+        100% {
+          left: 0%;
+        }
+      }
+    }
     @media all and (max-width: 600px) {
       left: 0!important;
     }

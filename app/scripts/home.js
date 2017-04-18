@@ -63,3 +63,29 @@ $(document).ready(function() {
   });
 
 });
+
+
+/* Drag to Scroll */
+
+$(function(){
+  var curDown = false,
+      curYPos = 0,
+      curXPos = 0;
+  $('body.homepage').mousemove(function(m){
+    if(curDown === true){
+     $('body.homepage').scrollTop($('body.homepage').scrollTop() + (curYPos - m.pageY));
+     $('body.homepage').scrollLeft($('body.homepage').scrollLeft() + (curXPos - m.pageX));
+     $('body.homepage').scrollLeft($('body.homepage').scrollRight() + (curXPos - m.pageX));
+    }
+  });
+
+  $('body.homepage').mousedown(function(m){
+    curDown = true;
+    curYPos = m.pageY;
+    curXPos = m.pageX;
+  });
+
+  $('body.homepage').mouseup(function(){
+    curDown = false;
+  });
+})
