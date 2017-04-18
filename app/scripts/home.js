@@ -71,13 +71,13 @@ $(document).ready(function() {
 
 $(document).ready(function() {
   var $horizontal = $('.central-navigation ul');
-  var $horizontalMain = $('.black');
+  var $horizontalMain = $('.home-page .black');
   var previousScroll = $(document).scrollTop();
   var edge = false;
   var silent = false;
   var manualScroll = false;
 
-  $('.black').scroll(throttle(function(e){
+  $('.home-page .black').scroll(throttle(function(e){
     if (!manualScroll) {
       $(window).scrollTop(e.currentTarget.scrollLeft);
       silent = true;
@@ -85,7 +85,7 @@ $(document).ready(function() {
     }
   }, 500));
 
-  $('.black').scroll(function(e){
+  $('.home-page .black').scroll(function(e){
     if (silent) {
       silent = false;
       return;
