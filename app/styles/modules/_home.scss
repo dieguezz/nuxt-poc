@@ -12,6 +12,10 @@
     overflow: hidden;
     transition: height $normal-transition;
     z-index: 5;
+    overflow-x: auto;
+    overflow-y: hidden;
+    padding-bottom: 50px;
+    height: 100vh;
     &::after {
       content: '';
       position: absolute;
@@ -113,7 +117,7 @@
 
 .home-page {
   main {
-    overflow: scroll!important;
+    // overflow: scroll!important;
     margin-bottom: 300px;
     &::after {
       display: none;
@@ -287,8 +291,10 @@ body.home-intro.homepage {
   z-index: 20;
   top: 50%;
   left: 10%;
-  width: 2560px;
+  width: 100%;
   transform: translateY(-50%);
+  height: 160px;
+  // overflow: hidden;
   @media all and (max-width: 600px) {
     /*top: 250px;
     width: 100vw;*/
@@ -296,7 +302,12 @@ body.home-intro.homepage {
   }
   ul {
     position: absolute;
-    top: -50px;
+    white-space: nowrap;
+    // overflow-x: auto;
+    // overflow-y: hidden;
+    width: 100vw;
+    height: 110%;
+    padding: 0 50px;
     &.inactive {
       animation-name: menu-inactive;
       animation-duration: 10s;
