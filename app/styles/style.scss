@@ -643,6 +643,9 @@ footer {
       display: none;
     }
   }
+  @media all and (max-width: 600px) {
+    z-index: -1!important;
+  }
 }
 
 #pictures {
