@@ -364,6 +364,23 @@ module.exports = function(grunt) {
       }
     },
 
+    inlinestyles: {
+      options: {
+        basepath: './dist',
+        tag: '[rel="stylesheet"]'
+      },
+      all: {
+        files: {
+          'dist/index.html': 'dist/index.html',
+          'dist/comapny/index.html': 'dist/comapny/index.html',
+          'dist/people/index.html': 'dist/people/index.html',
+          'dist/contact/index.html': 'dist/contact/index.html',
+          'dist/new-project/index.html': 'dist/new-project/index.html',
+          'dist/privacy-policy/index.html': 'dist/privacy-policy/index.html'
+        }
+      },
+    },
+
     // Replace Google CDN references
     cdnify: {
       dist: {
@@ -470,6 +487,7 @@ module.exports = function(grunt) {
     'filerev',
     'usemin',
     'htmlmin',
+    'inlinestyles'
   ]);
 
   grunt.registerTask('default', [
