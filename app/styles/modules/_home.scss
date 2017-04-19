@@ -74,6 +74,46 @@
     height: 100vh;
     z-index: 2;
     transition: top .5s ease-in-out;
+    .background-video {
+      position: absolute;
+      width: 100vw;
+      height: 100vh;
+      z-index: 1;
+      background-size: cover!important;
+      @keyframes background-video {
+        0% {
+          opacity: 0;
+          visibility: hidden;
+        }
+        100% {
+          opacity: 1;
+          visibility: visible;
+        }
+      }
+      &.background-video-company {
+        background: url('/images/company/company-bg_.jpg');
+        animation-name: background-video;
+        opacity: 0;
+        visibility: hidden;
+
+        animation-name: background-video;
+        animation-duration: .5s;
+        animation-fill-mode: forwards;
+        animation-timing-function: ease-in;
+      }
+      &.background-video-people {
+        background: url('/images/people/people-bg1.jpg');
+        animation-name: background-video;
+        opacity: 0;
+        visibility: hidden;
+
+        animation-name: background-video;
+        animation-duration: .5s;
+        animation-fill-mode: forwards;
+        animation-timing-function: ease-in;
+      }
+
+    }
     @media all and (max-width: 600px) {
       display: none;
     }
@@ -95,7 +135,7 @@
       background-attachment: fixed;
       transition: opacity .5s ease-in-out;
       opacity: .7;
-      z-index: 0;
+      z-index: 2;
       @media all and (max-width: 600px) {
         opacity: 0;
       }
@@ -113,7 +153,6 @@
 
 .home-page {
   main {
-    overflow: scroll!important;
     margin-bottom: 300px;
     &::after {
       display: none;
@@ -149,7 +188,7 @@ section {
 /* Title Option 3 */
 .central-navigation,.claim-bottom,.scroll-navigate {display:none;}
 body.home-intro.homepage {
-  height: 180vh;
+  height: 200vh;
   -webkit-touch-callout: none;
     -webkit-user-select: none;
      -khtml-user-select: none;
@@ -289,6 +328,23 @@ body.home-intro.homepage {
   left: 10%;
   width: 2560px;
   transform: translateY(-50%);
+  animation-name: home-intro;
+  animation-duration: 2.5s;
+  animation-fill-mode: backwards;
+  animation-timing-function: ease-in-out;
+
+  @keyframes home-intro {
+    0% {
+      opacity: 0;
+      transform: translateY(-50%) translateX(50%) scale(.25);
+    }
+
+    100% {
+      opacity: 1;
+      transform: translateY(-50%) translateX(0%) scale(1);
+    }
+  }
+
   @media all and (max-width: 600px) {
     /*top: 250px;
     width: 100vw;*/
@@ -297,6 +353,7 @@ body.home-intro.homepage {
   ul {
     position: absolute;
     top: -50px;
+
     &.inactive {
       animation-name: menu-inactive;
       animation-duration: 10s;
@@ -326,6 +383,28 @@ body.home-intro.homepage {
       display: inline-block;
       padding-right: 150px;
       position: relative;
+      cursor: pointer;
+      &.opening {
+        color: #FFF;
+        opacity: 1!important;
+        animation-name: opening-home;
+        animation-duration: .75s;
+        animation-fill-mode: forwards;
+        animation-timing-function: ease-in;
+        @keyframes opening-home{
+          0% {
+            transform: scale(1);
+            filter: blur(0px);
+            opacity: 1;
+          }
+
+          100% {
+            transform: scale(1.5);
+            filter: blur(10px);
+            opacity: 0;
+          }
+        }
+      }
       @media all and (max-width: 600px) {
         display: block;
       }

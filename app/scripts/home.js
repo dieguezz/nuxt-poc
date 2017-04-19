@@ -62,4 +62,61 @@ $(document).ready(function() {
     $('.central-navigation ul li:first-child').addClass('active')
   });
 
+  $('.central-navigation ul li.home-company').hover(function() {
+    setTimeout(function() {
+      $('.background-video').addClass('background-video-company')
+      $('.background-video').css('display','block');
+    }, 100);
+
+  }, function() {
+    $('.background-video').removeClass('background-video-company')
+    $('.background-video').css('display','none');
+  });
+
+  $('.central-navigation ul li.home-people').hover(function() {
+    setTimeout(function() {
+      $('.background-video').addClass('background-video-people')
+      $('.background-video').css('display','block');
+    }, 100);
+  }, function() {
+    $('.background-video').removeClass('background-video-people')
+    $('.background-video').css('display','none');
+  });
+
+});
+
+/* Change Page Home [COMPANY] */
+$(document).ready(function() {
+  $('.central-navigation ul li.home-company').on('click', function() {
+    $('.central-navigation ul li').not(this).addClass('tofade');
+    $('.background-video').addClass('background-video-company')
+    $('.background-video').css('display','block');
+
+    setTimeout(function() {
+      $('.central-navigation ul li.home-company').addClass('opening');
+    }, 350);
+
+    setTimeout(function() {
+      window.location.href = '/company';
+    }, 1090);
+
+  });
+});
+
+/* Change Page Home [PEOPLE] */
+$(document).ready(function() {
+  $('.central-navigation ul li.home-people').on('click', function() {
+    $('.central-navigation ul li').not(this).addClass('tofade');
+    $('.background-video').addClass('background-video-people')
+    $('.background-video').css('display','block');
+
+    setTimeout(function() {
+      $('.central-navigation ul li.home-people').addClass('opening');
+    }, 350);
+
+    setTimeout(function() {
+      window.location.href = '/people';
+    }, 1090);
+
+  });
 });
