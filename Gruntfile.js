@@ -372,7 +372,7 @@ module.exports = function(grunt) {
       all: {
         files: {
           'dist/index.html': 'dist/index.html',
-          'dist/comapny/index.html': 'dist/comapny/index.html',
+          'dist/company/index.html': 'dist/company/index.html',
           'dist/people/index.html': 'dist/people/index.html',
           'dist/contact/index.html': 'dist/contact/index.html',
           'dist/new-project/index.html': 'dist/new-project/index.html',
