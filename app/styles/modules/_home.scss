@@ -285,175 +285,164 @@ body.home-intro.homepage {
       line-height: 46px;
     }
   }
-
-.central-navigation {
-  display: block;
-  position: relative;
-  z-index: 20;
-  top: 50%;
-  left: 10%;
-  width: 2560px;
-  transform: translateY(-50%);
-  animation-name: home-intro;
-  animation-duration: 2.5s;
-  animation-fill-mode: backwards;
-  animation-timing-function: ease-in-out;
-
-  @keyframes home-intro {
-    0% {
-      opacity: 0;
-      transform: translateY(-50%) translateX(50%) scale(.25);
-    }
-
-    100% {
-      opacity: 1;
-      transform: translateY(-50%) translateX(0%) scale(1);
-    }
-  }
-
-  @media all and (max-width: 600px) {
-    /*top: 250px;
-    width: 100vw;*/
-    display: none;
-  }
-  ul {
-    position: absolute;
-    top: -50px;
-
-    &.inactive {
-      animation-name: menu-inactive;
-      animation-duration: 10s;
-      animation-fill-mode: backwards;
-      animation-timing-function: ease-in;
-      @keyframes menu-inactive {
-        0% {
-          left:0%;
-        }
-
-        50% {
-          left: -40%;
-        }
-
-        100% {
-          left: 0%;
-        }
+  .central-navigation {
+    display: block;
+    position: relative;
+    z-index: 20;
+    top: 50%;
+    left: 10%;
+    width: 2560px;
+    transform: translateY(-50%);
+    animation-name: home-intro;
+    animation-duration: 2.5s;
+    animation-fill-mode: backwards;
+    animation-timing-function: ease-in-out;
+    @keyframes home-intro {
+      0% {
+        opacity: 0;
+        transform: translateY(-50%) translateX(50%) scale(.25);
+      }
+      100% {
+        opacity: 1;
+        transform: translateY(-50%) translateX(0%) scale(1);
       }
     }
     @media all and (max-width: 600px) {
-      left: 0!important;
+      /*top: 250px;
+    width: 100vw;*/
+      display: none;
     }
-    @media all and (max-height: 550px) {
-      top: -100px;
-    }
-    li {
-      display: inline-block;
-      padding-right: 150px;
-      position: relative;
-      cursor: pointer;
-      &.opening {
-        color: #FFF;
-        opacity: 1!important;
-        animation-name: opening-home;
-        animation-duration: .75s;
-        animation-fill-mode: forwards;
+    ul {
+      position: absolute;
+      top: -50px;
+      &.inactive {
+        animation-name: menu-inactive;
+        animation-duration: 10s;
+        animation-fill-mode: backwards;
         animation-timing-function: ease-in;
-        @keyframes opening-home{
+        @keyframes menu-inactive {
           0% {
-            transform: scale(1);
-            filter: blur(0px);
-            opacity: 1;
+            left: 0%;
           }
-
+          50% {
+            left: -40%;
+          }
           100% {
-            transform: scale(1.5);
-            filter: blur(10px);
-            opacity: 0;
+            left: 0%;
           }
         }
       }
       @media all and (max-width: 600px) {
-        display: block;
+        left: 0!important;
       }
-      &:last-child {
-        margin-right: 150px;
+      @media all and (max-height: 550px) {
+        top: -100px;
       }
-
-      &:hover, &.active {
-        a {
-          opacity: 1;
-          &::after {
-            opacity: 1;
-            top: -20px;
-          }
-        }
-      }
-      &:nth-of-type(2) {
-        a {
-          &::after {
-            content: '—Services and values';
-          }
-        }
-      }
-      &:nth-of-type(3) {
-        a {
-          &::after {
-            content: '—Who make this possible';
-          }
-        }
-      }
-      &:nth-of-type(4) {
-        a {
-          &::after {
-            content: '—Reach and take the leap';
-          }
-        }
-      }
-
-      a {
-        font-size: 120px;
-        font-weight: 600;
-        color: #FFF;
-        opacity: .25;
-        transition: opacity $normal-transition;
-        @media all and (max-width: 960px) {
-          font-size: 72px;
-        }
-        @media all and (max-width: 400px) {
-          font-size: 60px;
-        }
-        &::before {
-          content: '/';
-          font-weight: 100;
-          position: absolute;
+      li {
+        display: inline-block;
+        padding-right: 150px;
+        position: relative;
+        cursor: pointer;
+        &.opening {
           color: #FFF;
-          left: -50px;
-          @media all and (max-width: 400px) {
-            left: -35px;
+          opacity: 1!important;
+          animation-name: opening-home;
+          animation-duration: .75s;
+          animation-fill-mode: forwards;
+          animation-timing-function: ease-in;
+          @keyframes opening-home {
+            0% {
+              transform: scale(1);
+              filter: blur(0px);
+              opacity: 1;
+            }
+            100% {
+              transform: scale(1.5);
+              filter: blur(10px);
+              opacity: 0;
+            }
           }
         }
-
-        &::after {
-          content: '—Home, sweet home';
-          position: absolute;
-          font-size: 14px;
-          letter-spacing: 2px;
-          top: 0px;
-          left: 0;
-          text-transform: uppercase;
-          opacity: 0;
-          transition: opacity $normal-transition, top $normal-transition;
-          transform: inherit;
-          width: auto;
-          @media all and (max-width: 600px) {
-            display: none;
+        @media all and (max-width: 600px) {
+          display: block;
+        }
+        &:last-child {
+          margin-right: 150px;
+        }
+        &:hover, &.active {
+          a {
+            opacity: 1;
+            &::after {
+              opacity: 1;
+              top: -20px;
+            }
+          }
+        }
+        &:nth-of-type(2) {
+          a {
+            &::after {
+              content: '—Services and values';
+            }
+          }
+        }
+        &:nth-of-type(3) {
+          a {
+            &::after {
+              content: '—Who make this possible';
+            }
+          }
+        }
+        &:nth-of-type(4) {
+          a {
+            &::after {
+              content: '—Reach and take the leap';
+            }
+          }
+        }
+        a {
+          font-size: 120px;
+          font-weight: 600;
+          color: #FFF;
+          opacity: .25;
+          transition: opacity $normal-transition;
+          @media all and (max-width: 960px) {
+            font-size: 72px;
+          }
+          @media all and (max-width: 400px) {
+            font-size: 60px;
+          }
+          &::before {
+            content: '/';
+            font-weight: 100;
+            position: absolute;
+            color: #FFF;
+            left: -50px;
+            @media all and (max-width: 400px) {
+              left: -35px;
+            }
+          }
+          &::after {
+            content: '—Home, sweet home';
+            position: absolute;
+            font-size: 14px;
+            letter-spacing: 2px;
+            top: 0px;
+            left: 0;
+            text-transform: uppercase;
+            opacity: 0;
+            transition: opacity $normal-transition, top $normal-transition;
+            transform: inherit;
+            width: auto;
+            @media all and (max-width: 600px) {
+              display: none;
+            }
           }
         }
       }
     }
   }
-}
-&::-webkit-scrollbar {
-  width: 0px;
-  height: 0px;
-}
+  &::-webkit-scrollbar {
+    width: 0px;
+    height: 0px;
+  }
 }
