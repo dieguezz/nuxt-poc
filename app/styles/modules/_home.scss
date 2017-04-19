@@ -1,5 +1,5 @@
 /* Home Section */
-@import url('https://fonts.googleapis.com/css?family=Playfair+Display');
+
 #home {
   padding: 0;
   background: $black;
@@ -186,15 +186,14 @@ section {
 
 
 /* Title Option 3 */
-.central-navigation,.claim-bottom,.scroll-navigate {display:none;}
+
+.central-navigation, .claim-bottom, .scroll-navigate {
+  display: none;
+}
+
 body.home-intro.homepage {
   height: 200vh;
-  -webkit-touch-callout: none;
-    -webkit-user-select: none;
-     -khtml-user-select: none;
-       -moz-user-select: none;
-        -ms-user-select: none;
-            user-select: none;
+  user-select: none;
   @media all and (max-width: 600px) {
     height: 100vh;
   }
@@ -252,8 +251,6 @@ body.home-intro.homepage {
     width: 100%;
     max-width: 320px;
     color: #FFF;
-    /*font-family: 'Playfair Display', serif;
-    font-style: italic;*/
     letter-spacing: 1px;
     font-size: 24px;
     z-index: 20;
