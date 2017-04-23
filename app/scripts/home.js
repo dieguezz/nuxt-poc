@@ -207,3 +207,16 @@ $(document).ready(function() {
     }, 18700);
 
 });
+
+$(function() {
+    var scrollDown = $(".scroll-down");
+    $(window).scroll(function() {
+        var scroll = $(window).scrollTop();
+
+        if (scroll >= 200) {
+            scrollDown.css('opacity', '0');;
+        } else {
+            scrollDown.css('opacity', '1');
+        }
+    });
+});
