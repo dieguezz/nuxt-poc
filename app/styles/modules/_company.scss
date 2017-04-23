@@ -4,7 +4,7 @@
   main {
     z-index: 0;
     .section-bg {
-      background: url('../images/company/company-bg_.jpg');
+      background: url('../images/company/company-bg.jpg');
       background-size: cover;
       background-position: center;
       animation-name: section-bg;
@@ -445,7 +445,7 @@
       }
     }
     a {
-      font-size: 18px;
+      font-size: 16px;
       padding: 25px 60px;
       @media all and (max-width: 600px) {
         font-size: 16px;

@@ -16,9 +16,11 @@
   <link rel="stylesheet" type="text/css" href="/styles/main.css" />
   <!-- endbuild -->
 
+  <link rel=”canonical” href="https://etereo.io" />
+
 </head>
 
-<body class="home-intro">
+<body class="portfolio">
 
   <!-- build:include templates/mobile-menu.html -->
   <!-- /build -->
@@ -28,44 +30,82 @@
 
   <!-- START Page Transition -->
   <div class="animsition">
+    <!-- build:include templates/cookies.html -->
+    <!-- /build -->
 
+    <!-- build:include templates/header.html -->
+    <!-- /build -->
     <!-- START Home -->
-    <section id="home" class="home-page">
+      <section class="slider-container black">
+        <a class="scroll-down" href="#info">
+          <svg width="30px" height="17px" viewBox="0 0 30 17" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+            <polygon id="Shape" stroke="none" fill-rule="evenodd" points="28.6896535 0.0353030303 29.9193564 1.28984848 14.960495 16.5516667 0 1.28712121 1.22970297 0.0327272727 14.9613861 14.0418182"></polygon>
+          </svg>
+        </a>
 
-      <!-- build:include templates/cookies.html -->
-      <!-- /build -->
+        <nav class="slider-navigation reveal2">
+          <ul>
+            <li><a href="#" class="slider-navigation-home">Home</a></li>
+            <li><a href="#" class="slider-navigation-twotoforty active">Two To Forty</a></li>
+            <li><a href="#" class="slider-navigation-futureteaming">Futureteaming</a></li>
+            <li><a href="#" class="slider-navigation-lledo">Lledó</a></li>
+          </ul>
+        </nav>
 
-      <!-- build:include templates/header.html -->
-      <!-- /build -->
+        <!-- Slide Twotoforty-->
+        <div class="slider-unit twotoforty show">
 
-      <main class="black">
+          <article class="slider-content slider-twotoforty">
+            <div class="slider-letter-wr">
+              <h3 class="slider-letter reveal2">Two To Forty</h3>
+            </div>
+            <h4 class="slider-title reveal2">Two To Forty</h4>
+            <h5 class="slider-subtitle reveal2">Matching Personas and Business</h5>
+            <a href="#" class="link-raw white reveal2">View Case Study</a>
+          </article>
 
-        <div class="container">
-
-          <h2 data-lining class="fade-scroll title-page">A digital product agency made different.</h2>
-
-          <a class="scroll-down" href="#footer">
-            <svg width="30px" height="17px" viewBox="0 0 30 17" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-              <polygon id="Shape" stroke="none" fill-rule="evenodd" points="28.6896535 0.0353030303 29.9193564 1.28984848 14.960495 16.5516667 0 1.28712121 1.22970297 0.0327272727 14.9613861 14.0418182"></polygon>
-            </svg>
-          </a>
-
-          <span class="scroll-appear">People First.</span>
-
+          <div class="slider-bg slider-twotoforty-bg slider-twotoforty-bg-animation">
+            <div class="slider-bg-cover"></div>
+          </div>
         </div>
 
-        <video src="images/video.mp4" autoplay loop></video>
 
-      </main>
+        <!-- Slide Futureteaming-->
+        <div class="slider-unit futureteaming white hide">
 
-    </section>
+          <article class="slider-content slider-futureteaming">
+            <div class="slider-letter-wr">
+            <h3 class="slider-letter reveal2">Futureteaming</h3>
+            </div>
+            <h4 class="slider-title reveal2">Futureteaming</h4>
+            <h5 class="slider-subtitle reveal2">Boosting your performance today</h5>
+            <a href="#" class="link-raw white reveal2">View Case Study</a>
+          </article>
+        </div>
+
+
+        <!-- Slide Lledó-->
+        <div class="slider-unit lledo hide">
+
+          <article class="slider-content slider-lledo">
+            <div class="slider-letter-wr">
+              <h3 class="slider-letter reveal2">Lledó</h3>
+            </div>
+            <h4 class="slider-title reveal2">Lledó</h4>
+            <h5 class="slider-subtitle reveal2">A Centenary Digital (R)evolution</h5>
+            <a href="#" class="link-raw white reveal2">View Case Study</a>
+          </article>
+
+          <div class="slider-bg slider-lledo-bg slider-lledo-bg-animation">
+            <div class="slider-bg-cover"></div>
+          </div>
+        </div>
+      </section>
     <!-- END Home -->
 
     <!-- build:include templates/footer.html -->
     <!-- /build -->
-
   </div>
-
   <!-- build:js(.) /scripts/vendor.js -->
   <!-- bower:js -->
   <script src="bower_components/jquery/dist/jquery.js"></script>
@@ -83,7 +123,6 @@
   <script src="/app.scripts.js"></script>
   <!-- include: "type": "js", "files": ["scripts/*.js"], "baseUrl": "/" -->
   <!-- endbuild -->
-
 </body>
 
 </html>

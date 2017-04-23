@@ -453,7 +453,7 @@
           display: block;
         }
       }
-      &:nth-of-type(2),&:nth-of-type(4) {
+      &:nth-of-type(2), &:nth-of-type(4) {
         margin-right: 0;
       }
       @media all and (max-width: $max-xs) {

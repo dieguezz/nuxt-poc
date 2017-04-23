@@ -30,9 +30,6 @@ $(document).ready(function() {
   var $black = $('.black');
   var $pictures = $('#pictures');
   var $header = $('header');
-  var $aboutpicture1 = $('.about-picture.values-1 span');
-  var $aboutpicture2 = $('.about-picture.values-2 span');
-  var $aboutpicture3 = $('.about-picture.values-3 span');
   var $menuNavigation = $('.menu-navigation');
 
   $white.waypoint(function(direction) {
@@ -75,22 +72,6 @@ $(document).ready(function() {
     }
   }, {
     offset: '90%'
-  });
-
-  $aboutpicture1.waypoint(function() {
-      $aboutpicture1.addClass('show');
-  }, {
-    offset: '150%'
-  });
-  $aboutpicture2.waypoint(function() {
-      $aboutpicture2.addClass('show');
-  }, {
-    offset: '150%'
-  });
-  $aboutpicture3.waypoint(function() {
-      $aboutpicture3.addClass('show');
-  }, {
-    offset: '150%'
   });
 
 });

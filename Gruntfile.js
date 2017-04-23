@@ -261,7 +261,7 @@ module.exports = function(grunt) {
         src: [
           '<%= appConfig.dist %>/{,**/}*.js',
           '<%= appConfig.dist %>/styles/{,*/}*.css',
-          '<%= appConfig.dist %>/images/**/*.{png,jpg,jpeg,gif,webp,svg}',
+          '<%= appConfig.dist %>/images/**/*.{png,jpg,jpeg,gif,webp,svg,mp4}',
           '<%= appConfig.dist %>/styles/fonts/*'
         ]
       }
@@ -362,6 +362,23 @@ module.exports = function(grunt) {
           dest: '<%= appConfig.dist %>'
         }]
       }
+    },
+
+    inlinestyles: {
+      options: {
+        basepath: './dist',
+        tag: '[rel="stylesheet"]'
+      },
+      all: {
+        files: {
+          'dist/index.html': 'dist/index.html',
+          'dist/company/index.html': 'dist/company/index.html',
+          'dist/people/index.html': 'dist/people/index.html',
+          'dist/contact/index.html': 'dist/contact/index.html',
+          'dist/new-project/index.html': 'dist/new-project/index.html',
+          'dist/privacy-policy/index.html': 'dist/privacy-policy/index.html'
+        }
+      },
     },
 
     // Replace Google CDN references
@@ -470,6 +487,7 @@ module.exports = function(grunt) {
     'filerev',
     'usemin',
     'htmlmin',
+    'inlinestyles'
   ]);
 
   grunt.registerTask('default', [

@@ -51,6 +51,7 @@ body {
 .tofade {
   transition: all .5s ease-out!important;
   opacity: 0!important;
+  visibility: hidden;
   transform: translateY(40px)!important;
 }
 
@@ -284,6 +285,9 @@ section {
 
 #home.cookies-active {
   padding-top: 50px;
+  .scroll-navigate {
+    margin-top: 100px;
+  }
 }
 
 #home.cookies-active, .contact-page.cookies-active {
@@ -309,6 +313,10 @@ section {
   text-align: center;
   left: 50%;
   transform: translateX(-50%);
+  transition: opacity $normal-transition, transform $normal-transition;
+  &.rotate {
+    transform: translateX(-50%) rotateX(-180deg);
+  }
   svg {
     animation-name: scroll-down;
     animation-duration: 2s;
@@ -536,7 +544,7 @@ footer {
   padding: 50px 0;
   background: #FFF;
   bottom: 0;
-  z-index: -2;
+  z-index: -1;
   height: calc(300px - 100px);
   .info {
     float: left;
@@ -635,6 +643,9 @@ footer {
     .contact {
       display: none;
     }
+  }
+  @media all and (max-width: 600px) {
+    z-index: -1!important;
   }
 }
 

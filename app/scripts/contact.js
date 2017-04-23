@@ -15,6 +15,11 @@ $(document).ready(function() {
     });
   });
 
+  $('a[href^="mailto:"]').on('click', function(event) {
+    window.location.href = event.currentTarget.href;
+    return false;
+  });
+
   $('.sender').on('click', function(event) {
     event.preventDefault();
 

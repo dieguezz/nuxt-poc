@@ -47,6 +47,11 @@
           transform: translateX(-50%) translateY(-50%);
           top: 50%;
         }
+        &.link {
+          &::after {
+            display: none;
+          }
+        }
       }
       &:hover {
         a {
