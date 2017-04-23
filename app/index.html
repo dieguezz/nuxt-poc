@@ -18,7 +18,7 @@
 
 </head>
 
-<body class="home-intro homepage">
+<body>
 
   <!-- build:include templates/mobile-menu.html -->
   <!-- /build -->
@@ -28,45 +28,41 @@
 
   <!-- START Page Transition -->
   <div class="animsition">
+    <!-- build:include templates/cookies.html -->
+    <!-- /build -->
 
+    <!-- build:include templates/header.html -->
+    <!-- /build -->
     <!-- START Home -->
-    <section id="home" class="home-page">
-
-      <!-- build:include templates/cookies.html -->
-      <!-- /build -->
-
-      <!-- build:include templates/header.html -->
-      <!-- /build -->
-
-      <main class="black">
-
-        <span class="scroll-navigate">Scroll down to navigate</span>
-        <nav class="central-navigation">
+      <section class="slider-container black">
+        <nav class="slider-navigation">
           <ul>
-            <li class="active reveal2 home-home"><a href="#">Home</a></li>
-            <li class="reveal2 home-company"><a>Company</a></li>
-            <li class="reveal2 home-people"><a>People</a></li>
-            <li class="reveal2 home-contact"><a href="/contact" class="link">Contact</a></li>
+            <li><a href="#">Home</a></li>
+            <li><a href="#" class="active">Two To Forty</a></li>
+            <li><a href="#">Futureteaming</a></li>
+            <li><a href="#">Lledó</a></li>
           </ul>
         </nav>
+        <!--<article>Home</article>-->
+        <article class="slider-unit slider-twotoforty">
+          <h3 class="slider-letter">Two To Forty</h3>
+          <h4 class="slider-title">Two To Forty</h4>
+          <h5 class="slider-subtitle">Matching Personas and Business</h5>
+          <a href="#" class="link-raw white">View Case Study</a>
+        </article>
 
-        <h3 class="claim-bottom fade-scroll">A digital product agency made different.</h3>
-
-        <div class="container">
-
-          <a class="scroll-down" href="#footer">
-            <svg width="30px" height="17px" viewBox="0 0 30 17" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-              <polygon id="Shape" stroke="none" fill-rule="evenodd" points="28.6896535 0.0353030303 29.9193564 1.28984848 14.960495 16.5516667 0 1.28712121 1.22970297 0.0327272727 14.9613861 14.0418182"></polygon>
-            </svg>
-          </a>
-          <span class="scroll-appear">People First.</span>
+        <div class="slider-bg slider-twotoforty-bg">
+          <div class="slider-bg-cover"></div>
         </div>
-      </main>
-      <div class="video-cover">
-        <div class="background-video"></div>
-        <video src="images/video.mp4" autoplay loop></video>
-      </div>
-    </section>
+        <!--<article>Futureteaming</article>-->
+        <!--<article>Lledó</article>-->
+
+        <a class="scroll-down" href="#info">
+          <svg width="30px" height="17px" viewBox="0 0 30 17" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+            <polygon id="Shape" stroke="none" fill-rule="evenodd" points="28.6896535 0.0353030303 29.9193564 1.28984848 14.960495 16.5516667 0 1.28712121 1.22970297 0.0327272727 14.9613861 14.0418182"></polygon>
+          </svg>
+        </a>
+      </section>
     <!-- END Home -->
 
     <!-- build:include templates/footer.html -->

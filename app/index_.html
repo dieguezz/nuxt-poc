@@ -1,0 +1,94 @@
+<!doctype html>
+<html class="no-js">
+
+<head>
+
+  <!-- build:include templates/meta.html -->
+  <!-- /build -->
+
+  <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+  <!-- build:css(.) /styles/vendor.css -->
+  <!-- bower:css -->
+  <link rel="stylesheet" href="bower_components/animsition/dist/css/animsition.min.css" />
+  <!-- endbower -->
+  <!-- endbuild -->
+  <!-- build:css(.tmp) /styles/main.css -->
+  <link rel="stylesheet" type="text/css" href="/styles/main.css" />
+  <!-- endbuild -->
+
+</head>
+
+<body class="home-intro homepage">
+
+  <!-- build:include templates/mobile-menu.html -->
+  <!-- /build -->
+
+  <!-- build:include templates/pre-loader.html -->
+  <!-- /build -->
+
+  <!-- START Page Transition -->
+  <div class="animsition">
+
+    <!-- START Home -->
+    <section id="home" class="home-page">
+
+      <!-- build:include templates/cookies.html -->
+      <!-- /build -->
+
+      <!-- build:include templates/header.html -->
+      <!-- /build -->
+
+      <main class="black">
+
+        <span class="scroll-navigate">Scroll down to navigate</span>
+        <nav class="central-navigation">
+          <ul>
+            <li class="active reveal2 home-home"><a href="#">Home</a></li>
+            <li class="reveal2 home-company"><a>Company</a></li>
+            <li class="reveal2 home-people"><a>People</a></li>
+            <li class="reveal2 home-contact"><a href="/contact" class="link">Contact</a></li>
+          </ul>
+        </nav>
+
+        <h3 class="claim-bottom fade-scroll">A digital product agency made different.</h3>
+
+        <div class="container">
+
+          <a class="scroll-down" href="#footer">
+            <svg width="30px" height="17px" viewBox="0 0 30 17" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+              <polygon id="Shape" stroke="none" fill-rule="evenodd" points="28.6896535 0.0353030303 29.9193564 1.28984848 14.960495 16.5516667 0 1.28712121 1.22970297 0.0327272727 14.9613861 14.0418182"></polygon>
+            </svg>
+          </a>
+          <span class="scroll-appear">People First.</span>
+        </div>
+      </main>
+      <div class="video-cover">
+        <div class="background-video"></div>
+        <video src="images/video.mp4" autoplay loop></video>
+      </div>
+    </section>
+    <!-- END Home -->
+
+    <!-- build:include templates/footer.html -->
+    <!-- /build -->
+  </div>
+  <!-- build:js(.) /scripts/vendor.js -->
+  <!-- bower:js -->
+  <script src="bower_components/jquery/dist/jquery.js"></script>
+  <script src="bower_components/lining.js/src/lining.js"></script>
+  <script src="bower_components/animsition/dist/js/animsition.min.js"></script>
+  <script src="bower_components/scrollreveal/dist/scrollreveal.js"></script>
+  <script src="bower_components/instafeed.js/instafeed.js"></script>
+  <script src="bower_components/rellax/rellax.js"></script>
+  <!-- endbower -->
+  <script src="/bower_components/waypoints/lib/jquery.waypoints.js"></script>
+  <!-- endbuild -->
+
+  <!-- build:js({.,.tmp,app,dist}) /scripts/scripts.js -->
+  <!-- include: "type": "js", "files": ["vendor/**/*.js"], "baseUrl": "/" -->
+  <script src="/app.scripts.js"></script>
+  <!-- include: "type": "js", "files": ["scripts/*.js"], "baseUrl": "/" -->
+  <!-- endbuild -->
+</body>
+
+</html>
