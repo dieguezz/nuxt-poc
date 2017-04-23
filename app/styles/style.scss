@@ -51,6 +51,7 @@ body {
 .tofade {
   transition: all .5s ease-out!important;
   opacity: 0!important;
+  visibility: hidden;
   transform: translateY(40px)!important;
 }
 
