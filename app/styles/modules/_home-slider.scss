@@ -8,6 +8,31 @@
   padding: 0;
   margin-bottom: 300px;
 
+  .slider-unit {
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    &.white {
+      background: #FFF;
+      h4, h5, a {
+        color: $black;
+      }
+      a::after {
+        background: $black;
+      }
+    }
+    &.hide {
+      opacity: 0;
+      visibility: hidden;
+    }
+    &.active {
+      opacity: 1;
+      visibility: visible;
+    }
+  }
+
   .slider-navigation {
     position: fixed;
     height: 100vh;
@@ -64,6 +89,21 @@
     height: 423px;
     background: url('/images/home/slider/twotoforty/twotoforty-personas.png');
     z-index: -2;
+    opacity: 0;
+    animation-name: slider-twotoforty-bg;
+    animation-delay: 1s;
+    animation-duration: 1.5s;
+    animation-fill-mode: forwards;
+    animation-timing-function: ease-in;
+    @keyframes slider-twotoforty-bg {
+      0% {
+        opacity: 0;
+      }
+
+      100% {
+        opacity: 1;
+      }
+    }
     &::before {
       content: '';
       width: 15%;
@@ -91,7 +131,7 @@
     }
   }
 
-  article.slider-unit {
+  article.slider-content {
     position: absolute;
     left: 50%;
     top: 50%;
@@ -133,6 +173,12 @@
         width: 100%;
         background: #FFF;
         bottom: -5px;
+      }
+    }
+
+    &.slider-futureteaming {
+      h3.slider-letter {
+        background: url('/images/home/slider/futureteaming/futureteaming-letter.png');
       }
     }
   }

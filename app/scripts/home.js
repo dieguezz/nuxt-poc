@@ -125,7 +125,7 @@ $(document).ready(function() {
   });
 });
 
-
+/* Home Slider - Twotoforty */
 $(function(){
     var x = 0;
     setInterval(function(){
