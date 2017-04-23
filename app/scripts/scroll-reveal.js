@@ -17,11 +17,4 @@ $(document).ready(function() {
     duration: 1750
   }, 150);
 
-  sr.reveal('.reveal3', {
-    scale: 1,
-    reset: false,
-    distance: '50px',
-    duration: 1750
-  }, 150);
-
 });

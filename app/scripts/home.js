@@ -125,6 +125,12 @@ $(document).ready(function() {
   });
 });
 
+
+
+
+
+/*----------------------------------------------*/
+
 /* Home Slider - Twotoforty */
 $(function(){
     var x = 0;
@@ -133,6 +139,9 @@ $(function(){
         $('.slider-twotoforty-bg').css('background-position', x + 'px 0');
     }, 20);
 })
+
+
+/********* ---> BULLSHIT STARTS HERE!!! :( <---- ***********/
 
 $(document).ready(function() {
     setTimeout(function() {
@@ -156,6 +165,8 @@ $(document).ready(function() {
       $('.slider-container').addClass('white').removeClass('black');
       $('.scroll-down svg').css('fill','#171A1C');
       $('header').addClass('inverse');
+      $('.slider-navigation-twotoforty').removeClass('active');
+      $('.slider-navigation-futureteaming').addClass('active');
       $('.slider-navigation').addClass('inverse');
       $('.slider-bg').removeClass('tofade');
       $('.slider-letter').removeClass('tofade');
@@ -163,5 +174,36 @@ $(document).ready(function() {
       $('.slider-subtitle').removeClass('tofade');
       $('.slider-unit a').removeClass('tofade');
     }, 9600);
+
+    setTimeout(function() {
+      $('.slider-bg').addClass('hide');
+    }, 17600);
+    setTimeout(function() {
+      $('.slider-letter').addClass('tofade');
+    }, 17750);
+    setTimeout(function() {
+      $('.slider-title').addClass('tofade');
+    }, 17900);
+    setTimeout(function() {
+      $('.slider-subtitle').addClass('tofade');
+    }, 18050);
+    setTimeout(function() {
+      $('.slider-unit a').addClass('tofade');
+    }, 18200);
+    setTimeout(function() {
+      $('.slider-unit.futureteaming').addClass('hide').removeClass('show');
+      $('.slider-unit.lledo').addClass('show').removeClass('hide');
+      $('.slider-container').removeClass('white').addClass('black');
+      $('.scroll-down svg').css('fill','#FFF');
+      $('header').removeClass('inverse');
+      $('.slider-navigation-futureteaming').removeClass('active');
+      $('.slider-navigation-lledo').addClass('active');
+      $('.slider-navigation').removeClass('inverse');
+      $('.slider-bg').removeClass('tofade');
+      $('.slider-letter').removeClass('tofade');
+      $('.slider-title').removeClass('tofade');
+      $('.slider-subtitle').removeClass('tofade');
+      $('.slider-unit a').removeClass('tofade');
+    }, 18700);
 
 });

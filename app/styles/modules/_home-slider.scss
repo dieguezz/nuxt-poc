@@ -241,7 +241,13 @@
 
     &.slider-futureteaming {
       h3.slider-letter {
-        background: url('/images/home/slider/futureteaming/futureteaming-letter.png');
+        background-image: url('/images/home/slider/futureteaming/futureteaming-letter.png');
+      }
+    }
+    &.slider-lledo {
+      h3.slider-letter {
+        background-image: url('/images/home/slider/lledo/lledo-letter.png');
+        background-position: 60% 50%;
       }
     }
   }
