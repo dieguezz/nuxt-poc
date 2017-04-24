@@ -12,6 +12,7 @@
     /*position: fixed;*/
     position: absolute;
     width: 100vw;
+    overflow-x: hidden;
     height: 100vh;
     top: 0;
     left: 0;
@@ -66,18 +67,34 @@
         text-transform: uppercase;
         font-size: 12px;
         letter-spacing: 2px;
+        &:last-child {
+          padding-right: 0;
+        }
         a {
           color: #FFF;
           position: relative;
           &.active {
             &::after {
               content: '';
-              width: 100%;
+              width: 0%;
               height: 2px;
               background: #FFF;
               position: absolute;
               bottom: -5px;
               left: 0;
+              animation-name: slider-navigation-duration;
+              animation-duration: 8s;
+              animation-fill-mode: forwards;
+              animation-timing-function: linear;
+              @keyframes slider-navigation-duration {
+                0% {
+                  width: 0%;
+                }
+
+                100% {
+                  width: 100%;
+                }
+              }
             }
           }
         }
@@ -233,6 +250,7 @@
       text-transform: uppercase;
       font-size: 14px;
       letter-spacing: 2px;
+      cursor: not-allowed;
       &::after {
         width: 100%;
         background: #FFF;
@@ -244,11 +262,179 @@
       h3.slider-letter {
         background-image: url('/images/home/slider/futureteaming/futureteaming-letter.png');
       }
+      .slider-reveal-fog{
+        position: absolute;
+        width: 256px;
+        height: 256px;
+        background: url('/images/home/slider/futureteaming/fog.png');
+        top: 0%;
+        left: 0%;
+        opacity: 1;
+        animation-name: slider-reveal-fog;
+        animation-duration: 6s;
+        animation-fill-mode: forwards;
+        animation-timing-function: ease-in-out;
+        animation-iteration-count: infinite;
+        animation-direction: alternate-reverse;
+        @keyframes slider-reveal-fog{
+          0% {
+            top: 0%;
+            left: 0%;
+          }
+          100% {
+            top: 0%;
+            left: calc(100% - 200px);
+          }
+        }
+      }
+      .fog1 {
+        margin-top: 0%;
+        animation-duration: 2s;
+      }
+      .fog2 {
+        margin-top: 1.5%;
+        animation-duration: 3s;
+      }
+      .fog3 {
+        margin-top: 14%;
+        animation-duration: 4s;
+      }
+      .fog4 {
+        margin-top: 21%;
+        animation-duration: 5s;
+      }
+      .fog5 {
+        margin-top: 28%;
+        animation-duration: 6s;
+      }
+      .fog6 {
+        margin-top: 35%;
+        animation-duration: 7s;
+      }
+      .fog7 {
+        margin-top: 42%;
+        animation-duration: 8s;
+      }
+      .fog8 {
+        margin-top: 49%;
+        animation-duration: 8.5s;
+      }
+      .fog9 {
+        margin-top: 56%;
+        animation-duration: 8s;
+      }
+      .fog10 {
+        margin-top: 63%;
+        animation-duration: 9s;
+      }
     }
     &.slider-lledo {
       h3.slider-letter {
         background-image: url('/images/home/slider/lledo/lledo-letter.png');
         background-position: 60% 50%;
+        &::after {
+          content: '';
+          position: absolute;
+          width: 0;
+          height: 0;
+          border-left: 70px solid transparent;
+          border-right: 70px solid transparent;
+          border-top: 100px solid red;
+          -moz-border-radius: 50%;
+          -webkit-border-radius: 50%;
+          border-radius: 50%;
+        }
+      }
+      .ll-head {
+        position: absolute;
+        width: 262px;
+        height: 203px;
+        background: url('/images/home/slider/lledo/lledo-head.png');
+        top: calc(33% - 160px);
+        left: calc(50% - 67px);
+        z-index: 20;
+        animation-name: ll-head;
+        animation-duration: 8s;
+        animation-fill-mode: forwards;
+        animation-timing-function: ease-in-out;
+        animation-iteration-count: infinite;
+        transform-origin: 0% 5%;
+        @keyframes ll-head {
+          0% {
+            top: calc(33% - 160px);
+            transform: rotate(0deg);
+          }
+
+          20% {
+            top: calc(33% - 100px);
+            transform: rotate(-18deg);
+          }
+
+          50% {
+            top: calc(33% - 100px);
+            transform: rotate(0deg);
+          }
+
+          90% {
+            top: calc(33% - 100px);
+            transform: rotate(0deg);
+          }
+
+          100% {
+            top: calc(33% - 160px);
+            transform: rotate(0deg);
+          }
+        }
+      }
+
+      .ll-bar {
+        position: absolute;
+        width: 17px;
+        height: 138px;
+        background: url('/images/home/slider/lledo/lledo-bar.png');
+        top: 2px;
+        left: calc(50% - 25px);
+        z-index: 19;
+      }
+
+      .ll-light {
+        position: absolute;
+        width: 650px;
+        height: 412px;
+        background: url('/images/home/slider/lledo/lledo-light.png');
+        top: calc(33% - 100px);
+        left: calc(50% - 67px);
+        z-index: 21;
+        opacity: 0;
+          &.on {
+          animation-name: ll-light;
+          animation-duration: 3s;
+          animation-fill-mode: forwards;
+          animation-timing-function: ease-in;
+          @keyframes ll-light {
+            0% {
+              opacity: 0;
+            }
+
+            70% {
+              opacity: 1;
+            }
+
+            100% {
+              opacity: 0;
+            }
+          }
+        }
+      }
+
+      .ll-logo {
+        position: absolute;
+        width: 161px;
+        height: 38px;
+        background: url('/images/home/slider/lledo/lledo-logo.png');
+        z-index: 30;
+        right: -34%;
+        top: 57%;
       }
     }
   }

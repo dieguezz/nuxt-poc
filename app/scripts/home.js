@@ -144,6 +144,9 @@ $(function(){
 /********* ---> BULLSHIT STARTS HERE!!! :( <---- ***********/
 
 $(document).ready(function() {
+
+    /* AUTOPLAY SLIDER */
+
     setTimeout(function() {
       $('.slider-bg').addClass('hide');
     }, 8500);
@@ -220,3 +223,8 @@ $(function() {
         }
     });
 });
+
+
+setInterval(function(){
+   $('.ll-light').toggleClass('on');
+},4000);

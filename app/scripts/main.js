@@ -111,3 +111,10 @@ $(document).ready(function() {
 
   });
 });
+
+/* Initiate FastClic */
+$(document).ready(function() {
+  $(function() {
+    FastClick.attach(document.body);
+  });
+});

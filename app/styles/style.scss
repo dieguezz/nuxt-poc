@@ -396,7 +396,7 @@ header {
   h1 {
     margin-left: -10px;
     float: left;
-    transition: opacity $normal-transition, visibility $normal-transition, background $normal-transition;
+    transition: opacity $normal-transition, visibility $normal-transition;
     background: url('../images/logo-inverse.svg');
     width: 120px;
     height: 36px;
