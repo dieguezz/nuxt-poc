@@ -220,3 +220,8 @@ $(function() {
         }
     });
 });
+
+
+setInterval(function(){
+   $('.ll-light').toggleClass('on');
+},4000);
