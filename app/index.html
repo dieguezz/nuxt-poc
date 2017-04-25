@@ -10,6 +10,7 @@
   <!-- build:css(.) /styles/vendor.css -->
   <!-- bower:css -->
   <link rel="stylesheet" href="bower_components/animsition/dist/css/animsition.min.css" />
+  <link rel="stylesheet" href="bower_components/slick-carousel/slick/slick.css" />
   <!-- endbower -->
   <!-- endbuild -->
   <!-- build:css(.tmp) /styles/main.css -->
@@ -36,25 +37,30 @@
     <!-- build:include templates/header.html -->
     <!-- /build -->
     <!-- START Home -->
-      <section class="slider-container black">
-        <a class="scroll-down" href="#footer">
-          <svg width="30px" height="17px" viewBox="0 0 30 17" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-            <polygon id="Shape" stroke="none" fill-rule="evenodd" points="28.6896535 0.0353030303 29.9193564 1.28984848 14.960495 16.5516667 0 1.28712121 1.22970297 0.0327272727 14.9613861 14.0418182"></polygon>
-          </svg>
-        </a>
+    <section class="slider-container black">
+      <a class="scroll-down" href="#footer">
+        <svg width="30px" height="17px" viewBox="0 0 30 17" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+          <polygon id="Shape" stroke="none" fill-rule="evenodd" points="28.6896535 0.0353030303 29.9193564 1.28984848 14.960495 16.5516667 0 1.28712121 1.22970297 0.0327272727 14.9613861 14.0418182"></polygon>
+        </svg>
+      </a>
 
-        <nav class="slider-navigation reveal2">
-          <ul>
-            <li><a class="slider-navigation-home">Home</a></li>
-            <li><a class="slider-navigation-twotoforty active">Two To Forty</a></li>
-            <li><a class="slider-navigation-futureteaming">Futureteaming</a></li>
-            <li><a class="slider-navigation-lledo">Lledó</a></li>
-          </ul>
-        </nav>
+      <nav class="slider-navigation reveal2">
+        <ul>
+          <li><a href data-slide="0" class="slider-navigation-home active">Home</a></li>
+          <li><a href data-slide="1" class="slider-navigation-twotoforty">Two To Forty</a></li>
+          <li><a href data-slide="2" class="slider-navigation-futureteaming">Futureteaming</a></li>
+          <li><a href data-slide="3" class="slider-navigation-lledo">Lledó</a></li>
+        </ul>
+      </nav>
+
+      <div class="slider">
+
+        <div class="slider-unit home">
+          <h2>HOME</h2>
+        </div>
 
         <!-- Slide Twotoforty-->
-        <div class="slider-unit twotoforty show">
-
+        <div class="slider-unit twotoforty">
           <article class="slider-content slider-twotoforty">
             <div class="slider-letter-wr">
               <h3 class="slider-letter reveal2">Two To Forty</h3>
@@ -69,24 +75,22 @@
           </div>
         </div>
 
-
         <!-- Slide Futureteaming-->
-        <div class="slider-unit futureteaming white hide">
-
+        <div class="slider-unit futureteaming white">
           <article class="slider-content slider-futureteaming">
             <div class="slider-letter-wr">
-            <h3 class="slider-letter reveal2">CLEAR+CALM</h3>
-            <div class="slider-reveal-fog"></div>
-            <div class="slider-reveal-fog fog1"></div>
-            <div class="slider-reveal-fog fog2"></div>
-            <div class="slider-reveal-fog fog3"></div>
-            <div class="slider-reveal-fog fog4"></div>
-            <div class="slider-reveal-fog fog5"></div>
-            <div class="slider-reveal-fog fog6"></div>
-            <div class="slider-reveal-fog fog7"></div>
-            <div class="slider-reveal-fog fog8"></div>
-            <div class="slider-reveal-fog fog9"></div>
-            <div class="slider-reveal-fog fog10"></div>
+              <h3 class="slider-letter reveal2">CLEAR+CALM</h3>
+              <div class="slider-reveal-fog"></div>
+              <div class="slider-reveal-fog fog1"></div>
+              <div class="slider-reveal-fog fog2"></div>
+              <div class="slider-reveal-fog fog3"></div>
+              <div class="slider-reveal-fog fog4"></div>
+              <div class="slider-reveal-fog fog5"></div>
+              <div class="slider-reveal-fog fog6"></div>
+              <div class="slider-reveal-fog fog7"></div>
+              <div class="slider-reveal-fog fog8"></div>
+              <div class="slider-reveal-fog fog9"></div>
+              <div class="slider-reveal-fog fog10"></div>
             </div>
             <h4 class="slider-title reveal2">CLEAR+CALM</h4>
             <h5 class="slider-subtitle reveal2">Boost your performance today</h5>
@@ -94,10 +98,8 @@
           </article>
         </div>
 
-
         <!-- Slide Lledó-->
-        <div class="slider-unit lledo hide">
-
+        <div class="slider-unit lledo">
           <article class="slider-content slider-lledo">
             <div class="slider-letter-wr">
               <h3 class="slider-letter reveal2">Lledó</h3>
@@ -115,7 +117,10 @@
             <div class="slider-bg-cover"></div>
           </div>
         </div>
-      </section>
+
+      </div>
+
+    </section>
     <!-- END Home -->
 
     <!-- build:include templates/footer.html -->
@@ -129,6 +134,8 @@
   <script src="bower_components/scrollreveal/dist/scrollreveal.js"></script>
   <script src="bower_components/instafeed.js/instafeed.js"></script>
   <script src="bower_components/rellax/rellax.js"></script>
+  <script src="bower_components/slick-carousel/slick/slick.js"></script>
+  <script src="bower_components/fastclick/lib/fastclick.js"></script>
   <!-- endbower -->
   <script src="/bower_components/waypoints/lib/jquery.waypoints.js"></script>
   <!-- endbuild -->
@@ -138,7 +145,7 @@
   <script src="/app.scripts.js"></script>
   <!-- include: "type": "js", "files": ["scripts/*.js"], "baseUrl": "/" -->
   <!-- endbuild -->
-  <script src="/scripts/fastclick.js"></script>
+
 </body>
 
 </html>
