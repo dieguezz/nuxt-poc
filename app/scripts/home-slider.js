@@ -35,37 +35,14 @@ $(document).ready(function() {
     $('.slider-navigation a').eq(currentSlide).removeClass('active');
     $('.slider-navigation a').eq(nextSlide).addClass('active');
 
-    setTimeout(function() {
-      $('.slider-unit').eq(currentSlide).find('.slider-letter').addClass('tofade');
-    }, 0);
-
-    setTimeout(function() {
-      $('.slider-unit').eq(currentSlide).find('.slider-title').addClass('tofade');
-    }, 150);
-
-    setTimeout(function() {
-      $('.slider-unit').eq(currentSlide).find('.slider-subtitle').addClass('tofade');
-    }, 300);
-
-    setTimeout(function() {
-      $('.slider-unit').eq(currentSlide).find('a').addClass('tofade');
-    }, 450);
-
-    setTimeout(function() {
-      $('.slider-unit').eq(nextSlide).find('.slider-letter').removeClass('tofade');
-    }, 0);
-
-    setTimeout(function() {
-      $('.slider-unit').eq(nextSlide).find('.slider-title').removeClass('tofade');
-    }, 150);
-
-    setTimeout(function() {
-      $('.slider-unit').eq(nextSlide).find('.slider-subtitle').removeClass('tofade');
-    }, 300);
-
-    setTimeout(function() {
-      $('.slider-unit').eq(nextSlide).find('a').removeClass('tofade');
-    }, 450);
+    $('.slider-unit').find('.slider-letter').addClass('tofade');
+    $('.slider-unit').find('.slider-title').addClass('tofade');
+    $('.slider-unit').find('.slider-subtitle').addClass('tofade');
+    $('.slider-unit').find('a').addClass('tofade');
+    $('.slider-unit').eq(nextSlide).find('.slider-letter').removeClass('tofade');
+    $('.slider-unit').eq(nextSlide).find('.slider-title').removeClass('tofade');
+    $('.slider-unit').eq(nextSlide).find('.slider-subtitle').removeClass('tofade');
+    $('.slider-unit').eq(nextSlide).find('a').removeClass('tofade');
 
     if (nextSlide === 2) {
       $('.slider-container').addClass('white').removeClass('black');
@@ -78,6 +55,7 @@ $(document).ready(function() {
       $('.slider-navigation').removeClass('inverse');
       $('.scroll-down svg').css('fill', '#FFF');
     }
+
   });
 
   var scrollDown = $(".scroll-down");
