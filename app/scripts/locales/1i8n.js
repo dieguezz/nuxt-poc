@@ -12,9 +12,14 @@
       i18njs.setLang(lang);
       $('.language-switcher .active').removeClass('active').addClass('second');
       $('.language-switcher a[data-lang="' + lang + '"]').addClass('active').removeClass('second');
-      $('*[data-locale]').each(function(index, item) {
+      $('*[data-locale]:not([data-locale-attr])').each(function(index, item) {
         var localized = i18njs.get($(item).data('locale'));
         $(item).html(localized);
+      });
+      $('*[data-locale-attr]').each(function(index, item) {
+        var attr = i18njs.get($(item).data('locale-attr'));
+        var localized = i18njs.get($(item).data('locale'));
+        $(item).attr(attr, localized);
       });
     }
 

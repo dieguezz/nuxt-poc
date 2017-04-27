@@ -42,43 +42,43 @@
       <!-- /build -->
 
       <div class="container">
-        <h2 class="form-item reveal">Start a project with us</h2>
+        <h2 class="form-item reveal" data-locale="new-project.title">Start a project with us</h2>
 
         <form id="join-us-form">
           <div class="form-control reveal2 required">
-            <input class="form-item" id="name" name="name" type="text" placeholder="Your full name..." required>
-            <p>A valid name is required</p>
+            <input class="form-item" id="name" name="name" type="text" placeholder="Your full name..." required data-locale-attr="placeholder" data-locale="new-project.name.title">
+            <p data-locale="new-project.name.error">A valid name is required</p>
           </div>
           <div class="form-control reveal2">
-            <input class="form-item" id="company" name="company" type="text" placeholder="Your company name...">
+            <input class="form-item" id="company" name="company" type="text" placeholder="Your company name..." data-locale-attr="placeholder" data-locale="new-project.company.title">
           </div>
           <div class="form-control reveal2 required">
-            <input class="form-item" id="email" name="email" type="email" placeholder="Your email..." required>
-            <p>A valid email is required</p>
+            <input class="form-item" id="email" name="email" type="email" placeholder="Your email..." required data-locale-attr="placeholder" data-locale="new-project.email.title">
+            <p data-locale="new-project.email.error">A valid email is required</p>
           </div>
           <div class="form-control reveal2">
-            <input class="form-item" id="phone" name="phone" type="tel" placeholder="Your phone number...">
-            <p>A valid phone is required</p>
+            <input class="form-item" id="phone" name="phone" type="tel" placeholder="Your phone number..." data-locale-attr="placeholder" data-locale="new-project.phone.title">
+            <p data-locale="new-project.phone.error">A valid phone is required</p>
           </div>
           <div class="form-control reveal2 required message">
-            <textarea class="form-item" id="message" name="message" rows="8" cols="80" placeholder="A bit about your project..." required></textarea>
-            <p>Message required</p>
+            <textarea class="form-item" id="message" name="message" rows="8" cols="80" placeholder="A bit about your project..." required data-locale-attr="placeholder" data-locale="new-project.message.title"></textarea>
+            <p data-locale="new-project.message.error">Message required</p>
           </div>
 
 
           <!-- Optional Questions -->
           <div class="form-control reveal2 message extra">
-            <textarea class="form-item reveal" id="message" name="message" rows="8" cols="80" placeholder="How did you meet us?"></textarea>
+            <textarea class="form-item reveal" id="message" name="message" rows="8" cols="80" placeholder="How did you meet us?" data-locale-attr="placeholder" data-locale="new-project.extra.how.title"></textarea>
           </div>
           <div class="form-control reveal2 message extra">
-            <textarea class="form-item reveal" id="message" name="message" rows="8" cols="80" placeholder="What was the special point that made you contact us?"></textarea>
+            <textarea class="form-item reveal" id="message" name="message" rows="8" cols="80" placeholder="What was the special point that made you contact us?" data-locale-attr="placeholder" data-locale="new-project.extra.comments.title"></textarea>
           </div>
 
 
           <div class="clear"></div>
           <div class="send-questions">
-            <a class="extra-questions link-raw white reveal">Do you mind answering two more questions? (optional)</a>
-            <a class="button white sender form-item reveal"><span>Send</span></a>
+            <a class="extra-questions link-raw white reveal" data-locale="new-project.extra.title">Do you mind answering two more questions? (optional)</a>
+            <a class="button white sender form-item reveal"><span data-locale="new-project.send">Send</span></a>
           </div>
 
         </form>
@@ -96,10 +96,10 @@
     <!-- END Info Section -->
 
     <section id="sended-form">
-      <h6>Thank you!</h6>
-      <p>We are looking forward to meet you,
+      <h6 data-locale="new-project.sended.title">Thank you!</h6>
+      <p data-locale="new-project.sended.subtitle">We are looking forward to meet you,
         <br>we will contact you as soon as possible.</p>
-      <a href="/" class="button link">Take me to home</a>
+      <a href="/" class="button link" data-locale="new-project.sended.back">Take me to home</a>
     </section>
 
     <!-- build:include templates/footer.html -->

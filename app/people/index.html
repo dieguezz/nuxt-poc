@@ -34,11 +34,11 @@
 
     <nav class="menu-navigation menu-active">
       <ul id="top-menu">
-        <li><a href="#home">Start</a></li>
-        <li><a href="#info">About us</a></li>
-        <li><a href="#values">What we believe</a></li>
-        <li><a href="#people">The Etéreotypes</a></li>
-        <li><a href="#pictures">Instagram</a></li>
+        <li><a href="#home" data-locale="people.nav.start">Start</a></li>
+        <li><a href="#info" data-locale="people.nav.about">About us</a></li>
+        <li><a href="#values" data-locale="people.nav.values">What we believe</a></li>
+        <li><a href="#people" data-locale="people.nav.people">The Etéreotypes</a></li>
+        <li><a href="#pictures" data-locale="people.nav.pictures">Instagram</a></li>
       </ul>
     </nav>
 
@@ -53,16 +53,14 @@
       <main>
         <div class="container">
 
-          <h2 data-lining class="fade-scroll title-page" data-menu-navigation="#home">
-          We believe in individual potential by removing hierarchical barriers.
-        </h2>
+          <h2 data-lining class="fade-scroll title-page" data-menu-navigation="#home" data-locale="people.start.title">We believe in individual potential by removing hierarchical barriers.</h2>
 
           <a class="scroll-down" href="#info">
             <svg width="30px" height="17px" viewBox="0 0 30 17" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
               <polygon id="Shape" stroke="none" fill-rule="evenodd" points="28.6896535 0.0353030303 29.9193564 1.28984848 14.960495 16.5516667 0 1.28712121 1.22970297 0.0327272727 14.9613861 14.0418182"></polygon>
             </svg>
           </a>
-          <span class="scroll-appear">People First.</span>
+          <span class="scroll-appear" data-locale="people.start.subtitle">People First.</span>
         </div>
         <div class="section-bg people"></div>
       </main>
@@ -72,11 +70,8 @@
     <!-- START Info Section -->
     <section id="info" class="white">
       <div class="container">
-        <h3 class="reveal" data-menu-navigation="#info">More than bright ideas...</h3>
-        <h4 class="reveal">The etéreo team has an enormous ambition and passion to create great products. We are a talented group, who share the same values and can create just about anything from the web: designers, engineers, creators, makers, programmers and thinkers together.
-          <br><br>
-          We work as equal partners, with responsibility, with ambition, with excellence. We don´t like hierarchy, we like teams working together with you.<br><br>Let's do something amazing.
-        </h4>
+        <h3 class="reveal" data-menu-navigation="#info" data-locale="people.about.title">More than bright ideas...</h3>
+        <h4 class="reveal" data-locale="people.about.subtitle">The etéreo team has an enormous ambition and passion to create great products. We are a talented group, who share the same values and can create just about anything from the web: designers, engineers, creators, makers, programmers and thinkers together.<br><br>We work as equal partners, with responsibility, with ambition, with excellence. We don´t like hierarchy, we like teams working together with you.<br><br>Let's do something amazing.</h4>
       </div>
     </section>
     <!-- END Info Section -->
@@ -84,22 +79,22 @@
     <!-- START Services Section -->
     <section id="values" class="black">
 
-      <img src="/images/people/values-1.jpg" class="values-1 rellax" data-rellax-speed="7" data-rellax-percentage="0.5" alt="">
+      <img src="/images/people/values-1.jpg" class="values-1 rellax" data-rellax-speed="7" data-rellax-percentage="0.5">
       <img src="/images/people/values-3.jpg" class="values-2 rellax" data-rellax-speed="7" data-rellax-percentage="0.5">
       <img src="/images/people/values-2.jpg" class="values-3 rellax" data-rellax-speed="3" data-rellax-percentage="0.25">
 
       <div class="container">
-        <h3 class="reveal" data-menu-navigation="#values">The values we stand for. The tools that allow us to pursue our goals.</h3>
+        <h3 class="reveal" data-menu-navigation="#values" data-locale="people.values.title">The values we stand for. The tools that allow us to pursue our goals.</h3>
         <div class="values-list">
 
           <div class="row">
             <div class="values-unit community">
-              <h5 class="reveal">Community</h5>
-              <p class="reveal">We like to hang out with people who share our values.</p>
+              <h5 class="reveal" data-locale="people.values.value0.title">Community</h5>
+              <p class="reveal" data-locale="people.values.value0.subtitle">We like to hang out with people who share our values.</p>
             </div>
             <div class="values-unit freedom">
-              <h5 class="reveal">Freedom</h5>
-              <p class="reveal">We want to control our own time, so we can control your time.</p>
+              <h5 class="reveal" data-locale="people.values.value1.title">Freedom</h5>
+              <p class="reveal" data-locale="people.values.value1.subtitle">We want to control our own time, so we can control your time.</p>
             </div>
           </div>
 
@@ -107,12 +102,12 @@
 
           <div class="row">
             <div class="values-unit competence">
-              <h5 class="reveal">Competence</h5>
-              <p class="reveal">We want to continuously learn and innovate.</p>
+              <h5 class="reveal" data-locale="people.values.value2.title">Competence</h5>
+              <p class="reveal" data-locale="people.values.value2.subtitle">We want to continuously learn and innovate.</p>
             </div>
             <div class="values-unit citizenship">
-              <h5 class="reveal">Good Citizenship</h5>
-              <p class="reveal">Heart over wallet (money isn’t the main thing in life).</p>
+              <h5 class="reveal" data-locale="people.values.value3.title">Good Citizenship</h5>
+              <p class="reveal" data-locale="people.values.value3.subtitle">Heart over wallet (money isn’t the main thing in life).</p>
             </div>
           </div>
 
@@ -121,8 +116,8 @@
           <div class="row">
             <div class="values-unit blank"></div>
             <div class="values-unit professionalism">
-              <h5 class="reveal">Professionalism</h5>
-              <p class="reveal">We genuinely care about solving our customers problems.</p>
+              <h5 class="reveal" data-locale="people.values.value4.title">Professionalism</h5>
+              <p class="reveal" data-locale="people.values.value4.subtitle">We genuinely care about solving our customers problems.</p>
             </div>
           </div>
 
@@ -134,7 +129,7 @@
 
     <!-- START DNA Section -->
     <section id="dna" class="white">
-      <a class="reveal" href="http://dna.etereo.io" target="_blank">Discover our DNA</a>
+      <a class="reveal" href="http://dna.etereo.io" target="_blank" data-locale="people.dna">Discover our DNA</a>
     </section>
     <!-- END DNA Section -->
 
@@ -158,7 +153,7 @@
       <!-- END People Bio -->
 
       <div class="container">
-        <h3 class="reveal" data-menu-navigation="#people">The etéreotypes: these are the crazy guys that make this possible.</h3>
+        <h3 class="reveal" data-menu-navigation="#people" data-locale="people.people.title">The etéreotypes: these are the crazy guys that make this possible.</h3>
 
         <ul>
 
@@ -166,7 +161,7 @@
             <img src="/images/people/hayder.jpg" alt="Hayder">
             <div>
               <h4 class="reveal">Hayder Al-Deen</h4>
-              <p class="people-title reveal">THE INVETERATE DESIGNER</p>
+              <p class="people-title reveal" data-locale="people.people.hayder.title">THE INVETERATE DESIGNER</p>
               <div>
                 <a class="button border link reveal" href="https://linkedin.com/in/hayderaldeen" target="_blank">Linkedin</a>
                 <a class="button border link reveal" href="mailto:hayder@etereo.io">Mail</a>
@@ -179,7 +174,7 @@
             <img src="/images/people/ruben.jpg" alt="Rubén">
             <div>
               <h4 class="reveal">Rubén Carrasco</h4>
-              <p class="people-title reveal">THE ALLROAD GUY</p>
+              <p class="people-title reveal" data-locale="people.people.ruben.title">THE ALLROAD GUY</p>
               <div>
                 <a class="button border link reveal" href="https://linkedin.com/in/rubencarrascofernandez" target="_blank">Linkedin</a>
                 <a class="button border link reveal" href="mailto:ruben@etereo.io">Mail</a>
@@ -191,7 +186,7 @@
             <img src="/images/people/daniel.jpg" alt="Daniel">
             <div>
               <h4 class="reveal">Daniel García</h4>
-              <p class="people-title reveal">THE YOUNG ALL-ROUNDER</p>
+              <p class="people-title reveal" data-locale="people.people.daniel.title">THE YOUNG ALL-ROUNDER</p>
               <div>
                 <a class="button border link reveal" href="https://www.linkedin.com/in/daniel-garc%C3%ADa-gonz%C3%A1lez-ab978585/">Linkedin</a>
                 <a class="button border link reveal" href="mailto:daniel@etereo.io">Mail</a>
@@ -203,7 +198,7 @@
             <img src="/images/people/rafael.jpg" alt="Rafael">
             <div>
               <h4 class="reveal">Rafael Gimeno</h4>
-              <p class="people-title reveal">THE CREATIVE CODER</p>
+              <p class="people-title reveal" data-locale="people.people.rafael.title">THE CREATIVE CODER</p>
               <div>
                 <a class="button border link reveal" href="https://www.linkedin.com/in/rafael-pedrola-gimeno-22678837/">Linkedin</a>
                 <a class="button border link reveal" href="mailto:rafaelventura@etereo.io">Mail</a>
@@ -215,7 +210,7 @@
             <img src="/images/people/ismael.jpg" alt="Ismael">
             <div>
               <h4 class="reveal">Ismael Madirolas</h4>
-              <p class="people-title reveal">THE DATA CRAFTSMAN</p>
+              <p class="people-title reveal" data-locale="people.people.ismael.title">THE DATA CRAFTSMAN</p>
               <div>
                 <a class="button border link reveal" href="https://www.linkedin.com/in/ismael-madirolas-mahou-34790381/">Linkedin</a>
                 <a class="button border link reveal" href="mailto:ismael@etereo.io">Mail</a>
@@ -227,7 +222,7 @@
             <img src="/images/people/anthanh.jpg" alt="Anthanh">
             <div>
               <h4 class="reveal">Anthanh Pham</h4>
-              <p class="people-title reveal">THE NINJA DEVELOPER</p>
+              <p class="people-title reveal" data-locale="people.people.anthanh.title">THE NINJA DEVELOPER</p>
               <div>
                 <a class="button border link reveal" href="https://linkedin.com/in/anthanh" target="_blank">Linkedin</a>
                 <a class="button border link reveal" href="mailto:anthanh@etereo.io">Mail</a>
@@ -239,7 +234,7 @@
             <img src="/images/people/diego.jpg" alt="diego">
             <div>
               <h4 class="reveal">Diego Segura</h4>
-              <p class="people-title reveal">THE ONE MAN ARMY</p>
+              <p class="people-title reveal" data-locale="people.people.diego.title">THE ONE MAN ARMY</p>
               <div>
                 <a class="button border link reveal" href="https://www.linkedin.com/in/diego-segura-fern%C3%A1ndez-107a8859/">Linkedin</a>
                 <a class="button border link reveal" href="mailto:diego@etereo.io">Mail</a>
@@ -248,8 +243,8 @@
           </li>
 
           <li class="reveal2 people-join">
-            <p class="reveal">We are always eager to meet awesome talent.</p>
-            <a href="/contact" class="button border link reveal" target="_blank">DROP US A LINE</a>
+            <p class="reveal" data-locale="people.people.join.title">We are always eager to meet awesome talent.</p>
+            <a href="/contact" class="button border link reveal" target="_blank" data-locale="people.people.join.action">DROP US A LINE</a>
           </li>
 
         </ul>
@@ -259,11 +254,12 @@
     <!-- END Partners Section -->
     <section id="pictures" class="white">
       <div class="container">
-        <h3 class="reveal" data-menu-navigation="#pictures">Not everything in life is working. Check out our view work-life balance!</h3>
+        <h3 class="reveal" data-menu-navigation="#pictures" data-locale="people.pictures.title">Not everything in life is working. Check out our view work-life balance!</h3>
       </div>
       <div id="instafeed" class="reveal"></div>
-      <a href="http://instagram.com/etereoio" class="link button white border reveal" target="_blank">View more on Instagram</a>
+      <a href="http://instagram.com/etereoio" class="link button white border reveal" target="_blank" data-locale="people.pictures.more">View more on Instagram</a>
     </section>
+
     <!-- build:include templates/pre-footer.html -->
     <!-- /build -->
 
