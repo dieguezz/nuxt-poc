@@ -1,23 +1,24 @@
 .language-switcher {
   position: fixed;
   bottom: 40px;
-  right: 40px;
-  width: 50px;
-  height: 50px;
+  left: 40px;
+  width: 40px;
+  height: 40px;
   z-index: 20;
   a {
     position: absolute;
     display: block;
     color: $black;
-    width: 50px;
-    height: 50px;
+    width: 40px;
+    height: 40px;
     border-radius: 50%;
     background: #FFF;
     text-align: center;
-    line-height: 50px;
+    line-height: 40px;
     transition: all .5s ease-in-out;
     bottom: 0;
-    right: 0;
+    left: 0;
+    font-size: 14px;
     &.active {
       z-index: 21;
       transform: scale(1);
@@ -35,8 +36,8 @@
       color: #FFF;
     }
     a.second {
-      bottom: 25px;
-      right: 25px;
+      bottom: 20px;
+      left: 20px;
       transform: scale(1);
     }
     .language-switcher-transition {
