@@ -1,31 +1,49 @@
 'use strict';
 
-/* Scroll to Top before load */
+/* Open Bio */
 
-var $window = $(window);
+// $(document).ready(function() {
+//   $('.open-bio').on('click', function() {
+//     $('.people-bio-container').addClass('show');
+//     $('.people-bio-container').removeClass('hide');
+//   });
+// });
 
-$window.on('beforeunload', function() {
-  $window.scrollTop(0);
-});
+// $(document).ready(function() {
+//   $('.close-bio').on('click', function() {
+//     $('.people-bio-container').removeClass('show');
+//     $('.people-bio-container').addClass('hide');
+//   });
+// });
 
-/* Scroll Opacity */
-
-var $fadeScroll = $('.fade-scroll');
-var $scrollAppear = $('.scroll-appear');
-$window.on('scroll', function() {
-  requestAnimationFrame(function() {
-    $fadeScroll.css({
-      'opacity': (250 - $window.scrollTop()) / 250
-    });
-  });
-  requestAnimationFrame(function() {
-    $scrollAppear.css({
-      'opacity': (-150 + $window.scrollTop()) / 150
-    });
-  });
-});
-
+/* Open New Project */
 $(document).ready(function() {
+
+  /* Scroll to Top before load */
+
+  var $window = $(window);
+
+  $window.on('beforeunload', function() {
+    $window.scrollTop(0);
+  });
+
+  /* Scroll Opacity */
+
+  var $fadeScroll = $('.fade-scroll');
+  var $scrollAppear = $('.scroll-appear');
+  $window.on('scroll', function() {
+    requestAnimationFrame(function() {
+      $fadeScroll.css({
+        'opacity': (250 - $window.scrollTop()) / 250
+      });
+    });
+    requestAnimationFrame(function() {
+      $scrollAppear.css({
+        'opacity': (-150 + $window.scrollTop()) / 150
+      });
+    });
+  });
+
   var $white = $('.white');
   var $black = $('.black');
   var $pictures = $('#pictures');
@@ -52,8 +70,6 @@ $(document).ready(function() {
     offset: '90%'
   });
 
-
-
   $black.waypoint(function(direction) {
     if (direction === 'down') {
       $header.removeClass('inverse');
@@ -74,26 +90,6 @@ $(document).ready(function() {
     offset: '90%'
   });
 
-});
-
-/* Open Bio */
-
-// $(document).ready(function() {
-//   $('.open-bio').on('click', function() {
-//     $('.people-bio-container').addClass('show');
-//     $('.people-bio-container').removeClass('hide');
-//   });
-// });
-
-// $(document).ready(function() {
-//   $('.close-bio').on('click', function() {
-//     $('.people-bio-container').removeClass('show');
-//     $('.people-bio-container').addClass('hide');
-//   });
-// });
-
-/* Open New Project */
-$(document).ready(function() {
   $('.new-business').on('click', function() {
     $('.contact-page h3,.contact-page svg,.general-contact-unit,.mars-map').addClass('tofade');
 
@@ -110,11 +106,12 @@ $(document).ready(function() {
     }, 800);
 
   });
-});
 
-/* Initiate FastClic */
-$(document).ready(function() {
-  $(function() {
-    FastClick.attach(document.body);
+  /* Initiate FastClic */
+  FastClick.attach(document.body);
+
+  $('a[disabled]').click(function(event) {
+    event.preventDefault();
   });
+
 });

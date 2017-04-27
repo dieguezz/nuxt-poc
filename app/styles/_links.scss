@@ -37,6 +37,9 @@ p, h4 {
     transform: translateX(-50%);
     transition: all $normal-transition;
   }
+  &[disabled] {
+    cursor: not-allowed;
+  }
   &:hover {
     &::after {
       width: 100%;
