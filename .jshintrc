@@ -57,6 +57,7 @@
   "globals": {
     "ga": true,
     "svg4everybody": true,
+    "i18njs": true,
     "Instafeed": true,
     "ScrollReveal": true,
     "Promise": true,
