@@ -56,14 +56,14 @@
   }
 }
 
-#home.cookies-active {
+#home.cookies-active, .home-page.cookies-active {
   padding-top: 50px;
   .scroll-navigate {
     margin-top: 100px;
   }
 }
 
-#home.cookies-active, .contact-page.cookies-active {
+#home.cookies-active, .contact-page.cookies-active, .home-page.cookies-active {
   transition: padding-top $normal-transition;
   main {
     height: calc(100vh - 150px);
