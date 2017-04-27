@@ -1,9 +1,20 @@
 (function() {
 
   var locales = {
+    'nav': {
+      'home': 'inicio',
+      'company': 'empresa',
+      'people': 'equipo',
+      'contact': 'contacto'
+    },
+    'cookies': {
+      'bar': 'lol'
+    },
     'home': {
       'slide0': {
-        'title': 'Somos Etéreo'
+        'title': 'We are Etéreo',
+        'subtitle': 'A digital product agency made different',
+        'link': 'Get to know us'
       }
     }
   };
