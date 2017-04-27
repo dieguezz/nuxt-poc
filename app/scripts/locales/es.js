@@ -22,6 +22,7 @@
       'cookies': 'Política de Cookies'
     },
     'home': {
+      'soon': 'Caso de estudio Próximamente',
       'slide0': {
         'title': 'Somos Etéreo',
         'subtitle': 'Una agencia de producto digital diferente',
@@ -29,15 +30,12 @@
       },
       'slide1': {
         'title': 'Uniendo personas y empresas',
-        'home.soon': 'Caso de estudio Próximamente'
       },
       'slide2': {
         'title': 'Dispara tu rendimiento hoy',
-        'home.soon': 'Caso de estudio Próximamente'
       },
       'slide3': {
         'title': 'Una (R)evolución digital centenaria',
-        'home.soon': 'Caso de estudio Próximamente'
       }
     },
     'company': {
