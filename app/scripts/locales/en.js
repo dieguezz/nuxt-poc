@@ -131,13 +131,13 @@
       'people': {
         'title': 'The etéreotypes: these are the crazy guys that make this possible.',
         'hayder': {
-          'title': 'The Invertebrate Designer'
+          'title': 'The Inveterate Designer'
         },
         'ruben': {
           'title': 'The All Road Guy'
         },
         'daniel': {
-          'title': 'The Young All-Rounder'
+          'title': 'The Young Engineer'
         },
         'rafael': {
           'title': 'The Creative Coder'
