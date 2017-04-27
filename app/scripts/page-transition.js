@@ -12,8 +12,8 @@ $(document).ready(function() {
     loadingParentElement: 'body', //animsition wrapper element
     loadingClass: 'animsition-loading',
     loadingInner: '<img src="/images/logo-icon-inverse.svg" />', // e.g '<img src="loading.svg" />'
-    timeout: false,
-    timeoutCountdown: 5000,
+    timeout: true,
+    timeoutCountdown: 1000,
     onLoadEvent: true,
     browser: ['animation-duration', '-webkit-animation-duration'],
     // "browser" option allows you to disable the "animsition" in case
