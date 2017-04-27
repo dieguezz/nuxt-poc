@@ -29,6 +29,15 @@
       },
       'slide1': {
         'title': 'Matching Personas and Business',
+        'home.soon': 'Case Study Coming Soon'
+      },
+      'slide2': {
+        'title': 'Boost your performance today',
+        'home.soon': 'Case Study Coming Soon'
+      },
+      'slide3': {
+        'title': 'A Centenary Digital (R)evolution',
+        'home.soon': 'Case Study Coming Soon'
       }
     },
     'comapny': {
