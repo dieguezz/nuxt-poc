@@ -152,12 +152,12 @@
           'title': 'El Ejército de un Hombre'
         },
         'join': {
-          'title': 'Siempre estamos deseosos de conocer gente talentosa.',
-          'action': 'ESCRÍBENOS UNAS LÍNEAS'
+          'title': 'Siempre abiertos a conocer gente con talento.',
+          'action': 'Trabaja con nosotros'
         }
       },
       'pictures': {
-        'title': 'No todo en la vida es trabajar. Este es nuestro equilibrio trabajo-vida!',
+        'title': 'Porque no todo en la vida es trabajar.',
         'more': 'Ver más en Instagram'
       }
     },
