@@ -52,18 +52,25 @@
           <li><a href data-slide="3" class="slider-navigation-lledo">Lledó</a></li>
         </ul>
       </nav>
-
+      <div class="language-switcher">
+        <a href="/en" class="english active">EN</a>
+        <div class="language-switcher-transition"></div>
+        <a href="/es" class="spanish second">ES</a>
+      </div>
       <div class="slider">
 
         <div class="slider-unit home">
           <article class="slider-content slider-home">
-            <div class="slider-letter-wr">
+            <!--<div class="slider-letter-wr">
               <h3 class="slider-letter reveal2">Etéreo</h3>
-            </div>
-            <h4 class="slider-title reveal2">We are Etéreo</h4>
+              <div class="bg-slider-home"></div>
+            </div>-->
+            <h4 class="slider-title reveal2 home">We are Etéreo</h4>
             <h5 class="slider-subtitle reveal2">A digital product agency made different</h5>
             <a href="/company" class="link-raw white reveal2">Get to know us</a>
           </article>
+          <!--<canvas id="webgl"></canvas>-->
+          <!--<div class="slider-home-bg"></div>-->
         </div>
 
         <!-- Slide Twotoforty-->
@@ -152,7 +159,52 @@
   <script src="/app.scripts.js"></script>
   <!-- include: "type": "js", "files": ["scripts/*.js"], "baseUrl": "/" -->
   <!-- endbuild -->
+  <script src="/scripts/regl.min.js"></script>
+	<script type="x-shader/x-fragment" id="fragmentShader">
+	#define TWO_PI 6.2831853072
+	#define PI 3.14159265359
 
+	precision highp float;
+
+	uniform float globaltime;
+	uniform vec2 resolution;
+	uniform float aspect;
+	uniform float scroll;
+	uniform float velocity;
+	uniform sampler2D texture;
+
+	const float timescale = 0.1;
+	const float twist = 2.0;
+
+	vec2 rotate(vec2 v, float angle) {
+		float c = cos(angle);
+		float s = sin(angle);
+		return v * mat2(c, -s, s, c);
+	}
+
+	float nsin(float value) {
+		return sin(value * TWO_PI) * 0.5 + 0.5;
+	}
+
+	void main(void) {
+		float time = globaltime * timescale;
+		vec2 center = vec2(sin(TWO_PI * time * 0.2), cos(TWO_PI * time * 0.2)) * nsin(time * 0.3) * 0.5;
+		vec2 tx = (gl_FragCoord.xy / resolution.xy - 0.5 - center) * vec2(aspect, 1.0);
+		float len = length(tx);
+		float zoom = 1.0 + scroll - len * 10.0 * (1.0 - scroll) + len * velocity * 10.0;
+
+		vec4 imgColor = texture2D(
+			texture,
+			rotate(
+				(tx + center) * vec2(1.0, -1.0) * zoom,
+				twist * TWO_PI * nsin(len + time) * scroll + time
+			) + 0.5
+		);
+
+		gl_FragColor = imgColor;
+	}
+	</script>
+	<script src="/scripts/home-slider-home.js"></script>
 </body>
 
 </html>

@@ -22,21 +22,13 @@
     top: 0;
     left: 0;
     transition: all 1s ease-in-out;
-    /*&.home {
-      h4 {
-        font-size: 120px!important;
-        line-height: 120px!important;
-        margin-top: 0!important;
-      }
-      video {
+
+    &.home {
+      canvas {
+        position: fixed;
         z-index: -1;
-        position: absolute;
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-        opacity: .25;
       }
-    }*/
+    }
     &.white {
       background: #FFF;
       h4, h5, a {
@@ -135,6 +127,10 @@
     z-index: -2;
     opacity: 0;
     transition: opacity 1s ease-in-out, visibility 1s ease-in-out;
+    &.tofade {
+      transform: translateY(calc(-50% - 115px))!important;
+      transition: opacity .35s ease-in-out, visibility .35s ease-in-out!important;
+    }
     @media all and (max-width: 600px) {
       transform: translateY(calc(-50% - 46px)) scale(.7);
     }
@@ -280,6 +276,24 @@
         background: #FFF;
         bottom: -5px;
       }
+    }
+    &.slider-home {
+      h3.slider-letter {
+        background-image: url('/images/home/slider/home/home-letter-1.png');
+      }
+      /*.bg-slider-home {
+        position: absolute;
+        width: 400px;
+        height: 400px;
+        background: -moz-radial-gradient(center, ellipse cover, rgba(255,255,255,1) 0%, rgba(255,255,255,0) 90%);
+        background: -webkit-radial-gradient(center, ellipse cover, rgba(255,255,255,1) 0%,rgba(255,255,255,0) 90%);
+        background: radial-gradient(ellipse at center, rgba(255,255,255,1) 0%,rgba(255,255,255,0) 70%);
+        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#00ffffff',GradientType=1 );
+        z-index: -1;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-80%);
+      }*/
     }
     &.slider-futureteaming {
       h3.slider-letter {
@@ -451,3 +465,30 @@
     }
   }
 }
+
+.slider-home-bg {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background: url('https://www.transparenttextures.com/patterns/asfalt-light.png');
+    z-index: -1;
+    opacity: .35;
+}
+
+    h4.home {
+      @media all and (max-width: 600px) {
+        font-size: 45px;
+        margin-top: 0px!important;
+        padding: 0 0 25px 0;
+      }
+      @media all and (max-height: 750px) {
+        font-size: 45px;
+        margin-top: 0px!important;
+        padding: 0 0 25px 0;
+      }
+      @media all and (max-width: 400px) {
+        font-size: 36px;
+        margin-top: 0px!important;
+        padding: 0 0 20px 0;
+      }
+    }

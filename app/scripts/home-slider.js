@@ -38,11 +38,15 @@ $(document).ready(function() {
     $('.slider-unit').find('.slider-letter').addClass('tofade');
     $('.slider-unit').find('.slider-title').addClass('tofade');
     $('.slider-unit').find('.slider-subtitle').addClass('tofade');
+    $('.slider-unit').find('.slider-bg').addClass('tofade');
     $('.slider-unit').find('a').addClass('tofade');
+    $('.slider-unit').find('#webgl').addClass('tofade');
     $('.slider-unit').eq(nextSlide).find('.slider-letter').removeClass('tofade');
     $('.slider-unit').eq(nextSlide).find('.slider-title').removeClass('tofade');
     $('.slider-unit').eq(nextSlide).find('.slider-subtitle').removeClass('tofade');
+    $('.slider-unit').eq(nextSlide).find('.slider-bg').removeClass('tofade');
     $('.slider-unit').eq(nextSlide).find('a').removeClass('tofade');
+    $('.slider-unit').eq(nextSlide).find('#webgl').removeClass('tofade');
 
     if (nextSlide === 2) {
       $('.slider-container').addClass('white').removeClass('black');
