@@ -24,7 +24,7 @@
     'home': {
       'slide0': {
         'title': 'Somos Etéreo',
-        'subtitle': 'Una agencia de producto digital diferente',
+        'subtitle': 'Una agencia de producto digital, diferente',
         'link': 'Cónocenos'
       },
       'slide1': {
@@ -53,7 +53,7 @@
         'subtitle': 'People First.'
       },
       'about': {
-        'title': 'Experiencias resonadoras con valor duradero.',
+        'title': 'Experiencias sublimes con valor duradero.',
         'subtitle': 'Etéreo es una agencia de productos digitales ubicada en Madrid, que trabaja con clientes de todo el mundo. Con un equipo de expertos en todas las áreas, desde conceptualización, diseño y tecnología, potenciamos a las empresas a dar el salto digital.<br><br>Te ayudamos a construir productos digitales y experiencias de vanguardia con un valor duradero.'
       },
       'services': {
@@ -68,18 +68,18 @@
         },
         'service2': {
           'title': 'Tecnología',
-          'subtitle': 'Con un equipo de expertos ingenieros de software, creamos productos escalables utilizando las últimas tecnologías. Nos involucramos profundamente en su proyecto y ofrecemos experiencias sobresalientes.'
+          'subtitle': 'Con un equipo de expertos ingenieros de software, creamos productos escalables utilizando las últimas tecnologías. Nos sumergimos de lleno en tu proyecto y ofrecemos experiencias sobresalientes.'
         }
       },
       'how': {
         'title': 'Involucrándonos profundamente en el desarrollo y proceso creativo.',
         'how0': {
           'title': 'Concepto',
-          'subtitle': 'Nos sumergimos en la planificación de necesidades, objetivos y resultados deseados; Hacemos de sus sueños y metas, realidades.'
+          'subtitle': 'Nos sumergimos en la planificación de necesidades, objetivos y resultados deseados; Hacemos de tus sueños y metas, realidades.'
         },
         'how1': {
           'title': 'Creación',
-          'subtitle': 'Después de encontrar la mejor solución, tenemos el expertise necesario para crear la mejor versión posible de su producto, siempre dejando que guíes nuestras decisiones.'
+          'subtitle': 'Después de encontrar la mejor solución, tenemos el expertise necesario para crear la mejor versión posible de tu producto, siempre dejando que guíes nuestras decisiones.'
         },
         'how2': {
           'title': 'Excelencia',
@@ -87,7 +87,7 @@
         }
       },
       'friends': {
-        'title': 'Compartiendo conocimiento con nuestros colaboradores y amigos.'
+        'title': 'Compartiendo la aventura con nuestros amigos.'
       }
     },
     'people': {
