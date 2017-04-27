@@ -72,7 +72,7 @@
         }
       },
       'how': {
-        'title': 'Involucrándonos profundamente en el desarrollo y proceso creativo.',
+        'title': 'Involucrándonos en el desarrollo y proceso creativo.',
         'how0': {
           'title': 'Concepto',
           'subtitle': 'Nos sumergimos en la planificación de necesidades, objetivos y resultados deseados; Hacemos de tus sueños y metas, realidades.'
