@@ -34,18 +34,18 @@
       var lang = defaultLang;
 
       // browser default lang
-      if (navigator.userLanguage) {
-        // Explorer
-        lang = navigator.userLanguage;
-      }
-      if (navigator.language) {
-        lang = navigator.language;
-      }
-      if (navigator.languages && navigator.languages.length) {
-        lang = navigator.languages[0];
-      }
+      // if (navigator.userLanguage) {
+      //   // Explorer
+      //   lang = navigator.userLanguage;
+      // }
+      // if (navigator.language) {
+      //   lang = navigator.language;
+      // }
+      // if (navigator.languages && navigator.languages.length) {
+      //   lang = navigator.languages[0];
+      // }
 
-      lang = lang.split('-')[0];
+      // lang = lang.split('-')[0];
 
       // user default lang
       if (localStorage.getItem('lang')) {
