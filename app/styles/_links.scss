@@ -26,6 +26,7 @@ p, h4 {
   color: $black;
   outline: none;
   -webkit-tab-highlight-color: none;
+  cursor: pointer;
   &::after {
     content: '';
     position: absolute;

@@ -8,6 +8,10 @@ $(document).ready(function() {
   }
 
   $('.close-cookies-bar').on('click', function(evt) {
+    $('.cookies-active').removeClass('cookies-active');
+  });
+
+  $('.link-ok').on('click', function(evt) {
     localStorage.setItem('cookies', true);
     $('.cookies-active').removeClass('cookies-active');
   });
