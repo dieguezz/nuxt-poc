@@ -23,7 +23,9 @@ $(document).ready(function() {
     $('.title-page').addClass('appeared');
   }, time1);
 
-  document.getElementById('videoHome').play(); 
+  if ($('#videoHome').length) {
+    document.getElementById('videoHome').play();
+  }
 });
 
 
@@ -50,13 +52,13 @@ $(document).ready(function() {
       $('.claim-bottom').css('margin-bottom', '-75px');
       $('.video-cover').addClass('fade');
       setTimeout(function() {
-        $('.homepage footer').css('z-index','10');
+        $('.homepage footer').css('z-index', '10');
       }, 500);
     } else {
       $('.scroll-down').css('opacity', '1');
       $('.claim-bottom').css('margin-bottom', '-25px');
       $('.video-cover').removeClass('fade');
-      $('.homepage footer').css('z-index','-1');
+      $('.homepage footer').css('z-index', '-1');
     }
 
   });
