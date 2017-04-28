@@ -235,6 +235,9 @@
       padding: 0;
       margin-bottom: 75px;
       transition-delay: 0.15s !important;
+      @media all and (max-width: 400px) {
+        height: 385px;
+      }
     }
     h4.slider-title {
       font-size: 64px;
@@ -269,6 +272,7 @@
       @media all and (max-width: 600px) {
         font-size: 18px;
         padding-bottom: 25px;
+        line-height: 21px;
       }
       @media all and (max-height: 750px) {
         font-size: 18px;
@@ -493,7 +497,7 @@
   @media all and (max-width: 900px) {
     top: 40%!important;
     transform: translateX(-50%)!important;
-    width: 100%!important;
+    width: 90%!important;
     h4 {
       margin: 0 auto!important;
     }
@@ -502,5 +506,11 @@
         margin-top: 0!important;
       }
     }
+  }
+}
+
+@media all and (max-width: 400px) {
+  .language-switcher,.scroll-down {
+    display: none!important;
   }
 }
