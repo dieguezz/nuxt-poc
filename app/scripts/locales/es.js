@@ -89,7 +89,10 @@
       }
     },
     'people': {
-      'dna': 'Descubre nuestro ADN',
+      'dna': {
+        'title': 'Descubre nuestro ADN',
+        'subtitle': '¿Te gustaría saber más?'
+      },
       'nav': {
         'start': 'Inicio',
         'about': 'Sobre nosotros',

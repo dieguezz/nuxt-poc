@@ -89,7 +89,10 @@
       }
     },
     'people': {
-      'dna': 'Discover our DNA',
+      'dna': {
+        'title': 'Discover our DNA',
+        'subtitle': 'Want to know more?'
+      },
       'nav': {
         'start': 'Start',
         'about': 'About Us',

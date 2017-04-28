@@ -2,6 +2,34 @@
 
 #dna {
   padding: 0;
+  position: relative;
+  p {
+    transition: color $normal-transition;
+    position: absolute;
+    top: -60px;
+    left: 0;
+    right: 0;
+    font-size: 20px;
+    font-weight: 300;
+    width: 100%;
+    margin: 0 auto;
+    text-align: center;
+    z-index: 8;
+  }
+  &:hover {
+    p {
+      color: #FFF;
+    }
+    a {
+      background: $black;
+      color: #FFF;
+      box-shadow: 0 0px 150px 0 rgba(256, 256, 256, 0.2);
+      &:after {
+        background: url('../images/fingerprint-inverse.svg');
+        background-size: cover;
+      }
+    }
+  }
   a {
     font-size: 48px;
     font-weight: 600;
@@ -19,17 +47,7 @@
     max-width: 880px;
     box-shadow: 0 6px 45px 0 rgba(23, 26, 28, 0.25);
     transition: color $normal-transition, background $normal-transition, box-shadow $normal-transition;
-    &::before {
-      content: 'Want to know more?';
-      position: absolute;
-      font-size: 20px;
-      font-weight: 300;
-      left: 50%;
-      margin-top: -25px;
-      width: 100%;
-      transform: translateX(-50%);
-    }
-    &::after {
+    &:after {
       content: '';
       position: absolute;
       width: 210px;
@@ -45,20 +63,11 @@
       z-index: -1;
       opacity: .1;
     }
-    &:hover {
-      background: $black;
-      color: #FFF;
-      box-shadow: 0 0px 150px 0 rgba(256, 256, 256, 0.2);
-      &::after {
-        background: url('../images/fingerprint-inverse.svg');
-        background-size: cover;
-      }
-    }
     @media all and (max-width: 600px) {
       font-size: 36px;
       padding: 100px 0;
       margin-top: -120px;
-      &::after {
+      &:after {
         width: 160px;
         height: 160px;
       }
