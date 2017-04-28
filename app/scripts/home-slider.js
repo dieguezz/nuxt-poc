@@ -29,6 +29,11 @@ $(document).ready(function() {
     autoplaySpeed: 8000
   });
 
+  // hack to prevent slide initialization animation
+  setTimeout(function() {
+    $('.slider .hidden').removeClass('hidden');
+  }, 0);
+
   // On before slide change
   $('.slider').on('beforeChange', function(event, slick, currentSlide, nextSlide) {
 
