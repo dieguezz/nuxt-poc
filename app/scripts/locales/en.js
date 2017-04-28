@@ -19,7 +19,8 @@
     'pre-footer': {
       'title': 'Simply love what you see?<br>Let’s grab a coffee!',
       'contact': 'Contact Us',
-      'cookies': 'Cookies Policy'
+      'cookies': 'Cookies Policy',
+      'or': 'OR'
     },
     'home': {
       'soon': 'Case Study Coming Soon',

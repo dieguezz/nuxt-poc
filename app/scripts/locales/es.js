@@ -19,7 +19,8 @@
     'pre-footer': {
       'title': '¿Te gusta lo que ves?<br>¡Tomemos un café!',
       'contact': 'Contacta con nosotros',
-      'cookies': 'Política de Cookies'
+      'cookies': 'Política de Cookies',
+      'or': 'Ó'
     },
     'home': {
       'soon': 'Caso de estudio Próximamente',
