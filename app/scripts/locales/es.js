@@ -166,7 +166,7 @@
       }
     },
     'contact': {
-      'title': 'Nos encantaría saber de ti.<br>Démosle rock and roll!',
+      'title': 'Nos encantaría conocerte.',
       'action': {
         'title': 'Es hora de hacer algo grande juntos.',
         'subtitle': 'A por ello!'
@@ -177,7 +177,7 @@
       },
       'contact1': {
         'title': 'Empleo',
-        'subtitle': 'Siempre estamos abiertos a gente con talento con la que compartir este viaje.',
+        'subtitle': 'Estamos siempre abiertos a gente con talento con la que compartir este viaje.',
         'link': 'Trabaja con nosotros'
       },
       'contact2': {
