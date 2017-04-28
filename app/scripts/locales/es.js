@@ -207,6 +207,7 @@
       'extra': {
         'title': '¿Te importaría contestar dos preguntas más? (opcional)',
         'title2': 'No tengo tiempo para contestar a las preguntas opcionales',
+        'optional': 'Pregunta extra opcional',
         'how': {
           'title': '¿Cómo nos conociste?',
         },
