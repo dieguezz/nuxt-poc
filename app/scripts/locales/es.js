@@ -107,7 +107,7 @@
       },
       'about': {
         'title': 'Más que ideas brillantes...',
-        'subtitle': 'El equipo etéreo tiene una enorme ambición y pasión por crear grandes productos. Somos un grupo de talentos que comparten los mismos valores y puede crear prácticamente cualquier cosa relacionado con la web: diseñadores, ingenieros, creadores, artesanos, programadores y pensadores juntos.<br><br>Trabajamos como socios equitativos, con responsabilidad, con ambición, con excelencia. Nos apartamos de la jerarquía y buscamos el potencial individual. <br> <br> Hagamos algo increíble.'
+        'subtitle': 'El equipo etéreo tiene una enorme ambición y pasión por crear grandes productos. Somos un grupo de talentos que comparten los mismos valores y pueden crear prácticamente cualquier cosa relacionado con la web: diseñadores, ingenieros, creadores, artesanos, programadores y pensadores juntos.<br><br>Trabajamos como socios equitativos, con responsabilidad, con ambición, con excelencia. Nos apartamos de la jerarquía y buscamos el potencial individual. <br> <br> Hagamos algo increíble.'
       },
       'values': {
         'title': 'Los valores que defendemos para alcanzar nuestras metas.',
