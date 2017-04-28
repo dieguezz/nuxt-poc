@@ -1,0 +1,77 @@
+/* Cookies Bar Alert */
+
+.cookies-bar {
+  position: fixed;
+  top: -50px;
+  height: 50px;
+  width: 100vw;
+  background: #000;
+  z-index: 100;
+  transition: top $normal-transition;
+  p {
+    color: $gray;
+    font-size: 12px;
+    line-height: 50px;
+    float: left;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+    width: 90%;
+  }
+  .link, .link-raw {
+    margin-left: 15px;
+    line-height: 50px;
+    @media all and (max-width: 610px) {
+      display: none;
+    }
+  }
+  .close-cookies-bar {
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+    padding-top: 30px;
+    width: 20px;
+    height: 20px;
+    overflow: hidden;
+    transition: transform $normal-transition;
+    &:hover {
+      transform: rotate(90deg);
+    }
+    &::before, &::after {
+      content: '';
+      position: absolute;
+      height: 2px;
+      width: 100%;
+      top: 50%;
+      left: 0;
+      background: #FFF;
+    }
+    &::before {
+      transform: rotate(45deg);
+    }
+    &::after {
+      transform: rotate(-45deg);
+    }
+  }
+}
+
+#home.cookies-active, .home-page.cookies-active {
+  padding-top: 50px;
+  .scroll-navigate {
+    margin-top: 100px;
+  }
+  .slider-unit, .slider-container {
+    height: calc(100vh - 50px);
+  }
+}
+
+#home.cookies-active, .contact-page.cookies-active, .home-page.cookies-active {
+  transition: padding-top $normal-transition;
+  main {
+    height: calc(100vh - 150px);
+  }
+  .cookies-bar {
+    transition: top $normal-transition;
+    top: 0;
+  }
+}

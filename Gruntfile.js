@@ -64,7 +64,7 @@ module.exports = function(grunt) {
           '<%= appConfig.app %>/**/*.html',
           '<%= appConfig.app %>/**/*.json',
           '.tmp/styles/{,*/}*.css',
-          '<%= appConfig.app %>/images/{,*/}*.{png,jpg,jpeg,gif,webp,svg}'
+          '<%= appConfig.app %>/images/{,*/}*.{png,jpg,jpeg,gif,webp,svg,mp4}'
         ]
       }
     },
@@ -404,7 +404,7 @@ module.exports = function(grunt) {
             '!*.html',
             'statics/{,*/}*.html',
             '!statics/{,*/}*.mock.html',
-            'images/{,*/}*',
+            'images/{,**/}*',
             'fonts/*',
             'json/lang/*',
             'modules/**',

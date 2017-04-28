@@ -57,11 +57,13 @@
   "globals": {
     "ga": true,
     "svg4everybody": true,
+    "i18njs": true,
     "Instafeed": true,
     "ScrollReveal": true,
     "Promise": true,
     "Waypoint": true,
     "alert": true,
-    "$": false
+    "$": false,
+    "FastClick": true
   }
 }

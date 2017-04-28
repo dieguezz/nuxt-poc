@@ -394,11 +394,9 @@
     width: 100%;
     position: relative;
     z-index: 20;
-
     label {
       font-size: 28px;
     }
-
     input, textarea {
       transition: border-bottom 0.1s;
       display: block;
@@ -412,7 +410,6 @@
       font-family: 'Mark';
       color: #FFF;
       position: relative;
-
       &:focus {
         outline: none;
         border-color: #FFF;
@@ -440,21 +437,20 @@
       &.extra {
         display: none;
         padding-top: 20px;
-        &:before {
-          content: 'Optional extra question';
-          text-transform: uppercase;
-          letter-spacing: 2px;
-          font-size: 12px;
-          position: absolute;
-          left: 0;
-          top: 10px;
-        }
         &.show {
           display: block;
         }
       }
       &:nth-of-type(2), &:nth-of-type(4) {
         margin-right: 0;
+      }
+      label {
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        font-size: 12px;
+        position: absolute;
+        left: 0;
+        top: 10px;
       }
       @media all and (max-width: $max-xs) {
         margin: 20px 0;
@@ -476,7 +472,6 @@
     }
     .send-questions {
       width: 100%;
-
       a {
         &.extra-questions {
           float: left;
@@ -593,7 +588,6 @@
       h2 {
         font-size: 8vw;
       }
-
       input, textarea {
         font-size: 18px;
         margin: 15px 0;

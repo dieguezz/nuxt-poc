@@ -10,6 +10,7 @@
   <!-- build:css(.) /styles/vendor.css -->
   <!-- bower:css -->
   <link rel="stylesheet" href="bower_components/animsition/dist/css/animsition.min.css" />
+  <link rel="stylesheet" href="bower_components/slick-carousel/slick/slick.css" />
   <!-- endbower -->
   <!-- endbuild -->
   <!-- build:css(.tmp) /styles/main.css -->
@@ -20,7 +21,7 @@
 
 </head>
 
-<body class="home-intro homepage">
+<body class="portfolio">
 
   <!-- build:include templates/mobile-menu.html -->
   <!-- /build -->
@@ -29,45 +30,101 @@
   <!-- /build -->
 
   <!-- START Page Transition -->
-  <div class="animsition">
+  <div class="home-page animsition">
+    <!-- build:include templates/cookies.html -->
+    <!-- /build -->
 
+    <!-- build:include templates/header.html -->
+    <!-- /build -->
     <!-- START Home -->
-    <section id="home" class="home-page">
+    <section class="slider-container black">
+      <a class="scroll-down" href="#footer">
+        <svg width="30px" height="17px" viewBox="0 0 30 17" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+          <polygon id="Shape" stroke="none" fill-rule="evenodd" points="28.6896535 0.0353030303 29.9193564 1.28984848 14.960495 16.5516667 0 1.28712121 1.22970297 0.0327272727 14.9613861 14.0418182"></polygon>
+        </svg>
+      </a>
 
-      <!-- build:include templates/cookies.html -->
-      <!-- /build -->
+      <nav class="slider-navigation reveal2">
+        <ul>
+          <li><a href data-slide="0" class="slider-navigation-home active" data-locale="nav.home">Home</a></li>
+          <li><a href data-slide="1" class="slider-navigation-twotoforty">Two To Forty</a></li>
+          <li><a href data-slide="2" class="slider-navigation-futureteaming">Futureteaming</a></li>
+          <li><a href data-slide="3" class="slider-navigation-lledo">Lledó</a></li>
+        </ul>
+      </nav>
 
-      <!-- build:include templates/header.html -->
-      <!-- /build -->
+      <div class="slider">
 
-      <main class="black">
-
-        <span class="scroll-navigate">Scroll down to navigate</span>
-        <nav class="central-navigation">
-          <ul>
-            <li class="active reveal2 home-home"><a href="#">Home</a></li>
-            <li class="reveal2 home-company"><a>Company</a></li>
-            <li class="reveal2 home-people"><a>People</a></li>
-            <li class="reveal2 home-contact"><a href="/contact" class="link">Contact</a></li>
-          </ul>
-        </nav>
-
-        <h3 class="claim-bottom fade-scroll">A digital product agency made different.</h3>
-
-        <div class="container">
-
-          <a class="scroll-down" href="#footer">
-            <svg width="30px" height="17px" viewBox="0 0 30 17" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-              <polygon id="Shape" stroke="none" fill-rule="evenodd" points="28.6896535 0.0353030303 29.9193564 1.28984848 14.960495 16.5516667 0 1.28712121 1.22970297 0.0327272727 14.9613861 14.0418182"></polygon>
-            </svg>
-          </a>
-          <span class="scroll-appear">People First.</span>
+        <div class="slider-unit hidden home">
+          <article class="slider-content slider-home">
+            <h4 class="slider-title reveal2 home" data-locale="home.slide0.title">We are Etéreo</h4>
+            <h5 class="slider-subtitle reveal2" data-locale="home.slide0.subtitle">A digital product agency made different</h5>
+            <a href="/company" class="link white reveal2" data-locale="home.slide0.link">Get to know us</a>
+          </article>
+          <video type="video/mp4" id="videoHome" src="/images/home/slider/home/home.mp4" autoplay loop></video>
         </div>
-      </main>
-      <div class="video-cover">
-        <div class="background-video"></div>
-        <video src="images/video.mp4" autoplay loop></video>
+
+        <!-- Slide Twotoforty-->
+        <div class="slider-unit hidden twotoforty">
+          <article class="slider-content slider-twotoforty">
+            <div class="slider-letter-wr">
+              <h3 class="slider-letter reveal2">Two To Forty</h3>
+            </div>
+            <h4 class="slider-title reveal2">Two To Forty</h4>
+            <h5 class="slider-subtitle reveal2" data-locale="home.slide1.title">Matching Personas and Business</h5>
+            <a href class="link-raw white reveal2" data-locale="home.soon" disabled>Case Study Coming Soon</a>
+          </article>
+
+          <div class="slider-bg slider-twotoforty-bg slider-twotoforty-bg-animation">
+            <div class="slider-bg-cover"></div>
+          </div>
+        </div>
+
+        <!-- Slide Futureteaming-->
+        <div class="slider-unit hidden futureteaming white">
+          <article class="slider-content slider-futureteaming">
+            <div class="slider-letter-wr">
+              <h3 class="slider-letter reveal2">CLEAR+CALM</h3>
+              <div class="slider-reveal-fog"></div>
+              <div class="slider-reveal-fog fog1"></div>
+              <div class="slider-reveal-fog fog2"></div>
+              <div class="slider-reveal-fog fog3"></div>
+              <div class="slider-reveal-fog fog4"></div>
+              <div class="slider-reveal-fog fog5"></div>
+              <div class="slider-reveal-fog fog6"></div>
+              <div class="slider-reveal-fog fog7"></div>
+              <div class="slider-reveal-fog fog8"></div>
+              <div class="slider-reveal-fog fog9"></div>
+              <div class="slider-reveal-fog fog10"></div>
+            </div>
+            <h4 class="slider-title reveal2">CLEAR+CALM</h4>
+            <h5 class="slider-subtitle reveal2" data-locale="home.slide2.title">Boost your performance today</h5>
+            <a href class="link-raw white reveal2" data-locale="home.soon" disabled>Case Study Coming Soon</a>
+          </article>
+        </div>
+
+        <!-- Slide Lledó-->
+        <div class="slider-unit hidden lledo">
+          <article class="slider-content slider-lledo">
+            <div class="slider-letter-wr">
+              <h3 class="slider-letter reveal2">Lledó</h3>
+              <div class="ll-head"></div>
+              <div class="ll-bar"></div>
+              <div class="ll-light"></div>
+              <div class="ll-logo"></div>
+            </div>
+            <h4 class="slider-title reveal2">Lledó</h4>
+            <h5 class="slider-subtitle reveal2" data-locale="home.slide3.title">A Centenary Digital (R)evolution</h5>
+            <a href class="link-raw white reveal2" data-locale="home.soon" disabled>Case Study Coming Soon</a>
+          </article>
+
+          <div class="slider-bg slider-lledo-bg slider-lledo-bg-animation">
+            <div class="slider-bg-cover"></div>
+          </div>
+        </div>
+
       </div>
+
     </section>
     <!-- END Home -->
 
@@ -82,15 +139,19 @@
   <script src="bower_components/scrollreveal/dist/scrollreveal.js"></script>
   <script src="bower_components/instafeed.js/instafeed.js"></script>
   <script src="bower_components/rellax/rellax.js"></script>
+  <script src="bower_components/slick-carousel/slick/slick.js"></script>
+  <script src="bower_components/fastclick/lib/fastclick.js"></script>
   <!-- endbower -->
   <script src="/bower_components/waypoints/lib/jquery.waypoints.js"></script>
+  <script src="/bower_components/i18njs/dist/i18njs.js"></script>
   <!-- endbuild -->
 
   <!-- build:js({.,.tmp,app,dist}) /scripts/scripts.js -->
   <!-- include: "type": "js", "files": ["vendor/**/*.js"], "baseUrl": "/" -->
   <script src="/app.scripts.js"></script>
-  <!-- include: "type": "js", "files": ["scripts/*.js"], "baseUrl": "/" -->
+  <!-- include: "type": "js", "files": ["scripts/**/*.js"], "baseUrl": "/" -->
   <!-- endbuild -->
+
 </body>
 
 </html>
