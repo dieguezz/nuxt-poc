@@ -23,6 +23,7 @@ $(document).ready(function() {
     $('.title-page').addClass('appeared');
   }, time1);
 
+  document.getElementById('videoHome').play(); 
 });
 
 

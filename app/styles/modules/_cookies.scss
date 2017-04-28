@@ -61,6 +61,9 @@
   .scroll-navigate {
     margin-top: 100px;
   }
+  .slider-unit, .slider-container {
+    height: calc(100vh - 50px;);
+  }
 }
 
 #home.cookies-active, .contact-page.cookies-active, .home-page.cookies-active {
