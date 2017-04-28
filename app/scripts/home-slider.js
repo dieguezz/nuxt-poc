@@ -45,21 +45,29 @@ $(document).ready(function() {
     $('.slider-unit').find('.slider-subtitle').addClass('tofade');
     $('.slider-unit').find('.slider-bg').addClass('tofade');
     $('.slider-unit').find('a').addClass('tofade');
-    $('.slider-unit').find('#webgl').addClass('tofade');
     $('.slider-unit').eq(nextSlide).find('.slider-letter').removeClass('tofade');
     $('.slider-unit').eq(nextSlide).find('.slider-title').removeClass('tofade');
     $('.slider-unit').eq(nextSlide).find('.slider-subtitle').removeClass('tofade');
     $('.slider-unit').eq(nextSlide).find('.slider-bg').removeClass('tofade');
     $('.slider-unit').eq(nextSlide).find('a').removeClass('tofade');
-    $('.slider-unit').eq(nextSlide).find('#webgl').removeClass('tofade');
 
     if (nextSlide === 2) {
-      $('.slider-container').addClass('white').removeClass('black');
       $('header').addClass('inverse');
       $('.slider-navigation').addClass('inverse');
       $('.scroll-down svg').css('fill', '#171A1C');
     } else {
-      $('.slider-container').addClass('black').removeClass('white');
+      $('.lledo .ll-logo').addClass('hidden');
+      $('.twotoforty .slider-bg').addClass('hidden');
+      if (nextSlide === 1) {
+        setTimeout(function() {
+          $('.twotoforty .slider-bg').removeClass('hidden');
+        }, 0);
+      }
+      if (nextSlide === 3) {
+        setTimeout(function() {
+          $('.lledo .ll-logo').removeClass('hidden');
+        }, 2000);
+      }
       $('header').removeClass('inverse');
       $('.slider-navigation').removeClass('inverse');
       $('.scroll-down svg').css('fill', '#FFF');
