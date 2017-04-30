@@ -135,12 +135,9 @@
 
 /* BLOG ENTRY UNIT */
 
-.entries-list {
+.blog-entries-list {
   display: block;
   text-align: center;
-  .blog-entry-unit:last-child {
-    margin-right: 0;
-  }
 }
 
 .blog-entry-unit {
