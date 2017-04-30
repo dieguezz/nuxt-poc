@@ -117,3 +117,9 @@ $(document).ready(function() {
   });
 
 });
+
+/*Blog Fixed Background with Cover*/
+$(window).scroll(function() {
+  var scrolledY = $(window).scrollTop();
+  $('.slider-blog .slider-unit').css('background-position', 'left ' + ((scrolledY)) + 'px');
+});
