@@ -5,7 +5,8 @@
       'home': 'home',
       'company': 'company',
       'people': 'people',
-      'contact': 'contact'
+      'contact': 'contact',
+      'blog': 'blog'
     },
     'cookies': {
       'bar': 'We use cookies to ensure you get the best experience on the etereo’s site.',

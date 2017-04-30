@@ -1,0 +1,182 @@
+/* BLOG BASIC SETUP */
+.blog {
+  position: relative;
+  margin-bottom: 300px;
+  padding-top: 0;
+  .container {
+    padding: 0;
+    max-width: 1240px;
+    position: relative;
+  }
+  .button {
+    background: transparent;
+    border-color: #FFF;
+    color: #FFF;
+    display: table;
+    margin: 0 auto;
+    &::after {
+      background: #FFF;
+    }
+  }
+  .next-slide {
+    position: absolute;
+    top: 50%;
+    right: 0;
+    svg {
+      fill: #FFF;
+      transform: rotate(-90deg);
+    }
+  }
+}
+
+/* FEATURED BLOG ENTRIES SLIDER */
+
+.slider-blog {
+  .slider-unit {
+    width: 100%;
+    background: url('/images/blog/entries/entry-featured.png');
+    background-size: cover;
+    padding: 250px 0;
+    position: relative;
+    &::before {
+      content: '';
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+      background: linear-gradient(rgba(23,26,28,0.82) 38%, $black 96%);
+      z-index: 0;
+    }
+    h2 {
+      position: relative;
+      margin: 25px 0;
+    }
+    .blog-entry-data {
+      position: relative;
+      .blog-entry-data-picture {
+        display: inline-block;
+        vertical-align: middle;
+        width: 40px;
+        height: 40px;
+        background: url('/images/people/hayder.jpg');
+        background-size: 150%;
+        background-position: 30% 40%;
+        border-radius: 50%;
+      }
+      .blog-entry-data-info {
+        display: inline-block;
+        vertical-align: middle;
+        padding-left: 5px;
+        .blog-entry-data-author {
+          display: block;
+          font-size: 14px;
+          font-size: 600;
+          padding-bottom: 5px;
+        }
+        .blog-entry-data-date {
+          display: block;
+          font-size: 14px;
+          font-size: 100;
+        }
+      }
+    }
+  }
+}
+
+/* BLOG CATEGORIES */
+
+.blog-entries-categories {
+  margin: 0 auto 150px auto;
+  display: block;
+  text-align: center;
+  ul {
+    li {
+      display: inline-block;
+      padding-right: 50px;
+      &:last-child {
+        padding-right: 0;
+      }
+      a {
+        text-transform: uppercase;
+        color: #FFF;
+        font-size: 16px;
+        letter-spacing: 2px;
+        font-weight: 600;
+      }
+    }
+  }
+}
+
+/* CATEGORY NAME WITH ICON TAG */
+
+.blog-entry-category {
+  font-size: 14px;
+  font-weight: 600;
+  text-transform: uppercase;
+  position: relative;
+  padding-left: 25px;
+  &::before {
+    content: '';
+    background: url('/images/blog/tag.svg');
+    background-size: cover;
+    position: absolute;
+    width: 15px;
+    height: 15px;
+    left: 0;
+    top: 2px;
+  }
+}
+
+
+/* BLOG ENTRY UNIT */
+
+.entries-row {
+  display: block;
+  .blog-entry-unit:last-child {
+    margin-right: 0;
+  }
+}
+
+.blog-entry-unit {
+  background: #000;
+  display: inline-block;
+  width: 33%;
+  max-width: 390px;
+  margin: 0 30px 150px 0;
+  padding: 0;
+  transition: transform $normal-transition, background $normal-transition, box-shadow $normal-transition;
+
+  img {
+    width: 100%;
+  }
+
+  .blog-entry-info {
+    padding: 25px;
+    a {
+      color: #FFF;
+    }
+    .blog-entry-title {
+      font-size: 28px;
+      line-height: 40px;
+      padding: 40px 0 60px 0;
+      font-weight: 600;
+    }
+    .blog-entry-author {
+      font-size: 14px;
+      font-weight: 600;
+      float: left;
+      padding-bottom: 25px;
+    }
+    .blog-entry-date {
+      font-size: 14px;
+      font-weight: 600;
+      float: right;
+    }
+  }
+  &:hover {
+    box-shadow: 0px 15px 15px rgba(0,0,0,.75);
+    background: $black;
+    transform: translateY(-15px);
+  }
+}
