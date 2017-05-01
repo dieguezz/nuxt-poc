@@ -285,13 +285,13 @@
     position: relative;
     width: 100vw;
     height: 750px;
-    background: red;
+    background: $black;
     display: block;
     margin: 50px 0 100px 0;
     background-size: auto 100vw;
     background-attachment: fixed;
     background-position: center center;
-    background-image: url('https://images.unsplash.com/photo-1482851775390-6d84f5f6cf61?dpr=1&auto=format&fit=crop&w=1500&h=1002&q=80&cs=tinysrgb&crop=&bg=');
+    background-image: url('/images/blog/posts/post-demo.jpg');
   }
 }
 
