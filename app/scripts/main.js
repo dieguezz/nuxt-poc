@@ -123,3 +123,7 @@ $(window).scroll(function() {
   var scrolledY = $(window).scrollTop();
   $('.slider-blog .slider-unit').css('background-position', 'left ' + ((scrolledY)) + 'px');
 });
+
+$('.blog-entry-page header').addClass('inverse');
+$('.blog-entry-page p').addClass('reveal');
+$('.blog-entry-page h3').addClass('reveal');

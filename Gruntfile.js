@@ -200,6 +200,7 @@ module.exports = function(grunt) {
           '.tmp/contact/index.html': '<%= appConfig.app %>/contact/index.html',
           '.tmp/people/index.html': '<%= appConfig.app %>/people/index.html',
           '.tmp/blog/index.html': '<%= appConfig.app %>/blog/index.html',
+          '.tmp/blog/entry.html': '<%= appConfig.app %>/blog/entry.html',
           '.tmp/privacy-policy/index.html': '<%= appConfig.app %>/privacy-policy/index.html'
         }]
       },
@@ -211,6 +212,7 @@ module.exports = function(grunt) {
           '<%= appConfig.dist %>/contact/index.html': '<%= appConfig.app %>/contact/index.html',
           '<%= appConfig.dist %>/people/index.html': '<%= appConfig.app %>/people/index.html',
           '<%= appConfig.dist %>/blog/index.html': '<%= appConfig.app %>/blog/index.html',
+          '<%= appConfig.dist %>/blog/entry.html': '<%= appConfig.app %>/blog/entry.html',
           '<%= appConfig.dist %>/privacy-policy/index.html': '<%= appConfig.app %>/privacy-policy/index.html',
         }
       }
@@ -228,6 +230,7 @@ module.exports = function(grunt) {
           '.tmp/contact/index.html': '.tmp/contact/index.html',
           '.tmp/people/index.html': '.tmp/people/index.html',
           '.tmp/blog/index.html': '.tmp/blog/index.html',
+          '.tmp/blog/entry.html': '.tmp/blog/entry.html',
           '.tmp/privacy-policy/index.html': '.tmp/privacy-policy/index.html'
         }
       },
@@ -239,6 +242,7 @@ module.exports = function(grunt) {
           'dist/contact/index.html': '<%= appConfig.dist %>/contact/index.html',
           'dist/people/index.html': '<%= appConfig.dist %>/people/index.html',
           'dist/blog/index.html': '<%= appConfig.dist %>/blog/index.html',
+          'dist/blog/entry.html': '<%= appConfig.dist %>/blog/entry.html',
           'dist/privacy-policy/index.html': '<%= appConfig.dist %>/privacy-policy/index.html'
         }
       }
@@ -379,6 +383,7 @@ module.exports = function(grunt) {
           'dist/company/index.html': 'dist/company/index.html',
           'dist/people/index.html': 'dist/people/index.html',
           'dist/blog/index.html': 'dist/blog/index.html',
+          'dist/blog/entry.html': 'dist/blog/entry.html',
           'dist/contact/index.html': 'dist/contact/index.html',
           'dist/new-project/index.html': 'dist/new-project/index.html',
           'dist/privacy-policy/index.html': 'dist/privacy-policy/index.html'
