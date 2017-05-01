@@ -293,6 +293,14 @@
     background-position: center center;
     background-image: url('/images/blog/posts/post-demo.jpg');
   }
+
+  iframe {
+    display: block;
+    margin: 50px auto 100px auto;
+    max-width: 1080px;
+    width: 100%;
+    height: 608px;
+  }
 }
 
 .blog-share {
