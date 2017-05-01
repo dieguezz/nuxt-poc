@@ -127,3 +127,5 @@ $(window).scroll(function() {
 $('.blog-entry-page header').addClass('inverse');
 $('.blog-entry-page p').addClass('reveal');
 $('.blog-entry-page h3').addClass('reveal');
+$('.blog-entry-page .navigation').css('display','none');
+$('.blog-entry-page .navigation-mobile').css('display','block');
