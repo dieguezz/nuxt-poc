@@ -419,3 +419,27 @@
     }
   }
 }
+
+.disqus-container {
+  background: #FFF;
+  padding-top: 150px;
+  a,
+  a:visited,
+  a:hover {
+    color: $black;
+    font-weight: bold;
+    text-decoration: none;
+  }
+
+a:hover {
+text-decoration: underline;
+}
+  #disqus_thread {
+    width: 90%;
+    max-width: 750px;
+    margin: 0 auto;
+    .comment__header .author a {
+      color: $black!important;
+    }
+  }
+}
