@@ -257,24 +257,21 @@
 
 .blog-post {
   padding: 250px 0 100px 0;
-  .container {
-    max-width: 750px;
-    padding: 0;
-  }
+  
   .blog-entry-category {
     &::before {
       background: url('/images/blog/tag-black.svg');
     }
   }
 
-  h2 {
+  h1 {
     @media all and (max-width: 600px) {
       font-size: 42px!important;
       line-height: 52px!important;
     }
   }
 
-  h3 {
+  h2 {
     font-family: 'Merriweather', serif;
     font-size: 28px;
     line-height: 42px;
@@ -287,38 +284,50 @@
       padding: 45px 0;
     }
   }
-  p {
-    font-size: 21px;
-    line-height: 42px;
-    font-family: 'Merriweather', serif;
-    font-weight: 100;
-    padding-bottom: 50px!important;
-    @media all and (max-width: 600px) {
-      font-size: 16px;
-      line-height: 32px;
-      padding-bottom: 30px!important;
+
+  .post-meta{
+    .post-date{
+      
     }
   }
+  
+  .post-content{
+    max-width: 750px;
+    padding: 0;
 
-  .big-image {
-    width: 100%;
-    max-width: 1080px;
-    display: block;
-    margin: 50px auto 100px auto;
-    @media all and (max-width: 600px) {
-      margin: 20px auto 50px auto;
+    p {
+      font-size: 21px;
+      line-height: 42px;
+      font-family: 'Merriweather', serif;
+      font-weight: 100;
+      padding-bottom: 50px!important;
+      @media all and (max-width: 600px) {
+        font-size: 16px;
+        line-height: 32px;
+        padding-bottom: 30px!important;
+      }
     }
-  }
 
-  iframe {
-    display: block;
-    margin: 50px auto 100px auto;
-    max-width: 1080px;
-    width: 100%;
-    height: 608px;
-    @media all and (max-width: 600px) {
-      margin: 20px auto 50px auto;
-      height: 350px;
+    img {
+      width: 100%;
+      max-width: 1080px;
+      display: block;
+      margin: 50px auto 100px auto;
+      @media all and (max-width: 600px) {
+        margin: 20px auto 50px auto;
+      }
+    }
+
+    iframe {
+      display: block;
+      margin: 50px auto 100px auto;
+      max-width: 1080px;
+      width: 100%;
+      height: 608px;
+      @media all and (max-width: 600px) {
+        margin: 20px auto 50px auto;
+        height: 350px;
+      }
     }
   }
 }
