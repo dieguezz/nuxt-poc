@@ -340,6 +340,16 @@
       display: inline-block;
       padding-left: 25px;
     }
+    @media all and (max-width: 400px) {
+      margin-left: 0;
+      display: block;
+      margin-top: 25px;
+      li {
+        &:first-child {
+          padding-left: 0;
+        }
+      }
+    }
   }
 }
 
@@ -392,5 +402,20 @@
     border-color: $black;
     vertical-align: middle;
     margin-left: -10px;
+  }
+  @media all and (max-width: 650px) {
+    input {
+      width: 250px;
+    }
+  }
+  @media all and (max-width: 510px) {
+    input {
+      width: calc(100% - 40px);
+      margin-left: -10px;
+    }
+    button {
+      width: 100%;
+      margin-left: 0;
+    }
   }
 }
