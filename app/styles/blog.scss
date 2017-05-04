@@ -1,10 +1,11 @@
-@import "_reset.scss";
-@import "_variables.scss";
-@import "_utils.scss";
-@import "_colors.scss";
-@import "_transitions.scss";
-@import "_links.scss";
-@import "_typography.scss";
-@import "_layout.scss";
+@import "reset";
+@import "variables";
+@import "utils";
+@import "colors";
+@import "transitions";
+@import "links";
+@import "typography";
+@import "layout";
 // modules in alphabetic order
-@import "modules/_blog.scss";
+@import "modules/blog";
+@import "modules/footer"
