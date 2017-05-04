@@ -40,9 +40,12 @@ body {
 }
 
 
-/* Sections */
+/* Sections: We use the class instead of the tag because
+  the tag can be used for semantic purposes. 
+  And this class is for styling some sections
+ */
 
-section {
+.section {
   padding: 250px 0;
   background: #FFF;
   @media all and (max-width: 600px) {
