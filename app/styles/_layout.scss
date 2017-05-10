@@ -88,3 +88,20 @@ body {
     }
   }
 }
+
+
+/* Not Home Page*/
+
+section {
+  h2, .scroll-appear {
+    font-size: 48px;
+    font-weight: 500;
+    line-height: 70px;
+    letter-spacing: 2px;
+    max-width: 720px;
+    .line[index="1"], .line[index="2"], .line[index="3"] {}
+    @media screen and (max-width: 600px) {
+      font-size: 36px;
+    }
+  }
+}
