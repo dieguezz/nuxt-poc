@@ -6,6 +6,11 @@
     line-height: 82px;
     letter-spacing: 1px;
     max-width: 700px;
+
+    a{
+      color:white;
+      cursor:pointer;
+    }
   }
 }
 
@@ -444,11 +449,34 @@
       outline: none;
     }
   }
+  .form-group{
+    display:inline-block;
+
+  }
   button {
     display: inline-block;
     border-color: $black;
     vertical-align: middle;
     margin-left: -10px;
+
+    padding: 15px 25px;
+    font-size: 14px;
+    border: 2px solid inherit;
+    outline: none;
+    -webkit-tab-highlight-color: none;
+    background: #171A1C;
+    color: #FFF;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    display: inline-block;
+    font-weight: 600;
+    transition: background 0.35s ease-in-out, color 0.35s ease-in-out, transform 0.35s ease-in-out, border 0.35s ease-in-out;
+
+    position: relative;
+    height: auto;
+    outline: none;
+    -webkit-tab-highlight-color: none;
+    cursor: pointer;
   }
   @media all and (max-width: 650px) {
     input {
