@@ -11,6 +11,7 @@ header {
     h1 {
       background: url('../images/logo.svg');
       background-size: cover;
+      background-position: center;
     }
     .navigation {
       ul {
@@ -61,6 +62,7 @@ header {
     height: 36px;
     text-indent: -99999px;
     background-size: cover;
+    background-position: center;
   }
   .navigation {
     float: right;
