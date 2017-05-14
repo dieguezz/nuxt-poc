@@ -5,7 +5,8 @@
       'home': 'inicio',
       'company': 'empresa',
       'people': 'equipo',
-      'contact': 'contacto'
+      'contact': 'contacto',
+      'blog': 'blog'
     },
     'cookies': {
       'bar': 'Usamos cookies para asegurarte la mejor experiencia en nuestra web.',

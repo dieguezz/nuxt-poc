@@ -1,0 +1,445 @@
+/* BLOG BASIC SETUP */
+.blog {
+  position: relative;
+  margin-bottom: 300px;
+  padding: 0 0 150px 0;
+  .container {
+    padding: 0;
+    max-width: 1240px;
+    position: relative;
+  }
+  .load-more-entries {
+    background: transparent;
+    border-color: #FFF;
+    color: #FFF;
+    display: table;
+    margin: 0 auto;
+    &::after {
+      background: #FFF;
+    }
+  }
+  .next-slide {
+    position: absolute;
+    top: 50%;
+    right: 0;
+    svg {
+      fill: #FFF;
+      transform: rotate(-90deg);
+    }
+    @media all and (max-width: 600px) {
+      display: none;
+    }
+  }
+}
+
+/* FEATURED BLOG ENTRIES SLIDER */
+
+.slider-blog {
+  .slider-unit {
+    width: 100%;
+    background: url('/images/blog/entries/entry-featured.png');
+    background-size: cover;
+    padding: 250px 0;
+    position: relative;
+    @media all and (max-width: 600px) {
+      padding: 150px 0 100px 0;
+    }
+    &::before {
+      content: '';
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+      background: linear-gradient(rgba(23,26,28,0.82) 38%, $black 96%);
+      z-index: 0;
+    }
+    h2 {
+      position: relative;
+      margin: 25px 0;
+      @media all and (max-width: 600px) {
+        font-size: 36px;
+        line-height: 52px;
+      }
+    }
+    .blog-entry-data {
+      position: relative;
+      .blog-entry-data-picture {
+        display: inline-block;
+        vertical-align: middle;
+        width: 40px;
+        height: 40px;
+        background: url('/images/people/hayder.jpg');
+        background-size: 150%;
+        background-position: 30% 40%;
+        border-radius: 50%;
+      }
+      .blog-entry-data-info {
+        display: inline-block;
+        vertical-align: middle;
+        padding-left: 5px;
+        .blog-entry-data-author {
+          display: block;
+          font-size: 14px;
+          font-size: 600;
+          padding-bottom: 5px;
+        }
+        .blog-entry-data-date {
+          display: block;
+          font-size: 14px;
+          font-size: 100;
+        }
+      }
+    }
+  }
+}
+
+/* BLOG CATEGORIES */
+
+.blog-entries-categories {
+  margin: 0 auto 150px auto;
+  display: block;
+  text-align: center;
+  ul {
+    li {
+      display: inline-block;
+      padding-right: 50px;
+      &:last-child {
+        padding-right: 0;
+      }
+      a {
+        text-transform: uppercase;
+        color: #FFF;
+        font-size: 16px;
+        letter-spacing: 2px;
+        font-weight: 600;
+      }
+    }
+  }
+  @media all and (max-width: 600px){
+    margin: 0 auto 100px auto;
+    ul {
+      li {
+        padding-right: 15px;
+        a {
+          font-size: 12px;
+        }
+      }
+    }
+  }
+}
+
+/* CATEGORY NAME WITH ICON TAG */
+
+.blog-entry-category {
+  font-size: 14px;
+  font-weight: 600;
+  text-transform: uppercase;
+  position: relative;
+  padding-left: 25px;
+  &::before {
+    content: '';
+    background: url('/images/blog/tag.svg');
+    background-size: cover;
+    position: absolute;
+    width: 15px;
+    height: 15px;
+    left: 0;
+    top: 2px;
+  }
+}
+
+
+/* BLOG ENTRY UNIT */
+
+.blog-entries-list {
+  display: block;
+  text-align: center;
+}
+
+.blog-entry-unit {
+  background: #121416;
+  display: inline-block;
+  vertical-align: top;
+  text-align: left;
+  width: 32%;
+  max-width: 390px;
+  margin: 0 1% 150px 0;
+  padding: 0;
+  transition: transform $normal-transition, background $normal-transition, box-shadow $normal-transition;
+  &:nth-of-type(3), &:nth-of-type(6) {
+    margin-right: 0;
+  }
+  @media all and (max-width: 960px){
+    &:nth-of-type(3) {
+      margin-right: 1%;
+    }
+    &:nth-of-type(even) {
+      margin-right: 0;
+    }
+  }
+  .blog-entry-category {
+    color: #FFF;
+  }
+  .vision-details {
+    position: absolute;
+    bottom: 0;
+    padding: 25px;
+    h6 {
+      color: #FFF;
+      font-size: 21px;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      line-height: 26px;
+      text-shadow: 0px 0px 15px rgba(0,0,0,.5);
+      font-weight: 600;
+      small {
+        font-size: 14px;
+        display: block;
+        letter-spacing: 2px;
+        color: #FFF;
+      }
+      span {
+        display: block;
+        color: #FFF;
+      }
+    }
+  }
+  a {
+    position: relative;
+    display: block;
+  }
+  img {
+    width: 100%;
+  }
+
+  .blog-entry-info {
+    padding: 25px;
+    a {
+      color: #FFF;
+    }
+    .blog-entry-title {
+      font-size: 28px;
+      line-height: 40px;
+      padding: 40px 0 60px 0;
+      font-weight: 600;
+      color: #FFF;
+    }
+    .blog-entry-author {
+      font-size: 14px;
+      font-weight: 600;
+      float: left;
+      padding-bottom: 25px;
+      color: #FFF;
+    }
+    .blog-entry-date {
+      font-size: 14px;
+      font-weight: 600;
+      float: right;
+      color: #FFF;
+    }
+  }
+  &:hover {
+    box-shadow: 0px 15px 15px rgba(0,0,0,.75);
+    background: $black;
+    transform: translateY(-15px);
+  }
+  @media all and (max-width: 960px) {
+    width: 45%;
+  }
+  @media all and (max-width: 600px) {
+    width: 90%;
+    margin: 0 0 50px 0;
+  }
+}
+
+/* BLOG ENTRY POST */
+
+.blog-post {
+  padding: 250px 0 100px 0;
+  .container {
+    max-width: 750px;
+    padding: 0;
+  }
+  .blog-entry-category {
+    &::before {
+      background: url('/images/blog/tag-black.svg');
+    }
+  }
+
+  h2 {
+    @media all and (max-width: 600px) {
+      font-size: 42px!important;
+      line-height: 52px!important;
+    }
+  }
+
+  h3 {
+    font-family: 'Merriweather', serif;
+    font-size: 28px;
+    line-height: 42px;
+    letter-spacing: 0px;
+    font-style: italic;
+    padding: 90px 0;
+    @media all and (max-width: 600px) {
+      font-size: 23px;
+      line-height: 36px;
+      padding: 45px 0;
+    }
+  }
+  p {
+    font-size: 21px;
+    line-height: 42px;
+    font-family: 'Merriweather', serif;
+    font-weight: 100;
+    padding-bottom: 50px!important;
+    @media all and (max-width: 600px) {
+      font-size: 16px;
+      line-height: 32px;
+      padding-bottom: 30px!important;
+    }
+  }
+
+  .big-image {
+    width: 100%;
+    max-width: 1080px;
+    display: block;
+    margin: 50px auto 100px auto;
+    @media all and (max-width: 600px) {
+      margin: 20px auto 50px auto;
+    }
+  }
+
+  iframe {
+    display: block;
+    margin: 50px auto 100px auto;
+    max-width: 1080px;
+    width: 100%;
+    height: 608px;
+    @media all and (max-width: 600px) {
+      margin: 20px auto 50px auto;
+      height: 350px;
+    }
+  }
+}
+
+.blog-share {
+  position: relative;
+  width: 100%;
+  text-align: center;
+  background: #FFF;
+  padding-bottom: 100px;
+  small {
+    font-size: 24px;
+    display: inline-block;
+  }
+  ul {
+    display: inline-block;
+    margin-left: 25px;
+    li {
+      display: inline-block;
+      padding-left: 25px;
+    }
+    @media all and (max-width: 400px) {
+      margin-left: 0;
+      display: block;
+      margin-top: 25px;
+      li {
+        &:first-child {
+          padding-left: 0;
+        }
+      }
+    }
+  }
+}
+
+.blog-author {
+  position: relative;
+  width: 100%;
+  text-align: center;
+  background: #FFF;
+  .author-pic {
+    display: block;
+    width: 90px;
+    height: 90px;
+    background: url('/images/people/hayder.jpg');
+    background-size: cover;
+    border-radius: 50%;
+    margin: 0 auto 25px auto;
+  }
+  .author-name {
+    display: block;
+    font-size: 18px;
+    font-weight: 600;
+    padding-bottom: 7px;
+  }
+  .author-title {
+    display: block;
+    font-size: 14px;
+    font-weight: 600;
+  }
+}
+
+.blog-related {
+  text-align: center;
+  padding: 150px 0 0 0;
+}
+
+.blog-subscribe {
+  input {
+    display: inline-block;
+    padding: 13px 23px 13px 13px;
+    font-size: 18px;
+    width: 350px;
+    vertical-align: middle;
+    margin-right: -10px;
+    &:focus {
+      outline: none;
+    }
+  }
+  button {
+    display: inline-block;
+    border-color: $black;
+    vertical-align: middle;
+    margin-left: -10px;
+  }
+  @media all and (max-width: 650px) {
+    input {
+      width: 250px;
+    }
+  }
+  @media all and (max-width: 510px) {
+    input {
+      width: calc(100% - 40px);
+      margin-left: -10px;
+    }
+    button {
+      width: 100%;
+      margin-left: 0;
+    }
+  }
+}
+
+.disqus-container {
+  background: #FFF;
+  padding-top: 150px;
+  a,
+  a:visited,
+  a:hover {
+    color: $black;
+    font-weight: bold;
+    text-decoration: none;
+  }
+
+a:hover {
+text-decoration: underline;
+}
+  #disqus_thread {
+    width: 90%;
+    max-width: 750px;
+    margin: 0 auto;
+    .comment__header .author a {
+      color: $black!important;
+    }
+  }
+}
