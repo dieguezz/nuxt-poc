@@ -1,12 +1,12 @@
 {
   "name": "et\u00e9reo",
   "icons": [{
-      "src": "/images/icons/android-chrome-192x192.00adbeab.png",
+      "src": "/images/icons/android-chrome-192x192.530c76b5.png",
       "sizes": "192x192",
       "type": "image/png"
     },
     {
-      "src": "/images/icons/android-chrome-512x512.8609ac86.png",
+      "src": "/images/icons/android-chrome-512x512.644e9c28.png",
       "sizes": "512x512",
       "type": "image/png"
     }
