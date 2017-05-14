@@ -7,10 +7,10 @@
     letter-spacing: 1px;
     max-width: 700px;
 
-    a{
-      color:white;
-      cursor:pointer;
-    }
+  }
+  a{
+    color:white;
+    cursor:pointer;
   }
 }
 
@@ -153,16 +153,23 @@
   padding-left: 25px;
   &::before {
     content: '';
-    background: url('/images/blog/tag.svg');
+    background: url('/assets/images/blog/tag.svg'), url('/images/blog/tag.svg');
     background-size: cover;
     position: absolute;
     width: 15px;
     height: 15px;
     left: 0;
-    top: 2px;
+    top: 1px;
   }
   a {
     color: black;
+    display: inherit !important;
+
+  }
+  &.white{
+    a{
+       color: white;
+    } 
   }
 }
 
@@ -277,7 +284,7 @@
   
   .blog-entry-category {
     &::before {
-      background: url('/images/blog/tag-black.svg');
+      background: url('/images/blog/tag-black.svg'),  url('/assets/images/blog/tag-black.svg');
     }
   }
 
