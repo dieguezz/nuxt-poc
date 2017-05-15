@@ -36,6 +36,9 @@ header {
   transition: top $normal-transition;
   &.mobile-appear {
     margin-top: 50px;
+    @media all and (max-width: 490px) {
+      margin-top: 15px;
+    }
     h1 {
       opacity: 0;
       visibility: hidden;
