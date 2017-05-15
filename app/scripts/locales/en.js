@@ -2,11 +2,11 @@
 
   var locales = {
     'nav': {
-      'home': 'home',
-      'company': 'company',
-      'people': 'people',
-      'contact': 'contact',
-      'blog': 'blog'
+      'home': 'Home',
+      'company': 'Company',
+      'people': 'People',
+      'contact': 'Contact',
+      'blog': 'Blog'
     },
     'cookies': {
       'bar': 'We use cookies to ensure you get the best experience on the etereo’s site.',

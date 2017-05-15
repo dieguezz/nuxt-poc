@@ -2,11 +2,11 @@
 
   var locales = {
     'nav': {
-      'home': 'inicio',
-      'company': 'empresa',
-      'people': 'equipo',
-      'contact': 'contacto',
-      'blog': 'blog'
+      'home': 'Inicio',
+      'company': 'Empresa',
+      'people': 'Equipo',
+      'contact': 'Contacto',
+      'blog': 'Blog'
     },
     'cookies': {
       'bar': 'Usamos cookies para asegurarte la mejor experiencia en nuestra web.',
