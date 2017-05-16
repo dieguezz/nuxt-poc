@@ -12,7 +12,6 @@ $bar-spacing: 10px;
   width: $bar-width;
   height: $bar-height + $bar-spacing*2;
   cursor: pointer;
-  display: none;
   @media all and (max-width: 740px) {
     display: block;
   }
