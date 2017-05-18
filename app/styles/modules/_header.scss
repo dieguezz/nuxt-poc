@@ -8,7 +8,7 @@ header {
   transform: translateX(-50%);
   z-index: 150;
   &.inverse {
-    h1 {
+    h1.logo {
       background: url('../images/logo.svg');
       background-size: cover;
       background-position: center;
