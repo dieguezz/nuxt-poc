@@ -2,7 +2,7 @@
 
   $(document).ready(function() {
 
-    $('.language-switcher a').click(function(event) {
+    $('.content-language a').click(function(event) {
       event.preventDefault();
       setLang($(event.target).data('lang'));
     });
@@ -10,8 +10,8 @@
     function setLang(lang) {
       localStorage.setItem('lang', lang);
       i18njs.setLang(lang);
-      $('.language-switcher .active').removeClass('active').addClass('second');
-      $('.language-switcher a[data-lang="' + lang + '"]').addClass('active').removeClass('second');
+      $('.content-language .active').removeClass('active').addClass('second');
+      $('.content-language a[data-lang="' + lang + '"]').addClass('active').removeClass('second');
       $('*[data-locale]:not([data-locale-attr])').each(function(index, item) {
         var localized = i18njs.get($(item).data('locale'));
         $(item).html(localized);
