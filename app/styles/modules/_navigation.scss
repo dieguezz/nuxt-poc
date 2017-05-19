@@ -173,6 +173,7 @@
             color: $black;
             span {
               transition: opacity $normal-transition;
+              cursor: pointer;
             }
             &:hover {
               span {

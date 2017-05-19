@@ -2,7 +2,7 @@
 
   $(document).ready(function() {
 
-    $('.content-language a').click(function(event) {
+    $('.content-language *[data-lang]').click(function(event) {
       event.preventDefault();
       setLang($(event.target).data('lang'));
     });
@@ -10,8 +10,6 @@
     function setLang(lang) {
       localStorage.setItem('lang', lang);
       i18njs.setLang(lang);
-      $('.content-language .active').removeClass('active').addClass('second');
-      $('.content-language a[data-lang="' + lang + '"]').addClass('active').removeClass('second');
       $('*[data-locale]:not([data-locale-attr])').each(function(index, item) {
         var localized = i18njs.get($(item).data('locale'));
         $(item).html(localized);
