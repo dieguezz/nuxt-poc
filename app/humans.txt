@@ -1,0 +1,33 @@
+
+
+/* TEAM */
+
+Agency: etereo
+
+Site: etereo.io
+
+Location: Madrid, Spain
+
+Hayder Al-Deen
+
+Anthanh Pham
+
+Daniel García
+
+Diego Segura
+
+Rafael Pedrola
+
+Ismael Maridolas
+
+Ruben Carrasco
+
+Twitter: etereoio
+
+/* SITE */
+
+Last update: 2017/06/01
+
+Standards: HTML5, CSS3, JS
+
+Components: jQuery.
