@@ -412,6 +412,7 @@ module.exports = function(grunt) {
             'CNAME',
             '.htpasswd',
             '!*.html',
+            'google*.html',
             'statics/{,*/}*.html',
             '!statics/{,*/}*.mock.html',
             'images/{,**/}*',
