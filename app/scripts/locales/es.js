@@ -28,7 +28,7 @@
       'soon': 'Caso de estudio Próximamente',
       'slide0': {
         'title': 'Somos etéreo',
-        'subtitle': 'Una agencia de producto digital diferente',
+        'subtitle': 'Making the real Digital Evolution',
         'link': 'Cónocenos'
       },
       'slide1': {
@@ -55,7 +55,7 @@
       },
       'about': {
         'title': 'Experiencias sublimes con valor duradero.',
-        'subtitle': 'etéreo es una agencia de productos digitales ubicada en Madrid, que trabaja con clientes de todo el mundo. Con un equipo de expertos en todas las áreas, desde conceptualización, diseño y tecnología, potenciamos a las empresas a dar el salto digital.<br><br>Te ayudamos a construir productos digitales y experiencias de vanguardia con un valor duradero.'
+        'subtitle': 'Etéreo es una agencia de productos digitales ubicada en Madrid, que trabaja con clientes de todo el mundo. Con un equipo de expertos en todas las áreas, desde conceptualización, diseño y tecnología hasta competencia corporativa, potenciamos a las empresas a crear la evolución digital.<br><br>Te ayudamos a construir productos digitales y experiencias de vanguardia con un valor duradero.'
       },
       'services': {
         'title': 'Combinando estrategia, diseño y desarrollo para revelar la esencia de tus ideas.',
@@ -135,12 +135,15 @@
         },
       },
       'people': {
-        'title': 'Los etereotipos: los locos que hacen posible todo esto.',
+        'title': 'Los etereotipos: creando comunidad a través del ejemplo.',
         'hayder': {
           'title': 'El Diseñador Empedernido'
         },
         'ruben': {
           'title': 'El Todoterreno'
+        },
+        'huibert': {
+          'title': 'La Mente Pensante'
         },
         'daniel': {
           'title': 'El Jóven ingeniero'
