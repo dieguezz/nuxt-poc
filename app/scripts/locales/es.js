@@ -55,7 +55,7 @@
       },
       'about': {
         'title': 'Experiencias sublimes con valor duradero.',
-        'subtitle': 'Etéreo es una agencia de productos digitales ubicada en Madrid, que trabaja con clientes de todo el mundo. Con un equipo de expertos en todas las áreas, desde conceptualización, diseño y tecnología hasta competencia corporativa, potenciamos a las empresas a crear la evolución digital.<br><br>Te ayudamos a construir productos digitales y experiencias de vanguardia con un valor duradero.'
+        'subtitle': 'El equipo etéreo tiene una enorme ambición y pasión por crear grandes productos. Somos un equipo de personas con talento. Compartimos valores y somos capaces de crear cualquier idea relacionada con la tecnología digital. Somos diseñadores, ingenieros, creativos, artesanos, programadores y pensadores.<br><br>Sabemos producir sinergias que garantizan equipos dinámicos de alto rendimiento, donde priman la equidad, la flexibilidad y la libertad.<br> <br> Hagamos algo increíble.'
       },
       'services': {
         'title': 'Combinando estrategia, diseño y desarrollo para revelar la esencia de tus ideas.',
