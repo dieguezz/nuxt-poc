@@ -27,9 +27,6 @@ $(document).ready(function() {
     $('.bar').toggleClass('animate');
     $('.mobile-menu').toggleClass('appear');
     $('header').toggleClass('mobile-appear');
-    $('.overlay-menu').toggleClass('appear');
-    $('body').toggleClass('lock');
-
   });
 });
 

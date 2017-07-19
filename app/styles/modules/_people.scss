@@ -351,6 +351,7 @@
         }
       }
       &.people-join {
+        width: calc( (290px * 2) + ((100% - 120px - ((315px - 2em) * 3)) / 2));
         background-color: $gray-lighter;
         text-align: center;
         display: flex;
@@ -362,13 +363,12 @@
           width: 290px;
         }
         p {
-          font-size: 28px;
-          line-height: 36px;
+          font-size: 32px;
+          line-height: 42px;
           font-weight: 600;
           max-width: 500px;
           letter-spacing: 1.5px;
           margin-bottom: 1em;
-          padding: 0 10px;
         }
         .link {
           background-color: transparent;
