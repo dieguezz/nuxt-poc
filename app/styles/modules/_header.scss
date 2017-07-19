@@ -35,10 +35,18 @@ header {
   margin-top: 50px;
   transition: top $normal-transition;
   &.mobile-appear {
-    margin-top: 15px;
+    margin-top: 50px;
+    @media all and (max-width: 490px) {
+      margin-top: 15px;
+    }
     h1 {
       opacity: 0;
       visibility: hidden;
+      background-image: url('/images/logo.svg');
+      @media all and (max-width: 785px) {
+        opacity: 1;
+        visibility: visible;
+      }
     }
     .navigation-mobile {
       .bar {
