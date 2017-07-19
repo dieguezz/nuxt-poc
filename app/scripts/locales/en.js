@@ -27,8 +27,8 @@
     'home': {
       'soon': 'Case Study Coming Soon',
       'slide0': {
-        'title': 'We are etéreo',
-        'subtitle': 'A digital product agency made different',
+        'title': 'We are Etéreo',
+        'subtitle': 'Making the real Digital Evolution',
         'link': 'Get to know us'
       },
       'slide1': {
@@ -55,7 +55,7 @@
       },
       'about': {
         'title': 'Resonating experiences with lasting value.',
-        'subtitle': 'etéreo is a digital product agency in Madrid, serving customers around the world. With a team of experts in all areas ranging from conceptualization, design and technology we empower companies to take the next leap.<br><br>We help you build cutting-edge, thoughtful, purposeful digital products and experiences with lasting value.'
+        'subtitle': 'Etéreo is a digital product agency in Madrid, serving customers around the world. With a team of experts – from conceptualisation, design, technology to business expertise – we empower companies to make the digital evolution.<br><br>We help you build cutting-edge, thoughtful, purposeful digital products and experiences with lasting value.'
       },
       'services': {
         'title': 'Combining strategy, design and development to reveal the essence of your ideas.',
@@ -135,12 +135,15 @@
         },
       },
       'people': {
-        'title': 'The etéreotypes: these are the crazy guys that make this possible.',
+        'title': 'The etéreotypes: creating community through example.',
         'hayder': {
           'title': 'The Inveterate Designer'
         },
         'ruben': {
           'title': 'The All Road Guy'
+        },
+        'huibert': {
+          'title': 'The Thinking Mind'
         },
         'daniel': {
           'title': 'The Young Engineer'
@@ -158,7 +161,7 @@
           'title': 'The One Man Army'
         },
         'join': {
-          'title': 'We are always eager to meet awesome talent.',
+          'title': 'Always eager to meet talents.',
           'action': 'DROP US A LINE'
         }
       },
@@ -179,7 +182,7 @@
       },
       'contact1': {
         'title': 'Careers',
-        'subtitle': 'We are always eager to meet awesome creative talent.',
+        'subtitle': 'Always eager to meet awesome creative talent.',
         'link': 'Introduce yourself'
       },
       'contact2': {
