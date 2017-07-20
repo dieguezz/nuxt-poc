@@ -16,6 +16,7 @@
         var localized = i18njs.get($(item).data('locale'));
         $(item).html(localized);
       });
+      
       $('*[data-locale-attr]').each(function(index, item) {
         var attr = i18njs.get($(item).data('locale-attr'));
         var localized = i18njs.get($(item).data('locale'));
