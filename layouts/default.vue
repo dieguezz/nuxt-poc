@@ -3,7 +3,11 @@
     <nuxt/>
   </div>
 </template>
-
+<script>
+export default {
+  middleware: 'i18n'
+}
+</script>
 <style>
 html
 {

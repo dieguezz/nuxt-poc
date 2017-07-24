@@ -13,6 +13,12 @@ module.exports = {
   */
   loading: { color: '#3B8070' },
   /*
+  ** Router
+  */
+  router: {
+    middleware: 'i18n'
+  },
+  /*
   ** Customize app manifest
   */
   manifest: {
@@ -23,5 +29,13 @@ module.exports = {
   */
   modules: [
     '@nuxtjs/pwa'
-  ]
+  ],
+  /*
+  ** Plugins
+  */
+  plugins: ['~/plugins/i18n.js'],
+  /*
+  ** Vendor
+  */
+  vendor: ['vue-i18n']
 }

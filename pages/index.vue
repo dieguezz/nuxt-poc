@@ -6,7 +6,7 @@
         NUXT
       </h1>
       <h2 class="subtitle">
-        PWA Vue.js Application
+        {{$t('what')}} PWA Vue.js Application
       </h2>
       <div :class="['network',online ? 'online' : 'offline']">
         <div class="circle"></div>
@@ -16,15 +16,17 @@
         <a href="https://nuxtjs.org/" target="_blank" class="button--green" rel="noopener">Documentation</a>
         <a href="https://github.com/nuxt/nuxt.js" target="_blank" class="button--grey" rel="noopener">GitHub</a>
       </div>
+      <language-switcher></language-switcher>
     </div>
   </section>
 </template>
 
 <script>
   import Logo from '~components/Logo.vue'
+  import LanguageSwitcher from '~components/Language-switcher.vue'
 
   export default {
-    components: {Logo},
+    components: {Logo, LanguageSwitcher},
     data () {
       return {
         online: true
