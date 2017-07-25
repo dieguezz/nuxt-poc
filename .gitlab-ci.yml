@@ -10,7 +10,7 @@ build:
   script:
     - npm install -g s3-deploy
     - npm install
-    - BASE_URL="http://test2.etereo.io" npm run generate
-    - s3-deploy './dist/*' --etag --cache 31536000 --cwd './dist/' --gzip --region $AWS_REGION --bucket $AWS_BUCKET_TEST2
+    - npm run generate-test
+    - s3-deploy './dist/**' --etag --cache 31536000 --cwd './dist/' --gzip --region $AWS_REGION --bucket $AWS_BUCKET_TEST2
   only:
     - etereo-next
