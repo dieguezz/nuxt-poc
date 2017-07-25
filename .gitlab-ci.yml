@@ -1,3 +1,10 @@
+image: node:7.10.0
+
+stages:
+  - setup
+  - test
+  - build
+  - deploy
 build:
   stage: build
   script:
