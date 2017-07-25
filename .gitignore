@@ -1,3 +1,4 @@
 .tmp
 .nuxt
 node_modules
+dist
