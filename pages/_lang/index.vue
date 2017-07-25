@@ -3,18 +3,16 @@
     <div>
       <logo/>
       <h1 class="title">
-        NUXT
+        etereo
       </h1>
       <h2 class="subtitle">
-        {{$t('what')}} PWA Vue.js Application
+        {{$t('tagline')}}
       </h2>
+
       <div :class="['network',online ? 'online' : 'offline']">
         <div class="circle"></div>
+        <span>Network Status:</span>
         {{ online ? 'online' : 'offline' }}
-      </div>
-      <div class="links">
-        <a href="https://nuxtjs.org/" target="_blank" class="button--green" rel="noopener">Documentation</a>
-        <a href="https://github.com/nuxt/nuxt.js" target="_blank" class="button--grey" rel="noopener">GitHub</a>
       </div>
     </div>
   </section>
