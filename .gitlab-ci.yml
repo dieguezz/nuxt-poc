@@ -8,6 +8,7 @@ stages:
 build:
   stage: build
   script:
+    - npm install -g s3-deploy
     - npm install
     - npm run generate
     - s3-deploy './dist/*' --etag --cache 31536000 --cwd './dist/' --gzip --region $AWS_REGION --bucket $AWS_BUCKET_TEST2
