@@ -37,5 +37,8 @@ module.exports = {
   /*
   ** Vendor
   */
-  vendor: ['vue-i18n']
+  vendor: ['vue-i18n'],
+  css: [
+    '~/css/main.scss'
+  ]
 }
