@@ -1,37 +1,43 @@
 <template>
   <div class="language-switcher">
-    <ul>
-      <li><button @click="setLang('en')">{{$t('english')}}</button></li>
-      <li><button @click="setLang('es')">{{$t('spanish')}}</button></li>
-    </ul>
+    <nav>
+      <ul>
+        <h1 class="hidden">{{$t('changeLang')}}</h1>
+        <li>
+          <nuxt-link :to="$route.params.lang === 'en' ? $route.fullPath : '/en' + $route.fullPath" exact hreflang="en" rel="alternate">
+            {{ $t('nav.english') }}
+          </nuxt-link>
+        </li>
+        <li>
+          <nuxt-link :to="$route.fullPath.replace(/^\/[^\/]+/, '')" exact hreflang="es" rel="alternate">
+            {{ $t('nav.spanish') }}
+          </nuxt-link>
+        </li>
+      </ul>
+    </nav>
   </div>
 </template>
 <script>
-
   export default {
     i18n: {
       messages: {
         en: {
-          english: 'English',
-          spanish:  'Spanish'
+          nav: {
+            english: 'English',
+            spanish:  'Spanish',
+          },
+          changeLang: 'Change language'
         },
         es: {
-          english: 'Inglés',
-          spanish: 'Español'
+          nav: {
+            english: 'Inglés',
+            spanish: 'Español',
+          },
+          changeLang: 'Cambiar idioma'
         }
-      }
-    },
-    methods: {
-      setLang(lang) {
-        console.log(lang)
-        this.$store.commit('i18n/SET_LANG', lang);
       }
     }
   }
 </script>
 
-<style lang="scss" scoped>
-  .language-switcher {
-    background-color: #00ffbb;
-  }
-</style>
+<style lang="scss" scoped></style>
