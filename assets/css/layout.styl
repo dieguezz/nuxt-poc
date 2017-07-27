@@ -1,0 +1,39 @@
+.flex
+  display flex
+.flex-25
+  max-width 25%
+.flex-33
+  max-width 33%
+.layout-row, .layout-column
+  display: flex;
+  flex: 1;
+  box-sizing: border-box;
+  -webkit-box-direction normal
+.layout-row
+  -webkit-box-orient: horizontal;
+.layout-column
+  flex-direction: column;
+  -webkit-box-orient: vertical;
+.layout-align-center, .layout-align-center-center, .layout-align-center-end, .layout-align-center-start, .layout-align-center-stretch
+  -webkit-box-pack center
+  justify-content center
+.layout-align-end-center
+  justify-content flex-end
+.layout-align-center-center
+  align-items: center;
+  align-content: center;
+  max-width: 100%;
+.layout-align-center-end
+  align-items: flex-end;
+  align-content: flex-end;
+.layout-align-center-start
+  align-items: flex-start;
+  align-content: flex-start;
+.layout-align-start-center
+  align-items: center;
+  justify-content: flex-start;
+.layout-align-space-between-center
+  justify-content space-between
+  align-items center
+  align-content center
+  max-width 100%
