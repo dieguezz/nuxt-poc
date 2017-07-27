@@ -36,7 +36,7 @@ module.exports = {
   ** Router
   */
   router: {
-    middleware: 'i18n'
+    middleware: ['i18n']
   },
   /*
   ** Customize app manifest
