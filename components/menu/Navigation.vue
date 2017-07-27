@@ -1,21 +1,23 @@
 <template>
   <nav class="navigation">
-    <h1 class="hidden">$t{{'menuName'}}</h1>
-    <nuxt-link :to="path('/services')" exact>
-      {{ $t('nav.services') }}
-    </nuxt-link>
-    <nuxt-link :to="path('/about')" exact>
-      {{ $t('nav.about') }}
-    </nuxt-link>
-    <nuxt-link :to="path('/careers')" exact>
-      {{ $t('nav.careers') }}
-    </nuxt-link>
-    <nuxt-link :to="path('/blog')" exact>
-      {{ $t('nav.blog') }}
-    </nuxt-link>
-    <nuxt-link :to="path('/contact')" exact>
-      {{ $t('nav.contact') }}
-    </nuxt-link>
+    <h1 class="nav-title">{{ $t('menuName') }}</h1>
+    <ul>
+      <nuxt-link :to="path('/services')" exact>
+        {{ $t('nav.services') }}
+      </nuxt-link>
+      <nuxt-link :to="path('/about')" exact>
+        {{ $t('nav.about') }}
+      </nuxt-link>
+      <nuxt-link :to="path('/careers')" exact>
+        {{ $t('nav.careers') }}
+      </nuxt-link>
+      <nuxt-link :to="path('/blog')" exact>
+        {{ $t('nav.blog') }}
+      </nuxt-link>
+      <nuxt-link :to="path('/contact')" exact>
+        {{ $t('nav.contact') }}
+      </nuxt-link>
+    </ul>
   </nav>
 </template>
 
@@ -36,19 +38,40 @@
             blog:  'Blog',
             contact:  'Contact Us',
           },
-          menuName: 'Main navigation'
+          menuName: 'Navigation'
         },
         es: {
           nav: {
             services: 'Servicios',
-            about:  'Sobre nosotros',
+            about:  'Nosotros',
             careers:  'Empleos',
             blog:  'Blog',
             contact:  'Contacta',
           },
-          menuName: 'Navegación principal'
+          menuName: 'Navegación'
         }
       }
     }
   }
 </script>
+
+<style lang="scss" scoped>
+  @import '~assets/css/variables.scss'; // will be fixed soon
+  .nav-title {
+    font-size: 14px;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    color: $slateGrey;
+  }
+  ul {
+    a {
+      display: block;
+      font-size: 36px;
+      font-weight: 300;
+      line-height: 2.0;
+      color: #ffffff;
+      text-decoration: none;
+    }
+  }
+</style>
