@@ -13,7 +13,7 @@ module.exports = {
         })
       },
       {
-        test: /\.(png|jpg|gif|svg)$/,
+        test: /\.(png|jpg|gif|svg|eot|otf)$/,
         loader: 'url-loader',
         exclude: /assets\/svg/,
         options: {
@@ -59,7 +59,9 @@ module.exports = {
   */
   vendor: ['vue-i18n'],
   css: [
-    '~/css/main.scss'
+    '~assets/css/main.scss',
+    { src: '~assets/css/spacing.styl', lang: 'stylus'},
+    { src: '~assets/css/layout.styl', lang: 'stylus'}
   ],
   env: {
       baseUrl: process.env.BASE_URL || 'http://localhost:3000'
