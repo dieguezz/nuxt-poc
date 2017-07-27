@@ -13,12 +13,20 @@ module.exports = {
         })
       },
       {
-        test: /\.(png|jpg|gif|svg|eot|otf)$/,
+        test: /\.(png|jpg|gif|svg)$/,
         loader: 'url-loader',
         exclude: /assets\/svg/,
         options: {
           limit: 1000, // 1K limit
           name: 'img/[name].[hash:8].[ext]'
+        }
+      },
+      {
+        test: /\.(eot|otf)$/,
+        loader: 'url-loader',
+        options: {
+          limit: 1000, // 1K limit
+          name: 'fonts/[name].[hash:8].[ext]'
         }
       }
     ]
