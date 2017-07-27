@@ -1,17 +1,17 @@
 <template>
   <div>
-    <language-switcher></language-switcher>
+    <Main-Menu></Main-Menu>
     <nuxt/>
   </div>
 </template>
 
 
 <script>
-  import LanguageSwitcher from '~components/Language-switcher.vue'
+  import MainMenu from '~components/menu/Main-Menu.vue'
 
   export default {
-    components: {LanguageSwitcher},
-    head () {
+    components: { MainMenu },
+    head() {
       return {
         htmlAttrs: {
           lang: this.$i18n.locale,
