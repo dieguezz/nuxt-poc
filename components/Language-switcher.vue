@@ -17,6 +17,7 @@
     </nav>
   </div>
 </template>
+
 <script>
   export default {
     i18n: {
@@ -39,5 +40,3 @@
     }
   }
 </script>
-
-<style lang="scss" scoped></style>

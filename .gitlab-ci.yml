@@ -8,6 +8,7 @@ stages:
 build:
   stage: build
   script:
+    - rm -irf node_modules/
     - npm install -g s3-deploy
     - npm install
     - npm run generate-test
