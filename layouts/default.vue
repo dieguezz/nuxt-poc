@@ -1,7 +1,7 @@
 <template>
   <div>
     <Main-Menu></Main-Menu>
-    <nuxt/>
+    <nuxt class="main"/>
   </div>
 </template>
 
@@ -21,5 +21,8 @@
   }
 </script>
 
-
-<style></style>
+<style>
+  .main {
+    padding-top: 130px;
+  }
+</style>

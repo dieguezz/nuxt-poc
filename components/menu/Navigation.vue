@@ -63,6 +63,7 @@
     text-transform: uppercase;
     letter-spacing: 3px;
     color: $slateGrey;
+    padding-bottom: 50px;
   }
   ul {
     a {
