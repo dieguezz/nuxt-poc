@@ -2,7 +2,27 @@ module.exports = {
   /*
   ** Build configuration
   */
-  build: {},
+  build: {
+    loaders:[
+      {
+        test: /\.svg$/,
+        include: /assets\/svg/,
+        loader: 'svg-sprite-loader?' + JSON.stringify({
+          name: '[name]',
+          prefixize: false
+        })
+      },
+      {
+        test: /\.(png|jpg|gif|svg)$/,
+        loader: 'url-loader',
+        exclude: /assets\/svg/,
+        options: {
+          limit: 1000, // 1K limit
+          name: 'img/[name].[hash:8].[ext]'
+        }
+      }
+    ]
+  },
   /*
   ** Headers
   ** Common headers are already provided by @nuxtjs/pwa preset
@@ -33,7 +53,7 @@ module.exports = {
   /*
   ** Plugins
   */
-  plugins: ['~/plugins/i18n.js'],
+  plugins: ['~/plugins/i18n.js', '~plugins/svg-sprite-loader'],
   /*
   ** Vendor
   */
