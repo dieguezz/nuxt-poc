@@ -7,7 +7,7 @@
 
 
 <script>
-  import MainMenu from '~components/menu/Main-Menu.vue'
+  import MainMenu from '~components/menu/MainMenu.vue'
 
   export default {
     components: { MainMenu },

@@ -7,7 +7,7 @@
 </template>
 
 <script>
-  import LanguageSwitcher from '~components/Language-Switcher.vue'
+  import LanguageSwitcher from '~components/LanguageSwitcher.vue'
   import Navigation from '~components/menu/Navigation.vue'
   import SocialIcons from '~components/menu/Social-Icons.vue'
 
