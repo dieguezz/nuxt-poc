@@ -45,6 +45,6 @@ module.exports = {
       baseUrl: process.env.BASE_URL || 'http://localhost:3000'
     },
   generate: {
-    routes: ['/', '/company', '/en', '/en/company']
+    routes: ['/', '/about', '/en', '/en/about', '/contact', '/en/contact', '/careers', '/en/careers', '/blog', '/en/blog', '/services', '/en/services' ]
   }
 }
